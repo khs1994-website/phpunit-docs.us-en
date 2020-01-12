@@ -181,7 +181,7 @@ Specifying Covered Code Parts
 -----------------------------
 
 The `@covers` annotation (see the
-annotaction documentation &lt;appendixes.annotations.covers.tables.annotations&gt;)
+annotation documentation &lt;appendixes.annotations.covers.tables.annotations&gt;)
 can be used in the test code to specify which code parts a test class
 (or test method) wants to test. If provided, this effectively filters
 the code coverage report to include executed code from the referenced
