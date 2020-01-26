@@ -68,6 +68,8 @@ phpunit.xml file that will add all `*Test` classes that are found in
       </testsuites>
     </phpunit>
 
+To run the test suite, use the the `--testsuite` option:
+
 If phpunit.xml or phpunit.xml.dist (in that order) exist in the current
 working directory and `--configuration` is *not* used, the configuration
 will be automatically read from that file.
