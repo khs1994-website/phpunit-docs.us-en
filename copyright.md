@@ -1,7 +1,7 @@
 Copyright
 =========
 
-    Copyright (c) 2005-2019 Sebastian Bergmann.
+    Copyright (c) 2005-2020 Sebastian Bergmann.
 
     This work is licensed under the Creative Commons Attribution 3.0
     Unported License.
