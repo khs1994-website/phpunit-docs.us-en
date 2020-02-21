@@ -77,28 +77,6 @@ takes the same arguments.
         }
     }
 
-assertArraySubset()
--------------------
-
-`assertArraySubset(array $subset, array $array[, bool $strict = false, string $message = ''])`
-
-Reports an error identified by `$message` if `$array` does not contains
-the `$subset`.
-
-`$strict` is a flag used to compare the identity of objects within
-arrays.
-
-    <?php
-    use PHPUnit\Framework\TestCase;
-
-    class ArraySubsetTest extends TestCase
-    {
-        public function testFailure()
-        {
-            $this->assertArraySubset(['config' => ['key-a', 'key-b']], ['config' => ['key-a']]);
-        }
-    }
-
 assertClassHasStaticAttribute()
 -------------------------------
 

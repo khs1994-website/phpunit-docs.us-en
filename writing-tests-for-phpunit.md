@@ -1372,7 +1372,7 @@ consumers.
 <td><code>expectExceptionMessage()</code>, and</td>
 </tr>
 <tr class="odd">
-<td><code>expectExceptionMessageRegExp()</code> methods exist to set up</td>
+<td><code>expectExceptionMessageMatches()</code> methods exist to set up</td>
 </tr>
 <tr class="even">
 <td>expectations for exceptions raised by the code under test.</td>

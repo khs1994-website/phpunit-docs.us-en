@@ -4,7 +4,7 @@ Installing PHPUnit
 Requirements
 ------------
 
-PHPUnit requires PHP 7.2; using the latest version of PHP is highly
+PHPUnit requires PHP 7.3; using the latest version of PHP is highly
 recommended.
 
 PHPUnit requires the [dom](http://php.net/manual/en/dom.setup.php) and
