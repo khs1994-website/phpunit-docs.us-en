@@ -121,4 +121,5 @@ publicly accessible on your webserver then your deployment process is
 also broken.**
 
 Please note that if you upload PHPUnit to a webserver "bad things" may
-happen. You have been warned.
+happen. [You have been
+warned.](https://thephp.cc/news/2020/02/phpunit-a-security-risk)
