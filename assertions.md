@@ -495,7 +495,7 @@ Reports an error identified by `$message` if the two variables
 The contents of `$expected` and `$actual` are canonicalized before they
 are compared. For instance, when the two variables `$expected` and
 `$actual` are arrays, then these arrays are sorted before they are
-compared. When $expected\` and `$actual` are objects, each object is
+compared. When `$expected` and `$actual` are objects, each object is
 converted to an array containing all private, protected and public
 attributes.
 
