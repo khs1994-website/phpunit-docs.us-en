@@ -175,7 +175,7 @@ example how to make an extension configurable, by adding an
 
         public function executeBeforeFirstTest(): void
         {
-            if (strlen($this-config_value_1) {
+            if (strlen($this->config_value_1) {
                 echo 'Testing with configuration value: ' . $this->config_value_1;
             }
         }
