@@ -675,52 +675,6 @@ is a list of methods provided by the Mock Builder:
 > `disableAutoload()` can be used to disable `__autoload()` during the
 > generation of the test double class.
 
-Prophecy
---------
-
-[Prophecy](https://github.com/phpspec/prophecy) is a "highly opinionated
-yet very powerful and flexible PHP object mocking framework. Though
-initially it was created to fulfil phpspec2 needs, it is flexible enough
-to be used inside any testing framework out there with minimal effort".
-
-PHPUnit has built-in support for using Prophecy to create test doubles.
-test-doubles.prophecy.examples.SubjectTest.php shows how the same test
-shown in test-doubles.mock-objects.examples.SubjectTest.php can be
-expressed using Prophecy's philosophy of prophecies and revelations:
-
-    <?php
-    use PHPUnit\Framework\TestCase;
-
-    class SubjectTest extends TestCase
-    {
-        public function testObserversAreUpdated()
-        {
-            $subject = new Subject('My subject');
-
-            // Create a prophecy for the Observer class.
-            $observer = $this->prophesize(Observer::class);
-
-            // Set up the expectation for the update() method
-            // to be called only once and with the string 'something'
-            // as its parameter.
-            $observer->update('something')->shouldBeCalled();
-
-            // Reveal the prophecy and attach the mock object
-            // to the Subject.
-            $subject->attach($observer->reveal());
-
-            // Call the doSomething() method on the $subject object
-            // which we expect to call the mocked Observer object's
-            // update() method with the string 'something'.
-            $subject->doSomething();
-        }
-    }
-
-Please refer to the
-[documentation](https://github.com/phpspec/prophecy#how-to-use-it) for
-Prophecy for further details on how to create, configure, and use stubs,
-spies, and mocks using this alternative test double framework.
-
 Mocking Traits and Abstract Classes
 -----------------------------------
 

@@ -245,8 +245,8 @@ assertDirectoryExists()
 Reports an error identified by `$message` if the directory specified by
 `$directory` does not exist.
 
-`assertDirectoryNotExists()` is the inverse of this assertion and takes
-the same arguments.
+`assertDirectoryDoesNotExist()` is the inverse of this assertion and
+takes the same arguments.
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -267,7 +267,7 @@ assertDirectoryIsReadable()
 Reports an error identified by `$message` if the directory specified by
 `$directory` is not a directory or is not readable.
 
-`assertDirectoryNotIsReadable()` is the inverse of this assertion and
+`assertDirectoryIsNotReadable()` is the inverse of this assertion and
 takes the same arguments.
 
     <?php
@@ -289,7 +289,7 @@ assertDirectoryIsWritable()
 Reports an error identified by `$message` if the directory specified by
 `$directory` is not a directory or is not writable.
 
-`assertDirectoryNotIsWritable()` is the inverse of this assertion and
+`assertDirectoryIsNotWritable()` is the inverse of this assertion and
 takes the same arguments.
 
     <?php
@@ -321,68 +321,6 @@ arguments.
         public function testFailure()
         {
             $this->assertEmpty(['foo']);
-        }
-    }
-
-assertEqualXMLStructure()
--------------------------
-
-`assertEqualXMLStructure(DOMElement $expectedElement, DOMElement $actualElement[, boolean $checkAttributes = false, string $message = ''])`
-
-Reports an error identified by `$message` if the XML Structure of the
-DOMElement in `$actualElement` is not equal to the XML structure of the
-DOMElement in `$expectedElement`.
-
-    <?php
-    use PHPUnit\Framework\TestCase;
-
-    class EqualXMLStructureTest extends TestCase
-    {
-        public function testFailureWithDifferentNodeNames()
-        {
-            $expected = new DOMElement('foo');
-            $actual = new DOMElement('bar');
-
-            $this->assertEqualXMLStructure($expected, $actual);
-        }
-
-        public function testFailureWithDifferentNodeAttributes()
-        {
-            $expected = new DOMDocument;
-            $expected->loadXML('<foo bar="true" />');
-
-            $actual = new DOMDocument;
-            $actual->loadXML('<foo/>');
-
-            $this->assertEqualXMLStructure(
-              $expected->firstChild, $actual->firstChild, true
-            );
-        }
-
-        public function testFailureWithDifferentChildrenCount()
-        {
-            $expected = new DOMDocument;
-            $expected->loadXML('<foo><bar/><bar/><bar/></foo>');
-
-            $actual = new DOMDocument;
-            $actual->loadXML('<foo><bar/></foo>');
-
-            $this->assertEqualXMLStructure(
-              $expected->firstChild, $actual->firstChild
-            );
-        }
-
-        public function testFailureWithDifferentChildren()
-        {
-            $expected = new DOMDocument;
-            $expected->loadXML('<foo><bar/><bar/><bar/></foo>');
-
-            $actual = new DOMDocument;
-            $actual->loadXML('<foo><baz/><baz/><baz/></foo>');
-
-            $this->assertEqualXMLStructure(
-              $expected->firstChild, $actual->firstChild
-            );
         }
     }
 
@@ -617,8 +555,8 @@ assertFileExists()
 Reports an error identified by `$message` if the file specified by
 `$filename` does not exist.
 
-`assertFileNotExists()` is the inverse of this assertion and takes the
-same arguments.
+`assertFileDoesNotExist()` is the inverse of this assertion and takes
+the same arguments.
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -639,7 +577,7 @@ assertFileIsReadable()
 Reports an error identified by `$message` if the file specified by
 `$filename` is not a file or is not readable.
 
-`assertFileNotIsReadable()` is the inverse of this assertion and takes
+`assertFileIsNotReadable()` is the inverse of this assertion and takes
 the same arguments.
 
     <?php
@@ -661,7 +599,7 @@ assertFileIsWritable()
 Reports an error identified by `$message` if the file specified by
 `$filename` is not a file or is not writable.
 
-`assertFileNotIsWritable()` is the inverse of this assertion and takes
+`assertFileIsNotWritable()` is the inverse of this assertion and takes
 the same arguments.
 
     <?php
@@ -1179,7 +1117,7 @@ assertIsReadable()
 Reports an error identified by `$message` if the file or directory
 specified by `$filename` is not readable.
 
-`assertNotIsReadable()` is the inverse of this assertion and takes the
+`assertIsNotReadable()` is the inverse of this assertion and takes the
 same arguments.
 
     <?php
@@ -1202,7 +1140,7 @@ assertIsWritable()
 Reports an error identified by `$message` if the file or directory
 specified by `$filename` is not writable.
 
-`assertNotIsWritable()` is the inverse of this assertion and takes the
+`assertIsNotWritable()` is the inverse of this assertion and takes the
 same arguments.
 
     <?php
@@ -1387,16 +1325,15 @@ takes the same arguments.
     }
     ?>
 
-assertRegExp()
---------------
+assertMatchesRegularExpression() \#\#\#\#\#\#\#\#\#\#\#\#\#\#
 
-`assertRegExp(string $pattern, string $string[, string $message = ''])`
+`assertMatchesRegularExpression(string $pattern, string $string[, string $message = ''])`
 
 Reports an error identified by `$message` if `$string` does not match
 the regular expression `$pattern`.
 
-`assertNotRegExp()` is the inverse of this assertion and takes the same
-arguments.
+`assertDoesNotMatchRegularExpression()` is the inverse of this assertion
+and takes the same arguments.
 
     <?php
     use PHPUnit\Framework\TestCase;
@@ -1405,7 +1342,7 @@ arguments.
     {
         public function testFailure()
         {
-            $this->assertRegExp('/foo/', 'bar');
+            $this->assertMatchesRegularExpression('/foo/', 'bar');
         }
     }
     ?>
