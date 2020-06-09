@@ -456,16 +456,14 @@ The `<filter>` Element
 
 Parent element: `<phpunit>`
 
-The `<filter/whitelist>` element and its children can be used to
-configure the whitelist for the code coverage reporting:
+The `<filter>` element and its children can be used to configure the
+files to be included for the code coverage reporting:
 
-    <filter>
-      <whitelist processUncoveredFilesFromWhitelist="true">
-        <directory suffix=".php">src</directory>
-        <exclude>
-          <file>src/autoload.php</file>
-        </exclude>
-      </whitelist>
+    <filter processUncoveredFilesForCodeCoverageReport="true">
+      <directory suffix=".php">src</directory>
+      <exclude>
+        <file>src/autoload.php</file>
+      </exclude>
     </filter>
 
 The `<listeners>` Element
@@ -649,8 +647,8 @@ attributes have no equivalent TextUI test runner option.
 
 -
 
-> `showUncoveredFiles`: Show all whitelisted files in `--coverage-text`
-> output not just the ones with coverage information.
+> `showUncoveredFiles`: Show all files in `--coverage-text` output not
+> just the ones with coverage information.
 
 -
 
