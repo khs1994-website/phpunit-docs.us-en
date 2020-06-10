@@ -261,7 +261,7 @@ when it executes code that is not specified using `@covers` or `@uses`.
 Possible values: `true` or `false` (default: `false`)
 
 This attribute configures whether code units annotated with
-`@deprecated` should be ignored from code covreage.
+`@deprecated` should be ignored from code coverage.
 
 ### The `enforceTimeLimit` Attribute
 
