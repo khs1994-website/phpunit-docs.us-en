@@ -407,6 +407,7 @@ coverage:
 
     <coverage includeUncoveredFiles="true"
               processUncoveredFiles="true"
+              pathCoverage="false"
               ignoreDeprecatedCodeUnits="true"
               disableCodeCoverageIgnore="true"
               cacheTokens="true">
@@ -431,6 +432,12 @@ Possible values: `true` or `false` (default: `false`)
 
 This attribute configures whether code units annotated with
 `@deprecated` should be ignored from code coverage.
+
+### The `pathCoverage` Attribute
+
+Possible values: `true` or `false` (default: `false`)
+
+TODO
 
 ### The `disableCodeCoverageIgnore` Attribute
 
