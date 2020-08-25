@@ -29,7 +29,7 @@ structure of the System Under Test (SUT) in the src directory:
     `-- Money.php                       `-- MoneyTest.php
     `-- autoload.php
 
-To run all tests for the library we just need to point the PHPUnit
+To run all tests for the library we need to point the PHPUnit
 command-line test runner to the test directory:
 
 Note

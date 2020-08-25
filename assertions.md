@@ -1325,7 +1325,8 @@ takes the same arguments.
     }
     ?>
 
-assertMatchesRegularExpression() \#\#\#\#\#\#\#\#\#\#\#\#\#\#
+assertMatchesRegularExpression()
+--------------------------------
 
 `assertMatchesRegularExpression(string $pattern, string $string[, string $message = ''])`
 

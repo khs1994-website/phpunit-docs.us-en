@@ -37,7 +37,7 @@ you can use the `getMockBuilder($type)` method to customize the test
 double generation using a fluent interface.
 
 By default, all methods of the original class are replaced with a dummy
-implementation that just returns `null` (without calling the original
+implementation that returns `null` (without calling the original
 method). Using the `will($this->returnValue())` method, for instance,
 you can configure these dummy implementations to return a value when
 called.
@@ -331,14 +331,14 @@ exception. test-doubles.stubs.examples.StubTest8.php shows how to use
 
 Alternatively, you can write the stub yourself and improve your design
 along the way. Widely used resources are accessed through a single
-façade, so you can easily replace the resource with the stub. For
-example, instead of having direct database calls scattered throughout
-the code, you have a single `Database` object, an implementor of the
-`IDatabase` interface. Then, you can create a stub implementation of
-`IDatabase` and use it for your tests. You can even create an option for
-running the tests with the stub database or the real database, so you
-can use your tests for both local testing during development and
-integration testing with the real database.
+façade, so you can replace the resource with the stub. For example,
+instead of having direct database calls scattered throughout the code,
+you have a single `Database` object, an implementor of the `IDatabase`
+interface. Then, you can create a stub implementation of `IDatabase` and
+use it for your tests. You can even create an option for running the
+tests with the stub database or the real database, so you can use your
+tests for both local testing during development and integration testing
+with the real database.
 
 Functionality that needs to be stubbed out tends to cluster in the same
 object, improving cohesion. By presenting the functionality with a
@@ -745,12 +745,11 @@ Stubbing and Mocking Web Services
 ---------------------------------
 
 When your application interacts with a web service you want to test it
-without actually interacting with the web service. To make the stubbing
-and mocking of web services easy, the `getMockFromWsdl()` can be used
-just like `getMock()` (see above). The only difference is that
-`getMockFromWsdl()` returns a stub or mock based on a web service
-description in WSDL and `getMock()` returns a stub or mock based on a
-PHP class or interface.
+without actually interacting with the web service. To create stubs and
+mocks of web services, the `getMockFromWsdl()` can be used like
+`getMock()` (see above). The only difference is that `getMockFromWsdl()`
+returns a stub or mock based on a web service description in WSDL and
+`getMock()` returns a stub or mock based on a PHP class or interface.
 
 test-doubles.stubbing-and-mocking-web-services.examples.GoogleTest.php
 shows how `getMockFromWsdl()` can be used to stub, for example, the web

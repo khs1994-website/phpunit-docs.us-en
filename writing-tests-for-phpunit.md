@@ -229,7 +229,7 @@ consumers.
 <td><code>@depends shallowClone</code> are possible too.</td>
 </tr>
 <tr class="even">
-<td>To quickly localize defects, we want our attention to be focussed on</td>
+<td>To localize defects, we want our attention to be focussed on</td>
 </tr>
 <tr class="odd">
 <td>relevant failing tests. This is why PHPUnit skips the execution of a test</td>

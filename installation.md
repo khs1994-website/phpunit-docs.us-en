@@ -90,7 +90,7 @@ Verification Environment, was created. You can learn about PHIVE on its
 Composer
 --------
 
-Simply add a (development-time) dependency on `phpunit/phpunit` to your
+Add a (development-time) dependency on `phpunit/phpunit` to your
 project's `composer.json` file if you use
 [Composer](https://getcomposer.org/) to manage the dependencies of your
 project:

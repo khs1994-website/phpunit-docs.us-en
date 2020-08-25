@@ -405,26 +405,41 @@ Parent element: `<phpunit>`
 The `<coverage>` element and its children can be used to configure code
 coverage:
 
-    <coverage includeUncoveredFiles="true"
+    <coverage cacheDirectory="/path/to/directory"
+              includeUncoveredFiles="true"
               processUncoveredFiles="true"
               pathCoverage="false"
               ignoreDeprecatedCodeUnits="true"
-              disableCodeCoverageIgnore="true"
-              cacheTokens="true">
+              disableCodeCoverageIgnore="true">
         <!-- ... -->
     </coverage>
+
+### The `cacheDirectory` Attribute
+
+Possible values: string
+
+When code coverage data is collected and processed, static code analysis
+is performed to improve reasoning about the covered code. This is an
+expensive operation, whose result can be cached. When the
+`cacheDirectory` attribute is set, static analysis results will be
+cached in the specified directory.
 
 ### The `includeUncoveredFiles` Attribute
 
 Possible values: `true` or `false` (default: `true`)
 
-TODO
+When set to `true`, all sourcecode files that are configured to be
+considered for code coverage analysis will be included in the code
+coverage report(s). This includes sourcecode files that are not executed
+while the tests are running.
 
 ### The `processUncoveredFiles` Attribute
 
 Possible values: `true` or `false` (default: `false`)
 
-TODO
+When set to `true`, all sourcecode files that are configured to be
+considered for code coverage analysis will be processed. This includes
+sourcecode files that are not executed while the tests are running.
 
 ### The `ignoreDeprecatedCodeUnits` Attribute
 
@@ -437,7 +452,13 @@ This attribute configures whether code units annotated with
 
 Possible values: `true` or `false` (default: `false`)
 
-TODO
+When set to `false`, only line coverage data will be collected,
+processed, and reported.
+
+When set to `true`, line coverage, branch coverage, and path coverage
+data will be collected, processed, and reported. This requires a code
+coverage driver that supports path coverage. Path Coverage is currently
+only implemented by Xdebug.
 
 ### The `disableCodeCoverageIgnore` Attribute
 
@@ -446,87 +467,111 @@ Possible values: `true` or `false` (default: `false`)
 This attribute configures whether the `@codeCoverageIgnore*` annotations
 should be ignored.
 
-### The `cacheTokens` Attribute
-
-Possible values: `true` or `false` (default: `false`)
-
-This attribute configures the in-memory cache of the token streams that
-are used for code coverage analysis.
-
-When more than one code coverage report is generated in a single run,
-enabling this cache will increase memory usage and may reduce the time
-to generate the reports.
-
 The `<include>` Element
 -----------------------
 
 Parent element: `<coverage>`
 
-TODO
+Configures a set of files to be included in code coverage report(s).
 
     <include>
         <directory suffix=".php">src</directory>
     </include>
+
+The example shown above instructs PHPUnit to include all sourcecode
+files with `.php` suffix in the `src` directory and its sub-directories
+in the code coverage report(s).
 
 The `<exclude>` Element
 -----------------------
 
 Parent element: `<coverage>`
 
-TODO
+Configures a set of files to be excluded from code coverage report(s).
+
+    <include>
+        <directory suffix=".php">src</directory>
+    </include>
 
     <exclude>
         <directory suffix=".php">src/generated</directory>
         <file>src/autoload.php</file>
     </exclude>
 
+The example shown above instructs PHPUnit to include all sourcecode
+files with `.php` suffix in the `src` directory and its sub-directories
+in the code coverage report but exclude all files with `.php` suffix in
+the `src/generated` directory and its sub-directories as well as the
+`src/autoload.php` file from the code coverage report(s).
+
 The `<directory>` Element
 -------------------------
 
 Parent elements: `<include>`, `<exclude>`
 
-TODO
+Configures a directory and its sub-directories for inclusion in or
+exclusion from code coverage report(s).
 
 ### The `prefix` Attribute
 
 Possible values: string
 
-TODO
+Configures a prefix-based filter that is applied to the names of files
+in the directory and its sub-directories.
 
 ### The `suffix` Attribute
 
 Possible values: string (default: `'.php'`)
 
-TODO
+Configures a suffix-based filter that is applied to the names of files
+in the directory and its sub-directories.
 
 ### The `phpVersion` Attribute
 
 Possible values: string
 
-TODO
+Configures a filter based on the version of the PHP runtime that is used
+to run the current PHPUnit process.
 
 ### The `phpVersionOperator` Attribute
 
 Possible values: `'<'`, `'lt'`, `'<='`, `'le'`, `'>'`, `'gt'`, `'>='`,
 `'ge'`, `'=='`, `'='`, `'eq'`, `'!='`, `'<>'`, `'ne'` (default: `'>='`)
 
-TODO
+Configures the comparison operator to be used with `version_compare()`
+for the filter based on the version of the PHP runtime that is used to
+run the current PHPUnit process.
 
 The `<file>` Element
 --------------------
 
 Parent elements: `<include>`, `<exclude>`
 
-TODO
+Configures a file for inclusion in or exclusion from code coverage
+report(s).
 
-The `phpVersion` and `phpVersionOperator` attributes ... TODO
+### The `phpVersion` Attribute
+
+Possible values: string
+
+Configures a filter based on the version of the PHP runtime that is used
+to run the current PHPUnit process.
+
+### The `phpVersionOperator` Attribute
+
+Possible values: `'<'`, `'lt'`, `'<='`, `'le'`, `'>'`, `'gt'`, `'>='`,
+`'ge'`, `'=='`, `'='`, `'eq'`, `'!='`, `'<>'`, `'ne'` (default: `'>='`)
+
+Configures the comparison operator to be used with `version_compare()`
+for the filter based on the version of the PHP runtime that is used to
+run the current PHPUnit process.
 
 The `<report>` Element
 ----------------------
 
 Parent element: `<coverage>`
 
-TODO
+Configures the code coverage reports to be generated.
 
     <report>
         <clover outputFile="clover.xml"/>
@@ -542,85 +587,85 @@ The `<clover>` Element
 
 Parent element: `<report>`
 
-TODO
+Configures a code coverage report in Clover XML format.
 
 ### The `outputFile` Attribute
 
 Possible values: string
 
-TODO
+The file to which the Clover XML report is written.
 
 The `<crap4j>` Element
 ----------------------
 
 Parent element: `<report>`
 
-TODO
+Configures a code coverage report in Crap4J XML format.
 
 ### The `outputFile` Attribute
 
 Possible values: string
 
-TODO
+The file to which the Crap4J XML report is written.
 
 ### The `threshold` Attribute
 
 Possible values: integer (default: `50`)
-
-TODO
 
 The `<html>` Element
 --------------------
 
 Parent element: `<report>`
 
-TODO
+Configures a code coverage report in HTML format.
 
 ### The `outputDirectory` Attribute
 
-Possible values: string
-
-TODO
+The directory to which the HTML report is written.
 
 ### The `lowUpperBound` Attribute
 
 Possible values: integer (default: `50`)
 
-TODO
+The upper bound of what should be considered "low coverage".
 
 ### The `highLowerBound` Attribute
 
 Possible values: integer (default: `90`)
 
-TODO
+The lower bound of what should be considered "high coverage".
 
 The `<php>` Element
 -------------------
 
 Parent element: `<report>`
 
-TODO
+Configures a code coverage report in PHP format.
 
-The `outputFile` attribute ... TODO
+### The `outputFile` Attribute
+
+Possible values: string
+
+The file to which the PHP report is written.
 
 The `<text>` Element
 --------------------
 
 Parent element: `<report>`
 
-TODO
+Configures a code coverage report in text format.
 
 ### The `outputFile` Attribute
 
 Possible values: string
 
-TODO
+The file to which the text report is written.
 
-The `showUncoveredFiles` Attribute -----------------------------
+### The `showUncoveredFiles` Attribute
 
 Possible values: `true` or `false` (default: `false`)
 
-The `showOnlySummary` Attribute -----------------------------
+### The `showOnlySummary` Attribute
 
 Possible values: `true` or `false` (default: `false`)
 
@@ -629,13 +674,112 @@ The `<xml>` Element
 
 Parent element: `<report>`
 
-TODO
+Configures a code coverage report in PHPUnit XML format.
 
 ### The `outputDirectory` Attribute
 
 Possible values: string
 
-TODO
+The directory to which the PHPUnit XML report is written.
+
+The `<logging>` Element
+-----------------------
+
+Parent element: `<phpunit>`
+
+The `<logging>` element and its children can be used to configure the
+logging of the test execution.
+
+    <logging>
+        <junit outputFile="junit.xml"/>
+        <teamcity outputFile="teamcity.txt"/>
+        <testdoxHtml outputFile="testdox.html"/>
+        <testdoxText outputFile="testdox.txt"/>
+        <testdoxXml outputFile="testdox.xml"/>
+        <text outputFile="logfile.txt"/>
+    </logging>
+
+The `<junit>` Element
+---------------------
+
+Parent element: `<report>`
+
+Configures a test result logfile in JUnit XML format.
+
+### The `outputFile` Attribute
+
+Possible values: string
+
+The file to which the test result logfile in JUnit XML format is
+written.
+
+The `<teamcity>` Element
+------------------------
+
+Parent element: `<report>`
+
+Configures a test result logfile in TeamCity format.
+
+### The `outputFile` Attribute
+
+Possible values: string
+
+The file to which the test result logfile in TeamCity format is written.
+
+The `<testdoxHtml>` Element
+---------------------------
+
+Parent element: `<report>`
+
+Configures a test result logfile in TestDox HTML format.
+
+### The `outputFile` Attribute
+
+Possible values: string
+
+The file to which the test result logfile in TestDox HTML format is
+written.
+
+The `<testdoxText>` Element
+---------------------------
+
+Parent element: `<report>`
+
+Configures a test result logfile in TestDox text format.
+
+### The `outputFile` Attribute
+
+Possible values: string
+
+The file to which the test result logfile in TestDox text format is
+written.
+
+The `<testdoxXml>` Element
+--------------------------
+
+Parent element: `<report>`
+
+Configures a test result logfile in TestDox XML format.
+
+### The `outputFile` Attribute
+
+Possible values: string
+
+The file to which the test result logfile in TestDox XML format is
+written.
+
+The `<text>` Element
+--------------------
+
+Parent element: `<report>`
+
+Configures a test result logfile in text format.
+
+### The `outputFile` Attribute
+
+Possible values: string
+
+The file to which the test result logfile in text format is written.
 
 The `<groups>` Element
 ----------------------
@@ -774,85 +918,6 @@ Available types:
             </object>
         </arguments>
     </extension>
-
-The `<logging>` Element
------------------------
-
-Parent element: `<phpunit>`
-
-The `<logging>` element and its `<log>` children can be used to
-configure the logging of the test execution.
-
-### The `<log>` Element
-
-Parent element: `<logging>`
-
-    <logging>
-      <log type="coverage-html" target="/tmp/report" lowUpperBound="35" highLowerBound="70"/>
-      <log type="coverage-clover" target="/tmp/coverage.xml"/>
-      <log type="coverage-php" target="/tmp/coverage.serialized"/>
-      <log type="coverage-text" target="php://stdout" showUncoveredFiles="false"/>
-      <log type="junit" target="/tmp/logfile.xml"/>
-      <log type="testdox-html" target="/tmp/testdox.html"/>
-      <log type="testdox-text" target="/tmp/testdox.txt"/>
-    </logging>
-
-The XML configuration above corresponds to invoking the TextUI test
-runner with the following options:
-
--
-
-> `--coverage-html /tmp/report`
-
--
-
-> `--coverage-clover /tmp/coverage.xml`
-
--
-
-> `--coverage-php /tmp/coverage.serialized`
-
--
-
-> `--coverage-text`
-
--
-
-> `> /tmp/logfile.txt`
-
--
-
-> `--log-junit /tmp/logfile.xml`
-
--
-
-> `--testdox-html /tmp/testdox.html`
-
--
-
-> `--testdox-text /tmp/testdox.txt`
-
-The `lowUpperBound`, `highLowerBound`, and `showUncoveredFiles`
-attributes have no equivalent TextUI test runner option.
-
--
-
-> `lowUpperBound`: Maximum coverage percentage to be considered "lowly"
-> covered.
-
--
-
-> `highLowerBound`: Minimum coverage percentage to be considered
-> "highly" covered.
-
--
-
-> `showUncoveredFiles`: Show all files in `--coverage-text` output not
-> just the ones with coverage information.
-
--
-
-> `showOnlySummary`: Show only the summary in `--coverage-text` output.
 
 The `<php>` Element
 -------------------

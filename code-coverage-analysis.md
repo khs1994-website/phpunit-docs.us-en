@@ -48,6 +48,19 @@ Various software metrics exist to measure code coverage:
 > The *Line Coverage* software metric measures whether each executable
 > line was executed.
 
+*Branch Coverage*
+
+> The *Branch Coverage* software metric measures whether the boolean
+> expression of each control structure evaluated to both `true` and
+> `false` while running the test suite.
+
+*Path Coverage*
+
+> The *Path Coverage* software metric measures whether each of the
+> possible execution paths in a function or method has been followed
+> while running the test suite. An execution path is a unique sequence
+> of branches from the entry of the function or method to its exit.
+
 *Function and Method Coverage*
 
 > The *Function and Method Coverage* software metric measures whether
@@ -62,27 +75,6 @@ Various software metrics exist to measure code coverage:
 > considers a class or trait as covered when all of its methods are
 > covered.
 
-*Opcode Coverage*
-
-> The *Opcode Coverage* software metric measures whether each opcode of
-> a function or method has been executed while running the test suite. A
-> line of code usually compiles into more than one opcode. Line Coverage
-> regards a line of code as covered as soon as one of its opcodes is
-> executed.
-
-*Branch Coverage*
-
-> The *Branch Coverage* software metric measures whether the boolean
-> expression of each control structure evaluated to both `true` and
-> `false` while running the test suite.
-
-*Path Coverage*
-
-> The *Path Coverage* software metric measures whether each of the
-> possible execution paths in a function or method has been followed
-> while running the test suite. An execution path is a unique sequence
-> of branches from the entry of the function or method to its exit.
-
 *Change Risk Anti-Patterns (CRAP) Index*
 
 > The *Change Risk Anti-Patterns (CRAP) Index* is calculated based on
@@ -91,11 +83,6 @@ Various software metrics exist to measure code coverage:
 > low CRAP index. The CRAP index can be lowered by writing tests and by
 > refactoring the code to lower its complexity.
 
-Note
-
-The *Opcode Coverage*, *Branch Coverage*, and *Path Coverage* software
-metrics are not yet supported by php-code-coverage.
-
 Including Files
 ---------------
 
@@ -103,7 +90,7 @@ It is mandatory to configure a filter for telling PHPUnit which
 sourcecode files to include in the code coverage report. This can either
 be done using the `--coverage-filter`
 command line &lt;textui.clioptions&gt; option or via the configuration
-file (see appendixes.configuration.phpunit.filter).
+file (see appendixes.configuration.phpunit.coverage.include).
 
 The `includeUncoveredFilesInCodeCoverageReport` and
 `processUncoveredFilesForCodeCoverageReport` configuration settings are
@@ -350,25 +337,3 @@ coverage information.
         this_call_will_never_show_up_as_covered();
     }
     ?>
-
-Speeding Up Code Coverage with Xdebug
--------------------------------------
-
-The performance of code coverage data collection with Xdebug 2.6 (and
-later) can be significantly improved by delegating filtering to Xdebug.
-
-In order to do this, the first step is to generate the filter script for
-Xdebug using the `--dump-xdebug-filter` option:
-
-    $ phpunit --dump-xdebug-filter build/xdebug-filter.php
-    PHPUnit 7.4.0 by Sebastian Bergmann and contributors.
-
-    Runtime:       PHP 7.2.11 with Xdebug 2.6.1
-    Configuration: /workspace/project/phpunit.xml
-
-    Wrote Xdebug filter script to build/xdebug-filter.php
-
-Now we can use the `--prepend` option to load the Xdebug filter script
-as early as possible when we want to generate a code coverage report:
-
-    $ phpunit --prepend build/xdebug-filter.php --coverage-html build/coverage-report

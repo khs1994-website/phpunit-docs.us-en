@@ -6,14 +6,14 @@ code to set the world up in a known state and then return it to its
 original state when the test is complete. This known state is called the
 *fixture* of the test.
 
-In writing-tests-for-phpunit.examples.StackTest.php, the fixture was
-simply the array that is stored in the `$stack` variable. Most of the
-time, though, the fixture will be more complex than a simple array, and
-the amount of code needed to set it up will grow accordingly. The actual
-content of the test gets lost in the noise of setting up the fixture.
-This problem gets even worse when you write several tests with similar
-fixtures. Without some help from the testing framework, we would have to
-duplicate the code that sets up the fixture for each test we write.
+In writing-tests-for-phpunit.examples.StackTest.php, the fixture was the
+array that is stored in the `$stack` variable. Most of the time, though,
+the fixture will be more complex than a simple array, and the amount of
+code needed to set it up will grow accordingly. The actual content of
+the test gets lost in the noise of setting up the fixture. This problem
+gets even worse when you write several tests with similar fixtures.
+Without some help from the testing framework, we would have to duplicate
+the code that sets up the fixture for each test we write.
 
 PHPUnit supports sharing the setup code. Before a test method is run, a
 template method called `setUp()` is invoked. `setUp()` is where you
@@ -264,20 +264,20 @@ backup operation will break when such an object is stored e.g. in the
 The `@backupGlobals` annotation that is discussed in
 appendixes.annotations.backupGlobals can be used to control the backup
 and restore operations for global variables. Alternatively, you can
-provide a blacklist of global variables that are to be excluded from the
+provide a list of global variables that are to be excluded from the
 backup and restore operations like this
 
     class MyTest extends TestCase
     {
-        protected $backupGlobalsBlacklist = ['globalVariable'];
+        protected $backupGlobalsExcludeList = ['globalVariable'];
 
         // ...
     }
 
 Note
 
-Setting the `$backupGlobalsBlacklist` property inside e.g. the `setUp()`
-method has no effect.
+Setting the `$backupGlobalsExcludeList` property inside e.g. the
+`setUp()` method has no effect.
 
 The `@backupStaticAttributes` annotation discussed in
 appendixes.annotations.backupStaticAttributes can be used to back up all
@@ -306,12 +306,12 @@ For unit tests, it is recommended to explicitly reset the values of
 static properties under test in your `setUp()` code instead (and ideally
 also `tearDown()`, so as to not affect subsequently executed tests).
 
-You can provide a blacklist of static attributes that are to be excluded
-from the backup and restore operations:
+You can provide a list of static attributes that are to be excluded from
+the backup and restore operations:
 
     class MyTest extends TestCase
     {
-        protected $backupStaticAttributesBlacklist = [
+        protected $backupStaticAttributesExcludeList = [
             'className' => ['attributeName']
         ];
 
@@ -320,5 +320,5 @@ from the backup and restore operations:
 
 Note
 
-Setting the `$backupStaticAttributesBlacklist` property inside e.g. the
-`setUp()` method has no effect.
+Setting the `$backupStaticAttributesExcludeList` property inside e.g.
+the `setUp()` method has no effect.
