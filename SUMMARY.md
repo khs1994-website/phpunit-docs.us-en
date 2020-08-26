@@ -10,7 +10,6 @@
 * [Fixtures](fixtures.md)
 * [Incomplete And Skipped Tests](incomplete-and-skipped-tests.md)
 * [Installation](installation.md)
-* [Logging](logging.md)
 * [Organizing Tests](organizing-tests.md)
 * [Risky Tests](risky-tests.md)
 * [Test Doubles](test-doubles.md)

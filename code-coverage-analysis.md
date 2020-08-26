@@ -22,10 +22,7 @@ Note
 
 If you see a warning while running tests that no code coverage driver is
 available, it means that you are using the PHP CLI binary (`php`) and do
-not have Xdebug loaded. The [Xdebug installation
-guide](https://xdebug.org/docs/install) explains how Xdebug can be
-installed and configured. Alternatively, you may use the PHPDBG binary
-(`phpdbg`) instead of the PHP CLI one.
+not have Xdebug or PCOV loaded.
 
 PHPUnit can generate an HTML-based code coverage report as well as
 XML-based logfiles with code coverage information in various formats
@@ -34,9 +31,8 @@ reported as text (and printed to STDOUT) and exported as PHP code for
 further processing.
 
 Please refer to textui for a list of command line switches that control
-code coverage functionality as well as
-appendixes.configuration.phpunit.logging for the relevant configuration
-settings.
+code coverage functionality as well as appendixes.configuration.logging
+for the relevant configuration settings.
 
 Software Metrics for Code Coverage
 ----------------------------------
@@ -90,7 +86,7 @@ It is mandatory to configure a filter for telling PHPUnit which
 sourcecode files to include in the code coverage report. This can either
 be done using the `--coverage-filter`
 command line &lt;textui.clioptions&gt; option or via the configuration
-file (see appendixes.configuration.phpunit.coverage.include).
+file (see appendixes.configuration.coverage.include).
 
 The `includeUncoveredFilesInCodeCoverageReport` and
 `processUncoveredFilesForCodeCoverageReport` configuration settings are

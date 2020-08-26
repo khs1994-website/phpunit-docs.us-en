@@ -121,8 +121,8 @@ implement one or more of the following interfaces:
 Each "hook", meaning each of the interfaces listed above, represents an
 event that can occur while the tests are being executed.
 
-See appendixes.configuration.phpunit.extensions for details on how to
-register extensions in PHPUnit's XML configuration.
+See appendixes.configuration.extensions for details on how to register
+extensions in PHPUnit's XML configuration.
 
 extending-phpunit.examples.TestRunnerExtension shows an example for an
 extension implementing `BeforeFirstTestHook` and `AfterLastTestHook`:
@@ -203,8 +203,8 @@ extending-phpunit.examples.TestRunnerConfigurableExtensionConfig:
         </extension>
     </extensions>
 
-See appendixes.configuration.phpunit.extensions.extension.arguments for
-details on how to use the `arguments` configuration.
+See appendixes.configuration.extensions.extension.arguments for details
+on how to use the `arguments` configuration.
 
 Remember: all configuration is optional, so make sure your extension
 either has sane defaults in place, or that it disables itself in case

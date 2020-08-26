@@ -72,48 +72,31 @@ following code:
 `--coverage-clover`
 
 > Generates a logfile in XML format with the code coverage information
-> for the tests run. See logging for more details.
->
-> Please note that this functionality is only available when the
-> tokenizer and Xdebug extensions are installed.
+> for the tests run. See code-coverage-analysis for more details.
 
 `--coverage-crap4j`
 
 > Generates a code coverage report in Crap4j format. See
 > code-coverage-analysis for more details.
->
-> Please note that this functionality is only available when the
-> tokenizer and Xdebug extensions are installed.
 
 `--coverage-html`
 
 > Generates a code coverage report in HTML format. See
 > code-coverage-analysis for more details.
->
-> Please note that this functionality is only available when the
-> tokenizer and Xdebug extensions are installed.
 
 `--coverage-php`
 
 > Generates a serialized PHP\_CodeCoverage object with the code coverage
 > information.
->
-> Please note that this functionality is only available when the
-> tokenizer and Xdebug extensions are installed.
 
 `--coverage-text`
 
 > Generates a logfile or command-line output in human readable format
-> with the code coverage information for the tests run. See logging for
-> more details.
->
-> Please note that this functionality is only available when the
-> tokenizer and Xdebug extensions are installed.
+> with the code coverage information for the tests run.
 
 `--log-junit`
 
-> Generates a logfile in JUnit XML format for the tests run. See logging
-> for more details.
+> Generates a logfile in JUnit XML format for the tests run.
 
 `--testdox-html` and `--testdox-text`
 
@@ -388,7 +371,7 @@ following code:
 
 Note
 
-Please note that as of 4.8, options can be put after the argument(s).
+Please note that options can be put after the argument(s).
 
 TestDox
 -------

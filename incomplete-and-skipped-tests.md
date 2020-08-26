@@ -131,4 +131,4 @@ version constraints: `<`, `<=`, `>`, `>=`, `=`, `==`, `!=`, `<>`.
 
 If you are using syntax that doesn't compile with a certain PHP Version
 look into the xml configuration for version dependent includes in
-appendixes.configuration.phpunit.testsuites
+appendixes.configuration.testsuites
