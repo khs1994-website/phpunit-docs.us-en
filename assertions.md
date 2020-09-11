@@ -12,13 +12,8 @@ PHPUnit's assertions are implemented in `PHPUnit\Framework\Assert`.
 The assertion methods are declared static and can be invoked from any
 context using `PHPUnit\Framework\Assert::assertTrue()`, for instance, or
 using `$this->assertTrue()` or `self::assertTrue()`, for instance, in a
-class that extends `PHPUnit\Framework\TestCase`.
-
-In fact, you can even use global function wrappers such as
-`assertTrue()` in any context (including classes that extend
-`PHPUnit\Framework\TestCase`) when you (manually) include the
-src/Framework/Assert/Functions.php sourcecode file that comes with
-PHPUnit.
+class that extends `PHPUnit\Framework\TestCase`. You can even use global
+function wrappers such as `assertTrue()`.
 
 A common question, especially from developers new to PHPUnit, is whether
 using `$this->assertTrue()` or `self::assertTrue()`, for instance, is
