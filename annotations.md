@@ -32,14 +32,15 @@ authors.
 The `@after` annotation can be used to specify methods that should be
 called after each test method in a test case class.
 
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class MyTest extends TestCase
+    final class MyTest extends TestCase
     {
         /**
          * @after
          */
-        public function tearDownSomeFixtures()
+        public function tearDownSomeFixtures(): void
         {
             // ...
         }
@@ -47,7 +48,7 @@ called after each test method in a test case class.
         /**
          * @after
          */
-        public function tearDownSomeOtherFixtures()
+        public function tearDownSomeOtherFixtures(): void
         {
             // ...
         }
@@ -60,14 +61,15 @@ The `@afterClass` annotation can be used to specify static methods that
 should be called after all test methods in a test class have been run to
 clean up shared fixtures.
 
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class MyTest extends TestCase
+    final class MyTest extends TestCase
     {
         /**
          * @afterClass
          */
-        public static function tearDownSomeSharedFixtures()
+        public static function tearDownSomeSharedFixtures(): void
         {
             // ...
         }
@@ -75,7 +77,7 @@ clean up shared fixtures.
         /**
          * @afterClass
          */
-        public static function tearDownSomeOtherSharedFixtures()
+        public static function tearDownSomeOtherSharedFixtures(): void
         {
             // ...
         }
@@ -90,12 +92,13 @@ before each test and restore this backup after each test.
 The `@backupGlobals enabled` annotation can be used on the class level
 to enable this operation for all tests of a test case class:
 
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
     /**
      * @backupGlobals enabled
      */
-    class MyTest extends TestCase
+    final class MyTest extends TestCase
     {
         // ...
     }
@@ -104,12 +107,13 @@ The `@backupGlobals` annotation can also be used on the test method
 level. This allows for a fine-grained configuration of the backup and
 restore operations:
 
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
     /**
      * @backupGlobals enabled
      */
-    class MyTest extends TestCase
+    final class MyTest extends TestCase
     {
         public function testThatInteractsWithGlobalVariables()
         {
@@ -119,7 +123,7 @@ restore operations:
         /**
          * @backupGlobals disabled
          */
-        public function testThatDoesNotInteractWithGlobalVariables()
+        public function testThatDoesNotInteractWithGlobalVariables(): void
         {
             // ...
         }
@@ -134,12 +138,13 @@ classes before each test and restore this backup after each test.
 The `@backupStaticAttributes enabled` annotation can be used on the
 class level to enable this operation for all tests of a test case class:
 
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
     /**
      * @backupStaticAttributes enabled
      */
-    class MyTest extends TestCase
+    final class MyTest extends TestCase
     {
         // ...
     }
@@ -155,7 +160,7 @@ and restore operations:
      */
     class MyTest extends TestCase
     {
-        public function testThatInteractsWithStaticAttributes()
+        public function testThatInteractsWithStaticAttributes(): void
         {
             // ...
         }
@@ -163,7 +168,7 @@ and restore operations:
         /**
          * @backupStaticAttributes disabled
          */
-        public function testThatDoesNotInteractWithStaticAttributes()
+        public function testThatDoesNotInteractWithStaticAttributes(): void
         {
             // ...
         }
@@ -183,14 +188,15 @@ See fixtures.global-state for details.
 The `@before` annotation can be used to specify methods that should be
 called before each test method in a test case class.
 
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class MyTest extends TestCase
+    final class MyTest extends TestCase
     {
         /**
          * @before
          */
-        public function setupSomeFixtures()
+        public function setupSomeFixtures(): void
         {
             // ...
         }
@@ -198,7 +204,7 @@ called before each test method in a test case class.
         /**
          * @before
          */
-        public function setupSomeOtherFixtures()
+        public function setupSomeOtherFixtures(): void
         {
             // ...
         }
@@ -211,14 +217,15 @@ The `@beforeClass` annotation can be used to specify static methods that
 should be called before any test methods in a test class are run to set
 up shared fixtures.
 
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class MyTest extends TestCase
+    final class MyTest extends TestCase
     {
         /**
          * @beforeClass
          */
-        public static function setUpSomeSharedFixtures()
+        public static function setUpSomeSharedFixtures(): void
         {
             // ...
         }
@@ -226,7 +233,7 @@ up shared fixtures.
         /**
          * @beforeClass
          */
-        public static function setUpSomeOtherSharedFixtures()
+        public static function setUpSomeOtherSharedFixtures(): void
         {
             // ...
         }
@@ -250,7 +257,7 @@ parts of the code it is supposed to test:
     /**
      * @covers \BankAccount
      */
-    public function testBalanceIsInitiallyZero()
+    public function testBalanceIsInitiallyZero(): void
     {
         $this->assertSame(0, $this->ba->getBalance());
     }
@@ -293,18 +300,18 @@ Please note that this annotation requires a fully-qualified class name
 use a leading backslash (even if this not required for the annotation to
 work correctly).
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
     /**
      * @coversDefaultClass \Foo\CoveredClass
      */
-    class CoversDefaultClassTest extends TestCase
+    final class CoversDefaultClassTest extends TestCase
     {
         /**
          * @covers ::publicMethod
          */
-        public function testSomething()
+        public function testSomething(): void
         {
             $o = new Foo\CoveredClass;
             $o->publicMethod();
@@ -360,14 +367,15 @@ Prevents a test that performs no assertions from being considered risky.
 A test can be tagged as belonging to one or more groups using the
 `@group` annotation like this
 
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class MyTest extends TestCase
+    final class MyTest extends TestCase
     {
         /**
          * @group specification
          */
-        public function testSomething()
+        public function testSomething(): void
         {
         }
 
@@ -375,7 +383,7 @@ A test can be tagged as belonging to one or more groups using the
          * @group regression
          * @group bug2204
          */
-        public function testSomethingElse()
+        public function testSomethingElse(): void
         {
         }
     }
@@ -418,15 +426,16 @@ process. This can cause problems if the parent process contains globals
 that are not serializable. To fix this, you can prevent PHPUnit from
 preserving global state with the `@preserveGlobalState` annotation.
 
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class MyTest extends TestCase
+    final class MyTest extends TestCase
     {
         /**
          * @runInSeparateProcess
          * @preserveGlobalState disabled
          */
-        public function testInSeparateProcess()
+        public function testInSeparateProcess(): void
         {
             // ...
         }
@@ -448,12 +457,13 @@ incomplete-and-skipped-tests.requires.tables.api
 Indicates that all tests in a test class should be run in a separate PHP
 process.
 
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
     /**
      * @runTestsInSeparateProcesses
      */
-    class MyTest extends TestCase
+    final class MyTest extends TestCase
     {
         // ...
     }
@@ -470,14 +480,15 @@ this.
 
 Indicates that a test should be run in a separate PHP process.
 
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class MyTest extends TestCase
+    final class MyTest extends TestCase
     {
         /**
          * @runInSeparateProcess
          */
-        public function testInSeparateProcess()
+        public function testInSeparateProcess(): void
         {
             // ...
         }
@@ -516,7 +527,7 @@ test method.
     /**
      * @test
      */
-    public function initialBalanceShouldBe0()
+    public function initialBalanceShouldBe0(): void
     {
         $this->assertSame(0, $this->ba->getBalance());
     }
@@ -530,15 +541,18 @@ documentation sentences.
 The `@testdox` annotation can be applied to both test classes and test
 methods.
 
+    <?php declare(strict_types=1);
+    use PHPUnit\Framework\TestCase;
+
     /**
      * @testdox A bank account
      */
-    class BankAccountTest extends TestCase
+    final class BankAccountTest extends TestCase
     {
         /**
          * @testdox has an initial balance of zero
          */
-        public function balanceIsInitiallyZero()
+        public function balanceIsInitiallyZero(): void
         {
             $this->assertSame(0, $this->ba->getBalance());
         }
@@ -587,13 +601,10 @@ See writing-tests-for-phpunit.data-providers to learn more about passing
 a set of data to a test.
 
     /**
-     * @param string    $input
-     * @param int       $expectedLength
-     *
-     * @testWith        ["test", 4]
-     *                  ["longer-string", 13]
+     * @testWith ["test", 4]
+     *           ["longer-string", 13]
      */
-    public function testStringLength(string $input, int $expectedLength)
+    public function testStringLength(string $input, int $expectedLength): void
     {
         $this->assertSame($expectedLength, strlen($input));
     }
@@ -602,12 +613,9 @@ An object representation in JSON will be converted into an associative
 array.
 
     /**
-     * @param array     $array
-     * @param array     $keys
-     *
-     * @testWith        [{"day": "monday", "conditions": "sunny"}, ["day", "conditions"]]
+     * @testWith [{"day": "monday", "conditions": "sunny"}, ["day", "conditions"]]
      */
-    public function testArrayKeys($array, $keys)
+    public function testArrayKeys(array $array, array $keys): void
     {
         $this->assertSame($keys, array_keys($array));
     }
@@ -630,7 +638,7 @@ object which is necessary for testing a unit of code.
      * @covers \BankAccount
      * @uses   \Money
      */
-    public function testMoneyCanBeDepositedInAccount()
+    public function testMoneyCanBeDepositedInAccount(): void
     {
         // ...
     }

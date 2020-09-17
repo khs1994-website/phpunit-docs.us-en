@@ -7,7 +7,7 @@ Incomplete Tests
 When you are working on a new test case class, you might want to begin
 by writing empty test methods such as:
 
-    public function testSomething()
+    public function testSomething(): void
     {
     }
 
@@ -35,12 +35,12 @@ shows a test case class, `SampleTest`, that contains one test method,
 `PHPUnit\Framework\IncompleteTestError` exception) in the test method,
 we mark the test as being incomplete.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class SampleTest extends TestCase
+    final class SampleTest extends TestCase
     {
-        public function testSomething()
+        public function testSomething(): void
         {
             // Optional: Test anything here, if you want.
             $this->assertTrue(true, 'This should already work.');
@@ -51,7 +51,6 @@ we mark the test as being incomplete.
             );
         }
     }
-    ?>
 
 An incomplete test is denoted by an `I` in the output of the PHPUnit
 command-line test runner, as shown in the following example:
@@ -73,10 +72,10 @@ shows a test case class, `DatabaseTest`, that contains one test method,
 check whether the MySQLi extension is available and use the
 `markTestSkipped()` method to skip the test if it is not.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class DatabaseTest extends TestCase
+    final class DatabaseTest extends TestCase
     {
         protected function setUp(): void
         {
@@ -87,12 +86,11 @@ check whether the MySQLi extension is available and use the
             }
         }
 
-        public function testConnection()
+        public function testConnection(): void
         {
             // ...
         }
     }
-    ?>
 
 A test that has been skipped is denoted by an `S` in the output of the
 PHPUnit command-line test runner, as shown in the following example:
@@ -109,25 +107,24 @@ In addition to the above methods it is also possible to use the
 The following operators are supported for PHP, PHPUnit, and extension
 version constraints: `<`, `<=`, `>`, `>=`, `=`, `==`, `!=`, `<>`.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
     /**
      * @requires extension mysqli
      */
-    class DatabaseTest extends TestCase
+    final class DatabaseTest extends TestCase
     {
         /**
          * @requires PHP >= 5.3
          */
-        public function testConnection()
+        public function testConnection(): void
         {
             // Test requires the mysqli extension and PHP >= 5.3
         }
 
         // ... All other tests require the mysqli extension
     }
-    ?>
 
 If you are using syntax that doesn't compile with a certain PHP Version
 look into the xml configuration for version dependent includes in

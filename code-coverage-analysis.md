@@ -125,25 +125,25 @@ using the `@codeCoverageIgnore`, `@codeCoverageIgnoreStart` and
 `@codeCoverageIgnoreEnd` annotations as shown in
 code-coverage-analysis.ignoring-code-blocks.examples.Sample.php.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
     /**
      * @codeCoverageIgnore
      */
-    class Foo
+    final class Foo
     {
-        public function bar()
+        public function bar(): void
         {
         }
     }
 
-    class Bar
+    final class Bar
     {
         /**
          * @codeCoverageIgnore
          */
-        public function foo()
+        public function foo(): void
         {
         }
     }
@@ -155,7 +155,6 @@ code-coverage-analysis.ignoring-code-blocks.examples.Sample.php.
     }
 
     exit; // @codeCoverageIgnore
-    ?>
 
 The ignored lines of code (marked as ignored using the annotations) are
 counted as executed (if they are executable) and will not be
@@ -182,35 +181,34 @@ by this method. Hence, when a covered method is refactored using the
 to be added. This is the reason it is recommended to use this annotation
 with class scope, not with method scope.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
     /**
      * @covers \Invoice
      * @uses \Money
      */
-    class InvoiceTest extends TestCase
+    final class InvoiceTest extends TestCase
     {
-        protected $subject;
+        private $invoice;
 
         protected function setUp(): void
         {
-            $this->subject = new Invoice();
+            $this->invoice = new Invoice;
         }
 
-        public function testAmountInitiallyIsEmpty()
+        public function testAmountInitiallyIsEmpty(): void
         {
-            $this->assertEquals(new Money(), $this->subject->getAmount);
+            $this->assertEquals(new Money, $this->invoice->getAmount());
         }
     }
-    ?>
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class BankAccountTest extends TestCase
+    final class BankAccountTest extends TestCase
     {
-        protected $ba;
+        private $ba;
 
         protected function setUp(): void
         {
@@ -220,7 +218,7 @@ with class scope, not with method scope.
         /**
          * @covers \BankAccount::getBalance
          */
-        public function testBalanceIsInitiallyZero()
+        public function testBalanceIsInitiallyZero(): void
         {
             $this->assertSame(0, $this->ba->getBalance());
         }
@@ -228,7 +226,7 @@ with class scope, not with method scope.
         /**
          * @covers \BankAccount::withdrawMoney
          */
-        public function testBalanceCannotBecomeNegative()
+        public function testBalanceCannotBecomeNegative(): void
         {
             try {
                 $this->ba->withdrawMoney(1);
@@ -246,7 +244,7 @@ with class scope, not with method scope.
         /**
          * @covers \BankAccount::depositMoney
          */
-        public function testBalanceCannotBecomeNegative2()
+        public function testBalanceCannotBecomeNegative2(): void
         {
             try {
                 $this->ba->depositMoney(-1);
@@ -266,7 +264,7 @@ with class scope, not with method scope.
          * @covers \BankAccount::depositMoney
          * @covers \BankAccount::withdrawMoney
          */
-        public function testDepositWithdrawMoney()
+        public function testDepositWithdrawMoney(): void
         {
             $this->assertSame(0, $this->ba->getBalance());
             $this->ba->depositMoney(1);
@@ -275,7 +273,6 @@ with class scope, not with method scope.
             $this->assertSame(0, $this->ba->getBalance());
         }
     }
-    ?>
 
 It is also possible to specify that a test should not cover *any* method
 by using the `@coversNothing` annotation (see
@@ -283,15 +280,15 @@ appendixes.annotations.coversNothing). This can be helpful when writing
 integration tests to make sure you only generate code coverage with unit
 tests.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\DbUnit\TestCase
 
-    class GuestbookIntegrationTest extends TestCase
+    final class GuestbookIntegrationTest extends TestCase
     {
         /**
          * @coversNothing
          */
-        public function testAddEntry()
+        public function testAddEntry(): void
         {
             $guestbook = new Guestbook();
             $guestbook->addEntry("suzy", "Hello world!");
@@ -306,7 +303,6 @@ tests.
             $this->assertTablesEqual($expectedTable, $queryTable);
         }
     }
-    ?>
 
 Edge Cases
 ----------
@@ -314,7 +310,7 @@ Edge Cases
 This section shows noteworthy edge cases that lead to confusing code
 coverage information.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
     // Because it is "line based" and not statement base coverage
@@ -332,4 +328,3 @@ coverage information.
     if (false) {
         this_call_will_never_show_up_as_covered();
     }
-    ?>

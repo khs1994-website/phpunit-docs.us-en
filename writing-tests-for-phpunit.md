@@ -28,12 +28,12 @@ PHPUnit:
 > appendixes.assertions) are used to assert that an actual value matches
 > an expected value.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class StackTest extends TestCase
+    final class StackTest extends TestCase
     {
-        public function testPushAndPop()
+        public function testPushAndPop(): void
         {
             $stack = [];
             $this->assertSame(0, count($stack));
@@ -103,19 +103,19 @@ consumers.
 <td>:name: writing-tests-for-phpunit.examples.StackTest2.php</td>
 </tr>
 <tr class="even">
-<td>&lt;?php</td>
+<td>&lt;?php declare(strict_types=1);</td>
 </tr>
 <tr class="odd">
 <td>use PHPUnitFrameworkTestCase;</td>
 </tr>
 <tr class="even">
-<td>class StackTest extends TestCase</td>
+<td>final class StackTest extends TestCase</td>
 </tr>
 <tr class="odd">
 <td>{</td>
 </tr>
 <tr class="even">
-<td>public function testEmpty()</td>
+<td>public function testEmpty(): array</td>
 </tr>
 <tr class="odd">
 <td>{</td>
@@ -142,7 +142,7 @@ consumers.
 <td>*/</td>
 </tr>
 <tr class="odd">
-<td>public function testPush(array $stack)</td>
+<td>public function testPush(array $stack): array</td>
 </tr>
 <tr class="even">
 <td>{</td>
@@ -172,7 +172,7 @@ consumers.
 <td>*/</td>
 </tr>
 <tr class="odd">
-<td>public function testPop(array $stack)</td>
+<td>public function testPop(array $stack): void</td>
 </tr>
 <tr class="even">
 <td>{</td>
@@ -253,19 +253,19 @@ consumers.
 <td>:name: writing-tests-for-phpunit.examples.DependencyFailureTest.php</td>
 </tr>
 <tr class="even">
-<td>&lt;?php</td>
+<td>&lt;?php declare(strict_types=1);</td>
 </tr>
 <tr class="odd">
 <td>use PHPUnitFrameworkTestCase;</td>
 </tr>
 <tr class="even">
-<td>class DependencyFailureTest extends TestCase</td>
+<td>final class DependencyFailureTest extends TestCase</td>
 </tr>
 <tr class="odd">
 <td>{</td>
 </tr>
 <tr class="even">
-<td>public function testOne()</td>
+<td>public function testOne(): void</td>
 </tr>
 <tr class="odd">
 <td>{</td>
@@ -286,7 +286,7 @@ consumers.
 <td>*/</td>
 </tr>
 <tr class="odd">
-<td>public function testTwo()</td>
+<td>public function testTwo(): void</td>
 </tr>
 <tr class="even">
 <td>{</td>
@@ -373,19 +373,19 @@ consumers.
 <td>:name: writing-tests-for-phpunit.examples.MultipleDependencies.php</td>
 </tr>
 <tr class="even">
-<td>&lt;?php</td>
+<td>&lt;?php declare(strict_types=1);</td>
 </tr>
 <tr class="odd">
 <td>use PHPUnitFrameworkTestCase;</td>
 </tr>
 <tr class="even">
-<td>class MultipleDependenciesTest extends TestCase</td>
+<td>final class MultipleDependenciesTest extends TestCase</td>
 </tr>
 <tr class="odd">
 <td>{</td>
 </tr>
 <tr class="even">
-<td>public function testProducerFirst()</td>
+<td>public function testProducerFirst(): string</td>
 </tr>
 <tr class="odd">
 <td>{</td>
@@ -400,7 +400,7 @@ consumers.
 <td>}</td>
 </tr>
 <tr class="odd">
-<td>public function testProducerSecond()</td>
+<td>public function testProducerSecond(): string</td>
 </tr>
 <tr class="even">
 <td>{</td>
@@ -427,7 +427,7 @@ consumers.
 <td>*/</td>
 </tr>
 <tr class="even">
-<td>public function testConsumer($a, $b)</td>
+<td>public function testConsumer(string $a, string $b): void</td>
 </tr>
 <tr class="odd">
 <td>{</td>
@@ -511,13 +511,13 @@ consumers.
 <td>:name: writing-tests-for-phpunit.data-providers.examples.DataTest.php</td>
 </tr>
 <tr class="even">
-<td>&lt;?php</td>
+<td>&lt;?php declare(strict_types=1);</td>
 </tr>
 <tr class="odd">
 <td>use PHPUnitFrameworkTestCase;</td>
 </tr>
 <tr class="even">
-<td>class DataTest extends TestCase</td>
+<td>final class DataTest extends TestCase</td>
 </tr>
 <tr class="odd">
 <td>{</td>
@@ -532,7 +532,7 @@ consumers.
 <td>*/</td>
 </tr>
 <tr class="odd">
-<td>public function testAdd($a, $b, $expected)</td>
+<td>public function testAdd(int $a, int $b, int $expected): void</td>
 </tr>
 <tr class="even">
 <td>{</td>
@@ -544,7 +544,7 @@ consumers.
 <td>}</td>
 </tr>
 <tr class="odd">
-<td>public function additionProvider()</td>
+<td>public function additionProvider(): array</td>
 </tr>
 <tr class="even">
 <td>{</td>
@@ -622,13 +622,13 @@ consumers.
 <td>:name: writing-tests-for-phpunit.data-providers.examples.DataTest1.php</td>
 </tr>
 <tr class="odd">
-<td>&lt;?php</td>
+<td>&lt;?php declare(strict_types=1);</td>
 </tr>
 <tr class="even">
 <td>use PHPUnitFrameworkTestCase;</td>
 </tr>
 <tr class="odd">
-<td>class DataTest extends TestCase</td>
+<td>final class DataTest extends TestCase</td>
 </tr>
 <tr class="even">
 <td>{</td>
@@ -643,7 +643,7 @@ consumers.
 <td>*/</td>
 </tr>
 <tr class="even">
-<td>public function testAdd($a, $b, $expected)</td>
+<td>public function testAdd(int $a, int $b, int $expected): void</td>
 </tr>
 <tr class="odd">
 <td>{</td>
@@ -655,7 +655,7 @@ consumers.
 <td>}</td>
 </tr>
 <tr class="even">
-<td>public function additionProvider()</td>
+<td>public function additionProvider(): array</td>
 </tr>
 <tr class="odd">
 <td>{</td>
@@ -727,916 +727,46 @@ consumers.
 <td>:name: writing-tests-for-phpunit.data-providers.examples.DataTest2.php</td>
 </tr>
 <tr class="even">
-<td>&lt;?php</td>
-</tr>
-<tr class="odd">
-<td>use PHPUnitFrameworkTestCase;</td>
-</tr>
-<tr class="even">
-<td>require 'CsvFileIterator.php';</td>
-</tr>
-<tr class="odd">
-<td>class DataTest extends TestCase</td>
-</tr>
-<tr class="even">
-<td>{</td>
-</tr>
-<tr class="odd">
-<td>/**</td>
-</tr>
-<tr class="even">
-<td>* @dataProvider additionProvider</td>
-</tr>
-<tr class="odd">
-<td>*/</td>
-</tr>
-<tr class="even">
-<td>public function testAdd($a, $b, $expected)</td>
-</tr>
-<tr class="odd">
-<td>{</td>
-</tr>
-<tr class="even">
-<td>$this-&gt;assertSame($expected, $a + $b);</td>
-</tr>
-<tr class="odd">
-<td>}</td>
-</tr>
-<tr class="even">
-<td>public function additionProvider()</td>
-</tr>
-<tr class="odd">
-<td>{</td>
-</tr>
-<tr class="even">
-<td>return new CsvFileIterator('data.csv');</td>
-</tr>
-<tr class="odd">
-<td>}</td>
-</tr>
-<tr class="even">
-<td>}</td>
-</tr>
-<tr class="odd">
-<td>.. parsed-literal::</td>
-</tr>
-<tr class="even">
-<td>$ phpunit DataTest</td>
-</tr>
-<tr class="odd">
-<td>PHPUnit .0 by Sebastian Bergmann and contributors.</td>
-</tr>
-<tr class="even">
-<td>...F</td>
-</tr>
-<tr class="odd">
-<td>Time: 0 seconds, Memory: 5.75Mb</td>
-</tr>
-<tr class="even">
-<td>There was 1 failure:</td>
-</tr>
-<tr class="odd">
-<td>1) DataTest::testAdd with data set #3 ('1', '1', '3')</td>
-</tr>
-<tr class="even">
-<td>Failed asserting that 2 is identical to 3.</td>
-</tr>
-<tr class="odd">
-<td>/home/sb/DataTest.php:11</td>
-</tr>
-<tr class="even">
-<td>FAILURES!</td>
-</tr>
-<tr class="odd">
-<td>Tests: 4, Assertions: 4, Failures: 1.</td>
-</tr>
-<tr class="even">
-<td>.. code-block:: php</td>
-</tr>
-<tr class="odd">
-<td>:caption: The CsvFileIterator class</td>
-</tr>
-<tr class="even">
-<td>:name: writing-tests-for-phpunit.data-providers.examples.CsvFileIterator.php</td>
-</tr>
-<tr class="odd">
-<td>&lt;?php</td>
-</tr>
-<tr class="even">
-<td>use PHPUnitFrameworkTestCase;</td>
-</tr>
-<tr class="odd">
-<td>class CsvFileIterator implements Iterator</td>
-</tr>
-<tr class="even">
-<td>{</td>
-</tr>
-<tr class="odd">
-<td>protected $file;</td>
-</tr>
-<tr class="even">
-<td>protected $key = 0;</td>
-</tr>
-<tr class="odd">
-<td>protected $current;</td>
-</tr>
-<tr class="even">
-<td>public function __construct($file)</td>
-</tr>
-<tr class="odd">
-<td>{</td>
-</tr>
-<tr class="even">
-<td>$this-&gt;file = fopen($file, 'r');</td>
-</tr>
-<tr class="odd">
-<td>}</td>
-</tr>
-<tr class="even">
-<td>public function __destruct()</td>
-</tr>
-<tr class="odd">
-<td>{</td>
-</tr>
-<tr class="even">
-<td>fclose($this-&gt;file);</td>
-</tr>
-<tr class="odd">
-<td>}</td>
-</tr>
-<tr class="even">
-<td>public function rewind()</td>
-</tr>
-<tr class="odd">
-<td>{</td>
-</tr>
-<tr class="even">
-<td>rewind($this-&gt;file);</td>
-</tr>
-<tr class="odd">
-<td>$this-&gt;current = fgetcsv($this-&gt;file);</td>
-</tr>
-<tr class="even">
-<td>$this-&gt;key = 0;</td>
-</tr>
-<tr class="odd">
-<td>}</td>
-</tr>
-<tr class="even">
-<td>public function valid()</td>
-</tr>
-<tr class="odd">
-<td>{</td>
-</tr>
-<tr class="even">
-<td>return !feof($this-&gt;file);</td>
-</tr>
-<tr class="odd">
-<td>}</td>
-</tr>
-<tr class="even">
-<td>public function key()</td>
-</tr>
-<tr class="odd">
-<td>{</td>
-</tr>
-<tr class="even">
-<td>return $this-&gt;key;</td>
-</tr>
-<tr class="odd">
-<td>}</td>
-</tr>
-<tr class="even">
-<td>public function current()</td>
-</tr>
-<tr class="odd">
-<td>{</td>
-</tr>
-<tr class="even">
-<td>return $this-&gt;current;</td>
-</tr>
-<tr class="odd">
-<td>}</td>
-</tr>
-<tr class="even">
-<td>public function next()</td>
-</tr>
-<tr class="odd">
-<td>{</td>
-</tr>
-<tr class="even">
-<td>$this-&gt;current = fgetcsv($this-&gt;file);</td>
-</tr>
-<tr class="odd">
-<td>$this-&gt;key++;</td>
-</tr>
-<tr class="even">
-<td>}</td>
-</tr>
-<tr class="odd">
-<td>}</td>
-</tr>
-<tr class="even">
-<td>When a test receives input from both a <code>@dataProvider</code></td>
-</tr>
-<tr class="odd">
-<td>method and from one or more tests it <code>@depends</code> on, the</td>
-</tr>
-<tr class="even">
-<td>arguments from the data provider will come before the ones from</td>
-</tr>
-<tr class="odd">
-<td>depended-upon tests. The arguments from depended-upon tests will be the</td>
-</tr>
-<tr class="even">
-<td>same for each data set.</td>
-</tr>
-<tr class="odd">
-<td>See writing-tests-for-phpunit.data-providers.examples.DependencyAndDataProviderCombo.php</td>
-</tr>
-<tr class="even">
-<td>.. code-block:: php</td>
-</tr>
-<tr class="odd">
-<td>:caption: Combination of @depends and @dataProvider in same test</td>
-</tr>
-<tr class="even">
-<td>:name: writing-tests-for-phpunit.data-providers.examples.DependencyAndDataProviderCombo.php</td>
-</tr>
-<tr class="odd">
-<td>&lt;?php</td>
-</tr>
-<tr class="even">
-<td>use PHPUnitFrameworkTestCase;</td>
-</tr>
-<tr class="odd">
-<td>class DependencyAndDataProviderComboTest extends TestCase</td>
-</tr>
-<tr class="even">
-<td>{</td>
-</tr>
-<tr class="odd">
-<td>public function provider()</td>
-</tr>
-<tr class="even">
-<td>{</td>
-</tr>
-<tr class="odd">
-<td>return [['provider1'], ['provider2']];</td>
-</tr>
-<tr class="even">
-<td>}</td>
-</tr>
-<tr class="odd">
-<td>public function testProducerFirst()</td>
-</tr>
-<tr class="even">
-<td>{</td>
-</tr>
-<tr class="odd">
-<td>$this-&gt;assertTrue(true);</td>
-</tr>
-<tr class="even">
-<td>return 'first';</td>
-</tr>
-<tr class="odd">
-<td>}</td>
-</tr>
-<tr class="even">
-<td>public function testProducerSecond()</td>
-</tr>
-<tr class="odd">
-<td>{</td>
-</tr>
-<tr class="even">
-<td>$this-&gt;assertTrue(true);</td>
-</tr>
-<tr class="odd">
-<td>return 'second';</td>
-</tr>
-<tr class="even">
-<td>}</td>
-</tr>
-<tr class="odd">
-<td>/**</td>
-</tr>
-<tr class="even">
-<td>* @depends testProducerFirst</td>
-</tr>
-<tr class="odd">
-<td>* @depends testProducerSecond</td>
-</tr>
-<tr class="even">
-<td>* @dataProvider provider</td>
-</tr>
-<tr class="odd">
-<td>*/</td>
-</tr>
-<tr class="even">
-<td>public function testConsumer()</td>
-</tr>
-<tr class="odd">
-<td>{</td>
-</tr>
-<tr class="even">
-<td>$this-&gt;assertSame(</td>
-</tr>
-<tr class="odd">
-<td>['provider1', 'first', 'second'],</td>
-</tr>
-<tr class="even">
-<td>func_get_args()</td>
-</tr>
-<tr class="odd">
-<td>);</td>
-</tr>
-<tr class="even">
-<td>}</td>
-</tr>
-<tr class="odd">
-<td>}</td>
-</tr>
-<tr class="even">
-<td>.. parsed-literal::</td>
-</tr>
-<tr class="odd">
-<td>$ phpunit --verbose DependencyAndDataProviderComboTest</td>
-</tr>
-<tr class="even">
-<td>PHPUnit .0 by Sebastian Bergmann and contributors.</td>
-</tr>
-<tr class="odd">
-<td>...F</td>
-</tr>
-<tr class="even">
-<td>Time: 0 seconds, Memory: 3.50Mb</td>
-</tr>
-<tr class="odd">
-<td>There was 1 failure:</td>
-</tr>
-<tr class="even">
-<td>1) DependencyAndDataProviderComboTest::testConsumer with data set #1 ('provider2')</td>
-</tr>
-<tr class="odd">
-<td>Failed asserting that two arrays are identical.</td>
-</tr>
-<tr class="even">
-<td>--- Expected</td>
-</tr>
-<tr class="odd">
-<td>+++ Actual</td>
-</tr>
-<tr class="even">
-<td>@@ @@</td>
-</tr>
-<tr class="odd">
-<td>Array &amp;0 (</td>
-</tr>
-<tr class="even">
-<td>- 0 =&gt; 'provider1'</td>
-</tr>
-<tr class="odd">
-<td>+ 0 =&gt; 'provider2'</td>
-</tr>
-<tr class="even">
-<td>1 =&gt; 'first'</td>
-</tr>
-<tr class="odd">
-<td>2 =&gt; 'second'</td>
-</tr>
-<tr class="even">
-<td>)</td>
-</tr>
-<tr class="odd">
-<td>/home/sb/DependencyAndDataProviderComboTest.php:32</td>
-</tr>
-<tr class="even">
-<td>FAILURES!</td>
-</tr>
-<tr class="odd">
-<td>Tests: 4, Assertions: 4, Failures: 1.</td>
-</tr>
-<tr class="even">
-<td>.. code-block:: php</td>
-</tr>
-<tr class="odd">
-<td>:caption: Using multiple data providers for a single test</td>
-</tr>
-<tr class="even">
-<td>:name: writing-tests-for-phpunit.data-providers.examples2.DataTest.php</td>
-</tr>
-<tr class="odd">
-<td>&lt;?php</td>
-</tr>
-<tr class="even">
-<td>use PHPUnitFrameworkTestCase;</td>
-</tr>
-<tr class="odd">
-<td>class DataTest extends TestCase</td>
-</tr>
-<tr class="even">
-<td>{</td>
-</tr>
-<tr class="odd">
-<td>/**</td>
-</tr>
-<tr class="even">
-<td>* @dataProvider additionWithNonNegativeNumbersProvider</td>
-</tr>
-<tr class="odd">
-<td>* @dataProvider additionWithNegativeNumbersProvider</td>
-</tr>
-<tr class="even">
-<td>*/</td>
-</tr>
-<tr class="odd">
-<td>public function testAdd($a, $b, $expected)</td>
-</tr>
-<tr class="even">
-<td>{</td>
-</tr>
-<tr class="odd">
-<td>$this-&gt;assertSame($expected, $a + $b);</td>
-</tr>
-<tr class="even">
-<td>}</td>
-</tr>
-<tr class="odd">
-<td>public function additionWithNonNegativeNumbersProvider()</td>
-</tr>
-<tr class="even">
-<td>{</td>
-</tr>
-<tr class="odd">
-<td>return [</td>
-</tr>
-<tr class="even">
-<td>[0, 1, 1],</td>
-</tr>
-<tr class="odd">
-<td>[1, 0, 1],</td>
-</tr>
-<tr class="even">
-<td>[1, 1, 3]</td>
-</tr>
-<tr class="odd">
-<td>];</td>
-</tr>
-<tr class="even">
-<td>}</td>
-</tr>
-<tr class="odd">
-<td>public function additionWithNegativeNumbersProvider()</td>
-</tr>
-<tr class="even">
-<td>{</td>
-</tr>
-<tr class="odd">
-<td>return [</td>
-</tr>
-<tr class="even">
-<td>[-1, 1, 0],</td>
-</tr>
-<tr class="odd">
-<td>[-1, -1, -2],</td>
-</tr>
-<tr class="even">
-<td>[1, -1, 0]</td>
-</tr>
-<tr class="odd">
-<td>];</td>
-</tr>
-<tr class="even">
-<td>}</td>
-</tr>
-<tr class="odd">
-<td>}</td>
-</tr>
-<tr class="even">
-<td>.. parsed-literal::</td>
-</tr>
-<tr class="odd">
-<td>$ phpunit DataTest</td>
-</tr>
-<tr class="even">
-<td>PHPUnit .0 by Sebastian Bergmann and contributors.</td>
-</tr>
-<tr class="odd">
-<td>..F... 6 / 6 (100%)</td>
-</tr>
-<tr class="even">
-<td>Time: 0 seconds, Memory: 5.75Mb</td>
-</tr>
-<tr class="odd">
-<td>There was 1 failure:</td>
-</tr>
-<tr class="even">
-<td>1) DataTest::testAdd with data set #3 (1, 1, 3)</td>
-</tr>
-<tr class="odd">
-<td>Failed asserting that 2 is identical to 3.</td>
-</tr>
-<tr class="even">
-<td>/home/sb/DataTest.php:12</td>
-</tr>
-<tr class="odd">
-<td>FAILURES!</td>
-</tr>
-<tr class="even">
-<td>Tests: 6, Assertions: 6, Failures: 1.</td>
-</tr>
-<tr class="odd">
-<td>.. admonition:: Note</td>
-</tr>
-<tr class="even">
-<td>When a test depends on a test that uses data providers, the depending</td>
-</tr>
-<tr class="odd">
-<td>test will be executed when the test it depends upon is successful for at</td>
-</tr>
-<tr class="even">
-<td>least one data set. The result of a test that uses data providers cannot</td>
-</tr>
-<tr class="odd">
-<td>be injected into a depending test.</td>
-</tr>
-<tr class="even">
-<td>.. admonition:: Note</td>
-</tr>
-<tr class="odd">
-<td>All data providers are executed before both the call to the <code>setUpBeforeClass()</code></td>
-</tr>
-<tr class="even">
-<td>static method and the first call to the <code>setUp()</code> method.</td>
-</tr>
-<tr class="odd">
-<td>Because of that you can't access any variables you create there from</td>
-</tr>
-<tr class="even">
-<td>within a data provider. This is required in order for PHPUnit to be able</td>
-</tr>
-<tr class="odd">
-<td>to compute the total number of tests.</td>
-</tr>
-<tr class="even">
-<td>.. _writing-tests-for-phpunit.exceptions:</td>
-</tr>
-<tr class="odd">
-<td>Testing Exceptions</td>
-</tr>
-<tr class="even">
-<td>##################</td>
-</tr>
-<tr class="odd">
-<td>writing-tests-for-phpunit.exceptions.examples.ExceptionTest.php</td>
-</tr>
-<tr class="even">
-<td>shows how to use the <code>expectException()</code> method to test</td>
-</tr>
-<tr class="odd">
-<td>whether an exception is thrown by the code under test.</td>
-</tr>
-<tr class="even">
-<td>.. code-block:: php</td>
-</tr>
-<tr class="odd">
-<td>:caption: Using the expectException() method</td>
-</tr>
-<tr class="even">
-<td>:name: writing-tests-for-phpunit.exceptions.examples.ExceptionTest.php</td>
-</tr>
-<tr class="odd">
-<td>&lt;?php</td>
-</tr>
-<tr class="even">
-<td>use PHPUnitFrameworkTestCase;</td>
-</tr>
-<tr class="odd">
-<td>class ExceptionTest extends TestCase</td>
-</tr>
-<tr class="even">
-<td>{</td>
-</tr>
-<tr class="odd">
-<td>public function testException()</td>
-</tr>
-<tr class="even">
-<td>{</td>
-</tr>
-<tr class="odd">
-<td>$this-&gt;expectException(InvalidArgumentException::class);</td>
-</tr>
-<tr class="even">
-<td>}</td>
-</tr>
-<tr class="odd">
-<td>}</td>
-</tr>
-<tr class="even">
-<td>.. parsed-literal::</td>
-</tr>
-<tr class="odd">
-<td>$ phpunit ExceptionTest</td>
-</tr>
-<tr class="even">
-<td>PHPUnit .0 by Sebastian Bergmann and contributors.</td>
-</tr>
-<tr class="odd">
-<td>F</td>
-</tr>
-<tr class="even">
-<td>Time: 0 seconds, Memory: 4.75Mb</td>
-</tr>
-<tr class="odd">
-<td>There was 1 failure:</td>
-</tr>
-<tr class="even">
-<td>1) ExceptionTest::testException</td>
-</tr>
-<tr class="odd">
-<td>Failed asserting that exception of type &quot;InvalidArgumentException&quot; is thrown.</td>
-</tr>
-<tr class="even">
-<td>FAILURES!</td>
-</tr>
-<tr class="odd">
-<td>Tests: 1, Assertions: 1, Failures: 1.</td>
-</tr>
-<tr class="even">
-<td>In addition to the <code>expectException()</code> method the</td>
-</tr>
-<tr class="odd">
-<td><code>expectExceptionCode()</code>,</td>
-</tr>
-<tr class="even">
-<td><code>expectExceptionMessage()</code>, and</td>
-</tr>
-<tr class="odd">
-<td><code>expectExceptionMessageMatches()</code> methods exist to set up</td>
-</tr>
-<tr class="even">
-<td>expectations for exceptions raised by the code under test.</td>
-</tr>
-<tr class="odd">
-<td>.. admonition:: Note</td>
-</tr>
-<tr class="even">
-<td>Note that <code>expectExceptionMessage()</code> asserts that the <code>$actual</code></td>
-</tr>
-<tr class="odd">
-<td>message contains the <code>$expected</code> message and does not perform</td>
-</tr>
-<tr class="even">
-<td>an exact string comparison.</td>
-</tr>
-<tr class="odd">
-<td>.. _writing-tests-for-phpunit.errors:</td>
-</tr>
-<tr class="even">
-<td>Testing PHP Errors, Warnings, and Notices</td>
-</tr>
-<tr class="odd">
-<td>#########################################</td>
-</tr>
-<tr class="even">
-<td>By default, PHPUnit converts PHP errors, warnings, and notices that are</td>
-</tr>
-<tr class="odd">
-<td>triggered during the execution of a test to an exception. Among other benefits,</td>
-</tr>
-<tr class="even">
-<td>this makes it possible to expect that a PHP error, warning, or notice is</td>
-</tr>
-<tr class="odd">
-<td>triggered in a test as shown in</td>
-</tr>
-<tr class="even">
-<td>writing-tests-for-phpunit.exceptions.examples.ErrorTest.php.</td>
-</tr>
-<tr class="odd">
-<td>.. admonition:: Note</td>
-</tr>
-<tr class="even">
-<td>PHP's <code>error_reporting</code> runtime configuration can</td>
-</tr>
-<tr class="odd">
-<td>limit which errors PHPUnit will convert to exceptions. If you are</td>
-</tr>
-<tr class="even">
-<td>having issues with this feature, be sure PHP is not configured to</td>
-</tr>
-<tr class="odd">
-<td>suppress the type of error you are interested in.</td>
-</tr>
-<tr class="even">
-<td>.. code-block:: php</td>
-</tr>
-<tr class="odd">
-<td>:caption: Expecting PHP errors, warnings, and notices</td>
-</tr>
-<tr class="even">
-<td>:name: writing-tests-for-phpunit.exceptions.examples.ErrorTest.php</td>
-</tr>
-<tr class="odd">
 <td>&lt;?php declare(strict_types=1);</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>use PHPUnitFrameworkTestCase;</td>
 </tr>
-<tr class="odd">
-<td>final class ErrorTest extends TestCase</td>
-</tr>
 <tr class="even">
-<td>{</td>
-</tr>
-<tr class="odd">
-<td>public function testDeprecationCanBeExpected(): void</td>
-</tr>
-<tr class="even">
-<td>{</td>
-</tr>
-<tr class="odd">
-<td>$this-&gt;expectDeprecation();</td>
-</tr>
-<tr class="even">
-<td>// Optionally test that the message is equal to a string</td>
-</tr>
-<tr class="odd">
-<td>$this-&gt;expectDeprecationMessage('foo');</td>
-</tr>
-<tr class="even">
-<td>// Or optionally test that the message matches a regular expression</td>
-</tr>
-<tr class="odd">
-<td>$this-&gt;expectDeprecationMessageMatches('/foo/');</td>
-</tr>
-<tr class="even">
-<td>trigger_error('foo', E_USER_DEPRECATED);</td>
-</tr>
-<tr class="odd">
-<td>}</td>
-</tr>
-<tr class="even">
-<td>public function testNoticeCanBeExpected(): void</td>
+<td>final class DataTest extends TestCase</td>
 </tr>
 <tr class="odd">
 <td>{</td>
 </tr>
 <tr class="even">
-<td>$this-&gt;expectNotice();</td>
+<td>/**</td>
 </tr>
 <tr class="odd">
-<td>// Optionally test that the message is equal to a string</td>
+<td>* @dataProvider additionProvider</td>
 </tr>
 <tr class="even">
-<td>$this-&gt;expectNoticeMessage('foo');</td>
+<td>*/</td>
 </tr>
 <tr class="odd">
-<td>// Or optionally test that the message matches a regular expression</td>
+<td>public function testAdd(int $a, int $b, int $expected): void</td>
 </tr>
 <tr class="even">
-<td>$this-&gt;expectNoticeMessageMatches('/foo/');</td>
+<td>{</td>
 </tr>
 <tr class="odd">
-<td>trigger_error('foo', E_USER_NOTICE);</td>
+<td>$this-&gt;assertSame($expected, $a + $b);</td>
 </tr>
 <tr class="even">
 <td>}</td>
 </tr>
 <tr class="odd">
-<td>public function testWarningCanBeExpected(): void</td>
+<td>public function additionProvider(): CsvFileIterator</td>
 </tr>
 <tr class="even">
 <td>{</td>
 </tr>
 <tr class="odd">
-<td>$this-&gt;expectWarning();</td>
-</tr>
-<tr class="even">
-<td>// Optionally test that the message is equal to a string</td>
-</tr>
-<tr class="odd">
-<td>$this-&gt;expectWarningMessage('foo');</td>
-</tr>
-<tr class="even">
-<td>// Or optionally test that the message matches a regular expression</td>
-</tr>
-<tr class="odd">
-<td>$this-&gt;expectWarningMessageMatches('/foo/');</td>
-</tr>
-<tr class="even">
-<td>trigger_error('foo', E_USER_WARNING);</td>
-</tr>
-<tr class="odd">
-<td>}</td>
-</tr>
-<tr class="even">
-<td>public function testErrorCanBeExpected(): void</td>
-</tr>
-<tr class="odd">
-<td>{</td>
-</tr>
-<tr class="even">
-<td>$this-&gt;expectError();</td>
-</tr>
-<tr class="odd">
-<td>// Optionally test that the message is equal to a string</td>
-</tr>
-<tr class="even">
-<td>$this-&gt;expectErrorMessage('foo');</td>
-</tr>
-<tr class="odd">
-<td>// Or optionally test that the message matches a regular expression</td>
-</tr>
-<tr class="even">
-<td>$this-&gt;expectErrorMessageMatches('/foo/');</td>
-</tr>
-<tr class="odd">
-<td>trigger_error('foo', E_USER_ERROR);</td>
-</tr>
-<tr class="even">
-<td>}</td>
-</tr>
-<tr class="odd">
-<td>}</td>
-</tr>
-<tr class="even">
-<td>When testing code that uses PHP built-in functions such as <code>fopen()</code> that</td>
-</tr>
-<tr class="odd">
-<td>may trigger errors it can sometimes be useful to use error suppression while</td>
-</tr>
-<tr class="even">
-<td>testing. This allows you to check the return values by suppressing notices</td>
-</tr>
-<tr class="odd">
-<td>that would lead to an exception raised by PHPUnit's error handler.</td>
-</tr>
-<tr class="even">
-<td>.. code-block:: php</td>
-</tr>
-<tr class="odd">
-<td>:caption: Testing return values of code that uses PHP Errors</td>
-</tr>
-<tr class="even">
-<td>:name: writing-tests-for-phpunit.exceptions.examples.TriggerErrorReturnValue.php</td>
-</tr>
-<tr class="odd">
-<td>&lt;?php</td>
-</tr>
-<tr class="even">
-<td>use PHPUnitFrameworkTestCase;</td>
-</tr>
-<tr class="odd">
-<td>class ErrorSuppressionTest extends TestCase</td>
-</tr>
-<tr class="even">
-<td>{</td>
-</tr>
-<tr class="odd">
-<td>public function testFileWriting()</td>
-</tr>
-<tr class="even">
-<td>{</td>
-</tr>
-<tr class="odd">
-<td>$writer = new FileWriter;</td>
-</tr>
-<tr class="even">
-<td>$this-&gt;assertFalse(@$writer-&gt;write('/is-not-writeable/file', 'stuff'));</td>
-</tr>
-<tr class="odd">
-<td>}</td>
-</tr>
-<tr class="even">
-<td>}</td>
-</tr>
-<tr class="odd">
-<td>class FileWriter</td>
-</tr>
-<tr class="even">
-<td>{</td>
-</tr>
-<tr class="odd">
-<td>public function write($file, $content)</td>
-</tr>
-<tr class="even">
-<td>{</td>
-</tr>
-<tr class="odd">
-<td>$file = fopen($file, 'w');</td>
-</tr>
-<tr class="even">
-<td>if ($file == false) {</td>
-</tr>
-<tr class="odd">
-<td>return false;</td>
-</tr>
-<tr class="even">
-<td>}</td>
-</tr>
-<tr class="odd">
-<td>// ...</td>
+<td>return new CsvFileIterator('data.csv');</td>
 </tr>
 <tr class="even">
 <td>}</td>
@@ -1648,133 +778,13 @@ consumers.
 <td>.. parsed-literal::</td>
 </tr>
 <tr class="odd">
-<td>$ phpunit ErrorSuppressionTest</td>
+<td>$ phpunit DataTest</td>
 </tr>
 <tr class="even">
 <td>PHPUnit .0 by Sebastian Bergmann and contributors.</td>
 </tr>
 <tr class="odd">
-<td>.</td>
-</tr>
-<tr class="even">
-<td>Time: 1 seconds, Memory: 5.25Mb</td>
-</tr>
-<tr class="odd">
-<td>OK (1 test, 1 assertion)</td>
-</tr>
-<tr class="even">
-<td>Without the error suppression the test would fail reporting</td>
-</tr>
-<tr class="odd">
-<td><code>fopen(/is-not-writeable/file): failed to open stream: No such file or directory</code>.</td>
-</tr>
-<tr class="even">
-<td>.. _writing-tests-for-phpunit.output:</td>
-</tr>
-<tr class="odd">
-<td>Testing Output</td>
-</tr>
-<tr class="even">
-<td>##############</td>
-</tr>
-<tr class="odd">
-<td>Sometimes you want to assert that the execution of a method, for</td>
-</tr>
-<tr class="even">
-<td>instance, generates an expected output (via <code>echo</code> or</td>
-</tr>
-<tr class="odd">
-<td><code>print</code>, for example). The</td>
-</tr>
-<tr class="even">
-<td><code>PHPUnit\Framework\TestCase</code> class uses PHP's</td>
-</tr>
-<tr class="odd">
-<td>`Output</td>
-</tr>
-<tr class="even">
-<td>Buffering &lt;<a href="http://www.php.net/manual/en/ref.outcontrol.php" class="uri">http://www.php.net/manual/en/ref.outcontrol.php</a>&gt;`_ feature to provide the functionality that is</td>
-</tr>
-<tr class="odd">
-<td>necessary for this.</td>
-</tr>
-<tr class="even">
-<td>writing-tests-for-phpunit.output.examples.OutputTest.php</td>
-</tr>
-<tr class="odd">
-<td>shows how to use the <code>expectOutputString()</code> method to</td>
-</tr>
-<tr class="even">
-<td>set the expected output. If this expected output is not generated, the</td>
-</tr>
-<tr class="odd">
-<td>test will be counted as a failure.</td>
-</tr>
-<tr class="even">
-<td>.. code-block:: php</td>
-</tr>
-<tr class="odd">
-<td>:caption: Testing the output of a function or method</td>
-</tr>
-<tr class="even">
-<td>:name: writing-tests-for-phpunit.output.examples.OutputTest.php</td>
-</tr>
-<tr class="odd">
-<td>&lt;?php</td>
-</tr>
-<tr class="even">
-<td>use PHPUnitFrameworkTestCase;</td>
-</tr>
-<tr class="odd">
-<td>class OutputTest extends TestCase</td>
-</tr>
-<tr class="even">
-<td>{</td>
-</tr>
-<tr class="odd">
-<td>public function testExpectFooActualFoo()</td>
-</tr>
-<tr class="even">
-<td>{</td>
-</tr>
-<tr class="odd">
-<td>$this-&gt;expectOutputString('foo');</td>
-</tr>
-<tr class="even">
-<td>print 'foo';</td>
-</tr>
-<tr class="odd">
-<td>}</td>
-</tr>
-<tr class="even">
-<td>public function testExpectBarActualBaz()</td>
-</tr>
-<tr class="odd">
-<td>{</td>
-</tr>
-<tr class="even">
-<td>$this-&gt;expectOutputString('bar');</td>
-</tr>
-<tr class="odd">
-<td>print 'baz';</td>
-</tr>
-<tr class="even">
-<td>}</td>
-</tr>
-<tr class="odd">
-<td>}</td>
-</tr>
-<tr class="even">
-<td>.. parsed-literal::</td>
-</tr>
-<tr class="odd">
-<td>$ phpunit OutputTest</td>
-</tr>
-<tr class="even">
-<td>PHPUnit .0 by Sebastian Bergmann and contributors.</td>
-</tr>
-<tr class="odd">
-<td>.F</td>
+<td>...F</td>
 </tr>
 <tr class="even">
 <td>Time: 0 seconds, Memory: 5.75Mb</td>
@@ -1783,346 +793,1333 @@ consumers.
 <td>There was 1 failure:</td>
 </tr>
 <tr class="even">
-<td>1) OutputTest::testExpectBarActualBaz</td>
+<td>1) DataTest::testAdd with data set #3 ('1', '1', '3')</td>
 </tr>
 <tr class="odd">
-<td>Failed asserting that two strings are equal.</td>
+<td>Failed asserting that 2 is identical to 3.</td>
 </tr>
 <tr class="even">
-<td>--- Expected</td>
-</tr>
-<tr class="odd">
-<td>+++ Actual</td>
-</tr>
-<tr class="even">
-<td>@@ @@</td>
-</tr>
-<tr class="odd">
-<td>-'bar'</td>
-</tr>
-<tr class="even">
-<td>+'baz'</td>
+<td>/home/sb/DataTest.php:11</td>
 </tr>
 <tr class="odd">
 <td>FAILURES!</td>
 </tr>
 <tr class="even">
-<td>Tests: 2, Assertions: 2, Failures: 1.</td>
+<td>Tests: 4, Assertions: 4, Failures: 1.</td>
 </tr>
 <tr class="odd">
-<td>writing-tests-for-phpunit.output.tables.api</td>
+<td>.. code-block:: php</td>
 </tr>
 <tr class="even">
-<td>shows the methods provided for testing output</td>
+<td>:caption: The CsvFileIterator class</td>
 </tr>
 <tr class="odd">
-<td>.. rst-class:: table</td>
+<td>:name: writing-tests-for-phpunit.data-providers.examples.CsvFileIterator.php</td>
 </tr>
 <tr class="even">
-<td>.. list-table:: Methods for testing output</td>
+<td>&lt;?php declare(strict_types=1);</td>
 </tr>
 <tr class="odd">
-<td>:name: writing-tests-for-phpunit.output.tables.api</td>
+<td>use PHPUnitFrameworkTestCase;</td>
 </tr>
 <tr class="even">
-<td>:header-rows: 1</td>
+<td>final class CsvFileIterator implements Iterator</td>
 </tr>
 <tr class="odd">
-<td>* - Method</td>
+<td>{</td>
 </tr>
 <tr class="even">
-<td>- Meaning</td>
+<td>private $file;</td>
 </tr>
 <tr class="odd">
-<td>* - <code>void expectOutputRegex(string $regularExpression)</code></td>
+<td>private $key = 0;</td>
 </tr>
 <tr class="even">
-<td>- Set up the expectation that the output matches a <code>$regularExpression</code>.</td>
+<td>private $current;</td>
 </tr>
 <tr class="odd">
-<td>* - <code>void expectOutputString(string $expectedString)</code></td>
+<td>public function __construct(string $file)</td>
 </tr>
 <tr class="even">
-<td>- Set up the expectation that the output is equal to an <code>$expectedString</code>.</td>
+<td>{</td>
 </tr>
 <tr class="odd">
-<td>* - <code>bool setOutputCallback(callable $callback)</code></td>
+<td>$this-&gt;file = fopen($file, 'r');</td>
 </tr>
 <tr class="even">
-<td>- Sets up a callback that is used to, for instance, normalize the actual output.</td>
+<td>}</td>
 </tr>
 <tr class="odd">
-<td>* - <code>string getActualOutput()</code></td>
+<td>public function __destruct()</td>
 </tr>
 <tr class="even">
-<td>- Get the actual output.</td>
+<td>{</td>
+</tr>
+<tr class="odd">
+<td>fclose($this-&gt;file);</td>
+</tr>
+<tr class="even">
+<td>}</td>
+</tr>
+<tr class="odd">
+<td>public function rewind(): void</td>
+</tr>
+<tr class="even">
+<td>{</td>
+</tr>
+<tr class="odd">
+<td>rewind($this-&gt;file);</td>
+</tr>
+<tr class="even">
+<td>$this-&gt;current = fgetcsv($this-&gt;file);</td>
+</tr>
+<tr class="odd">
+<td>$this-&gt;key = 0;</td>
+</tr>
+<tr class="even">
+<td>}</td>
+</tr>
+<tr class="odd">
+<td>public function valid(): bool</td>
+</tr>
+<tr class="even">
+<td>{</td>
+</tr>
+<tr class="odd">
+<td>return !feof($this-&gt;file);</td>
+</tr>
+<tr class="even">
+<td>}</td>
+</tr>
+<tr class="odd">
+<td>public function key(): int</td>
+</tr>
+<tr class="even">
+<td>{</td>
+</tr>
+<tr class="odd">
+<td>return $this-&gt;key;</td>
+</tr>
+<tr class="even">
+<td>}</td>
+</tr>
+<tr class="odd">
+<td>public function current(): array</td>
+</tr>
+<tr class="even">
+<td>{</td>
+</tr>
+<tr class="odd">
+<td>return $this-&gt;current;</td>
+</tr>
+<tr class="even">
+<td>}</td>
+</tr>
+<tr class="odd">
+<td>public function next(): void</td>
+</tr>
+<tr class="even">
+<td>{</td>
+</tr>
+<tr class="odd">
+<td>$this-&gt;current = fgetcsv($this-&gt;file);</td>
+</tr>
+<tr class="even">
+<td>$this-&gt;key++;</td>
+</tr>
+<tr class="odd">
+<td>}</td>
+</tr>
+<tr class="even">
+<td>}</td>
+</tr>
+<tr class="odd">
+<td>When a test receives input from both a <code>@dataProvider</code></td>
+</tr>
+<tr class="even">
+<td>method and from one or more tests it <code>@depends</code> on, the</td>
+</tr>
+<tr class="odd">
+<td>arguments from the data provider will come before the ones from</td>
+</tr>
+<tr class="even">
+<td>depended-upon tests. The arguments from depended-upon tests will be the</td>
+</tr>
+<tr class="odd">
+<td>same for each data set.</td>
+</tr>
+<tr class="even">
+<td>See writing-tests-for-phpunit.data-providers.examples.DependencyAndDataProviderCombo.php</td>
+</tr>
+<tr class="odd">
+<td>.. code-block:: php</td>
+</tr>
+<tr class="even">
+<td>:caption: Combination of @depends and @dataProvider in same test</td>
+</tr>
+<tr class="odd">
+<td>:name: writing-tests-for-phpunit.data-providers.examples.DependencyAndDataProviderCombo.php</td>
+</tr>
+<tr class="even">
+<td>&lt;?php declare(strict_types=1);</td>
+</tr>
+<tr class="odd">
+<td>use PHPUnitFrameworkTestCase;</td>
+</tr>
+<tr class="even">
+<td>final class DependencyAndDataProviderComboTest extends TestCase</td>
+</tr>
+<tr class="odd">
+<td>{</td>
+</tr>
+<tr class="even">
+<td>public function provider(): array</td>
+</tr>
+<tr class="odd">
+<td>{</td>
+</tr>
+<tr class="even">
+<td>return [['provider1'], ['provider2']];</td>
+</tr>
+<tr class="odd">
+<td>}</td>
+</tr>
+<tr class="even">
+<td>public function testProducerFirst(): void</td>
+</tr>
+<tr class="odd">
+<td>{</td>
+</tr>
+<tr class="even">
+<td>$this-&gt;assertTrue(true);</td>
+</tr>
+<tr class="odd">
+<td>return 'first';</td>
+</tr>
+<tr class="even">
+<td>}</td>
+</tr>
+<tr class="odd">
+<td>public function testProducerSecond(): void</td>
+</tr>
+<tr class="even">
+<td>{</td>
+</tr>
+<tr class="odd">
+<td>$this-&gt;assertTrue(true);</td>
+</tr>
+<tr class="even">
+<td>return 'second';</td>
+</tr>
+<tr class="odd">
+<td>}</td>
+</tr>
+<tr class="even">
+<td>/**</td>
+</tr>
+<tr class="odd">
+<td>* @depends testProducerFirst</td>
+</tr>
+<tr class="even">
+<td>* @depends testProducerSecond</td>
+</tr>
+<tr class="odd">
+<td>* @dataProvider provider</td>
+</tr>
+<tr class="even">
+<td>*/</td>
+</tr>
+<tr class="odd">
+<td>public function testConsumer(): void</td>
+</tr>
+<tr class="even">
+<td>{</td>
+</tr>
+<tr class="odd">
+<td>$this-&gt;assertSame(</td>
+</tr>
+<tr class="even">
+<td>['provider1', 'first', 'second'],</td>
+</tr>
+<tr class="odd">
+<td>func_get_args()</td>
+</tr>
+<tr class="even">
+<td>);</td>
+</tr>
+<tr class="odd">
+<td>}</td>
+</tr>
+<tr class="even">
+<td>}</td>
+</tr>
+<tr class="odd">
+<td>.. parsed-literal::</td>
+</tr>
+<tr class="even">
+<td>$ phpunit --verbose DependencyAndDataProviderComboTest</td>
+</tr>
+<tr class="odd">
+<td>PHPUnit .0 by Sebastian Bergmann and contributors.</td>
+</tr>
+<tr class="even">
+<td>...F</td>
+</tr>
+<tr class="odd">
+<td>Time: 0 seconds, Memory: 3.50Mb</td>
+</tr>
+<tr class="even">
+<td>There was 1 failure:</td>
+</tr>
+<tr class="odd">
+<td>1) DependencyAndDataProviderComboTest::testConsumer with data set #1 ('provider2')</td>
+</tr>
+<tr class="even">
+<td>Failed asserting that two arrays are identical.</td>
+</tr>
+<tr class="odd">
+<td>--- Expected</td>
+</tr>
+<tr class="even">
+<td>+++ Actual</td>
+</tr>
+<tr class="odd">
+<td>@@ @@</td>
+</tr>
+<tr class="even">
+<td>Array &amp;0 (</td>
+</tr>
+<tr class="odd">
+<td>- 0 =&gt; 'provider1'</td>
+</tr>
+<tr class="even">
+<td>+ 0 =&gt; 'provider2'</td>
+</tr>
+<tr class="odd">
+<td>1 =&gt; 'first'</td>
+</tr>
+<tr class="even">
+<td>2 =&gt; 'second'</td>
+</tr>
+<tr class="odd">
+<td>)</td>
+</tr>
+<tr class="even">
+<td>/home/sb/DependencyAndDataProviderComboTest.php:32</td>
+</tr>
+<tr class="odd">
+<td>FAILURES!</td>
+</tr>
+<tr class="even">
+<td>Tests: 4, Assertions: 4, Failures: 1.</td>
+</tr>
+<tr class="odd">
+<td>.. code-block:: php</td>
+</tr>
+<tr class="even">
+<td>:caption: Using multiple data providers for a single test</td>
+</tr>
+<tr class="odd">
+<td>:name: writing-tests-for-phpunit.data-providers.examples2.DataTest.php</td>
+</tr>
+<tr class="even">
+<td>&lt;?php declare(strict_types=1);</td>
+</tr>
+<tr class="odd">
+<td>use PHPUnitFrameworkTestCase;</td>
+</tr>
+<tr class="even">
+<td>final class DataTest extends TestCase</td>
+</tr>
+<tr class="odd">
+<td>{</td>
+</tr>
+<tr class="even">
+<td>/**</td>
+</tr>
+<tr class="odd">
+<td>* @dataProvider additionWithNonNegativeNumbersProvider</td>
+</tr>
+<tr class="even">
+<td>* @dataProvider additionWithNegativeNumbersProvider</td>
+</tr>
+<tr class="odd">
+<td>*/</td>
+</tr>
+<tr class="even">
+<td>public function testAdd(int $a, int $b, int $expected): void</td>
+</tr>
+<tr class="odd">
+<td>{</td>
+</tr>
+<tr class="even">
+<td>$this-&gt;assertSame($expected, $a + $b);</td>
+</tr>
+<tr class="odd">
+<td>}</td>
+</tr>
+<tr class="even">
+<td>public function additionWithNonNegativeNumbersProvider(): void</td>
+</tr>
+<tr class="odd">
+<td>{</td>
+</tr>
+<tr class="even">
+<td>return [</td>
+</tr>
+<tr class="odd">
+<td>[0, 1, 1],</td>
+</tr>
+<tr class="even">
+<td>[1, 0, 1],</td>
+</tr>
+<tr class="odd">
+<td>[1, 1, 3]</td>
+</tr>
+<tr class="even">
+<td>];</td>
+</tr>
+<tr class="odd">
+<td>}</td>
+</tr>
+<tr class="even">
+<td>public function additionWithNegativeNumbersProvider(): array</td>
+</tr>
+<tr class="odd">
+<td>{</td>
+</tr>
+<tr class="even">
+<td>return [</td>
+</tr>
+<tr class="odd">
+<td>[-1, 1, 0],</td>
+</tr>
+<tr class="even">
+<td>[-1, -1, -2],</td>
+</tr>
+<tr class="odd">
+<td>[1, -1, 0]</td>
+</tr>
+<tr class="even">
+<td>];</td>
+</tr>
+<tr class="odd">
+<td>}</td>
+</tr>
+<tr class="even">
+<td>}</td>
+</tr>
+<tr class="odd">
+<td>.. parsed-literal::</td>
+</tr>
+<tr class="even">
+<td>$ phpunit DataTest</td>
+</tr>
+<tr class="odd">
+<td>PHPUnit .0 by Sebastian Bergmann and contributors.</td>
+</tr>
+<tr class="even">
+<td>..F... 6 / 6 (100%)</td>
+</tr>
+<tr class="odd">
+<td>Time: 0 seconds, Memory: 5.75Mb</td>
+</tr>
+<tr class="even">
+<td>There was 1 failure:</td>
+</tr>
+<tr class="odd">
+<td>1) DataTest::testAdd with data set #3 (1, 1, 3)</td>
+</tr>
+<tr class="even">
+<td>Failed asserting that 2 is identical to 3.</td>
+</tr>
+<tr class="odd">
+<td>/home/sb/DataTest.php:12</td>
+</tr>
+<tr class="even">
+<td>FAILURES!</td>
+</tr>
+<tr class="odd">
+<td>Tests: 6, Assertions: 6, Failures: 1.</td>
+</tr>
+<tr class="even">
+<td>.. admonition:: Note</td>
+</tr>
+<tr class="odd">
+<td>When a test depends on a test that uses data providers, the depending</td>
+</tr>
+<tr class="even">
+<td>test will be executed when the test it depends upon is successful for at</td>
+</tr>
+<tr class="odd">
+<td>least one data set. The result of a test that uses data providers cannot</td>
+</tr>
+<tr class="even">
+<td>be injected into a depending test.</td>
 </tr>
 <tr class="odd">
 <td>.. admonition:: Note</td>
 </tr>
 <tr class="even">
+<td>All data providers are executed before both the call to the <code>setUpBeforeClass()</code></td>
+</tr>
+<tr class="odd">
+<td>static method and the first call to the <code>setUp()</code> method.</td>
+</tr>
+<tr class="even">
+<td>Because of that you can't access any variables you create there from</td>
+</tr>
+<tr class="odd">
+<td>within a data provider. This is required in order for PHPUnit to be able</td>
+</tr>
+<tr class="even">
+<td>to compute the total number of tests.</td>
+</tr>
+<tr class="odd">
+<td>.. _writing-tests-for-phpunit.exceptions:</td>
+</tr>
+<tr class="even">
+<td>Testing Exceptions</td>
+</tr>
+<tr class="odd">
+<td>##################</td>
+</tr>
+<tr class="even">
+<td>writing-tests-for-phpunit.exceptions.examples.ExceptionTest.php</td>
+</tr>
+<tr class="odd">
+<td>shows how to use the <code>expectException()</code> method to test</td>
+</tr>
+<tr class="even">
+<td>whether an exception is thrown by the code under test.</td>
+</tr>
+<tr class="odd">
+<td>.. code-block:: php</td>
+</tr>
+<tr class="even">
+<td>:caption: Using the expectException() method</td>
+</tr>
+<tr class="odd">
+<td>:name: writing-tests-for-phpunit.exceptions.examples.ExceptionTest.php</td>
+</tr>
+<tr class="even">
+<td>&lt;?php declare(strict_types=1);</td>
+</tr>
+<tr class="odd">
+<td>use PHPUnitFrameworkTestCase;</td>
+</tr>
+<tr class="even">
+<td>final class ExceptionTest extends TestCase</td>
+</tr>
+<tr class="odd">
+<td>{</td>
+</tr>
+<tr class="even">
+<td>public function testException(): void</td>
+</tr>
+<tr class="odd">
+<td>{</td>
+</tr>
+<tr class="even">
+<td>$this-&gt;expectException(InvalidArgumentException::class);</td>
+</tr>
+<tr class="odd">
+<td>}</td>
+</tr>
+<tr class="even">
+<td>}</td>
+</tr>
+<tr class="odd">
+<td>.. parsed-literal::</td>
+</tr>
+<tr class="even">
+<td>$ phpunit ExceptionTest</td>
+</tr>
+<tr class="odd">
+<td>PHPUnit .0 by Sebastian Bergmann and contributors.</td>
+</tr>
+<tr class="even">
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>Time: 0 seconds, Memory: 4.75Mb</td>
+</tr>
+<tr class="even">
+<td>There was 1 failure:</td>
+</tr>
+<tr class="odd">
+<td>1) ExceptionTest::testException</td>
+</tr>
+<tr class="even">
+<td>Failed asserting that exception of type &quot;InvalidArgumentException&quot; is thrown.</td>
+</tr>
+<tr class="odd">
+<td>FAILURES!</td>
+</tr>
+<tr class="even">
+<td>Tests: 1, Assertions: 1, Failures: 1.</td>
+</tr>
+<tr class="odd">
+<td>In addition to the <code>expectException()</code> method the</td>
+</tr>
+<tr class="even">
+<td><code>expectExceptionCode()</code>,</td>
+</tr>
+<tr class="odd">
+<td><code>expectExceptionMessage()</code>, and</td>
+</tr>
+<tr class="even">
+<td><code>expectExceptionMessageMatches()</code> methods exist to set up</td>
+</tr>
+<tr class="odd">
+<td>expectations for exceptions raised by the code under test.</td>
+</tr>
+<tr class="even">
+<td>.. admonition:: Note</td>
+</tr>
+<tr class="odd">
+<td>Note that <code>expectExceptionMessage()</code> asserts that the <code>$actual</code></td>
+</tr>
+<tr class="even">
+<td>message contains the <code>$expected</code> message and does not perform</td>
+</tr>
+<tr class="odd">
+<td>an exact string comparison.</td>
+</tr>
+<tr class="even">
+<td>.. _writing-tests-for-phpunit.errors:</td>
+</tr>
+<tr class="odd">
+<td>Testing PHP Errors, Warnings, and Notices</td>
+</tr>
+<tr class="even">
+<td>#########################################</td>
+</tr>
+<tr class="odd">
+<td>By default, PHPUnit converts PHP errors, warnings, and notices that are</td>
+</tr>
+<tr class="even">
+<td>triggered during the execution of a test to an exception. Among other benefits,</td>
+</tr>
+<tr class="odd">
+<td>this makes it possible to expect that a PHP error, warning, or notice is</td>
+</tr>
+<tr class="even">
+<td>triggered in a test as shown in</td>
+</tr>
+<tr class="odd">
+<td>writing-tests-for-phpunit.exceptions.examples.ErrorTest.php.</td>
+</tr>
+<tr class="even">
+<td>.. admonition:: Note</td>
+</tr>
+<tr class="odd">
+<td>PHP's <code>error_reporting</code> runtime configuration can</td>
+</tr>
+<tr class="even">
+<td>limit which errors PHPUnit will convert to exceptions. If you are</td>
+</tr>
+<tr class="odd">
+<td>having issues with this feature, be sure PHP is not configured to</td>
+</tr>
+<tr class="even">
+<td>suppress the type of error you are interested in.</td>
+</tr>
+<tr class="odd">
+<td>.. code-block:: php</td>
+</tr>
+<tr class="even">
+<td>:caption: Expecting PHP errors, warnings, and notices</td>
+</tr>
+<tr class="odd">
+<td>:name: writing-tests-for-phpunit.exceptions.examples.ErrorTest.php</td>
+</tr>
+<tr class="even">
+<td>&lt;?php declare(strict_types=1);</td>
+</tr>
+<tr class="odd">
+<td>use PHPUnitFrameworkTestCase;</td>
+</tr>
+<tr class="even">
+<td>final class ErrorTest extends TestCase</td>
+</tr>
+<tr class="odd">
+<td>{</td>
+</tr>
+<tr class="even">
+<td>public function testDeprecationCanBeExpected(): void</td>
+</tr>
+<tr class="odd">
+<td>{</td>
+</tr>
+<tr class="even">
+<td>$this-&gt;expectDeprecation();</td>
+</tr>
+<tr class="odd">
+<td>// Optionally test that the message is equal to a string</td>
+</tr>
+<tr class="even">
+<td>$this-&gt;expectDeprecationMessage('foo');</td>
+</tr>
+<tr class="odd">
+<td>// Or optionally test that the message matches a regular expression</td>
+</tr>
+<tr class="even">
+<td>$this-&gt;expectDeprecationMessageMatches('/foo/');</td>
+</tr>
+<tr class="odd">
+<td>trigger_error('foo', E_USER_DEPRECATED);</td>
+</tr>
+<tr class="even">
+<td>}</td>
+</tr>
+<tr class="odd">
+<td>public function testNoticeCanBeExpected(): void</td>
+</tr>
+<tr class="even">
+<td>{</td>
+</tr>
+<tr class="odd">
+<td>$this-&gt;expectNotice();</td>
+</tr>
+<tr class="even">
+<td>// Optionally test that the message is equal to a string</td>
+</tr>
+<tr class="odd">
+<td>$this-&gt;expectNoticeMessage('foo');</td>
+</tr>
+<tr class="even">
+<td>// Or optionally test that the message matches a regular expression</td>
+</tr>
+<tr class="odd">
+<td>$this-&gt;expectNoticeMessageMatches('/foo/');</td>
+</tr>
+<tr class="even">
+<td>trigger_error('foo', E_USER_NOTICE);</td>
+</tr>
+<tr class="odd">
+<td>}</td>
+</tr>
+<tr class="even">
+<td>public function testWarningCanBeExpected(): void</td>
+</tr>
+<tr class="odd">
+<td>{</td>
+</tr>
+<tr class="even">
+<td>$this-&gt;expectWarning();</td>
+</tr>
+<tr class="odd">
+<td>// Optionally test that the message is equal to a string</td>
+</tr>
+<tr class="even">
+<td>$this-&gt;expectWarningMessage('foo');</td>
+</tr>
+<tr class="odd">
+<td>// Or optionally test that the message matches a regular expression</td>
+</tr>
+<tr class="even">
+<td>$this-&gt;expectWarningMessageMatches('/foo/');</td>
+</tr>
+<tr class="odd">
+<td>trigger_error('foo', E_USER_WARNING);</td>
+</tr>
+<tr class="even">
+<td>}</td>
+</tr>
+<tr class="odd">
+<td>public function testErrorCanBeExpected(): void</td>
+</tr>
+<tr class="even">
+<td>{</td>
+</tr>
+<tr class="odd">
+<td>$this-&gt;expectError();</td>
+</tr>
+<tr class="even">
+<td>// Optionally test that the message is equal to a string</td>
+</tr>
+<tr class="odd">
+<td>$this-&gt;expectErrorMessage('foo');</td>
+</tr>
+<tr class="even">
+<td>// Or optionally test that the message matches a regular expression</td>
+</tr>
+<tr class="odd">
+<td>$this-&gt;expectErrorMessageMatches('/foo/');</td>
+</tr>
+<tr class="even">
+<td>trigger_error('foo', E_USER_ERROR);</td>
+</tr>
+<tr class="odd">
+<td>}</td>
+</tr>
+<tr class="even">
+<td>}</td>
+</tr>
+<tr class="odd">
+<td>When testing code that uses PHP built-in functions such as <code>fopen()</code> that</td>
+</tr>
+<tr class="even">
+<td>may trigger errors it can sometimes be useful to use error suppression while</td>
+</tr>
+<tr class="odd">
+<td>testing. This allows you to check the return values by suppressing notices</td>
+</tr>
+<tr class="even">
+<td>that would lead to an exception raised by PHPUnit's error handler.</td>
+</tr>
+<tr class="odd">
+<td>.. code-block:: php</td>
+</tr>
+<tr class="even">
+<td>:caption: Testing return values of code that uses PHP Errors</td>
+</tr>
+<tr class="odd">
+<td>:name: writing-tests-for-phpunit.exceptions.examples.TriggerErrorReturnValue.php</td>
+</tr>
+<tr class="even">
+<td>&lt;?php declare(strict_types=1);</td>
+</tr>
+<tr class="odd">
+<td>use PHPUnitFrameworkTestCase;</td>
+</tr>
+<tr class="even">
+<td>final class ErrorSuppressionTest extends TestCase</td>
+</tr>
+<tr class="odd">
+<td>{</td>
+</tr>
+<tr class="even">
+<td>public function testFileWriting(): void</td>
+</tr>
+<tr class="odd">
+<td>{</td>
+</tr>
+<tr class="even">
+<td>$writer = new FileWriter;</td>
+</tr>
+<tr class="odd">
+<td>$this-&gt;assertFalse(@$writer-&gt;write('/is-not-writeable/file', 'stuff'));</td>
+</tr>
+<tr class="even">
+<td>}</td>
+</tr>
+<tr class="odd">
+<td>}</td>
+</tr>
+<tr class="even">
+<td>final class FileWriter</td>
+</tr>
+<tr class="odd">
+<td>{</td>
+</tr>
+<tr class="even">
+<td>public function write($file, $content)</td>
+</tr>
+<tr class="odd">
+<td>{</td>
+</tr>
+<tr class="even">
+<td>$file = fopen($file, 'w');</td>
+</tr>
+<tr class="odd">
+<td>if ($file === false) {</td>
+</tr>
+<tr class="even">
+<td>return false;</td>
+</tr>
+<tr class="odd">
+<td>}</td>
+</tr>
+<tr class="even">
+<td>// ...</td>
+</tr>
+<tr class="odd">
+<td>}</td>
+</tr>
+<tr class="even">
+<td>}</td>
+</tr>
+<tr class="odd">
+<td>.. parsed-literal::</td>
+</tr>
+<tr class="even">
+<td>$ phpunit ErrorSuppressionTest</td>
+</tr>
+<tr class="odd">
+<td>PHPUnit .0 by Sebastian Bergmann and contributors.</td>
+</tr>
+<tr class="even">
+<td>.</td>
+</tr>
+<tr class="odd">
+<td>Time: 1 seconds, Memory: 5.25Mb</td>
+</tr>
+<tr class="even">
+<td>OK (1 test, 1 assertion)</td>
+</tr>
+<tr class="odd">
+<td>Without the error suppression the test would fail reporting</td>
+</tr>
+<tr class="even">
+<td><code>fopen(/is-not-writeable/file): failed to open stream: No such file or directory</code>.</td>
+</tr>
+<tr class="odd">
+<td>.. _writing-tests-for-phpunit.output:</td>
+</tr>
+<tr class="even">
+<td>Testing Output</td>
+</tr>
+<tr class="odd">
+<td>##############</td>
+</tr>
+<tr class="even">
+<td>Sometimes you want to assert that the execution of a method, for</td>
+</tr>
+<tr class="odd">
+<td>instance, generates an expected output (via <code>echo</code> or</td>
+</tr>
+<tr class="even">
+<td><code>print</code>, for example). The</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\TestCase</code> class uses PHP's</td>
+</tr>
+<tr class="even">
+<td>`Output</td>
+</tr>
+<tr class="odd">
+<td>Buffering &lt;<a href="http://www.php.net/manual/en/ref.outcontrol.php" class="uri">http://www.php.net/manual/en/ref.outcontrol.php</a>&gt;`_ feature to provide the functionality that is</td>
+</tr>
+<tr class="even">
+<td>necessary for this.</td>
+</tr>
+<tr class="odd">
+<td>writing-tests-for-phpunit.output.examples.OutputTest.php</td>
+</tr>
+<tr class="even">
+<td>shows how to use the <code>expectOutputString()</code> method to</td>
+</tr>
+<tr class="odd">
+<td>set the expected output. If this expected output is not generated, the</td>
+</tr>
+<tr class="even">
+<td>test will be counted as a failure.</td>
+</tr>
+<tr class="odd">
+<td>.. code-block:: php</td>
+</tr>
+<tr class="even">
+<td>:caption: Testing the output of a function or method</td>
+</tr>
+<tr class="odd">
+<td>:name: writing-tests-for-phpunit.output.examples.OutputTest.php</td>
+</tr>
+<tr class="even">
+<td>&lt;?php declare(strict_types=1);</td>
+</tr>
+<tr class="odd">
+<td>use PHPUnitFrameworkTestCase;</td>
+</tr>
+<tr class="even">
+<td>final class OutputTest extends TestCase</td>
+</tr>
+<tr class="odd">
+<td>{</td>
+</tr>
+<tr class="even">
+<td>public function testExpectFooActualFoo(): void</td>
+</tr>
+<tr class="odd">
+<td>{</td>
+</tr>
+<tr class="even">
+<td>$this-&gt;expectOutputString('foo');</td>
+</tr>
+<tr class="odd">
+<td>print 'foo';</td>
+</tr>
+<tr class="even">
+<td>}</td>
+</tr>
+<tr class="odd">
+<td>public function testExpectBarActualBaz(): void</td>
+</tr>
+<tr class="even">
+<td>{</td>
+</tr>
+<tr class="odd">
+<td>$this-&gt;expectOutputString('bar');</td>
+</tr>
+<tr class="even">
+<td>print 'baz';</td>
+</tr>
+<tr class="odd">
+<td>}</td>
+</tr>
+<tr class="even">
+<td>}</td>
+</tr>
+<tr class="odd">
+<td>.. parsed-literal::</td>
+</tr>
+<tr class="even">
+<td>$ phpunit OutputTest</td>
+</tr>
+<tr class="odd">
+<td>PHPUnit .0 by Sebastian Bergmann and contributors.</td>
+</tr>
+<tr class="even">
+<td>.F</td>
+</tr>
+<tr class="odd">
+<td>Time: 0 seconds, Memory: 5.75Mb</td>
+</tr>
+<tr class="even">
+<td>There was 1 failure:</td>
+</tr>
+<tr class="odd">
+<td>1) OutputTest::testExpectBarActualBaz</td>
+</tr>
+<tr class="even">
+<td>Failed asserting that two strings are equal.</td>
+</tr>
+<tr class="odd">
+<td>--- Expected</td>
+</tr>
+<tr class="even">
+<td>+++ Actual</td>
+</tr>
+<tr class="odd">
+<td>@@ @@</td>
+</tr>
+<tr class="even">
+<td>-'bar'</td>
+</tr>
+<tr class="odd">
+<td>+'baz'</td>
+</tr>
+<tr class="even">
+<td>FAILURES!</td>
+</tr>
+<tr class="odd">
+<td>Tests: 2, Assertions: 2, Failures: 1.</td>
+</tr>
+<tr class="even">
+<td>writing-tests-for-phpunit.output.tables.api</td>
+</tr>
+<tr class="odd">
+<td>shows the methods provided for testing output</td>
+</tr>
+<tr class="even">
+<td>.. rst-class:: table</td>
+</tr>
+<tr class="odd">
+<td>.. list-table:: Methods for testing output</td>
+</tr>
+<tr class="even">
+<td>:name: writing-tests-for-phpunit.output.tables.api</td>
+</tr>
+<tr class="odd">
+<td>:header-rows: 1</td>
+</tr>
+<tr class="even">
+<td>* - Method</td>
+</tr>
+<tr class="odd">
+<td>- Meaning</td>
+</tr>
+<tr class="even">
+<td>* - <code>void expectOutputRegex(string $regularExpression)</code></td>
+</tr>
+<tr class="odd">
+<td>- Set up the expectation that the output matches a <code>$regularExpression</code>.</td>
+</tr>
+<tr class="even">
+<td>* - <code>void expectOutputString(string $expectedString)</code></td>
+</tr>
+<tr class="odd">
+<td>- Set up the expectation that the output is equal to an <code>$expectedString</code>.</td>
+</tr>
+<tr class="even">
+<td>* - <code>bool setOutputCallback(callable $callback)</code></td>
+</tr>
+<tr class="odd">
+<td>- Sets up a callback that is used to, for instance, normalize the actual output.</td>
+</tr>
+<tr class="even">
+<td>* - <code>string getActualOutput()</code></td>
+</tr>
+<tr class="odd">
+<td>- Get the actual output.</td>
+</tr>
+<tr class="even">
+<td>.. admonition:: Note</td>
+</tr>
+<tr class="odd">
 <td>A test that emits output will fail in strict mode.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>.. _writing-tests-for-phpunit.error-output:</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Error output</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>############</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Whenever a test fails PHPUnit tries its best to provide you with as much</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>context as possible that can help to identify the problem.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>.. code-block:: php</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>:caption: Error output generated when an array comparison fails</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>:name: writing-tests-for-phpunit.error-output.examples.ArrayDiffTest.php</td>
 </tr>
-<tr class="odd">
-<td>&lt;?php</td>
-</tr>
 <tr class="even">
+<td>&lt;?php declare(strict_types=1);</td>
+</tr>
+<tr class="odd">
 <td>use PHPUnitFrameworkTestCase;</td>
 </tr>
-<tr class="odd">
-<td>class ArrayDiffTest extends TestCase</td>
-</tr>
 <tr class="even">
+<td>final class ArrayDiffTest extends TestCase</td>
+</tr>
+<tr class="odd">
 <td>{</td>
 </tr>
-<tr class="odd">
-<td>public function testEquality()</td>
-</tr>
 <tr class="even">
+<td>public function testEquality(): void</td>
+</tr>
+<tr class="odd">
 <td>{</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>$this-&gt;assertSame(</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>[1, 2, 3, 4, 5, 6],</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>[1, 2, 33, 4, 5, 6]</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>);</td>
 </tr>
-<tr class="odd">
-<td>}</td>
-</tr>
 <tr class="even">
 <td>}</td>
 </tr>
 <tr class="odd">
+<td>}</td>
+</tr>
+<tr class="even">
 <td>.. parsed-literal::</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>$ phpunit ArrayDiffTest</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>PHPUnit .0 by Sebastian Bergmann and contributors.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>F</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Time: 0 seconds, Memory: 5.25Mb</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>There was 1 failure:</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>1) ArrayDiffTest::testEquality</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Failed asserting that two arrays are identical.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>--- Expected</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>+++ Actual</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>@@ @@</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Array (</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>0 =&gt; 1</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>1 =&gt; 2</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>- 2 =&gt; 3</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>+ 2 =&gt; 33</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>3 =&gt; 4</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>4 =&gt; 5</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>5 =&gt; 6</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>/home/sb/ArrayDiffTest.php:7</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>FAILURES!</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Tests: 1, Assertions: 1, Failures: 1.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>In this example only one of the array values differs and the other values</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>are shown to provide context on where the error occurred.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>When the generated output would be long to read PHPUnit will split it up</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>and provide a few lines of context around every difference.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>.. code-block:: php</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>:caption: Error output when an array comparison of an long array fails</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>:name: writing-tests-for-phpunit.error-output.examples.LongArrayDiffTest.php</td>
 </tr>
-<tr class="odd">
-<td>&lt;?php</td>
-</tr>
 <tr class="even">
+<td>&lt;?php declare(strict_types=1);</td>
+</tr>
+<tr class="odd">
 <td>use PHPUnitFrameworkTestCase;</td>
 </tr>
-<tr class="odd">
-<td>class LongArrayDiffTest extends TestCase</td>
-</tr>
 <tr class="even">
+<td>final class LongArrayDiffTest extends TestCase</td>
+</tr>
+<tr class="odd">
 <td>{</td>
 </tr>
-<tr class="odd">
-<td>public function testEquality()</td>
-</tr>
 <tr class="even">
+<td>public function testEquality(): void</td>
+</tr>
+<tr class="odd">
 <td>{</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>$this-&gt;assertSame(</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 5, 6],</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 33, 4, 5, 6]</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>);</td>
 </tr>
-<tr class="odd">
-<td>}</td>
-</tr>
 <tr class="even">
 <td>}</td>
 </tr>
 <tr class="odd">
+<td>}</td>
+</tr>
+<tr class="even">
 <td>.. parsed-literal::</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>$ phpunit LongArrayDiffTest</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>PHPUnit .0 by Sebastian Bergmann and contributors.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>F</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Time: 0 seconds, Memory: 5.25Mb</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>There was 1 failure:</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>1) LongArrayDiffTest::testEquality</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Failed asserting that two arrays are identical.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>--- Expected</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>+++ Actual</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>@@ @@</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>11 =&gt; 0</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>12 =&gt; 1</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>13 =&gt; 2</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>- 14 =&gt; 3</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>+ 14 =&gt; 33</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>15 =&gt; 4</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>16 =&gt; 5</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>17 =&gt; 6</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>)</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>/home/sb/LongArrayDiffTest.php:7</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>FAILURES!</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Tests: 1, Assertions: 1, Failures: 1.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>.. _writing-tests-for-phpunit.error-output.edge-cases:</td>
 </tr>
-<tr class="odd">
-<td>Edge cases</td>
+<tr class="even">
+<td>Edge Cases</td>
 </tr>
 </tbody>
 </table>
@@ -2134,12 +2131,12 @@ show more problems than actually exist.
 This only happens when using `assertEquals()` or other 'weak' comparison
 functions on arrays or objects.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class ArrayWeakComparisonTest extends TestCase
+    final class ArrayWeakComparisonTest extends TestCase
     {
-        public function testEquality()
+        public function testEquality(): void
         {
             $this->assertEquals(
                 [1, 2, 3, 4, 5, 6],

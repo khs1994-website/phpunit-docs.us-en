@@ -39,12 +39,12 @@ Reports an error identified by `$message` if `$array` does not have the
 `assertArrayNotHasKey()` is the inverse of this assertion and takes the
 same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class ArrayHasKeyTest extends TestCase
+    final class ArrayHasKeyTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertArrayHasKey('foo', ['bar' => 'baz']);
         }
@@ -61,12 +61,12 @@ does not exist.
 `assertClassNotHasAttribute()` is the inverse of this assertion and
 takes the same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class ClassHasAttributeTest extends TestCase
+    final class ClassHasAttributeTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertClassHasAttribute('foo', stdClass::class);
         }
@@ -83,12 +83,12 @@ does not exist.
 `assertClassNotHasStaticAttribute()` is the inverse of this assertion
 and takes the same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class ClassHasStaticAttributeTest extends TestCase
+    final class ClassHasStaticAttributeTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertClassHasStaticAttribute('foo', stdClass::class);
         }
@@ -105,12 +105,12 @@ of `$haystack`.
 `assertNotContains()` is the inverse of this assertion and takes the
 same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class ContainsTest extends TestCase
+    final class ContainsTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertContains(4, [1, 2, 3]);
         }
@@ -132,7 +132,7 @@ takes the same arguments.
 
     final class StringContainsStringTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertStringContainsString('foo', 'bar');
         }
@@ -157,7 +157,7 @@ assertion and takes the same arguments.
 
     final class StringContainsStringIgnoringCaseTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertStringContainsStringIgnoringCase('foo', 'bar');
         }
@@ -177,12 +177,12 @@ PHP type or not.
 `assertNotContainsOnly()` is the inverse of this assertion and takes the
 same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class ContainsOnlyTest extends TestCase
+    final class ContainsOnlyTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertContainsOnly('string', ['1', '2', 3]);
         }
@@ -196,12 +196,12 @@ assertContainsOnlyInstancesOf()
 Reports an error identified by `$message` if `$haystack` does not
 contain only instances of class `$classname`.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class ContainsOnlyInstancesOfTest extends TestCase
+    final class ContainsOnlyInstancesOfTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertContainsOnlyInstancesOf(
                 Foo::class,
@@ -221,12 +221,12 @@ Reports an error identified by `$message` if the number of elements in
 `assertNotCount()` is the inverse of this assertion and takes the same
 arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class CountTest extends TestCase
+    final class CountTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertCount(0, ['foo']);
         }
@@ -243,12 +243,12 @@ Reports an error identified by `$message` if the directory specified by
 `assertDirectoryDoesNotExist()` is the inverse of this assertion and
 takes the same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class DirectoryExistsTest extends TestCase
+    final class DirectoryExistsTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertDirectoryExists('/path/to/directory');
         }
@@ -265,12 +265,12 @@ Reports an error identified by `$message` if the directory specified by
 `assertDirectoryIsNotReadable()` is the inverse of this assertion and
 takes the same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class DirectoryIsReadableTest extends TestCase
+    final class DirectoryIsReadableTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertDirectoryIsReadable('/path/to/directory');
         }
@@ -287,12 +287,12 @@ Reports an error identified by `$message` if the directory specified by
 `assertDirectoryIsNotWritable()` is the inverse of this assertion and
 takes the same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class DirectoryIsWritableTest extends TestCase
+    final class DirectoryIsWritableTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertDirectoryIsWritable('/path/to/directory');
         }
@@ -308,12 +308,12 @@ Reports an error identified by `$message` if `$actual` is not empty.
 `assertNotEmpty()` is the inverse of this assertion and takes the same
 arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class EmptyTest extends TestCase
+    final class EmptyTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertEmpty(['foo']);
         }
@@ -330,22 +330,22 @@ Reports an error identified by `$message` if the two variables
 `assertNotEquals()` is the inverse of this assertion and takes the same
 arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class EqualsTest extends TestCase
+    final class EqualsTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertEquals(1, 0);
         }
 
-        public function testFailure2()
+        public function testFailure2(): void
         {
             $this->assertEquals('bar', 'baz');
         }
 
-        public function testFailure3()
+        public function testFailure3(): void
         {
             $this->assertEquals("foo\nbar\nbaz\n", "foo\nbah\nbaz\n");
         }
@@ -360,12 +360,12 @@ Reports an error identified by `$message` if the uncommented canonical
 form of the XML documents represented by the two DOMDocument objects
 `$expected` and `$actual` are not equal.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class EqualsTest extends TestCase
+    final class EqualsTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $expected = new DOMDocument;
             $expected->loadXML('<foo><bar/></foo>');
@@ -382,12 +382,12 @@ form of the XML documents represented by the two DOMDocument objects
 Reports an error identified by `$message` if the two objects `$expected`
 and `$actual` do not have equal attribute values.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class EqualsTest extends TestCase
+    final class EqualsTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $expected = new stdClass;
             $expected->foo = 'foo';
@@ -406,12 +406,12 @@ and `$actual` do not have equal attribute values.
 Reports an error identified by `$message` if the two arrays `$expected`
 and `$actual` are not equal.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class EqualsTest extends TestCase
+    final class EqualsTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertEquals(['a', 'b', 'c'], ['a', 'c', 'd']);
         }
@@ -508,12 +508,12 @@ Reports an error identified by `$message` if `$condition` is `true`.
 `assertNotFalse()` is the inverse of this assertion and takes the same
 arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class FalseTest extends TestCase
+    final class FalseTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertFalse(true);
         }
@@ -531,12 +531,12 @@ Reports an error identified by `$message` if the file specified by
 `assertFileNotEquals()` is the inverse of this assertion and takes the
 same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class FileEqualsTest extends TestCase
+    final class FileEqualsTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertFileEquals('/home/sb/expected', '/home/sb/actual');
         }
@@ -553,12 +553,12 @@ Reports an error identified by `$message` if the file specified by
 `assertFileDoesNotExist()` is the inverse of this assertion and takes
 the same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class FileExistsTest extends TestCase
+    final class FileExistsTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertFileExists('/path/to/file');
         }
@@ -575,12 +575,12 @@ Reports an error identified by `$message` if the file specified by
 `assertFileIsNotReadable()` is the inverse of this assertion and takes
 the same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class FileIsReadableTest extends TestCase
+    final class FileIsReadableTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertFileIsReadable('/path/to/file');
         }
@@ -597,12 +597,12 @@ Reports an error identified by `$message` if the file specified by
 `assertFileIsNotWritable()` is the inverse of this assertion and takes
 the same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class FileIsWritableTest extends TestCase
+    final class FileIsWritableTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertFileIsWritable('/path/to/file');
         }
@@ -616,12 +616,12 @@ assertGreaterThan()
 Reports an error identified by `$message` if the value of `$actual` is
 not greater than the value of `$expected`.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class GreaterThanTest extends TestCase
+    final class GreaterThanTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertGreaterThan(2, 1);
         }
@@ -635,17 +635,16 @@ assertGreaterThanOrEqual()
 Reports an error identified by `$message` if the value of `$actual` is
 not greater than or equal to the value of `$expected`.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class GreatThanOrEqualTest extends TestCase
+    final class GreatThanOrEqualTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertGreaterThanOrEqual(2, 1);
         }
     }
-    ?>
 
 assertInfinite()
 ----------------
@@ -657,17 +656,16 @@ Reports an error identified by `$message` if `$variable` is not `INF`.
 `assertFinite()` is the inverse of this assertion and takes the same
 arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class InfiniteTest extends TestCase
+    final class InfiniteTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertInfinite(1);
         }
     }
-    ?>
 
 assertInstanceOf()
 ------------------
@@ -680,17 +678,16 @@ instance of `$expected`.
 `assertNotInstanceOf()` is the inverse of this assertion and takes the
 same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class InstanceOfTest extends TestCase
+    final class InstanceOfTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertInstanceOf(RuntimeException::class, new Exception);
         }
     }
-    ?>
 
 assertIsArray()
 ---------------
@@ -742,12 +739,12 @@ Reports an error identified by `$message` if `$actual` is not of type
 `assertIsNotBool()` is the inverse of this assertion and takes the same
 arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class BoolTest extends TestCase
+    final class BoolTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertIsBool(null);
         }
@@ -1115,17 +1112,16 @@ specified by `$filename` is not readable.
 `assertIsNotReadable()` is the inverse of this assertion and takes the
 same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class IsReadableTest extends TestCase
+    final class IsReadableTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertIsReadable('/path/to/unreadable');
         }
     }
-    ?>
 
 assertIsWritable()
 ------------------
@@ -1138,17 +1134,16 @@ specified by `$filename` is not writable.
 `assertIsNotWritable()` is the inverse of this assertion and takes the
 same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class IsWritableTest extends TestCase
+    final class IsWritableTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertIsWritable('/path/to/unwritable');
         }
     }
-    ?>
 
 assertJsonFileEqualsJsonFile()
 ------------------------------
@@ -1158,18 +1153,17 @@ assertJsonFileEqualsJsonFile()
 Reports an error identified by `$message` if the value of `$actualFile`
 does not match the value of `$expectedFile`.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class JsonFileEqualsJsonFileTest extends TestCase
+    final class JsonFileEqualsJsonFileTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertJsonFileEqualsJsonFile(
               'path/to/fixture/file', 'path/to/actual/file');
         }
     }
-    ?>
 
 assertJsonStringEqualsJsonFile()
 --------------------------------
@@ -1179,19 +1173,18 @@ assertJsonStringEqualsJsonFile()
 Reports an error identified by `$message` if the value of `$actualJson`
 does not match the value of `$expectedFile`.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class JsonStringEqualsJsonFileTest extends TestCase
+    final class JsonStringEqualsJsonFileTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertJsonStringEqualsJsonFile(
                 'path/to/fixture/file', json_encode(['Mascot' => 'ux'])
             );
         }
     }
-    ?>
 
 assertJsonStringEqualsJsonString()
 ----------------------------------
@@ -1201,12 +1194,12 @@ assertJsonStringEqualsJsonString()
 Reports an error identified by `$message` if the value of `$actualJson`
 does not match the value of `$expectedJson`.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class JsonStringEqualsJsonStringTest extends TestCase
+    final class JsonStringEqualsJsonStringTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertJsonStringEqualsJsonString(
                 json_encode(['Mascot' => 'Tux']),
@@ -1214,7 +1207,6 @@ does not match the value of `$expectedJson`.
             );
         }
     }
-    ?>
 
 assertLessThan()
 ----------------
@@ -1224,17 +1216,16 @@ assertLessThan()
 Reports an error identified by `$message` if the value of `$actual` is
 not less than the value of `$expected`.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class LessThanTest extends TestCase
+    final class LessThanTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertLessThan(1, 2);
         }
     }
-    ?>
 
 assertLessThanOrEqual()
 -----------------------
@@ -1244,17 +1235,16 @@ assertLessThanOrEqual()
 Reports an error identified by `$message` if the value of `$actual` is
 not less than or equal to the value of `$expected`.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class LessThanOrEqualTest extends TestCase
+    final class LessThanOrEqualTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertLessThanOrEqual(1, 2);
         }
     }
-    ?>
 
 assertNan()
 -----------
@@ -1263,17 +1253,16 @@ assertNan()
 
 Reports an error identified by `$message` if `$variable` is not `NAN`.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class NanTest extends TestCase
+    final class NanTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertNan(1);
         }
     }
-    ?>
 
 assertNull()
 ------------
@@ -1285,17 +1274,16 @@ Reports an error identified by `$message` if `$variable` is not `null`.
 `assertNotNull()` is the inverse of this assertion and takes the same
 arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class NullTest extends TestCase
+    final class NullTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertNull('foo');
         }
     }
-    ?>
 
 assertObjectHasAttribute()
 --------------------------
@@ -1308,17 +1296,16 @@ does not exist.
 `assertObjectNotHasAttribute()` is the inverse of this assertion and
 takes the same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class ObjectHasAttributeTest extends TestCase
+    final class ObjectHasAttributeTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertObjectHasAttribute('foo', new stdClass);
         }
     }
-    ?>
 
 assertMatchesRegularExpression()
 --------------------------------
@@ -1331,17 +1318,16 @@ the regular expression `$pattern`.
 `assertDoesNotMatchRegularExpression()` is the inverse of this assertion
 and takes the same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class RegExpTest extends TestCase
+    final class RegExpTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertMatchesRegularExpression('/foo/', 'bar');
         }
     }
-    ?>
 
 assertStringMatchesFormat()
 ---------------------------
@@ -1354,17 +1340,16 @@ match the `$format` string.
 `assertStringNotMatchesFormat()` is the inverse of this assertion and
 takes the same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class StringMatchesFormatTest extends TestCase
+    final class StringMatchesFormatTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertStringMatchesFormat('%i', 'foo');
         }
     }
-    ?>
 
 The format string may contain the following placeholders:
 
@@ -1433,17 +1418,16 @@ match the contents of the `$formatFile`.
 `assertStringNotMatchesFormatFile()` is the inverse of this assertion
 and takes the same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class StringMatchesFormatFileTest extends TestCase
+    final class StringMatchesFormatFileTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertStringMatchesFormatFile('/path/to/expected.txt', 'foo');
         }
     }
-    ?>
 
 assertSame()
 ------------
@@ -1456,34 +1440,32 @@ Reports an error identified by `$message` if the two variables
 `assertNotSame()` is the inverse of this assertion and takes the same
 arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class SameTest extends TestCase
+    final class SameTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertSame('2204', 2204);
         }
     }
-    ?>
 
 `assertSame(object $expected, object $actual[, string $message = ''])`
 
 Reports an error identified by `$message` if the two variables
 `$expected` and `$actual` do not reference the same object.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class SameTest extends TestCase
+    final class SameTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertSame(new stdClass, new stdClass);
         }
     }
-    ?>
 
 assertStringEndsWith()
 ----------------------
@@ -1496,17 +1478,16 @@ with `$suffix`.
 `assertStringEndsNotWith()` is the inverse of this assertion and takes
 the same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class StringEndsWithTest extends TestCase
+    final class StringEndsWithTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertStringEndsWith('suffix', 'foo');
         }
     }
-    ?>
 
 assertStringEqualsFile()
 ------------------------
@@ -1519,17 +1500,16 @@ Reports an error identified by `$message` if the file specified by
 `assertStringNotEqualsFile()` is the inverse of this assertion and takes
 the same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class StringEqualsFileTest extends TestCase
+    final class StringEqualsFileTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertStringEqualsFile('/home/sb/expected', 'actual');
         }
     }
-    ?>
 
 assertStringStartsWith()
 ------------------------
@@ -1542,17 +1522,16 @@ start with `$prefix`.
 `assertStringStartsNotWith()` is the inverse of this assertion and takes
 the same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class StringStartsWithTest extends TestCase
+    final class StringStartsWithTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertStringStartsWith('prefix', 'foo');
         }
     }
-    ?>
 
 assertThat()
 ------------
@@ -1568,12 +1547,12 @@ express the same assertion as `assertNotEquals()`.
 Reports an error identified by `$message` if the `$value` does not match
 the `$constraint`.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class BiscuitTest extends TestCase
+    final class BiscuitTest extends TestCase
     {
-        public function testEquals()
+        public function testEquals(): void
         {
             $theBiscuit = new Biscuit('Ginger');
             $myBiscuit  = new Biscuit('Ginger');
@@ -1586,7 +1565,6 @@ the `$constraint`.
             );
         }
     }
-    ?>
 
 appendixes.assertions.assertThat.tables.constraints shows the available
 `PHPUnit\Framework\Constraint` classes.
@@ -1601,17 +1579,16 @@ Reports an error identified by `$message` if `$condition` is `false`.
 `assertNotTrue()` is the inverse of this assertion and takes the same
 arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class TrueTest extends TestCase
+    final class TrueTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertTrue(false);
         }
     }
-    ?>
 
 assertXmlFileEqualsXmlFile()
 ----------------------------
@@ -1624,18 +1601,17 @@ Reports an error identified by `$message` if the XML document in
 `assertXmlFileNotEqualsXmlFile()` is the inverse of this assertion and
 takes the same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class XmlFileEqualsXmlFileTest extends TestCase
+    final class XmlFileEqualsXmlFileTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertXmlFileEqualsXmlFile(
               '/home/sb/expected.xml', '/home/sb/actual.xml');
         }
     }
-    ?>
 
 assertXmlStringEqualsXmlFile()
 ------------------------------
@@ -1648,18 +1624,17 @@ Reports an error identified by `$message` if the XML document in
 `assertXmlStringNotEqualsXmlFile()` is the inverse of this assertion and
 takes the same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class XmlStringEqualsXmlFileTest extends TestCase
+    final class XmlStringEqualsXmlFileTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertXmlStringEqualsXmlFile(
               '/home/sb/expected.xml', '<foo><baz/></foo>');
         }
     }
-    ?>
 
 assertXmlStringEqualsXmlString()
 --------------------------------
@@ -1672,15 +1647,14 @@ Reports an error identified by `$message` if the XML document in
 `assertXmlStringNotEqualsXmlString()` is the inverse of this assertion
 and takes the same arguments.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class XmlStringEqualsXmlStringTest extends TestCase
+    final class XmlStringEqualsXmlStringTest extends TestCase
     {
-        public function testFailure()
+        public function testFailure(): void
         {
             $this->assertXmlStringEqualsXmlString(
               '<foo><bar/></foo>', '<foo><baz/></foo>');
         }
     }
-    ?>

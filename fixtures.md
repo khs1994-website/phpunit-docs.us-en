@@ -34,33 +34,35 @@ redundant code from the test methods and use the newly introduced
 instance variable, `$this->stack`, instead of the method-local variable
 `$stack` with the `assertSame()` assertion method.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class StackTest extends TestCase
+    final class StackTest extends TestCase
     {
-        protected $stack;
+        private $stack;
 
         protected function setUp(): void
         {
             $this->stack = [];
         }
 
-        public function testEmpty()
+        public function testEmpty(): void
         {
             $this->assertTrue(empty($this->stack));
         }
 
-        public function testPush()
+        public function testPush(): void
         {
             array_push($this->stack, 'foo');
+
             $this->assertSame('foo', $this->stack[count($this->stack)-1]);
             $this->assertFalse(empty($this->stack));
         }
 
-        public function testPop()
+        public function testPop(): void
         {
             array_push($this->stack, 'foo');
+
             $this->assertSame('foo', array_pop($this->stack));
             $this->assertTrue(empty($this->stack));
         }
@@ -77,10 +79,10 @@ respectively.
 The example below shows all template methods that are available in a
 test case class.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class TemplateMethodsTest extends TestCase
+    final class TemplateMethodsTest extends TestCase
     {
         public static function setUpBeforeClass(): void
         {
@@ -97,13 +99,13 @@ test case class.
             fwrite(STDOUT, __METHOD__ . "\n");
         }
 
-        public function testOne()
+        public function testOne(): void
         {
             fwrite(STDOUT, __METHOD__ . "\n");
             $this->assertTrue(true);
         }
 
-        public function testTwo()
+        public function testTwo(): void
         {
             fwrite(STDOUT, __METHOD__ . "\n");
             $this->assertTrue(false);
@@ -177,12 +179,12 @@ connect to the database before the test case class' first test and to
 disconnect from the database after the last test of the test case,
 respectively.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class DatabaseTest extends TestCase
+    final class DatabaseTest extends TestCase
     {
-        protected static $dbh;
+        private static $dbh;
 
         public static function setUpBeforeClass(): void
         {
@@ -267,7 +269,7 @@ and restore operations for global variables. Alternatively, you can
 provide a list of global variables that are to be excluded from the
 backup and restore operations like this
 
-    class MyTest extends TestCase
+    final class MyTest extends TestCase
     {
         protected $backupGlobalsExcludeList = ['globalVariable'];
 
@@ -309,7 +311,7 @@ also `tearDown()`, so as to not affect subsequently executed tests).
 You can provide a list of static attributes that are to be excluded from
 the backup and restore operations:
 
-    class MyTest extends TestCase
+    final class MyTest extends TestCase
     {
         protected $backupStaticAttributesExcludeList = [
             'className' => ['attributeName']

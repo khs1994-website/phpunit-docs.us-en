@@ -71,7 +71,7 @@ means that you do not need to create several temporary objects and wire
 them together afterwards. Instead, you chain method calls as shown in
 the example. This leads to more readable and "fluent" code.
 
-    <?php
+    <?php declare(strict_types=1);
     class SomeClass
     {
         public function doSomething()
@@ -80,12 +80,12 @@ the example. This leads to more readable and "fluent" code.
         }
     }
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class StubTest extends TestCase
+    final class StubTest extends TestCase
     {
-        public function testStub()
+        public function testStub(): void
         {
             // Create a stub for the SomeClass class.
             $stub = $this->createStub(SomeClass::class);
@@ -142,12 +142,12 @@ the Mock Builder's fluent interface to configure the creation of the
 test double. The configuration of this test double uses the same best
 practice defaults used by `createStub()`.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class StubTest extends TestCase
+    final class StubTest extends TestCase
     {
-        public function testStub()
+        public function testStub(): void
         {
             // Create a stub for the SomeClass class.
             $stub = $this->getMockBuilder(SomeClass::class)
@@ -177,12 +177,12 @@ Sometimes you want to return one of the arguments of a method call
 test-doubles.stubs.examples.StubTest3.php shows how you can achieve this
 using `returnArgument()` instead of `returnValue()`.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class StubTest extends TestCase
+    final class StubTest extends TestCase
     {
-        public function testReturnArgumentStub()
+        public function testReturnArgumentStub(): void
         {
             // Create a stub for the SomeClass class.
             $stub = $this->createStub(SomeClass::class);
@@ -204,12 +204,12 @@ stubbed method return a reference to the stubbed object.
 test-doubles.stubs.examples.StubTest4.php shows how you can use
 `returnSelf()` to achieve this.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class StubTest extends TestCase
+    final class StubTest extends TestCase
     {
-        public function testReturnSelf()
+        public function testReturnSelf(): void
         {
             // Create a stub for the SomeClass class.
             $stub = $this->createStub(SomeClass::class);
@@ -228,12 +228,12 @@ predefined list of arguments. You can use `returnValueMap()` to create a
 map that associates arguments with corresponding return values. See
 test-doubles.stubs.examples.StubTest5.php for an example.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class StubTest extends TestCase
+    final class StubTest extends TestCase
     {
-        public function testReturnValueMapStub()
+        public function testReturnValueMapStub(): void
         {
             // Create a stub for the SomeClass class.
             $stub = $this->createStub(SomeClass::class);
@@ -261,12 +261,12 @@ a fixed one (see `returnValue()`) or an (unchanged) argument (see
 method return the result of a callback function or method. See
 test-doubles.stubs.examples.StubTest6.php for an example.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class StubTest extends TestCase
+    final class StubTest extends TestCase
     {
-        public function testReturnCallbackStub()
+        public function testReturnCallbackStub(): void
         {
             // Create a stub for the SomeClass class.
             $stub = $this->createStub(SomeClass::class);
@@ -285,12 +285,12 @@ a list of desired return values. You can do this with the
 `onConsecutiveCalls()` method. See
 test-doubles.stubs.examples.StubTest7.php for an example.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class StubTest extends TestCase
+    final class StubTest extends TestCase
     {
-        public function testOnConsecutiveCallsStub()
+        public function testOnConsecutiveCallsStub(): void
         {
             // Create a stub for the SomeClass class.
             $stub = $this->createStub(SomeClass::class);
@@ -310,12 +310,12 @@ Instead of returning a value, a stubbed method can also raise an
 exception. test-doubles.stubs.examples.StubTest8.php shows how to use
 `throwException()` to do this.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class StubTest extends TestCase
+    final class StubTest extends TestCase
     {
-        public function testThrowExceptionStub()
+        public function testThrowExceptionStub(): void
         {
             // Create a stub for the SomeClass class.
             $stub = $this->createStub(SomeClass::class);
@@ -374,7 +374,7 @@ object. test-doubles.mock-objects.examples.SUT.php shows the code for
 the `Subject` and `Observer` classes that are part of the System under
 Test (SUT).
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
     class Subject
@@ -450,12 +450,12 @@ Because we are interested in verifying that a method is called, and
 which arguments it is called with, we introduce the `expects()` and
 `with()` methods to specify how this interaction should look.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class SubjectTest extends TestCase
+    final class SubjectTest extends TestCase
     {
-        public function testObserversAreUpdated()
+        public function testObserversAreUpdated(): void
         {
             // Create a mock for the Observer class,
             // only mock the update() method.
@@ -484,12 +484,12 @@ The `with()` method can take any number of arguments, corresponding to
 the number of arguments to the method being mocked. You can specify more
 advanced constraints on the method's arguments than a simple match.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class SubjectTest extends TestCase
+    final class SubjectTest extends TestCase
     {
-        public function testErrorReported()
+        public function testErrorReported(): void
         {
             // Create a mock for the Observer class, mocking the
             // reportError() method
@@ -517,12 +517,12 @@ arguments, depending on the calls you want to test against. Each array
 is a list of constraints corresponding to the arguments of the method
 being mocked, like in `with()`.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class FooTest extends TestCase
+    final class FooTest extends TestCase
     {
-        public function testFunctionCalledTwoTimesWithSpecificArguments()
+        public function testFunctionCalledTwoTimesWithSpecificArguments(): void
         {
             $mock = $this->getMockBuilder(stdClass::class)
                          ->setMethods(['set'])
@@ -546,12 +546,12 @@ The PHP callback will receive the argument to be verified as its only
 argument and should return `true` if the argument passes verification
 and `false` otherwise.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class SubjectTest extends TestCase
+    final class SubjectTest extends TestCase
     {
-        public function testErrorReported()
+        public function testErrorReported(): void
         {
             // Create a mock for the Observer class, mocking the
             // reportError() method
@@ -578,12 +578,12 @@ and `false` otherwise.
         }
     }
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class FooTest extends TestCase
+    final class FooTest extends TestCase
     {
-        public function testIdenticalObjectPassed()
+        public function testIdenticalObjectPassed(): void
         {
             $expectedObject = new stdClass;
 
@@ -599,12 +599,12 @@ and `false` otherwise.
         }
     }
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class FooTest extends TestCase
+    final class FooTest extends TestCase
     {
-        public function testIdenticalObjectPassed()
+        public function testIdenticalObjectPassed(): void
         {
             $cloneArguments = true;
 
@@ -682,7 +682,7 @@ The `getMockForTrait()` method returns a mock object that uses a
 specified trait. All abstract methods of the given trait are mocked.
 This allows for testing the concrete methods of a trait.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
     trait AbstractTrait
@@ -695,9 +695,9 @@ This allows for testing the concrete methods of a trait.
         public abstract function abstractMethod();
     }
 
-    class TraitClassTest extends TestCase
+    final class TraitClassTest extends TestCase
     {
-        public function testConcreteMethod()
+        public function testConcreteMethod(): void
         {
             $mock = $this->getMockForTrait(AbstractTrait::class);
 
@@ -714,7 +714,7 @@ abstract class. All abstract methods of the given abstract class are
 mocked. This allows for testing the concrete methods of an abstract
 class.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
     abstract class AbstractClass
@@ -727,9 +727,9 @@ class.
         public abstract function abstractMethod();
     }
 
-    class AbstractClassTest extends TestCase
+    final class AbstractClassTest extends TestCase
     {
-        public function testConcreteMethod()
+        public function testConcreteMethod(): void
         {
             $stub = $this->getMockForAbstractClass(AbstractClass::class);
 
@@ -755,12 +755,12 @@ test-doubles.stubbing-and-mocking-web-services.examples.GoogleTest.php
 shows how `getMockFromWsdl()` can be used to stub, for example, the web
 service described in GoogleSearch.wsdl.
 
-    <?php
+    <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
 
-    class GoogleTest extends TestCase
+    final class GoogleTest extends TestCase
     {
-        public function testSearch()
+        public function testSearch(): void
         {
             $googleSearch = $this->getMockFromWsdl(
               'GoogleSearch.wsdl', 'GoogleSearch'

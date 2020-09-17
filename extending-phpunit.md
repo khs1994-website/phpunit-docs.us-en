@@ -22,38 +22,25 @@ wrapper around the `isTrue()` and `assertThat()` methods: `isTrue()`
 creates a matcher object that is passed on to `assertThat()` for
 evaluation.
 
-    <?php
+    <?php declare(strict_types=1);
     namespace PHPUnit\Framework;
 
-    use PHPUnit\Framework\TestCase;
+    use PHPUnit\Framework\Constraint\IsTrue;
 
     abstract class Assert
     {
         // ...
 
-        /**
-         * Asserts that a condition is true.
-         *
-         * @param  boolean $condition
-         * @param  string  $message
-         * @throws PHPUnit\Framework\AssertionFailedError
-         */
-        public static function assertTrue($condition, $message = '')
+        public static function assertTrue($condition, string $message = ''): void
         {
-            self::assertThat($condition, self::isTrue(), $message);
+            static::assertThat($condition, static::isTrue(), $message);
         }
 
         // ...
 
-        /**
-         * Returns a PHPUnit\Framework\Constraint\IsTrue matcher object.
-         *
-         * @return PHPUnit\Framework\Constraint\IsTrue
-         * @since  Method available since Release 3.3.0
-         */
-        public static function isTrue()
+        public static function isTrue(): IsTrue
         {
-            return new PHPUnit\Framework\Constraint\IsTrue;
+            return new IsTrue;
         }
 
         // ...
@@ -63,35 +50,23 @@ extending-phpunit.examples.IsTrue.php shows how
 `PHPUnit\Framework\Constraint\IsTrue` extends the abstract base class
 for matcher objects (or constraints), `PHPUnit\Framework\Constraint`.
 
-    <?php
+    <?php declare(strict_types=1);
     namespace PHPUnit\Framework\Constraint;
 
     use PHPUnit\Framework\Constraint;
 
-    class IsTrue extends Constraint
+    final class IsTrue extends Constraint
     {
-        /**
-         * Evaluates the constraint for parameter $other. Returns true if the
-         * constraint is met, false otherwise.
-         *
-         * @param mixed $other Value or object to evaluate.
-         * @return bool
-         */
-        public function matches($other)
-        {
-            return $other === true;
-        }
-
-        /**
-         * Returns a string representation of the constraint.
-         *
-         * @return string
-         */
-        public function toString()
+        public function toString(): string
         {
             return 'is true';
         }
-    }?>
+
+        protected function matches($other): bool
+        {
+            return $other === true;
+        }
+    }
 
 The effort of implementing the `assertTrue()` and `isTrue()` methods as
 well as the `PHPUnit\Framework\Constraint\IsTrue` class yields the
