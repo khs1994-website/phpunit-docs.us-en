@@ -498,6 +498,84 @@ the same arguments.
         }
     }
 
+assertObjectEquals()
+--------------------
+
+`assertObjectEquals(object $expected, object $actual, string $method = 'equals', string $message = ''])`
+
+Reports an error identified by `$message` if `$actual` is not equal to
+`$expected` according to `$actual->$method($expected)`.
+
+It is a bad practice to use `assertEquals()` (and its inverse,
+`assertNotEquals()`) on objects without registering a custom comparator
+that customizes how objects are compared. Unfortunately, though,
+implementing custom comparators for each and every object you want to
+assert in your tests is inconvenient at best.
+
+The most common use case for custom comparators are Value Objects. These
+objects usually have an `equals(self $other): bool` method (or a method
+just like that but with a different name) for comparing two instances of
+the Value Object's type. `assertObjectEquals()` makes custom comparison
+of objects convenient for this common use case:
+
+    <?php declare(strict_types=1);
+    use PHPUnit\Framework\TestCase;
+
+    final class SomethingThatUsesEmailTest extends TestCase
+    {
+        public function testSomething(): void
+        {
+            $a = new Email('user@example.org');
+            $b = new Email('user@example.org');
+            $c = new Email('user@example.com');
+
+            // This passes
+            $this->assertObjectEquals($a, $b);
+
+            // This fails
+            $this->assertObjectEquals($a, $c);
+        }
+    }
+
+    <?php declare(strict_types=1);
+    final class Email
+    {
+        private string $email;
+
+        public function __construct(string $email)
+        {
+            $this->ensureIsValidEmail($email);
+
+            $this->email = $email;
+        }
+
+        public function asString(): string
+        {
+            return $this->email;
+        }
+
+        public function equals(self $other): bool
+        {
+            return $this->asString() === $other->asString();
+        }
+
+        private function ensureIsValidEmail(string $email): void
+        {
+            // ...
+        }
+    }
+
+Please note:
+
+-   A method with name `$method` must exist on the `$actual` object
+-   The method must accept exactly one argument
+-   The respective parameter must have a declared type
+-   The `$expected` object must be compatible with this declared type
+-   The method must have a declared `bool` return type
+
+If any of the aforementioned assumptions is not fulfilled or if
+`$actual->$method($expected)` returns `false` then the assertion fails.
+
 assertFalse()
 -------------
 
