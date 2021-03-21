@@ -30,9 +30,10 @@ XML-based logfiles with code coverage information in various formats
 reported as text (and printed to STDOUT) and exported as PHP code for
 further processing.
 
-Please refer to textui for a list of command line switches that control
-code coverage functionality as well as appendixes.configuration.logging
-for the relevant configuration settings.
+Please refer to `textui` for a list of command line switches that
+control code coverage functionality as well as
+`appendixes.configuration.logging` for the relevant configuration
+settings.
 
 Software Metrics for Code Coverage
 ----------------------------------
@@ -84,9 +85,9 @@ Including Files
 
 It is mandatory to configure a filter for telling PHPUnit which
 sourcecode files to include in the code coverage report. This can either
-be done using the `--coverage-filter`
-command line &lt;textui.clioptions&gt; option or via the configuration
-file (see appendixes.configuration.coverage.include).
+be done using the `--coverage-filter` `command line <textui.clioptions>`
+option or via the configuration file (see
+`appendixes.configuration.coverage.include`).
 
 The `includeUncoveredFilesInCodeCoverageReport` and
 `processUncoveredFilesForCodeCoverageReport` configuration settings are
@@ -123,7 +124,7 @@ Sometimes you have blocks of code that you cannot test and that you may
 want to ignore during code coverage analysis. PHPUnit lets you do this
 using the `@codeCoverageIgnore`, `@codeCoverageIgnoreStart` and
 `@codeCoverageIgnoreEnd` annotations as shown in
-code-coverage-analysis.ignoring-code-blocks.examples.Sample.php.
+`code-coverage-analysis.ignoring-code-blocks.examples.Sample.php`.
 
     <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
@@ -164,12 +165,12 @@ Specifying Covered Code Parts
 -----------------------------
 
 The `@covers` annotation (see the
-annotation documentation &lt;appendixes.annotations.covers.tables.annotations&gt;)
+`annotation documentation <appendixes.annotations.covers.tables.annotations>`)
 can be used in the test code to specify which code parts a test class
 (or test method) wants to test. If provided, this effectively filters
 the code coverage report to include executed code from the referenced
 code parts only.
-code-coverage-analysis.specifying-covered-parts.examples.InvoiceTest.php
+`code-coverage-analysis.specifying-covered-parts.examples.InvoiceTest.php`
 shows an example.
 
 Note
@@ -276,9 +277,9 @@ with class scope, not with method scope.
 
 It is also possible to specify that a test should not cover *any* method
 by using the `@coversNothing` annotation (see
-appendixes.annotations.coversNothing). This can be helpful when writing
-integration tests to make sure you only generate code coverage with unit
-tests.
+`appendixes.annotations.coversNothing`). This can be helpful when
+writing integration tests to make sure you only generate code coverage
+with unit tests.
 
     <?php declare(strict_types=1);
     use PHPUnit\DbUnit\TestCase

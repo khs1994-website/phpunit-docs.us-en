@@ -103,8 +103,8 @@ events triggered by the code under test are converted to an exception
 Possible values: `true` or `false` (default: `false`)
 
 This attribute configures whether a test will be marked as risky (see
-risky-tests.unintentionally-covered-code) when it does not have a
-@covers &lt;appendixes.annotations.covers&gt; annotation.
+`risky-tests.unintentionally-covered-code`) when it does not have a
+`@covers <appendixes.annotations.covers>` annotation.
 
 ### The `printerClass` Attribute
 
@@ -755,7 +755,7 @@ Parent element: `<phpunit>`
 
 The `<groups>` element and its `<include>`, `<exclude>`, and `<group>`
 children can be used to select groups of tests marked with the `@group`
-annotation (documented in appendixes.annotations.group) that should
+annotation (documented in `appendixes.annotations.group`) that should
 (not) be run:
 
     <groups>

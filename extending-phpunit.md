@@ -17,7 +17,7 @@ Write custom assertions
 
 When writing custom assertions it is the best practice to follow how
 PHPUnit's own assertions are implemented. As you can see in
-extending-phpunit.examples.Assert.php, the `assertTrue()` method is a
+`extending-phpunit.examples.Assert.php`, the `assertTrue()` method is a
 wrapper around the `isTrue()` and `assertThat()` methods: `isTrue()`
 creates a matcher object that is passed on to `assertThat()` for
 evaluation.
@@ -46,7 +46,7 @@ evaluation.
         // ...
     }
 
-extending-phpunit.examples.IsTrue.php shows how
+`extending-phpunit.examples.IsTrue.php` shows how
 `PHPUnit\Framework\Constraint\IsTrue` extends the abstract base class
 for matcher objects (or constraints), `PHPUnit\Framework\Constraint`.
 
@@ -96,10 +96,10 @@ implement one or more of the following interfaces:
 Each "hook", meaning each of the interfaces listed above, represents an
 event that can occur while the tests are being executed.
 
-See appendixes.configuration.extensions for details on how to register
+See `appendixes.configuration.extensions` for details on how to register
 extensions in PHPUnit's XML configuration.
 
-extending-phpunit.examples.TestRunnerExtension shows an example for an
+`extending-phpunit.examples.TestRunnerExtension` shows an example for an
 extension implementing `BeforeFirstTestHook` and `AfterLastTestHook`:
 
     <?php declare(strict_types=1);
@@ -126,7 +126,7 @@ extension implementing `BeforeFirstTestHook` and `AfterLastTestHook`:
 You can configure PHPUnit extensions, assuming the extension accepts
 configuration values.
 
-extending-phpunit.examples.TestRunnerConfigurableExtension shows an
+`extending-phpunit.examples.TestRunnerConfigurableExtension` shows an
 example how to make an extension configurable, by adding an
 `__constructor()` definition to the extension class:
 
@@ -166,7 +166,7 @@ example how to make an extension configurable, by adding an
 To input configuration to the extension via XML, the XML configuration
 file's `extensions` section needs to be updated to have configuration
 values, as shown in
-extending-phpunit.examples.TestRunnerConfigurableExtensionConfig:
+`extending-phpunit.examples.TestRunnerConfigurableExtensionConfig`:
 
     <extensions>
         <extension class="Vendor\MyUnconfigurableExtension" />
@@ -178,8 +178,8 @@ extending-phpunit.examples.TestRunnerConfigurableExtensionConfig:
         </extension>
     </extensions>
 
-See appendixes.configuration.extensions.extension.arguments for details
-on how to use the `arguments` configuration.
+See `appendixes.configuration.extensions.extension.arguments` for
+details on how to use the `arguments` configuration.
 
 Remember: all configuration is optional, so make sure your extension
 either has sane defaults in place, or that it disables itself in case

@@ -42,7 +42,13 @@ allow execution of PHARs in your `php.ini`:
 
 The PHPUnit PHAR can be used immediately after download:
 
+$ wget <https://phar.phpunit.de/phpunit-%7Cversion>version|.phar
+--version PHPUnit x.y.z by Sebastian Bergmann and contributors.
+
 It is a common practice to make the PHAR executable:
+
+$ wget <https://phar.phpunit.de/phpunit-%7Cversion>versionversion|.phar
+--version PHPUnit x.y.z by Sebastian Bergmann and contributors.
 
 ### Verifying PHPUnit PHAR Releases
 
@@ -52,22 +58,47 @@ hashes are available for verification on
 [phar.phpunit.de](https://phar.phpunit.de/).
 
 The following example details how release verification works. We start
-by downloading phpunit.phar as well as its detached PGP signature
-phpunit.phar.asc:
+by downloading `phpunit.phar` as well as its detached PGP signature
+`phpunit.phar.asc`:
 
-We want to verify PHPUnit's PHP Archive (phpunit-x.y.phar) against its
-detached signature (phpunit-x.y.phar.asc):
+$ wget <https://phar.phpunit.de/phpunit-%7Cversion>.phar.asc
+
+We want to verify PHPUnit's PHP Archive (`phpunit-x.y.phar`) against its
+detached signature (`phpunit-x.y.phar.asc`):
+
+$ gpg phpunit-.phar.asc gpg: Signature made Sat 19 Jul 2014 01:28:02 PM
+CEST using RSA key ID 6372C20A gpg: Can't check signature: public key
+not found
 
 We don't have the release manager's public key (`6372C20A`) in our local
 system. In order to proceed with the verification we need to retrieve
 the release manager's public key from a key server. One such server is
-pgp.uni-mainz.de. The public key servers are linked together, so you
+`pgp.uni-mainz.de`. The public key servers are linked together, so you
 should be able to connect to any key server.
+
+$ curl --silent <https://sebastian-bergmann.de/gpg.asc> | gpg --import
+gpg: key 4AA394086372C20A: 452 signatures not checked due to missing
+keys gpg: /root/.gnupg/trustdb.gpg: trustdb created gpg: key
+4AA394086372C20A: public key "Sebastian Bergmann
+&lt;<sb@sebastian-bergmann.de>&gt;" imported gpg: Total number
+processed: 1 gpg: imported: 1 gpg: no ultimately trusted keys found
 
 Now we have received a public key for an entity known as "Sebastian
 Bergmann &lt;<sb@sebastian-bergmann.de>&gt;". However, we have no way of
 verifying this key was created by the person known as Sebastian
 Bergmann. But, let's try to verify the release signature again.
+
+$ gpg phpunit-.phar.asc gpg: Signature made Sat 19 Jul 2014 01:28:02 PM
+CEST using RSA key ID 6372C20A gpg: Good signature from "Sebastian
+Bergmann &lt;<sb@sebastian-bergmann.de>&gt;" gpg: aka "Sebastian
+Bergmann &lt;<sebastian@php.net>&gt;" gpg: aka "Sebastian Bergmann
+&lt;<sebastian@thephp.cc>&gt;" gpg: aka "Sebastian Bergmann
+&lt;<sebastian@phpunit.de>&gt;" gpg: aka "Sebastian Bergmann
+&lt;<sebastian.bergmann@thephp.cc>&gt;" gpg: aka "\[jpeg image of size
+40635\]" gpg: WARNING: This key is not certified with a trusted
+signature! gpg: There is no indication that the signature belongs to the
+owner. Primary key fingerprint: D840 6D0D 8294 7747 2937 7831 4AA3 9408
+6372 C20A
 
 At this point, the signature is good, but we don't trust this key. A
 good signature means that the file has not been tampered. However, due
@@ -94,6 +125,8 @@ Add a (development-time) dependency on `phpunit/phpunit` to your
 project's `composer.json` file if you use
 [Composer](https://getcomposer.org/) to manage the dependencies of your
 project:
+
+composer require --dev phpunit/phpunit ^
 
 Global Installation
 -------------------

@@ -50,6 +50,22 @@ same arguments.
         }
     }
 
+$ phpunit ArrayHasKeyTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) ArrayHasKeyTest::testFailure Failed asserting that an array has the
+key 'foo'.
+
+/home/sb/ArrayHasKeyTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 assertClassHasAttribute()
 -------------------------
 
@@ -71,6 +87,22 @@ takes the same arguments.
             $this->assertClassHasAttribute('foo', stdClass::class);
         }
     }
+
+$ phpunit ClassHasAttributeTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 4.75Mb
+
+There was 1 failure:
+
+1) ClassHasAttributeTest::testFailure Failed asserting that class
+"stdClass" has attribute "foo".
+
+/home/sb/ClassHasAttributeTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
 
 assertClassHasStaticAttribute()
 -------------------------------
@@ -94,6 +126,22 @@ and takes the same arguments.
         }
     }
 
+$ phpunit ClassHasStaticAttributeTest PHPUnit .0 by Sebastian Bergmann
+and contributors.
+
+F
+
+Time: 0 seconds, Memory: 4.75Mb
+
+There was 1 failure:
+
+1) ClassHasStaticAttributeTest::testFailure Failed asserting that class
+"stdClass" has static attribute "foo".
+
+/home/sb/ClassHasStaticAttributeTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 assertContains()
 ----------------
 
@@ -116,6 +164,21 @@ same arguments.
         }
     }
 
+$ phpunit ContainsTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) ContainsTest::testFailure Failed asserting that an array contains 4.
+
+/home/sb/ContainsTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 assertStringContainsString()
 ----------------------------
 
@@ -137,6 +200,22 @@ takes the same arguments.
             $this->assertStringContainsString('foo', 'bar');
         }
     }
+
+$ phpunit StringContainsStringTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F 1 / 1 (100%)
+
+Time: 37 ms, Memory: 6.00 MB
+
+There was 1 failure:
+
+1) StringContainsStringTest::testFailure Failed asserting that 'bar'
+contains "foo".
+
+/home/sb/StringContainsStringTest.php:8
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
 
 assertStringContainsStringIgnoringCase()
 ----------------------------------------
@@ -163,6 +242,22 @@ assertion and takes the same arguments.
         }
     }
 
+$ phpunit StringContainsStringIgnoringCaseTest PHPUnit .0 by Sebastian
+Bergmann and contributors.
+
+F 1 / 1 (100%)
+
+Time: 40 ms, Memory: 6.00 MB
+
+There was 1 failure:
+
+1) StringContainsStringTest::testFailure Failed asserting that 'bar'
+contains "foo".
+
+/home/sb/StringContainsStringIgnoringCaseTest.php:8
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 assertContainsOnly()
 --------------------
 
@@ -188,6 +283,22 @@ same arguments.
         }
     }
 
+$ phpunit ContainsOnlyTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) ContainsOnlyTest::testFailure Failed asserting that Array ( 0 =&gt;
+'1' 1 =&gt; '2' 2 =&gt; 3 ) contains only values of type "string".
+
+/home/sb/ContainsOnlyTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 assertContainsOnlyInstancesOf()
 -------------------------------
 
@@ -209,6 +320,22 @@ contain only instances of class `$classname`.
             );
         }
     }
+
+$ phpunit ContainsOnlyInstancesOfTest PHPUnit .0 by Sebastian Bergmann
+and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) ContainsOnlyInstancesOfTest::testFailure Failed asserting that Array
+(\[0\]=&gt; Bar Object(...)) is an instance of class "Foo".
+
+/home/sb/ContainsOnlyInstancesOfTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
 
 assertCount()
 -------------
@@ -232,6 +359,21 @@ arguments.
         }
     }
 
+$ phpunit CountTest PHPUnit .0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 4.75Mb
+
+There was 1 failure:
+
+1) CountTest::testFailure Failed asserting that actual size 1 matches
+expected size 0.
+
+/home/sb/CountTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 assertDirectoryExists()
 -----------------------
 
@@ -253,6 +395,22 @@ takes the same arguments.
             $this->assertDirectoryExists('/path/to/directory');
         }
     }
+
+$ phpunit DirectoryExistsTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 4.75Mb
+
+There was 1 failure:
+
+1) DirectoryExistsTest::testFailure Failed asserting that directory
+"/path/to/directory" exists.
+
+/home/sb/DirectoryExistsTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
 
 assertDirectoryIsReadable()
 ---------------------------
@@ -276,6 +434,22 @@ takes the same arguments.
         }
     }
 
+$ phpunit DirectoryIsReadableTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 4.75Mb
+
+There was 1 failure:
+
+1) DirectoryIsReadableTest::testFailure Failed asserting that
+"/path/to/directory" is readable.
+
+/home/sb/DirectoryIsReadableTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 assertDirectoryIsWritable()
 ---------------------------
 
@@ -298,6 +472,22 @@ takes the same arguments.
         }
     }
 
+$ phpunit DirectoryIsWritableTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 4.75Mb
+
+There was 1 failure:
+
+1) DirectoryIsWritableTest::testFailure Failed asserting that
+"/path/to/directory" is writable.
+
+/home/sb/DirectoryIsWritableTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 assertEmpty()
 -------------
 
@@ -318,6 +508,20 @@ arguments.
             $this->assertEmpty(['foo']);
         }
     }
+
+$ phpunit EmptyTest PHPUnit .0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 4.75Mb
+
+There was 1 failure:
+
+1) EmptyTest::testFailure Failed asserting that an array is empty.
+
+/home/sb/EmptyTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
 
 assertEquals()
 --------------
@@ -351,6 +555,30 @@ arguments.
         }
     }
 
+$ phpunit EqualsTest PHPUnit .0 by Sebastian Bergmann and contributors.
+
+FFF
+
+Time: 0 seconds, Memory: 5.25Mb
+
+There were 3 failures:
+
+1) EqualsTest::testFailure Failed asserting that 0 matches expected 1.
+
+/home/sb/EqualsTest.php:6
+
+2) EqualsTest::testFailure2 Failed asserting that two strings are equal.
+--- Expected +++ Actual @@ @@ -'bar' +'baz'
+
+/home/sb/EqualsTest.php:11
+
+3) EqualsTest::testFailure3 Failed asserting that two strings are equal.
+--- Expected +++ Actual @@ @@ 'foo -bar +bah baz '
+
+/home/sb/EqualsTest.php:16
+
+FAILURES! Tests: 3, Assertions: 3, Failures: 3.
+
 More specialized comparisons are used for specific argument types for
 `$expected` and `$actual`, see below.
 
@@ -377,6 +605,23 @@ form of the XML documents represented by the two DOMDocument objects
         }
     }
 
+$ phpunit EqualsTest PHPUnit .0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) EqualsTest::testFailure Failed asserting that two DOM documents are
+equal. --- Expected +++ Actual @@ @@ &lt;?xml version="1.0"?&gt;
+-&lt;foo&gt; - &lt;bar/&gt; -&lt;/foo&gt; +&lt;bar&gt; + &lt;foo/&gt;
++&lt;/bar&gt;
+
+/home/sb/EqualsTest.php:12
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 `assertEquals(object $expected, object $actual[, string $message = ''])`
 
 Reports an error identified by `$message` if the two objects `$expected`
@@ -401,6 +646,22 @@ and `$actual` do not have equal attribute values.
         }
     }
 
+$ phpunit EqualsTest PHPUnit .0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.25Mb
+
+There was 1 failure:
+
+1) EqualsTest::testFailure Failed asserting that two objects are equal.
+--- Expected +++ Actual @@ @@ stdClass Object ( - 'foo' =&gt; 'foo' -
+'bar' =&gt; 'bar' + 'foo' =&gt; 'bar' + 'baz' =&gt; 'bar' )
+
+/home/sb/EqualsTest.php:14
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 `assertEquals(array $expected, array $actual[, string $message = ''])`
 
 Reports an error identified by `$message` if the two arrays `$expected`
@@ -416,6 +677,22 @@ and `$actual` are not equal.
             $this->assertEquals(['a', 'b', 'c'], ['a', 'c', 'd']);
         }
     }
+
+$ phpunit EqualsTest PHPUnit .0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.25Mb
+
+There was 1 failure:
+
+1) EqualsTest::testFailure Failed asserting that two arrays are equal.
+--- Expected +++ Actual @@ @@ Array ( 0 =&gt; 'a' - 1 =&gt; 'b' - 2
+=&gt; 'c' + 1 =&gt; 'c' + 2 =&gt; 'd' )
+
+/home/sb/EqualsTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
 
 assertEqualsCanonicalizing()
 ----------------------------
@@ -446,6 +723,23 @@ takes the same arguments.
         }
     }
 
+$ phpunit EqualsCanonicalizingTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F 1 / 1 (100%)
+
+Time: 42 ms, Memory: 6.00 MB
+
+There was 1 failure:
+
+1) EqualsCanonicalizingTest::testFailure Failed asserting that two
+arrays are equal. --- Expected +++ Actual @@ @@ Array ( - 0 =&gt; 1 - 1
+=&gt; 2 - 2 =&gt; 3 + 0 =&gt; 0 + 1 =&gt; 1 + 2 =&gt; 2 + 3 =&gt; 3 )
+
+/home/sb/EqualsCanonicalizingTest.php:8
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 assertEqualsIgnoringCase()
 --------------------------
 
@@ -470,6 +764,22 @@ takes the same arguments.
             $this->assertEqualsIgnoringCase('foo', 'BAR');
         }
     }
+
+$ phpunit EqualsIgnoringCaseTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F 1 / 1 (100%)
+
+Time: 51 ms, Memory: 6.00 MB
+
+There was 1 failure:
+
+1) EqualsIgnoringCaseTest::testFailure Failed asserting that two strings
+are equal. --- Expected +++ Actual @@ @@ -'foo' +'BAR'
+
+/home/sb/EqualsIgnoringCaseTest.php:8
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
 
 assertEqualsWithDelta()
 -----------------------
@@ -497,6 +807,22 @@ the same arguments.
             $this->assertEqualsWithDelta(1.0, 1.5, 0.1);
         }
     }
+
+$ phpunit EqualsWithDeltaTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F 1 / 1 (100%)
+
+Time: 41 ms, Memory: 6.00 MB
+
+There was 1 failure:
+
+1) EqualsWithDeltaTest::testFailure Failed asserting that 1.5 matches
+expected 1.0.
+
+/home/sb/EqualsWithDeltaTest.php:8
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
 
 assertObjectEquals()
 --------------------
@@ -565,6 +891,22 @@ of objects convenient for this common use case:
         }
     }
 
+$ phpunit EqualsTest PHPUnit .0 by Sebastian Bergmann and contributors.
+
+F 1 / 1 (100%)
+
+Time: 00:00.017, Memory: 4.00 MB
+
+There was 1 failure:
+
+1) SomethingThatUsesEmailTest::testSomething Failed asserting that two
+objects are equal. The objects are not equal according to
+Email::equals().
+
+/home/sb/SomethingThatUsesEmailTest.php:16
+
+FAILURES! Tests: 1, Assertions: 2, Failures: 1.
+
 Please note:
 
 -   A method with name `$method` must exist on the `$actual` object
@@ -597,6 +939,20 @@ arguments.
         }
     }
 
+$ phpunit FalseTest PHPUnit .0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) FalseTest::testFailure Failed asserting that true is false.
+
+/home/sb/FalseTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 assertFileEquals()
 ------------------
 
@@ -620,6 +976,22 @@ same arguments.
         }
     }
 
+$ phpunit FileEqualsTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.25Mb
+
+There was 1 failure:
+
+1) FileEqualsTest::testFailure Failed asserting that two strings are
+equal. --- Expected +++ Actual @@ @@ -'expected +'actual '
+
+/home/sb/FileEqualsTest.php:6
+
+FAILURES! Tests: 1, Assertions: 3, Failures: 1.
+
 assertFileExists()
 ------------------
 
@@ -641,6 +1013,22 @@ the same arguments.
             $this->assertFileExists('/path/to/file');
         }
     }
+
+$ phpunit FileExistsTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 4.75Mb
+
+There was 1 failure:
+
+1) FileExistsTest::testFailure Failed asserting that file
+"/path/to/file" exists.
+
+/home/sb/FileExistsTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
 
 assertFileIsReadable()
 ----------------------
@@ -664,6 +1052,22 @@ the same arguments.
         }
     }
 
+$ phpunit FileIsReadableTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 4.75Mb
+
+There was 1 failure:
+
+1) FileIsReadableTest::testFailure Failed asserting that "/path/to/file"
+is readable.
+
+/home/sb/FileIsReadableTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 assertFileIsWritable()
 ----------------------
 
@@ -686,6 +1090,22 @@ the same arguments.
         }
     }
 
+$ phpunit FileIsWritableTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 4.75Mb
+
+There was 1 failure:
+
+1) FileIsWritableTest::testFailure Failed asserting that "/path/to/file"
+is writable.
+
+/home/sb/FileIsWritableTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 assertGreaterThan()
 -------------------
 
@@ -705,6 +1125,22 @@ not greater than the value of `$expected`.
         }
     }
 
+$ phpunit GreaterThanTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) GreaterThanTest::testFailure Failed asserting that 1 is greater than
+2.
+
+/home/sb/GreaterThanTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 assertGreaterThanOrEqual()
 --------------------------
 
@@ -723,6 +1159,22 @@ not greater than or equal to the value of `$expected`.
             $this->assertGreaterThanOrEqual(2, 1);
         }
     }
+
+$ phpunit GreaterThanOrEqualTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.25Mb
+
+There was 1 failure:
+
+1) GreatThanOrEqualTest::testFailure Failed asserting that 1 is equal to
+2 or is greater than 2.
+
+/home/sb/GreaterThanOrEqualTest.php:6
+
+FAILURES! Tests: 1, Assertions: 2, Failures: 1.
 
 assertInfinite()
 ----------------
@@ -745,6 +1197,21 @@ arguments.
         }
     }
 
+$ phpunit InfiniteTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) InfiniteTest::testFailure Failed asserting that 1 is infinite.
+
+/home/sb/InfiniteTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 assertInstanceOf()
 ------------------
 
@@ -766,6 +1233,22 @@ same arguments.
             $this->assertInstanceOf(RuntimeException::class, new Exception);
         }
     }
+
+$ phpunit InstanceOfTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) InstanceOfTest::testFailure Failed asserting that Exception Object
+(...) is an instance of class "RuntimeException".
+
+/home/sb/InstanceOfTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
 
 assertIsArray()
 ---------------
@@ -1179,6 +1662,21 @@ same arguments.
         }
     }
 
+$ phpunit StringTest PHPUnit .0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) StringTest::testFailure Failed asserting that null is of type
+"string".
+
+/home/sb/StringTest.php:8
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 assertIsReadable()
 ------------------
 
@@ -1200,6 +1698,22 @@ same arguments.
             $this->assertIsReadable('/path/to/unreadable');
         }
     }
+
+$ phpunit IsReadableTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 4.75Mb
+
+There was 1 failure:
+
+1) IsReadableTest::testFailure Failed asserting that
+"/path/to/unreadable" is readable.
+
+/home/sb/IsReadableTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
 
 assertIsWritable()
 ------------------
@@ -1223,6 +1737,22 @@ same arguments.
         }
     }
 
+$ phpunit IsWritableTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 4.75Mb
+
+There was 1 failure:
+
+1) IsWritableTest::testFailure Failed asserting that
+"/path/to/unwritable" is writable.
+
+/home/sb/IsWritableTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 assertJsonFileEqualsJsonFile()
 ------------------------------
 
@@ -1242,6 +1772,23 @@ does not match the value of `$expectedFile`.
               'path/to/fixture/file', 'path/to/actual/file');
         }
     }
+
+$ phpunit JsonFileEqualsJsonFileTest PHPUnit .0 by Sebastian Bergmann
+and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) JsonFileEqualsJsonFile::testFailure Failed asserting that
+'{"Mascot":"Tux"}' matches JSON string "\["Mascott", "Tux", "OS",
+"Linux"\]".
+
+/home/sb/JsonFileEqualsJsonFileTest.php:5
+
+FAILURES! Tests: 1, Assertions: 3, Failures: 1.
 
 assertJsonStringEqualsJsonFile()
 --------------------------------
@@ -1263,6 +1810,22 @@ does not match the value of `$expectedFile`.
             );
         }
     }
+
+$ phpunit JsonStringEqualsJsonFileTest PHPUnit .0 by Sebastian Bergmann
+and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) JsonStringEqualsJsonFile::testFailure Failed asserting that
+'{"Mascot":"ux"}' matches JSON string "{"Mascott":"Tux"}".
+
+/home/sb/JsonStringEqualsJsonFileTest.php:5
+
+FAILURES! Tests: 1, Assertions: 3, Failures: 1.
 
 assertJsonStringEqualsJsonString()
 ----------------------------------
@@ -1286,6 +1849,23 @@ does not match the value of `$expectedJson`.
         }
     }
 
+$ phpunit JsonStringEqualsJsonStringTest PHPUnit .0 by Sebastian
+Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) JsonStringEqualsJsonStringTest::testFailure Failed asserting that two
+objects are equal. --- Expected +++ Actual @@ @@ stdClass Object ( -
+'Mascot' =&gt; 'Tux' + 'Mascot' =&gt; 'ux' )
+
+/home/sb/JsonStringEqualsJsonStringTest.php:5
+
+FAILURES! Tests: 1, Assertions: 3, Failures: 1.
+
 assertLessThan()
 ----------------
 
@@ -1304,6 +1884,21 @@ not less than the value of `$expected`.
             $this->assertLessThan(1, 2);
         }
     }
+
+$ phpunit LessThanTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) LessThanTest::testFailure Failed asserting that 2 is less than 1.
+
+/home/sb/LessThanTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
 
 assertLessThanOrEqual()
 -----------------------
@@ -1324,6 +1919,22 @@ not less than or equal to the value of `$expected`.
         }
     }
 
+$ phpunit LessThanOrEqualTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.25Mb
+
+There was 1 failure:
+
+1) LessThanOrEqualTest::testFailure Failed asserting that 2 is equal to
+1 or is less than 1.
+
+/home/sb/LessThanOrEqualTest.php:6
+
+FAILURES! Tests: 1, Assertions: 2, Failures: 1.
+
 assertNan()
 -----------
 
@@ -1341,6 +1952,20 @@ Reports an error identified by `$message` if `$variable` is not `NAN`.
             $this->assertNan(1);
         }
     }
+
+$ phpunit NanTest PHPUnit .0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) NanTest::testFailure Failed asserting that 1 is nan.
+
+/home/sb/NanTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
 
 assertNull()
 ------------
@@ -1362,6 +1987,20 @@ arguments.
             $this->assertNull('foo');
         }
     }
+
+$ phpunit NotNullTest PHPUnit .0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) NullTest::testFailure Failed asserting that 'foo' is null.
+
+/home/sb/NotNullTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
 
 assertObjectHasAttribute()
 --------------------------
@@ -1385,6 +2024,22 @@ takes the same arguments.
         }
     }
 
+$ phpunit ObjectHasAttributeTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 4.75Mb
+
+There was 1 failure:
+
+1) ObjectHasAttributeTest::testFailure Failed asserting that object of
+class "stdClass" has attribute "foo".
+
+/home/sb/ObjectHasAttributeTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 assertMatchesRegularExpression()
 --------------------------------
 
@@ -1406,6 +2061,21 @@ and takes the same arguments.
             $this->assertMatchesRegularExpression('/foo/', 'bar');
         }
     }
+
+$ phpunit RegExpTest PHPUnit .0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) RegExpTest::testFailure Failed asserting that 'bar' matches PCRE
+pattern "/foo/".
+
+/home/sb/RegExpTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
 
 assertStringMatchesFormat()
 ---------------------------
@@ -1429,61 +2099,53 @@ takes the same arguments.
         }
     }
 
+$ phpunit StringMatchesFormatTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) StringMatchesFormatTest::testFailure Failed asserting that 'foo'
+matches PCRE pattern "/^\[+-\]?d+$/s".
+
+/home/sb/StringMatchesFormatTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 The format string may contain the following placeholders:
 
--
+-   `%e`: Represents a directory separator, for example `/` on Linux.
 
-> `%e`: Represents a directory separator, for example `/` on Linux.
+-   `%s`: One or more of anything (character or white space) except the
+    > end of line character.
 
--
+-   `%S`: Zero or more of anything (character or white space) except the
+    > end of line character.
 
-> `%s`: One or more of anything (character or white space) except the
-> end of line character.
+-   `%a`: One or more of anything (character or white space) including
+    > the end of line character.
 
--
+-   `%A`: Zero or more of anything (character or white space) including
+    > the end of line character.
 
-> `%S`: Zero or more of anything (character or white space) except the
-> end of line character.
+-   `%w`: Zero or more white space characters.
 
--
+-   `%i`: A signed integer value, for example `+3142`, `-3142`.
 
-> `%a`: One or more of anything (character or white space) including the
-> end of line character.
+-   `%d`: An unsigned integer value, for example `123456`.
 
--
+-   `%x`: One or more hexadecimal character. That is, characters in the
+    > range `0-9`, `a-f`, `A-F`.
 
-> `%A`: Zero or more of anything (character or white space) including
-> the end of line character.
+-   `%f`: A floating point number, for example: `3.142`, `-3.142`,
+    > `3.142E-10`, `3.142e+10`.
 
--
+-   `%c`: A single character of any sort.
 
-> `%w`: Zero or more white space characters.
-
--
-
-> `%i`: A signed integer value, for example `+3142`, `-3142`.
-
--
-
-> `%d`: An unsigned integer value, for example `123456`.
-
--
-
-> `%x`: One or more hexadecimal character. That is, characters in the
-> range `0-9`, `a-f`, `A-F`.
-
--
-
-> `%f`: A floating point number, for example: `3.142`, `-3.142`,
-> `3.142E-10`, `3.142e+10`.
-
--
-
-> `%c`: A single character of any sort.
-
--
-
-> `%%`: A literal percent character: `%`.
+-   `%%`: A literal percent character: `%`.
 
 assertStringMatchesFormatFile()
 -------------------------------
@@ -1507,6 +2169,22 @@ and takes the same arguments.
         }
     }
 
+$ phpunit StringMatchesFormatFileTest PHPUnit .0 by Sebastian Bergmann
+and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) StringMatchesFormatFileTest::testFailure Failed asserting that 'foo'
+matches PCRE pattern "/^\[+-\]?d+ $/s".
+
+/home/sb/StringMatchesFormatFileTest.php:6
+
+FAILURES! Tests: 1, Assertions: 2, Failures: 1.
+
 assertSame()
 ------------
 
@@ -1529,6 +2207,21 @@ arguments.
         }
     }
 
+$ phpunit SameTest PHPUnit .0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) SameTest::testFailure Failed asserting that 2204 is identical to
+'2204'.
+
+/home/sb/SameTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 `assertSame(object $expected, object $actual[, string $message = ''])`
 
 Reports an error identified by `$message` if the two variables
@@ -1544,6 +2237,21 @@ Reports an error identified by `$message` if the two variables
             $this->assertSame(new stdClass, new stdClass);
         }
     }
+
+$ phpunit SameTest PHPUnit .0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 4.75Mb
+
+There was 1 failure:
+
+1) SameTest::testFailure Failed asserting that two variables reference
+the same object.
+
+/home/sb/SameTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
 
 assertStringEndsWith()
 ----------------------
@@ -1567,6 +2275,22 @@ the same arguments.
         }
     }
 
+$ phpunit StringEndsWithTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 1 second, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) StringEndsWithTest::testFailure Failed asserting that 'foo' ends with
+"suffix".
+
+/home/sb/StringEndsWithTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 assertStringEqualsFile()
 ------------------------
 
@@ -1588,6 +2312,22 @@ the same arguments.
             $this->assertStringEqualsFile('/home/sb/expected', 'actual');
         }
     }
+
+$ phpunit StringEqualsFileTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.25Mb
+
+There was 1 failure:
+
+1) StringEqualsFileTest::testFailure Failed asserting that two strings
+are equal. --- Expected +++ Actual @@ @@ -'expected -' +'actual'
+
+/home/sb/StringEqualsFileTest.php:6
+
+FAILURES! Tests: 1, Assertions: 2, Failures: 1.
 
 assertStringStartsWith()
 ------------------------
@@ -1611,12 +2351,28 @@ the same arguments.
         }
     }
 
+$ phpunit StringStartsWithTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) StringStartsWithTest::testFailure Failed asserting that 'foo' starts
+with "prefix".
+
+/home/sb/StringStartsWithTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
+
 assertThat()
 ------------
 
 More complex assertions can be formulated using the
 `PHPUnit\Framework\Constraint` classes. They can be evaluated using the
-`assertThat()` method. appendixes.assertions.assertThat.example shows
+`assertThat()` method. `appendixes.assertions.assertThat.example` shows
 how the `logicalNot()` and `equalTo()` constraints can be used to
 express the same assertion as `assertNotEquals()`.
 
@@ -1644,8 +2400,146 @@ the `$constraint`.
         }
     }
 
-appendixes.assertions.assertThat.tables.constraints shows the available
-`PHPUnit\Framework\Constraint` classes.
+`appendixes.assertions.assertThat.tables.constraints` shows the
+available `PHPUnit\Framework\Constraint` classes.
+
+table
+
+<table>
+<caption>Constraints</caption>
+<thead>
+<tr class="header">
+<th>Constraint</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\IsAnything anything()</code></td>
+<td>Constraint that accepts any input value.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\ArrayHasKey arrayHasKey(mixed $key)</code></td>
+<td>Constraint that asserts that the array has a given key.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\TraversableContains contains(mixed $value)</code></td>
+<td>Constraint that asserts that the <code>array</code> or object that implements the <code>Iterator</code> interface contains a given value.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\TraversableContainsOnly containsOnly(string $type)</code></td>
+<td>Constraint that asserts that the <code>array</code> or object that implements the <code>Iterator</code> interface contains only values of a given type.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\TraversableContainsOnly containsOnlyInstancesOf(string $classname)</code></td>
+<td>Constraint that asserts that the <code>array</code> or object that implements the <code>Iterator</code> interface contains only instances of a given classname.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\IsEqual equalTo($value, $delta = 0, $maxDepth = 10)</code></td>
+<td>Constraint that checks if one value is equal to another.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\DirectoryExists directoryExists()</code></td>
+<td>Constraint that checks if the directory exists.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\FileExists fileExists()</code></td>
+<td>Constraint that checks if the file(name) exists.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\IsReadable isReadable()</code></td>
+<td>Constraint that checks if the file(name) is readable.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\IsWritable isWritable()</code></td>
+<td>Constraint that checks if the file(name) is writable.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\GreaterThan greaterThan(mixed $value)</code></td>
+<td>Constraint that asserts that the value is greater than a given value.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\LogicalOr greaterThanOrEqual(mixed $value)</code></td>
+<td>Constraint that asserts that the value is greater than or equal to a given value.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\ClassHasAttribute classHasAttribute(string $attributeName)</code></td>
+<td>Constraint that asserts that the class has a given attribute.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\ClassHasStaticAttribute classHasStaticAttribute(string $attributeName)</code></td>
+<td>Constraint that asserts that the class has a given static attribute.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\ObjectHasAttribute objectHasAttribute(string $attributeName)</code></td>
+<td>Constraint that asserts that the object has a given attribute.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\IsIdentical identicalTo(mixed $value)</code></td>
+<td>Constraint that asserts that one value is identical to another.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\IsFalse isFalse()</code></td>
+<td>Constraint that asserts that the value is <code>false</code>.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\IsInstanceOf isInstanceOf(string $className)</code></td>
+<td>Constraint that asserts that the object is an instance of a given class.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\IsNull isNull()</code></td>
+<td>Constraint that asserts that the value is <code>null</code>.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\IsTrue isTrue()</code></td>
+<td>Constraint that asserts that the value is <code>true</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\IsType isType(string $type)</code></td>
+<td>Constraint that asserts that the value is of a specified type.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\LessThan lessThan(mixed $value)</code></td>
+<td>Constraint that asserts that the value is smaller than a given value.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\LogicalOr lessThanOrEqual(mixed $value)</code></td>
+<td>Constraint that asserts that the value is smaller than or equal to a given value.</td>
+</tr>
+<tr class="even">
+<td><code>logicalAnd()</code></td>
+<td>Logical AND.</td>
+</tr>
+<tr class="odd">
+<td><code>logicalNot(PHPUnit\Framework\Constraint $constraint)</code></td>
+<td>Logical NOT.</td>
+</tr>
+<tr class="even">
+<td><code>logicalOr()</code></td>
+<td>Logical OR.</td>
+</tr>
+<tr class="odd">
+<td><code>logicalXor()</code></td>
+<td>Logical XOR.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\PCREMatch matchesRegularExpression(string $pattern)</code></td>
+<td>Constraint that asserts that the string matches a regular expression.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\StringContains stringContains(string $string, bool $case)</code></td>
+<td>Constraint that asserts that the string contains a given string.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\StringEndsWith stringEndsWith(string $suffix)</code></td>
+<td>Constraint that asserts that the string ends with a given suffix.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\StringStartsWith stringStartsWith(string $prefix)</code></td>
+<td>Constraint that asserts that the string starts with a given prefix.</td>
+</tr>
+</tbody>
+</table>
 
 assertTrue()
 ------------
@@ -1667,6 +2561,20 @@ arguments.
             $this->assertTrue(false);
         }
     }
+
+$ phpunit TrueTest PHPUnit .0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) TrueTest::testFailure Failed asserting that false is true.
+
+/home/sb/TrueTest.php:6
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.
 
 assertXmlFileEqualsXmlFile()
 ----------------------------
@@ -1691,6 +2599,24 @@ takes the same arguments.
         }
     }
 
+$ phpunit XmlFileEqualsXmlFileTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.25Mb
+
+There was 1 failure:
+
+1) XmlFileEqualsXmlFileTest::testFailure Failed asserting that two DOM
+documents are equal. --- Expected +++ Actual @@ @@ &lt;?xml
+version="1.0"?&gt; &lt;foo&gt; - &lt;bar/&gt; + &lt;baz/&gt;
+&lt;/foo&gt;
+
+/home/sb/XmlFileEqualsXmlFileTest.php:7
+
+FAILURES! Tests: 1, Assertions: 3, Failures: 1.
+
 assertXmlStringEqualsXmlFile()
 ------------------------------
 
@@ -1714,6 +2640,24 @@ takes the same arguments.
         }
     }
 
+$ phpunit XmlStringEqualsXmlFileTest PHPUnit .0 by Sebastian Bergmann
+and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.25Mb
+
+There was 1 failure:
+
+1) XmlStringEqualsXmlFileTest::testFailure Failed asserting that two DOM
+documents are equal. --- Expected +++ Actual @@ @@ &lt;?xml
+version="1.0"?&gt; &lt;foo&gt; - &lt;bar/&gt; + &lt;baz/&gt;
+&lt;/foo&gt;
+
+/home/sb/XmlStringEqualsXmlFileTest.php:7
+
+FAILURES! Tests: 1, Assertions: 2, Failures: 1.
+
 assertXmlStringEqualsXmlString()
 --------------------------------
 
@@ -1736,3 +2680,21 @@ and takes the same arguments.
               '<foo><bar/></foo>', '<foo><baz/></foo>');
         }
     }
+
+$ phpunit XmlStringEqualsXmlStringTest PHPUnit .0 by Sebastian Bergmann
+and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) XmlStringEqualsXmlStringTest::testFailure Failed asserting that two
+DOM documents are equal. --- Expected +++ Actual @@ @@ &lt;?xml
+version="1.0"?&gt; &lt;foo&gt; - &lt;bar/&gt; + &lt;baz/&gt;
+&lt;/foo&gt;
+
+/home/sb/XmlStringEqualsXmlStringTest.php:7
+
+FAILURES! Tests: 1, Assertions: 1, Failures: 1.

@@ -6,14 +6,14 @@ code to set the world up in a known state and then return it to its
 original state when the test is complete. This known state is called the
 *fixture* of the test.
 
-In writing-tests-for-phpunit.examples.StackTest.php, the fixture was the
-array that is stored in the `$stack` variable. Most of the time, though,
-the fixture will be more complex than a simple array, and the amount of
-code needed to set it up will grow accordingly. The actual content of
-the test gets lost in the noise of setting up the fixture. This problem
-gets even worse when you write several tests with similar fixtures.
-Without some help from the testing framework, we would have to duplicate
-the code that sets up the fixture for each test we write.
+In `writing-tests-for-phpunit.examples.StackTest.php`, the fixture was
+the array that is stored in the `$stack` variable. Most of the time,
+though, the fixture will be more complex than a simple array, and the
+amount of code needed to set it up will grow accordingly. The actual
+content of the test gets lost in the noise of setting up the fixture.
+This problem gets even worse when you write several tests with similar
+fixtures. Without some help from the testing framework, we would have to
+duplicate the code that sets up the fixture for each test we write.
 
 PHPUnit supports sharing the setup code. Before a test method is run, a
 template method called `setUp()` is invoked. `setUp()` is where you
@@ -22,9 +22,9 @@ finished running, whether it succeeded or failed, another template
 method called `tearDown()` is invoked. `tearDown()` is where you clean
 up the objects against which you tested.
 
-In writing-tests-for-phpunit.examples.StackTest2.php we used the
+In `writing-tests-for-phpunit.examples.StackTest2.php` we used the
 producer-consumer relationship between tests to share a fixture. This is
-not always desired or even possible. fixtures.examples.StackTest.php
+not always desired or even possible. `fixtures.examples.StackTest.php`
 shows how we can write the tests of the `StackTest` in such a way that
 not the fixture itself is reused but the code that creates it. First we
 declare the instance variable, `$stack`, that we are going to use
@@ -133,6 +133,26 @@ test case class.
         }
     }
 
+$ phpunit TemplateMethodsTest PHPUnit .0 by Sebastian Bergmann and
+contributors.
+
+TemplateMethodsTest::setUpBeforeClass TemplateMethodsTest::setUp
+TemplateMethodsTest::assertPreConditions TemplateMethodsTest::testOne
+TemplateMethodsTest::assertPostConditions TemplateMethodsTest::tearDown
+.TemplateMethodsTest::setUp TemplateMethodsTest::assertPreConditions
+TemplateMethodsTest::testTwo TemplateMethodsTest::tearDown
+TemplateMethodsTest::onNotSuccessfulTest
+FTemplateMethodsTest::tearDownAfterClass
+
+Time: 0 seconds, Memory: 5.25Mb
+
+There was 1 failure:
+
+1) TemplateMethodsTest::testTwo Failed asserting that
+&lt;boolean:false&gt; is true. /home/sb/TemplateMethodsTest.php:30
+
+FAILURES! Tests: 2, Assertions: 2, Failures: 1.
+
 More setUp() than tearDown()
 ----------------------------
 
@@ -151,15 +171,11 @@ Variations
 What happens when you have two tests with slightly different setups?
 There are two possibilities:
 
--
+-   If the `setUp()` code differs only slightly, move the code that
+    > differs from the `setUp()` code to the test method.
 
-> If the `setUp()` code differs only slightly, move the code that
-> differs from the `setUp()` code to the test method.
-
--
-
-> If you really have a different `setUp()`, you need a different test
-> case class. Name the class after the difference in the setup.
+-   If you really have a different `setUp()`, you need a different test
+    > case class. Name the class after the difference in the setup.
 
 Sharing Fixture
 ---------------
@@ -173,7 +189,7 @@ tests is a database connection: you log into the database once and reuse
 the database connection instead of creating a new connection for each
 test. This makes your tests run faster.
 
-fixtures.sharing-fixture.examples.DatabaseTest.php uses the
+`fixtures.sharing-fixture.examples.DatabaseTest.php` uses the
 `setUpBeforeClass()` and `tearDownAfterClass()` template methods to
 connect to the database before the test case class' first test and to
 disconnect from the database after the last test of the test case,
@@ -201,7 +217,7 @@ It cannot be emphasized enough that sharing fixtures between tests
 reduces the value of the tests. The underlying design problem is that
 objects are not loosely coupled. You will achieve better results solving
 the underlying design problem and then writing tests using stubs (see
-test-doubles), than by creating dependencies between tests at runtime
+`test-doubles`), than by creating dependencies between tests at runtime
 and ignoring the opportunity to improve your design.
 
 Global State
@@ -216,26 +232,18 @@ test's change to a global variable might break another test.
 
 In PHP, global variables work like this:
 
--
+-   A global variable `$foo = 'bar';` is stored as
+    > `$GLOBALS['foo'] = 'bar';`.
 
-> A global variable `$foo = 'bar';` is stored as
-> `$GLOBALS['foo'] = 'bar';`.
+-   The `$GLOBALS` variable is a so-called *super-global* variable.
 
--
+-   Super-global variables are built-in variables that are always
+    > available in all scopes.
 
-> The `$GLOBALS` variable is a so-called *super-global* variable.
-
--
-
-> Super-global variables are built-in variables that are always
-> available in all scopes.
-
--
-
-> In the scope of a function or method, you may access the global
-> variable `$foo` by either directly accessing `$GLOBALS['foo']` or by
-> using `global $foo;` to create a local variable with a reference to
-> the global variable.
+-   In the scope of a function or method, you may access the global
+    > variable `$foo` by either directly accessing `$GLOBALS['foo']` or
+    > by using `global $foo;` to create a local variable with a
+    > reference to the global variable.
 
 Besides global variables, static attributes of classes are also part of
 the global state.
@@ -264,7 +272,7 @@ backup operation will break when such an object is stored e.g. in the
 `$GLOBALS` array.
 
 The `@backupGlobals` annotation that is discussed in
-appendixes.annotations.backupGlobals can be used to control the backup
+`appendixes.annotations.backupGlobals` can be used to control the backup
 and restore operations for global variables. Alternatively, you can
 provide a list of global variables that are to be excluded from the
 backup and restore operations like this
@@ -282,8 +290,8 @@ Setting the `$backupGlobalsExcludeList` property inside e.g. the
 `setUp()` method has no effect.
 
 The `@backupStaticAttributes` annotation discussed in
-appendixes.annotations.backupStaticAttributes can be used to back up all
-static property values in all declared classes before each test and
+`appendixes.annotations.backupStaticAttributes` can be used to back up
+all static property values in all declared classes before each test and
 restore them afterwards.
 
 It processes all classes that are declared at the time a test starts,

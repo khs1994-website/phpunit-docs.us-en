@@ -20,8 +20,8 @@ discover and run the tests by recursively traversing the test directory.
 Lets take a look at the test suite of the
 [sebastianbergmann/money](http://github.com/sebastianbergmann/money/)
 library. Looking at this project's directory structure, we see that the
-test case classes in the tests directory mirror the package and class
-structure of the System Under Test (SUT) in the src directory:
+test case classes in the `tests` directory mirror the package and class
+structure of the System Under Test (SUT) in the `src` directory:
 
     src                                 tests
     `-- Currency.php                    `-- CurrencyTest.php
@@ -32,33 +32,60 @@ structure of the System Under Test (SUT) in the src directory:
 To run all tests for the library we need to point the PHPUnit
 command-line test runner to the test directory:
 
+$ phpunit --bootstrap src/autoload.php tests PHPUnit .0 by Sebastian
+Bergmann and contributors.
+
+------------------------------------------------------------------------
+
+Time: 636 ms, Memory: 3.50Mb
+
+OK (33 tests, 52 assertions)
+
 Note
 
 If you point the PHPUnit command-line test runner to a directory it will
-look for \*Test.php files.
+look for `*Test.php` files.
 
 To run only the tests that are declared in the `CurrencyTest` test case
-class in tests/CurrencyTest.php we can use the following command:
+class in `tests/CurrencyTest.php` we can use the following command:
+
+$ phpunit --bootstrap src/autoload.php tests/CurrencyTest.php PHPUnit .0
+by Sebastian Bergmann and contributors.
+
+------------------------------------------------------------------------
+
+Time: 280 ms, Memory: 2.75Mb
+
+OK (8 tests, 8 assertions)
 
 For more fine-grained control of which tests to run we can use the
 `--filter` option:
+
+$ phpunit --bootstrap src/autoload.php --filter
+testObjectCanBeConstructedForValidConstructorArgument tests PHPUnit .0
+by Sebastian Bergmann and contributors.
+
+Time: 167 ms, Memory: 3.00Mb
+
+OK (2 test, 2 assertions)
 
 Note
 
 A drawback of this approach is that we have no control over the order in
 which the tests are run. This can lead to problems with regard to test
-dependencies, see writing-tests-for-phpunit.test-dependencies. In the
+dependencies, see `writing-tests-for-phpunit.test-dependencies`. In the
 next section you will see how you can make the test execution order
 explicit by using the XML configuration file.
 
 Composing a Test Suite Using XML Configuration
 ----------------------------------------------
 
-PHPUnit's XML configuration file (appendixes.configuration) can also be
-used to compose a test suite.
-organizing-tests.xml-configuration.examples.phpunit.xml shows a minimal
-phpunit.xml file that will add all `*Test` classes that are found in
-\*Test.php files when the tests directory is recursively traversed.
+PHPUnit's XML configuration file (`appendixes.configuration`) can also
+be used to compose a test suite.
+`organizing-tests.xml-configuration.examples.phpunit.xml` shows a
+minimal `phpunit.xml` file that will add all `*Test` classes that are
+found in `*Test.php` files when the `tests` directory is recursively
+traversed.
 
     <phpunit bootstrap="src/autoload.php">
       <testsuites>
@@ -70,9 +97,16 @@ phpunit.xml file that will add all `*Test` classes that are found in
 
 To run the test suite, use the the `--testsuite` option:
 
-If phpunit.xml or phpunit.xml.dist (in that order) exist in the current
-working directory and `--configuration` is *not* used, the configuration
-will be automatically read from that file.
+$ phpunit --bootstrap src/autoload.php --testsuite money PHPUnit .0 by
+Sebastian Bergmann and contributors.
+
+Time: 167 ms, Memory: 3.00Mb
+
+OK (2 test, 2 assertions)
+
+If `phpunit.xml` or `phpunit.xml.dist` (in that order) exist in the
+current working directory and `--configuration` is *not* used, the
+configuration will be automatically read from that file.
 
 The order in which tests are executed can be made explicit:
 

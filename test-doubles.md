@@ -2,7 +2,7 @@ Test Doubles
 ============
 
 Gerard Meszaros introduces the concept of Test Doubles in
-Meszaros2007 &lt;appendixes.bibliography&gt; like this:
+`Meszaros2007 <appendixes.bibliography>` like this:
 
 > *Gerard Meszaros*:
 >
@@ -60,11 +60,11 @@ that the test has a control point for the indirect inputs of the SUT.
 This allows the test to force the SUT down paths it might not otherwise
 execute".
 
-test-doubles.stubs.examples.StubTest.php shows how to stub method calls
-and set up return values. We first use the `createStub()` method that is
-provided by the `PHPUnit\Framework\TestCase` class to set up a stub
-object that looks like an object of `SomeClass`
-(test-doubles.stubs.examples.SomeClass.php). We then use the [Fluent
+`test-doubles.stubs.examples.StubTest.php` shows how to stub method
+calls and set up return values. We first use the `createStub()` method
+that is provided by the `PHPUnit\Framework\TestCase` class to set up a
+stub object that looks like an object of `SomeClass`
+(`test-doubles.stubs.examples.SomeClass.php`). We then use the [Fluent
 Interface](http://martinfowler.com/bliki/FluentInterface.html) that
 PHPUnit provides to specify the behavior for the stub. In essence, this
 means that you do not need to create several temporary objects and wire
@@ -137,8 +137,8 @@ Similarily, if `m` had a return type declaration for a scalar type then
 a return value such as `0` (for `int`), `0.0` (for `float`), or `[]`
 (for `array`) would be generated.
 
-test-doubles.stubs.examples.StubTest2.php shows an example of how to use
-the Mock Builder's fluent interface to configure the creation of the
+`test-doubles.stubs.examples.StubTest2.php` shows an example of how to
+use the Mock Builder's fluent interface to configure the creation of the
 test double. The configuration of this test double uses the same best
 practice defaults used by `createStub()`.
 
@@ -174,8 +174,8 @@ syntax to achieve more complex stubbing behaviour.
 
 Sometimes you want to return one of the arguments of a method call
 (unchanged) as the result of a stubbed method call.
-test-doubles.stubs.examples.StubTest3.php shows how you can achieve this
-using `returnArgument()` instead of `returnValue()`.
+`test-doubles.stubs.examples.StubTest3.php` shows how you can achieve
+this using `returnArgument()` instead of `returnValue()`.
 
     <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
@@ -201,7 +201,7 @@ using `returnArgument()` instead of `returnValue()`.
 
 When testing a fluent interface, it is sometimes useful to have a
 stubbed method return a reference to the stubbed object.
-test-doubles.stubs.examples.StubTest4.php shows how you can use
+`test-doubles.stubs.examples.StubTest4.php` shows how you can use
 `returnSelf()` to achieve this.
 
     <?php declare(strict_types=1);
@@ -226,7 +226,7 @@ test-doubles.stubs.examples.StubTest4.php shows how you can use
 Sometimes a stubbed method should return different values depending on a
 predefined list of arguments. You can use `returnValueMap()` to create a
 map that associates arguments with corresponding return values. See
-test-doubles.stubs.examples.StubTest5.php for an example.
+`test-doubles.stubs.examples.StubTest5.php` for an example.
 
     <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
@@ -259,7 +259,7 @@ When the stubbed method call should return a calculated value instead of
 a fixed one (see `returnValue()`) or an (unchanged) argument (see
 `returnArgument()`), you can use `returnCallback()` to have the stubbed
 method return the result of a callback function or method. See
-test-doubles.stubs.examples.StubTest6.php for an example.
+`test-doubles.stubs.examples.StubTest6.php` for an example.
 
     <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
@@ -283,7 +283,7 @@ test-doubles.stubs.examples.StubTest6.php for an example.
 A simpler alternative to setting up a callback method may be to specify
 a list of desired return values. You can do this with the
 `onConsecutiveCalls()` method. See
-test-doubles.stubs.examples.StubTest7.php for an example.
+`test-doubles.stubs.examples.StubTest7.php` for an example.
 
     <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;
@@ -307,7 +307,7 @@ test-doubles.stubs.examples.StubTest7.php for an example.
     }
 
 Instead of returning a value, a stubbed method can also raise an
-exception. test-doubles.stubs.examples.StubTest8.php shows how to use
+exception. `test-doubles.stubs.examples.StubTest8.php` shows how to use
 `throwException()` to do this.
 
     <?php declare(strict_types=1);
@@ -370,7 +370,7 @@ not be verified automatically by PHPUnit.
 
 Here is an example: suppose we want to test that the correct method,
 `update()` in our example, is called on an object that observes another
-object. test-doubles.mock-objects.examples.SUT.php shows the code for
+object. `test-doubles.mock-objects.examples.SUT.php` shows the code for
 the `Subject` and `Observer` classes that are part of the System under
 Test (SUT).
 
@@ -438,7 +438,7 @@ Test (SUT).
         // Other methods.
     }
 
-test-doubles.mock-objects.examples.SubjectTest.php shows how to use a
+`test-doubles.mock-objects.examples.SubjectTest.php` shows how to use a
 mock object to test the interaction between `Subject` and `Observer`
 objects.
 
@@ -617,10 +617,48 @@ and `false` otherwise.
         }
     }
 
-appendixes.assertions.assertThat.tables.constraints shows the
+`appendixes.assertions.assertThat.tables.constraints` shows the
 constraints that can be applied to method arguments and
-test-doubles.mock-objects.tables.matchers shows the matchers that are
+`test-doubles.mock-objects.tables.matchers` shows the matchers that are
 available to specify the number of invocations.
+
+table
+
+<table>
+<caption>Matchers</caption>
+<thead>
+<tr class="header">
+<th>Matcher</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>PHPUnit\Framework\MockObject\Matcher\AnyInvokedCount any()</code></td>
+<td>Returns a matcher that matches when the method it is evaluated for is executed zero or more times.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\MockObject\Matcher\InvokedCount never()</code></td>
+<td>Returns a matcher that matches when the method it is evaluated for is never executed.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\MockObject\Matcher\InvokedAtLeastOnce atLeastOnce()</code></td>
+<td>Returns a matcher that matches when the method it is evaluated for is executed at least once.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\MockObject\Matcher\InvokedCount once()</code></td>
+<td>Returns a matcher that matches when the method it is evaluated for is executed exactly once.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\MockObject\Matcher\InvokedCount exactly(int $count)</code></td>
+<td>Returns a matcher that matches when the method it is evaluated for is executed exactly <code>$count</code> times.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\MockObject\Matcher\InvokedAtIndex at(int $index)</code></td>
+<td>Returns a matcher that matches when the method it is evaluated for is invoked at the given <code>$index</code>.</td>
+</tr>
+</tbody>
+</table>
 
 Note
 
@@ -635,45 +673,32 @@ not match your needs then you can use the `getMockBuilder($type)` method
 to customize the test double generation using a fluent interface. Here
 is a list of methods provided by the Mock Builder:
 
--
+-   `setMethods(array $methods)` can be called on the Mock Builder
+    > object to specify the methods that are to be replaced with a
+    > configurable test double. The behavior of the other methods is not
+    > changed. If you call `setMethods(null)`, then no methods will be
+    > replaced.
 
-> `setMethods(array $methods)` can be called on the Mock Builder object
-> to specify the methods that are to be replaced with a configurable
-> test double. The behavior of the other methods is not changed. If you
-> call `setMethods(null)`, then no methods will be replaced.
+-   `setMethodsExcept(array $methods)` can be called on the Mock Builder
+    > object to specify the methods that will not be replaced with a
+    > configurable test double while replacing all other public methods.
+    > This works inverse to `setMethods()`.
 
--
+-   `setConstructorArgs(array $args)` can be called to provide a
+    > parameter array that is passed to the original class' constructor
+    > (which is not replaced with a dummy implementation by default).
 
-> `setMethodsExcept(array $methods)` can be called on the Mock Builder
-> object to specify the methods that will not be replaced with a
-> configurable test double while replacing all other public methods.
-> This works inverse to `setMethods()`.
+-   `setMockClassName($name)` can be used to specify a class name for
+    > the generated test double class.
 
--
+-   `disableOriginalConstructor()` can be used to disable the call to
+    > the original class' constructor.
 
-> `setConstructorArgs(array $args)` can be called to provide a parameter
-> array that is passed to the original class' constructor (which is not
-> replaced with a dummy implementation by default).
+-   `disableOriginalClone()` can be used to disable the call to the
+    > original class' clone constructor.
 
--
-
-> `setMockClassName($name)` can be used to specify a class name for the
-> generated test double class.
-
--
-
-> `disableOriginalConstructor()` can be used to disable the call to the
-> original class' constructor.
-
--
-
-> `disableOriginalClone()` can be used to disable the call to the
-> original class' clone constructor.
-
--
-
-> `disableAutoload()` can be used to disable `__autoload()` during the
-> generation of the test double class.
+-   `disableAutoload()` can be used to disable `__autoload()` during the
+    > generation of the test double class.
 
 Mocking Traits and Abstract Classes
 -----------------------------------
@@ -751,9 +776,9 @@ mocks of web services, the `getMockFromWsdl()` can be used like
 returns a stub or mock based on a web service description in WSDL and
 `getMock()` returns a stub or mock based on a PHP class or interface.
 
-test-doubles.stubbing-and-mocking-web-services.examples.GoogleTest.php
+`test-doubles.stubbing-and-mocking-web-services.examples.GoogleTest.php`
 shows how `getMockFromWsdl()` can be used to stub, for example, the web
-service described in GoogleSearch.wsdl.
+service described in `GoogleSearch.wsdl`.
 
     <?php declare(strict_types=1);
     use PHPUnit\Framework\TestCase;

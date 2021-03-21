@@ -23,8 +23,8 @@ PHPUnit.
 -------
 
 The `@author` annotation is an alias for the `@group` annotation (see
-appendixes.annotations.group) and allows to filter tests based on their
-authors.
+`appendixes.annotations.group`) and allows to filter tests based on
+their authors.
 
 @after
 ------
@@ -180,7 +180,7 @@ Note
 unintended static values to persist and leak into subsequent tests in
 some circumstances.
 
-See fixtures.global-state for details.
+See `fixtures.global-state` for details.
 
 @before
 -------
@@ -246,7 +246,7 @@ The `@codeCoverageIgnore`, `@codeCoverageIgnoreStart` and
 `@codeCoverageIgnoreEnd` annotations can be used to exclude lines of
 code from the coverage analysis.
 
-For usage see code-coverage-analysis.ignoring-code-blocks.
+For usage see `code-coverage-analysis.ignoring-code-blocks`.
 
 @covers
 -------
@@ -273,19 +273,73 @@ individual test methods. The recommended way is to add the annotation to
 the docblock of the test class, not to the docblock of the test methods.
 
 When the `forceCoversAnnotation` configuration option in the
-configuration file &lt;appendixes.configuration&gt; is set to `true`,
-every test method needs to have an associated `@covers` annotation
-(either on the test class or the individual test method).
+`configuration file <appendixes.configuration>` is set to `true`, every
+test method needs to have an associated `@covers` annotation (either on
+the test class or the individual test method).
 
-appendixes.annotations.covers.tables.annotations shows the syntax of the
-`@covers` annotation. The section
-code-coverage-analysis.specifying-covered-parts provides longer examples
-for using the annotation.
+`appendixes.annotations.covers.tables.annotations` shows the syntax of
+the `@covers` annotation. The section
+`code-coverage-analysis.specifying-covered-parts` provides longer
+examples for using the annotation.
 
 Please note that this annotation requires a fully-qualified class name
 (FQCN). To make this more obvious to the reader, it is recommended to
 use a leading backslash (even if this not required for the annotation to
 work correctly).
+
+table
+
+<table>
+<caption>Annotations for specifying which methods are covered by a test</caption>
+<thead>
+<tr class="header">
+<th>Annotation</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>@covers ClassName::methodName</code> (not recommended)</td>
+<td>Specifies that the annotated test method covers the specified method.</td>
+</tr>
+<tr class="even">
+<td><code>@covers ClassName</code> (recommended)</td>
+<td>Specifies that the annotated test method covers all methods of a given class.</td>
+</tr>
+<tr class="odd">
+<td><code>@covers ClassName&lt;extended&gt;</code> (not recommended)</td>
+<td>Specifies that the annotated test method covers all methods of a given class and its parent class(es).</td>
+</tr>
+<tr class="even">
+<td><code>@covers ClassName::&lt;public&gt;</code> (not recommended)</td>
+<td>Specifies that the annotated test method covers all public methods of a given class.</td>
+</tr>
+<tr class="odd">
+<td><code>@covers ClassName::&lt;protected&gt;</code> (not recommended)</td>
+<td>Specifies that the annotated test method covers all protected methods of a given class.</td>
+</tr>
+<tr class="even">
+<td><code>@covers ClassName::&lt;private&gt;</code> (not recommended)</td>
+<td>Specifies that the annotated test method covers all private methods of a given class.</td>
+</tr>
+<tr class="odd">
+<td><code>@covers ClassName::&lt;!public&gt;</code> (not recommended)</td>
+<td>Specifies that the annotated test method covers all methods of a given class that are not public.</td>
+</tr>
+<tr class="even">
+<td><code>@covers ClassName::&lt;!protected&gt;</code> (not recommended)</td>
+<td>Specifies that the annotated test method covers all methods of a given class that are not protected.</td>
+</tr>
+<tr class="odd">
+<td><code>@covers ClassName::&lt;!private&gt;</code> (not recommended)</td>
+<td>Specifies that the annotated test method covers all methods of a given class that are not private.</td>
+</tr>
+<tr class="even">
+<td><code>@covers ::functionName</code> (recommended)</td>
+<td>Specifies that the annotated test method covers the specified global function.</td>
+</tr>
+</tbody>
+</table>
 
 @coversDefaultClass
 -------------------
@@ -293,7 +347,7 @@ work correctly).
 The `@coversDefaultClass` annotation can be used to specify a default
 namespace or class name. That way long names don't need to be repeated
 for every `@covers` annotation. See
-appendixes.annotations.examples.CoversDefaultClassTest.php.
+`appendixes.annotations.examples.CoversDefaultClassTest.php`.
 
 Please note that this annotation requires a fully-qualified class name
 (FQCN). To make this more obvious to the reader, it is recommended to
@@ -326,7 +380,7 @@ that no code coverage information will be recorded for the annotated
 test case.
 
 This can be used for integration testing. See
-code-coverage-analysis.specifying-covered-parts.examples.GuestbookIntegrationTest.php
+`code-coverage-analysis.specifying-covered-parts.examples.GuestbookIntegrationTest.php`
 for an example.
 
 The annotation can be used on the class and the method level and will
@@ -337,11 +391,11 @@ override any `@covers` tags.
 
 A test method can accept arbitrary arguments. These arguments are to be
 provided by one or more data provider methods (`provider()` in
-writing-tests-for-phpunit.data-providers.examples.DataTest.php). The
+`writing-tests-for-phpunit.data-providers.examples.DataTest.php`). The
 data provider method to be used is specified using the `@dataProvider`
 annotation.
 
-See writing-tests-for-phpunit.data-providers for more details.
+See `writing-tests-for-phpunit.data-providers` for more details.
 
 @depends
 --------
@@ -350,11 +404,11 @@ PHPUnit supports the declaration of explicit dependencies between test
 methods. Such dependencies do not define the order in which the test
 methods are to be executed but they allow the returning of an instance
 of the test fixture by a producer and passing it to the dependent
-consumers. writing-tests-for-phpunit.examples.StackTest2.php shows how
+consumers. `writing-tests-for-phpunit.examples.StackTest2.php` shows how
 to use the `@depends` annotation to express dependencies between test
 methods.
 
-See writing-tests-for-phpunit.test-dependencies for more details.
+See `writing-tests-for-phpunit.test-dependencies` for more details.
 
 @doesNotPerformAssertions
 -------------------------
@@ -449,7 +503,7 @@ preconditions, like the PHP Version or installed extensions, are not
 met.
 
 A complete list of possibilities and examples can be found at
-incomplete-and-skipped-tests.requires.tables.api
+`incomplete-and-skipped-tests.requires.tables.api`
 
 @runTestsInSeparateProcesses
 ----------------------------
@@ -472,8 +526,8 @@ process.
 from the parent process by serializing all globals in the parent process
 and unserializing them in the child process. This can cause problems if
 the parent process contains globals that are not serializable. See
-appendixes.annotations.preserveGlobalState for information on how to fix
-this.
+`appendixes.annotations.preserveGlobalState` for information on how to
+fix this.
 
 @runInSeparateProcess
 ---------------------
@@ -498,8 +552,8 @@ Indicates that a test should be run in a separate PHP process.
 from the parent process by serializing all globals in the parent process
 and unserializing them in the child process. This can cause problems if
 the parent process contains globals that are not serializable. See
-appendixes.annotations.preserveGlobalState for information on how to fix
-this.
+`appendixes.annotations.preserveGlobalState` for information on how to
+fix this.
 
 @small
 ------
@@ -597,8 +651,8 @@ A data set consists of one or many elements. To define a data set with
 multiple elements, define each element in a separate line. Each element
 of the data set must be an array defined in JSON.
 
-See writing-tests-for-phpunit.data-providers to learn more about passing
-a set of data to a test.
+See `writing-tests-for-phpunit.data-providers` to learn more about
+passing a set of data to a test.
 
     /**
      * @testWith ["test", 4]
@@ -624,8 +678,8 @@ array.
 -------
 
 The `@ticket` annotation is an alias for the `@group` annotation (see
-appendixes.annotations.group) and allows to filter tests based on their
-ticket ID.
+`appendixes.annotations.group`) and allows to filter tests based on
+their ticket ID.
 
 @uses
 -----
@@ -643,14 +697,14 @@ object which is necessary for testing a unit of code.
         // ...
     }
 
-code-coverage-analysis.specifying-covered-parts.examples.InvoiceTest.php
+`code-coverage-analysis.specifying-covered-parts.examples.InvoiceTest.php`
 shows another example.
 
 In addition to being helpful for persons reading the code, this
 annotation is useful in strict coverage mode where unintentionally
 covered code will cause a test to fail. See
-risky-tests.unintentionally-covered-code for more information regarding
-strict coverage mode.
+`risky-tests.unintentionally-covered-code` for more information
+regarding strict coverage mode.
 
 Please note that this annotation requires a fully-qualified class name
 (FQCN). To make this more obvious to the reader, it is recommended to
