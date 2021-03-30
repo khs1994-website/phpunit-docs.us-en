@@ -420,14 +420,14 @@ depended-upon tests will be the same for each data set. See
             return [['provider1'], ['provider2']];
         }
 
-        public function testProducerFirst(): void
+        public function testProducerFirst(): string
         {
             $this->assertTrue(true);
 
             return 'first';
         }
 
-        public function testProducerSecond(): void
+        public function testProducerSecond(): string
         {
             $this->assertTrue(true);
 
@@ -479,7 +479,7 @@ FAILURES! Tests: 4, Assertions: 4, Failures: 1.
             $this->assertSame($expected, $a + $b);
         }
 
-        public function additionWithNonNegativeNumbersProvider(): void
+        public function additionWithNonNegativeNumbersProvider(): array
         {
             return [
                 [0, 1, 1],
