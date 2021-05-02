@@ -176,6 +176,9 @@ Skipping Tests using @requires
 In addition to the above methods it is also possible to use the
 `@requires` annotation to express common preconditions for a test case.
 
+A test can have multiple `@requires` annotations, in which case all
+requirements need to be met for the test to run.
+
 table
 
 <table>
