@@ -25,6 +25,16 @@ extensions. Generating XML reports requires the
 [xmlwriter](http://php.net/manual/en/xmlwriter.installation.php)
 extension.
 
+Recommended PHP configuration
+-----------------------------
+
+For the output of PHPUnit to be most informative, it is recommended to
+have the following configuration set in the `php.ini` file used for test
+runs:
+
+memory\_limit=-1 error\_reporting=-1 log\_errors\_max\_len=0
+zend.assertions=1 assert.exception=1 xdebug.show\_exception\_trace=0
+
 PHP Archive (PHAR)
 ------------------
 
