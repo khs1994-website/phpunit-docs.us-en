@@ -1,0 +1,2386 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Assertions · PHPUnit 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="bibliography.html" />
+    
+    
+    <link rel="prev" href="annotations.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="annotations.html">
+            
+                <a href="annotations.html">
+            
+                    
+                    Annotations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3" data-path="assertions.html">
+            
+                <a href="assertions.html">
+            
+                    
+                    Assertions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="bibliography.html">
+            
+                <a href="bibliography.html">
+            
+                    
+                    Bibliography
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="code-coverage-analysis.html">
+            
+                <a href="code-coverage-analysis.html">
+            
+                    
+                    Code Coverage Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="copyright.html">
+            
+                <a href="copyright.html">
+            
+                    
+                    Copyright
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="extending-phpunit.html">
+            
+                <a href="extending-phpunit.html">
+            
+                    
+                    Extending Phpunit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="fixtures.html">
+            
+                <a href="fixtures.html">
+            
+                    
+                    Fixtures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="incomplete-and-skipped-tests.html">
+            
+                <a href="incomplete-and-skipped-tests.html">
+            
+                    
+                    Incomplete And Skipped Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="organizing-tests.html">
+            
+                <a href="organizing-tests.html">
+            
+                    
+                    Organizing Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="risky-tests.html">
+            
+                <a href="risky-tests.html">
+            
+                    
+                    Risky Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="test-doubles.html">
+            
+                <a href="test-doubles.html">
+            
+                    
+                    Test Doubles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="textui.html">
+            
+                <a href="textui.html">
+            
+                    
+                    Textui
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="writing-tests-for-phpunit.html">
+            
+                <a href="writing-tests-for-phpunit.html">
+            
+                    
+                    Writing Tests For Phpunit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Assertions</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="assertions">Assertions</h1>
+<p>This appendix lists the various assertion methods that are available.</p>
+<h2 id="static-vs-non-static-usage-of-assertion-methods">Static vs. Non-Static Usage of Assertion Methods</h2>
+<p>PHPUnit&apos;s assertions are implemented in <code>PHPUnit\Framework\Assert</code>.
+<code>PHPUnit\Framework\TestCase</code> inherits from <code>PHPUnit\Framework\Assert</code>.</p>
+<p>The assertion methods are declared static and can be invoked from any
+context using <code>PHPUnit\Framework\Assert::assertTrue()</code>, for instance, or
+using <code>$this-&gt;assertTrue()</code> or <code>self::assertTrue()</code>, for instance, in a
+class that extends <code>PHPUnit\Framework\TestCase</code>. You can even use global
+function wrappers such as <code>assertTrue()</code>.</p>
+<p>A common question, especially from developers new to PHPUnit, is whether
+using <code>$this-&gt;assertTrue()</code> or <code>self::assertTrue()</code>, for instance, is
+&quot;the right way&quot; to invoke an assertion. The short answer is: there is no
+right way. And there is no wrong way, either. It is a matter of personal
+preference.</p>
+<p>For most people it just &quot;feels right&quot; to use <code>$this-&gt;assertTrue()</code>
+because the test method is invoked on a test object. The fact that the
+assertion methods are declared static allows for (re)using them outside
+the scope of a test object. Lastly, the global function wrappers allow
+developers to type less characters (<code>assertTrue()</code> instead of
+<code>$this-&gt;assertTrue()</code> or <code>self::assertTrue()</code>).</p>
+<h2 id="assertarrayhaskey">assertArrayHasKey()</h2>
+<p><code>assertArrayHasKey(mixed $key, array $array[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$array</code> does not have the
+<code>$key</code>.</p>
+<p><code>assertArrayNotHasKey()</code> is the inverse of this assertion and takes the
+same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">ArrayHasKeyTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertArrayHasKey(&apos;foo&apos;, [&apos;bar&apos; =&gt; &apos;baz&apos;]);
+    }
+}
+</code></pre><p>$ phpunit ArrayHasKeyTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) ArrayHasKeyTest::testFailure Failed asserting that an array has the
+key &apos;foo&apos;.</p>
+<p>/home/sb/ArrayHasKeyTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertclasshasattribute">assertClassHasAttribute()</h2>
+<p><code>assertClassHasAttribute(string $attributeName, string $className[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$className::attributeName</code>
+does not exist.</p>
+<p><code>assertClassNotHasAttribute()</code> is the inverse of this assertion and
+takes the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">ClassHasAttributeTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertClassHasAttribute(&apos;foo&apos;, stdClass::class);
+    }
+}
+</code></pre><p>$ phpunit ClassHasAttributeTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 4.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) ClassHasAttributeTest::testFailure Failed asserting that class
+&quot;stdClass&quot; has attribute &quot;foo&quot;.</p>
+<p>/home/sb/ClassHasAttributeTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertclasshasstaticattribute">assertClassHasStaticAttribute()</h2>
+<p><code>assertClassHasStaticAttribute(string $attributeName, string $className[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$className::attributeName</code>
+does not exist.</p>
+<p><code>assertClassNotHasStaticAttribute()</code> is the inverse of this assertion
+and takes the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">ClassHasStaticAttributeTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertClassHasStaticAttribute(&apos;foo&apos;, stdClass::class);
+    }
+}
+</code></pre><p>$ phpunit ClassHasStaticAttributeTest PHPUnit .0 by Sebastian Bergmann
+and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 4.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) ClassHasStaticAttributeTest::testFailure Failed asserting that class
+&quot;stdClass&quot; has static attribute &quot;foo&quot;.</p>
+<p>/home/sb/ClassHasStaticAttributeTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertcontains">assertContains()</h2>
+<p><code>assertContains(mixed $needle, iterable $haystack[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$needle</code> is not an element
+of <code>$haystack</code>.</p>
+<p><code>assertNotContains()</code> is the inverse of this assertion and takes the
+same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">ContainsTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertContains(4, [1, 2, 3]);
+    }
+}
+</code></pre><p>$ phpunit ContainsTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) ContainsTest::testFailure Failed asserting that an array contains 4.</p>
+<p>/home/sb/ContainsTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertstringcontainsstring">assertStringContainsString()</h2>
+<p><code>assertStringContainsString(string $needle, string $haystack[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$needle</code> is not a
+substring of <code>$haystack</code>.</p>
+<p><code>assertStringNotContainsString()</code> is the inverse of this assertion and
+takes the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">StringContainsStringTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertStringContainsString(&apos;foo&apos;, &apos;bar&apos;);
+    }
+}
+</code></pre><p>$ phpunit StringContainsStringTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F 1 / 1 (100%)</p>
+<p>Time: 37 ms, Memory: 6.00 MB</p>
+<p>There was 1 failure:</p>
+<p>1) StringContainsStringTest::testFailure Failed asserting that &apos;bar&apos;
+contains &quot;foo&quot;.</p>
+<p>/home/sb/StringContainsStringTest.php:8</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertstringcontainsstringignoringcase">assertStringContainsStringIgnoringCase()</h2>
+<p><code>assertStringContainsStringIgnoringCase(string $needle, string $haystack[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$needle</code> is not a
+substring of <code>$haystack</code>.</p>
+<p>Differences in casing are ignored when <code>$needle</code> is searched for in
+<code>$haystack</code>.</p>
+<p><code>assertStringNotContainsStringIgnoringCase()</code> is the inverse of this
+assertion and takes the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">StringContainsStringIgnoringCaseTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertStringContainsStringIgnoringCase(&apos;foo&apos;, &apos;bar&apos;);
+    }
+}
+</code></pre><p>$ phpunit StringContainsStringIgnoringCaseTest PHPUnit .0 by Sebastian
+Bergmann and contributors.</p>
+<p>F 1 / 1 (100%)</p>
+<p>Time: 40 ms, Memory: 6.00 MB</p>
+<p>There was 1 failure:</p>
+<p>1) StringContainsStringTest::testFailure Failed asserting that &apos;bar&apos;
+contains &quot;foo&quot;.</p>
+<p>/home/sb/StringContainsStringIgnoringCaseTest.php:8</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertcontainsonly">assertContainsOnly()</h2>
+<p><code>assertContainsOnly(string $type, iterable $haystack[, boolean $isNativeType = null, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$haystack</code> does not
+contain only variables of type <code>$type</code>.</p>
+<p><code>$isNativeType</code> is a flag used to indicate whether <code>$type</code> is a native
+PHP type or not.</p>
+<p><code>assertNotContainsOnly()</code> is the inverse of this assertion and takes the
+same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">ContainsOnlyTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertContainsOnly(&apos;string&apos;, [&apos;1&apos;, &apos;2&apos;, 3]);
+    }
+}
+</code></pre><p>$ phpunit ContainsOnlyTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) ContainsOnlyTest::testFailure Failed asserting that Array ( 0 =&gt;
+&apos;1&apos; 1 =&gt; &apos;2&apos; 2 =&gt; 3 ) contains only values of type &quot;string&quot;.</p>
+<p>/home/sb/ContainsOnlyTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertcontainsonlyinstancesof">assertContainsOnlyInstancesOf()</h2>
+<p><code>assertContainsOnlyInstancesOf(string $classname, Traversable|array $haystack[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$haystack</code> does not
+contain only instances of class <code>$classname</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">ContainsOnlyInstancesOfTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertContainsOnlyInstancesOf(
+            Foo::class,
+            [new Foo, new Bar, new Foo]
+        );
+    }
+}
+</code></pre><p>$ phpunit ContainsOnlyInstancesOfTest PHPUnit .0 by Sebastian Bergmann
+and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) ContainsOnlyInstancesOfTest::testFailure Failed asserting that Array
+([0]=&gt; Bar Object(...)) is an instance of class &quot;Foo&quot;.</p>
+<p>/home/sb/ContainsOnlyInstancesOfTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertcount">assertCount()</h2>
+<p><code>assertCount($expectedCount, $haystack[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the number of elements in
+<code>$haystack</code> is not <code>$expectedCount</code>.</p>
+<p><code>assertNotCount()</code> is the inverse of this assertion and takes the same
+arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">CountTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertCount(0, [&apos;foo&apos;]);
+    }
+}
+</code></pre><p>$ phpunit CountTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 4.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) CountTest::testFailure Failed asserting that actual size 1 matches
+expected size 0.</p>
+<p>/home/sb/CountTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertdirectoryexists">assertDirectoryExists()</h2>
+<p><code>assertDirectoryExists(string $directory[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the directory specified by
+<code>$directory</code> does not exist.</p>
+<p><code>assertDirectoryDoesNotExist()</code> is the inverse of this assertion and
+takes the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">DirectoryExistsTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertDirectoryExists(&apos;/path/to/directory&apos;);
+    }
+}
+</code></pre><p>$ phpunit DirectoryExistsTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 4.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) DirectoryExistsTest::testFailure Failed asserting that directory
+&quot;/path/to/directory&quot; exists.</p>
+<p>/home/sb/DirectoryExistsTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertdirectoryisreadable">assertDirectoryIsReadable()</h2>
+<p><code>assertDirectoryIsReadable(string $directory[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the directory specified by
+<code>$directory</code> is not a directory or is not readable.</p>
+<p><code>assertDirectoryIsNotReadable()</code> is the inverse of this assertion and
+takes the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">DirectoryIsReadableTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertDirectoryIsReadable(&apos;/path/to/directory&apos;);
+    }
+}
+</code></pre><p>$ phpunit DirectoryIsReadableTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 4.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) DirectoryIsReadableTest::testFailure Failed asserting that
+&quot;/path/to/directory&quot; is readable.</p>
+<p>/home/sb/DirectoryIsReadableTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertdirectoryiswritable">assertDirectoryIsWritable()</h2>
+<p><code>assertDirectoryIsWritable(string $directory[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the directory specified by
+<code>$directory</code> is not a directory or is not writable.</p>
+<p><code>assertDirectoryIsNotWritable()</code> is the inverse of this assertion and
+takes the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">DirectoryIsWritableTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertDirectoryIsWritable(&apos;/path/to/directory&apos;);
+    }
+}
+</code></pre><p>$ phpunit DirectoryIsWritableTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 4.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) DirectoryIsWritableTest::testFailure Failed asserting that
+&quot;/path/to/directory&quot; is writable.</p>
+<p>/home/sb/DirectoryIsWritableTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertempty">assertEmpty()</h2>
+<p><code>assertEmpty(mixed $actual[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$actual</code> is not empty.</p>
+<p><code>assertNotEmpty()</code> is the inverse of this assertion and takes the same
+arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">EmptyTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertEmpty([&apos;foo&apos;]);
+    }
+}
+</code></pre><p>$ phpunit EmptyTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 4.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) EmptyTest::testFailure Failed asserting that an array is empty.</p>
+<p>/home/sb/EmptyTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertequals">assertEquals()</h2>
+<p><code>assertEquals(mixed $expected, mixed $actual[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the two variables
+<code>$expected</code> and <code>$actual</code> are not equal.</p>
+<p><code>assertNotEquals()</code> is the inverse of this assertion and takes the same
+arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">EqualsTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertEquals(1, 0);
+    }
+
+    public function testFailure2(): void
+    {
+        $this-&gt;assertEquals(&apos;bar&apos;, &apos;baz&apos;);
+    }
+
+    public function testFailure3(): void
+    {
+        $this-&gt;assertEquals(&quot;foo\nbar\nbaz\n&quot;, &quot;foo\nbah\nbaz\n&quot;);
+    }
+}
+</code></pre><p>$ phpunit EqualsTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>FFF</p>
+<p>Time: 0 seconds, Memory: 5.25Mb</p>
+<p>There were 3 failures:</p>
+<p>1) EqualsTest::testFailure Failed asserting that 0 matches expected 1.</p>
+<p>/home/sb/EqualsTest.php:6</p>
+<p>2) EqualsTest::testFailure2 Failed asserting that two strings are equal.
+--- Expected +++ Actual @@ @@ -&apos;bar&apos; +&apos;baz&apos;</p>
+<p>/home/sb/EqualsTest.php:11</p>
+<p>3) EqualsTest::testFailure3 Failed asserting that two strings are equal.
+--- Expected +++ Actual @@ @@ &apos;foo -bar +bah baz &apos;</p>
+<p>/home/sb/EqualsTest.php:16</p>
+<p>FAILURES! Tests: 3, Assertions: 3, Failures: 3.</p>
+<p>More specialized comparisons are used for specific argument types for
+<code>$expected</code> and <code>$actual</code>, see below.</p>
+<p><code>assertEquals(DOMDocument $expected, DOMDocument $actual[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the uncommented canonical
+form of the XML documents represented by the two DOMDocument objects
+<code>$expected</code> and <code>$actual</code> are not equal.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">EqualsTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$expected</span> <span class="token attr-value"><span class="token punctuation">=</span> new</span> <span class="token attr-name">DOMDocument;</span>
+        <span class="token attr-name">$expected-</span><span class="token punctuation">&gt;</span></span>loadXML(&apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>foo</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bar</span><span class="token punctuation">/&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>foo</span><span class="token punctuation">&gt;</span></span>&apos;);
+
+        $actual = new DOMDocument;
+        $actual-&gt;loadXML(&apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bar</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>foo</span><span class="token punctuation">/&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>bar</span><span class="token punctuation">&gt;</span></span>&apos;);
+
+        $this-&gt;assertEquals($expected, $actual);
+    }
+}
+</code></pre><p>$ phpunit EqualsTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) EqualsTest::testFailure Failed asserting that two DOM documents are
+equal. --- Expected +++ Actual @@ @@ &lt;?xml version=&quot;1.0&quot;?&gt;
+-&lt;foo&gt; - &lt;bar/&gt; -&lt;/foo&gt; +&lt;bar&gt; + &lt;foo/&gt;
++&lt;/bar&gt;</p>
+<p>/home/sb/EqualsTest.php:12</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<p><code>assertEquals(object $expected, object $actual[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the two objects <code>$expected</code>
+and <code>$actual</code> do not have equal attribute values.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">EqualsTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$expected</span> <span class="token attr-value"><span class="token punctuation">=</span> new</span> <span class="token attr-name">stdClass;</span>
+        <span class="token attr-name">$expected-</span><span class="token punctuation">&gt;</span></span>foo = &apos;foo&apos;;
+        $expected-&gt;bar = &apos;bar&apos;;
+
+        $actual = new stdClass;
+        $actual-&gt;foo = &apos;bar&apos;;
+        $actual-&gt;baz = &apos;bar&apos;;
+
+        $this-&gt;assertEquals($expected, $actual);
+    }
+}
+</code></pre><p>$ phpunit EqualsTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.25Mb</p>
+<p>There was 1 failure:</p>
+<p>1) EqualsTest::testFailure Failed asserting that two objects are equal.
+--- Expected +++ Actual @@ @@ stdClass Object ( - &apos;foo&apos; =&gt; &apos;foo&apos; -
+&apos;bar&apos; =&gt; &apos;bar&apos; + &apos;foo&apos; =&gt; &apos;bar&apos; + &apos;baz&apos; =&gt; &apos;bar&apos; )</p>
+<p>/home/sb/EqualsTest.php:14</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<p><code>assertEquals(array $expected, array $actual[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the two arrays <code>$expected</code>
+and <code>$actual</code> are not equal.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">EqualsTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertEquals([&apos;a&apos;, &apos;b&apos;, &apos;c&apos;], [&apos;a&apos;, &apos;c&apos;, &apos;d&apos;]);
+    }
+}
+</code></pre><p>$ phpunit EqualsTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.25Mb</p>
+<p>There was 1 failure:</p>
+<p>1) EqualsTest::testFailure Failed asserting that two arrays are equal.
+--- Expected +++ Actual @@ @@ Array ( 0 =&gt; &apos;a&apos; - 1 =&gt; &apos;b&apos; - 2
+=&gt; &apos;c&apos; + 1 =&gt; &apos;c&apos; + 2 =&gt; &apos;d&apos; )</p>
+<p>/home/sb/EqualsTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertequalscanonicalizing">assertEqualsCanonicalizing()</h2>
+<p><code>assertEqualsCanonicalizing(mixed $expected, mixed $actual[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the two variables
+<code>$expected</code> and <code>$actual</code> are not equal.</p>
+<p>The contents of <code>$expected</code> and <code>$actual</code> are canonicalized before they
+are compared. For instance, when the two variables <code>$expected</code> and
+<code>$actual</code> are arrays, then these arrays are sorted before they are
+compared. When <code>$expected</code> and <code>$actual</code> are objects, each object is
+converted to an array containing all private, protected and public
+attributes.</p>
+<p><code>assertNotEqualsCanonicalizing()</code> is the inverse of this assertion and
+takes the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">EqualsCanonicalizingTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name">testFailure()</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertEqualsCanonicalizing([3, 2, 1], [2, 3, 0, 1]);
+    }
+}
+</code></pre><p>$ phpunit EqualsCanonicalizingTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F 1 / 1 (100%)</p>
+<p>Time: 42 ms, Memory: 6.00 MB</p>
+<p>There was 1 failure:</p>
+<p>1) EqualsCanonicalizingTest::testFailure Failed asserting that two
+arrays are equal. --- Expected +++ Actual @@ @@ Array ( - 0 =&gt; 1 - 1
+=&gt; 2 - 2 =&gt; 3 + 0 =&gt; 0 + 1 =&gt; 1 + 2 =&gt; 2 + 3 =&gt; 3 )</p>
+<p>/home/sb/EqualsCanonicalizingTest.php:8</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertequalsignoringcase">assertEqualsIgnoringCase()</h2>
+<p><code>assertEqualsIgnoringCase(mixed $expected, mixed $actual[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the two variables
+<code>$expected</code> and <code>$actual</code> are not equal.</p>
+<p>Differences in casing are ignored for the comparison of <code>$expected</code> and
+<code>$actual</code>.</p>
+<p><code>assertNotEqualsIgnoringCase()</code> is the inverse of this assertion and
+takes the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">EqualsIgnoringCaseTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name">testFailure()</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertEqualsIgnoringCase(&apos;foo&apos;, &apos;BAR&apos;);
+    }
+}
+</code></pre><p>$ phpunit EqualsIgnoringCaseTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F 1 / 1 (100%)</p>
+<p>Time: 51 ms, Memory: 6.00 MB</p>
+<p>There was 1 failure:</p>
+<p>1) EqualsIgnoringCaseTest::testFailure Failed asserting that two strings
+are equal. --- Expected +++ Actual @@ @@ -&apos;foo&apos; +&apos;BAR&apos;</p>
+<p>/home/sb/EqualsIgnoringCaseTest.php:8</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertequalswithdelta">assertEqualsWithDelta()</h2>
+<p><code>assertEqualsWithDelta(mixed $expected, mixed $actual, float $delta[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the absolute difference
+between <code>$expected</code> and <code>$actual</code> is greater than <code>$delta</code>.</p>
+<p>Please read &quot;<a href="http://docs.oracle.com/cd/E19957-01/806-3568/ncg_goldberg.html" target="_blank">What Every Computer Scientist Should Know About
+Floating-Point
+Arithmetic</a>&quot;
+to understand why <code>$delta</code> is necessary.</p>
+<p><code>assertNotEqualsWithDelta()</code> is the inverse of this assertion and takes
+the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">EqualsWithDeltaTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name">testFailure()</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertEqualsWithDelta(1.0, 1.5, 0.1);
+    }
+}
+</code></pre><p>$ phpunit EqualsWithDeltaTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F 1 / 1 (100%)</p>
+<p>Time: 41 ms, Memory: 6.00 MB</p>
+<p>There was 1 failure:</p>
+<p>1) EqualsWithDeltaTest::testFailure Failed asserting that 1.5 matches
+expected 1.0.</p>
+<p>/home/sb/EqualsWithDeltaTest.php:8</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertobjectequals">assertObjectEquals()</h2>
+<p><code>assertObjectEquals(object $expected, object $actual, string $method = &apos;equals&apos;, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$actual</code> is not equal to
+<code>$expected</code> according to <code>$actual-&gt;$method($expected)</code>.</p>
+<p>It is a bad practice to use <code>assertEquals()</code> (and its inverse,
+<code>assertNotEquals()</code>) on objects without registering a custom comparator
+that customizes how objects are compared. Unfortunately, though,
+implementing custom comparators for each and every object you want to
+assert in your tests is inconvenient at best.</p>
+<p>The most common use case for custom comparators are Value Objects. These
+objects usually have an <code>equals(self $other): bool</code> method (or a method
+just like that but with a different name) for comparing two instances of
+the Value Object&apos;s type. <code>assertObjectEquals()</code> makes custom comparison
+of objects convenient for this common use case:</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
+
+final class SomethingThatUsesEmailTest extends TestCase
+{
+    public function testSomething(): void
+    {
+        $a = new Email(&apos;user@example.org&apos;);
+        $b = new Email(&apos;user@example.org&apos;);
+        $c = new Email(&apos;user@example.com&apos;);
+
+        // This passes
+        $this-&gt;assertObjectEquals($a, $b);
+
+        // This fails
+        $this-&gt;assertObjectEquals($a, $c);
+    }
+}
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">Email</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">private</span> <span class="token attr-name">string</span> <span class="token attr-name">$email;</span>
+
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name">__construct(string</span> <span class="token attr-name">$email)</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>ensureIsValidEmail($email);
+
+        $this-&gt;email = $email;
+    }
+
+    public function asString(): string
+    {
+        return $this-&gt;email;
+    }
+
+    public function equals(self $other): bool
+    {
+        return $this-&gt;asString() === $other-&gt;asString();
+    }
+
+    private function ensureIsValidEmail(string $email): void
+    {
+        // ...
+    }
+}
+</code></pre><p>$ phpunit EqualsTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>F 1 / 1 (100%)</p>
+<p>Time: 00:00.017, Memory: 4.00 MB</p>
+<p>There was 1 failure:</p>
+<p>1) SomethingThatUsesEmailTest::testSomething Failed asserting that two
+objects are equal. The objects are not equal according to
+Email::equals().</p>
+<p>/home/sb/SomethingThatUsesEmailTest.php:16</p>
+<p>FAILURES! Tests: 1, Assertions: 2, Failures: 1.</p>
+<p>Please note:</p>
+<ul>
+<li>A method with name <code>$method</code> must exist on the <code>$actual</code> object</li>
+<li>The method must accept exactly one argument</li>
+<li>The respective parameter must have a declared type</li>
+<li>The <code>$expected</code> object must be compatible with this declared type</li>
+<li>The method must have a declared <code>bool</code> return type</li>
+</ul>
+<p>If any of the aforementioned assumptions is not fulfilled or if
+<code>$actual-&gt;$method($expected)</code> returns <code>false</code> then the assertion fails.</p>
+<h2 id="assertfalse">assertFalse()</h2>
+<p><code>assertFalse(bool $condition[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$condition</code> is <code>true</code>.</p>
+<p><code>assertNotFalse()</code> is the inverse of this assertion and takes the same
+arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">FalseTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertFalse(true);
+    }
+}
+</code></pre><p>$ phpunit FalseTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) FalseTest::testFailure Failed asserting that true is false.</p>
+<p>/home/sb/FalseTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertfileequals">assertFileEquals()</h2>
+<p><code>assertFileEquals(string $expected, string $actual[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the file specified by
+<code>$expected</code> does not have the same contents as the file specified by
+<code>$actual</code>.</p>
+<p><code>assertFileNotEquals()</code> is the inverse of this assertion and takes the
+same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">FileEqualsTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertFileEquals(&apos;/home/sb/expected&apos;, &apos;/home/sb/actual&apos;);
+    }
+}
+</code></pre><p>$ phpunit FileEqualsTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.25Mb</p>
+<p>There was 1 failure:</p>
+<p>1) FileEqualsTest::testFailure Failed asserting that two strings are
+equal. --- Expected +++ Actual @@ @@ -&apos;expected +&apos;actual &apos;</p>
+<p>/home/sb/FileEqualsTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 3, Failures: 1.</p>
+<h2 id="assertfileexists">assertFileExists()</h2>
+<p><code>assertFileExists(string $filename[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the file specified by
+<code>$filename</code> does not exist.</p>
+<p><code>assertFileDoesNotExist()</code> is the inverse of this assertion and takes
+the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">FileExistsTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertFileExists(&apos;/path/to/file&apos;);
+    }
+}
+</code></pre><p>$ phpunit FileExistsTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 4.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) FileExistsTest::testFailure Failed asserting that file
+&quot;/path/to/file&quot; exists.</p>
+<p>/home/sb/FileExistsTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertfileisreadable">assertFileIsReadable()</h2>
+<p><code>assertFileIsReadable(string $filename[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the file specified by
+<code>$filename</code> is not a file or is not readable.</p>
+<p><code>assertFileIsNotReadable()</code> is the inverse of this assertion and takes
+the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">FileIsReadableTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertFileIsReadable(&apos;/path/to/file&apos;);
+    }
+}
+</code></pre><p>$ phpunit FileIsReadableTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 4.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) FileIsReadableTest::testFailure Failed asserting that &quot;/path/to/file&quot;
+is readable.</p>
+<p>/home/sb/FileIsReadableTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertfileiswritable">assertFileIsWritable()</h2>
+<p><code>assertFileIsWritable(string $filename[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the file specified by
+<code>$filename</code> is not a file or is not writable.</p>
+<p><code>assertFileIsNotWritable()</code> is the inverse of this assertion and takes
+the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">FileIsWritableTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertFileIsWritable(&apos;/path/to/file&apos;);
+    }
+}
+</code></pre><p>$ phpunit FileIsWritableTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 4.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) FileIsWritableTest::testFailure Failed asserting that &quot;/path/to/file&quot;
+is writable.</p>
+<p>/home/sb/FileIsWritableTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertgreaterthan">assertGreaterThan()</h2>
+<p><code>assertGreaterThan(mixed $expected, mixed $actual[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the value of <code>$actual</code> is
+not greater than the value of <code>$expected</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">GreaterThanTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertGreaterThan(2, 1);
+    }
+}
+</code></pre><p>$ phpunit GreaterThanTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) GreaterThanTest::testFailure Failed asserting that 1 is greater than
+2.</p>
+<p>/home/sb/GreaterThanTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertgreaterthanorequal">assertGreaterThanOrEqual()</h2>
+<p><code>assertGreaterThanOrEqual(mixed $expected, mixed $actual[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the value of <code>$actual</code> is
+not greater than or equal to the value of <code>$expected</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">GreatThanOrEqualTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertGreaterThanOrEqual(2, 1);
+    }
+}
+</code></pre><p>$ phpunit GreaterThanOrEqualTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.25Mb</p>
+<p>There was 1 failure:</p>
+<p>1) GreatThanOrEqualTest::testFailure Failed asserting that 1 is equal to
+2 or is greater than 2.</p>
+<p>/home/sb/GreaterThanOrEqualTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 2, Failures: 1.</p>
+<h2 id="assertinfinite">assertInfinite()</h2>
+<p><code>assertInfinite(mixed $variable[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$variable</code> is not <code>INF</code>.</p>
+<p><code>assertFinite()</code> is the inverse of this assertion and takes the same
+arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">InfiniteTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertInfinite(1);
+    }
+}
+</code></pre><p>$ phpunit InfiniteTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) InfiniteTest::testFailure Failed asserting that 1 is infinite.</p>
+<p>/home/sb/InfiniteTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertinstanceof">assertInstanceOf()</h2>
+<p><code>assertInstanceOf($expected, $actual[, $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$actual</code> is not an
+instance of <code>$expected</code>.</p>
+<p><code>assertNotInstanceOf()</code> is the inverse of this assertion and takes the
+same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">InstanceOfTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertInstanceOf(RuntimeException::class, new Exception);
+    }
+}
+</code></pre><p>$ phpunit InstanceOfTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) InstanceOfTest::testFailure Failed asserting that Exception Object
+(...) is an instance of class &quot;RuntimeException&quot;.</p>
+<p>/home/sb/InstanceOfTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertisarray">assertIsArray()</h2>
+<p><code>assertIsArray($actual[, $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$actual</code> is not of type
+<code>array</code>.</p>
+<p><code>assertIsNotArray()</code> is the inverse of this assertion and takes the same
+arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">class</span> <span class="token attr-name">ArrayTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name">testFailure()</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertIsArray(null);
+    }
+}
+
+$ phpunit ArrayTest
+PHPUnit |version|.0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) ArrayTest::testFailure
+Failed asserting that null is of type &quot;array&quot;.
+
+/home/sb/ArrayTest.php:8
+
+FAILURES!
+Tests: 1, Assertions: 1, Failures: 1.
+</code></pre><h2 id="assertisbool">assertIsBool()</h2>
+<p><code>assertIsBool($actual[, $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$actual</code> is not of type
+<code>bool</code>.</p>
+<p><code>assertIsNotBool()</code> is the inverse of this assertion and takes the same
+arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">BoolTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertIsBool(null);
+    }
+}
+
+$ phpunit BoolTest
+PHPUnit |version|.0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) BoolTest::testFailure
+Failed asserting that null is of type &quot;bool&quot;.
+
+/home/sb/BoolTest.php:8
+
+FAILURES!
+Tests: 1, Assertions: 1, Failures: 1.
+</code></pre><h2 id="assertiscallable">assertIsCallable()</h2>
+<p><code>assertIsCallable($actual[, $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$actual</code> is not of type
+<code>callable</code>.</p>
+<p><code>assertIsNotCallable()</code> is the inverse of this assertion and takes the
+same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">class</span> <span class="token attr-name">CallableTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name">testFailure()</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertIsCallable(null);
+    }
+}
+
+$ phpunit CallableTest
+PHPUnit |version|.0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) CallableTest::testFailure
+Failed asserting that null is of type &quot;callable&quot;.
+
+/home/sb/CallableTest.php:8
+
+FAILURES!
+Tests: 1, Assertions: 1, Failures: 1.
+</code></pre><h2 id="assertisfloat">assertIsFloat()</h2>
+<p><code>assertIsFloat($actual[, $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$actual</code> is not of type
+<code>float</code>.</p>
+<p><code>assertIsNotFloat()</code> is the inverse of this assertion and takes the same
+arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">class</span> <span class="token attr-name">FloatTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name">testFailure()</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertIsFloat(null);
+    }
+}
+
+$ phpunit FloatTest
+PHPUnit |version|.0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) FloatTest::testFailure
+Failed asserting that null is of type &quot;float&quot;.
+
+/home/sb/FloatTest.php:8
+
+FAILURES!
+Tests: 1, Assertions: 1, Failures: 1.
+</code></pre><h2 id="assertisint">assertIsInt()</h2>
+<p><code>assertIsInt($actual[, $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$actual</code> is not of type
+<code>int</code>.</p>
+<p><code>assertIsNotInt()</code> is the inverse of this assertion and takes the same
+arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">class</span> <span class="token attr-name">IntTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name">testFailure()</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertIsInt(null);
+    }
+}
+
+$ phpunit IntTest
+PHPUnit |version|.0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) IntTest::testFailure
+Failed asserting that null is of type &quot;int&quot;.
+
+/home/sb/IntTest.php:8
+
+FAILURES!
+Tests: 1, Assertions: 1, Failures: 1.
+</code></pre><h2 id="assertisiterable">assertIsIterable()</h2>
+<p><code>assertIsIterable($actual[, $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$actual</code> is not of type
+<code>iterable</code>.</p>
+<p><code>assertIsNotIterable()</code> is the inverse of this assertion and takes the
+same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">class</span> <span class="token attr-name">IterableTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name">testFailure()</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertIsIterable(null);
+    }
+}
+
+$ phpunit IterableTest
+PHPUnit |version|.0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) IterableTest::testFailure
+Failed asserting that null is of type &quot;iterable&quot;.
+
+/home/sb/IterableTest.php:8
+
+FAILURES!
+Tests: 1, Assertions: 1, Failures: 1.
+</code></pre><h2 id="assertisnumeric">assertIsNumeric()</h2>
+<p><code>assertIsNumeric($actual[, $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$actual</code> is not of type
+<code>numeric</code>.</p>
+<p><code>assertIsNotNumeric()</code> is the inverse of this assertion and takes the
+same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">class</span> <span class="token attr-name">NumericTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name">testFailure()</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertIsNumeric(null);
+    }
+}
+
+$ phpunit NumericTest
+PHPUnit |version|.0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) NumericTest::testFailure
+Failed asserting that null is of type &quot;numeric&quot;.
+
+/home/sb/NumericTest.php:8
+
+FAILURES!
+Tests: 1, Assertions: 1, Failures: 1.
+</code></pre><h2 id="assertisobject">assertIsObject()</h2>
+<p><code>assertIsObject($actual[, $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$actual</code> is not of type
+<code>object</code>.</p>
+<p><code>assertIsNotObject()</code> is the inverse of this assertion and takes the
+same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">class</span> <span class="token attr-name">ObjectTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name">testFailure()</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertIsObject(null);
+    }
+}
+
+$ phpunit ObjectTest
+PHPUnit |version|.0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) ObjectTest::testFailure
+Failed asserting that null is of type &quot;object&quot;.
+
+/home/sb/ObjectTest.php:8
+
+FAILURES!
+Tests: 1, Assertions: 1, Failures: 1.
+</code></pre><h2 id="assertisresource">assertIsResource()</h2>
+<p><code>assertIsResource($actual[, $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$actual</code> is not of type
+<code>resource</code>.</p>
+<p><code>assertIsNotResource()</code> is the inverse of this assertion and takes the
+same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">class</span> <span class="token attr-name">ResourceTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name">testFailure()</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertIsResource(null);
+    }
+}
+
+$ phpunit ResourceTest
+PHPUnit |version|.0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) ResourceTest::testFailure
+Failed asserting that null is of type &quot;resource&quot;.
+
+/home/sb/ResourceTest.php:8
+
+FAILURES!
+Tests: 1, Assertions: 1, Failures: 1.
+</code></pre><h2 id="assertisscalar">assertIsScalar()</h2>
+<p><code>assertIsScalar($actual[, $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$actual</code> is not of type
+<code>scalar</code>.</p>
+<p><code>assertIsNotScalar()</code> is the inverse of this assertion and takes the
+same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">class</span> <span class="token attr-name">ScalarTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name">testFailure()</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertIsScalar(null);
+    }
+}
+
+$ phpunit ScalarTest
+PHPUnit |version|.0 by Sebastian Bergmann and contributors.
+
+F
+
+Time: 0 seconds, Memory: 5.00Mb
+
+There was 1 failure:
+
+1) ScalarTest::testFailure
+Failed asserting that null is of type &quot;scalar&quot;.
+
+/home/sb/ScalarTest.php:8
+
+FAILURES!
+Tests: 1, Assertions: 1, Failures: 1.
+</code></pre><h2 id="assertisstring">assertIsString()</h2>
+<p><code>assertIsString($actual[, $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$actual</code> is not of type
+<code>string</code>.</p>
+<p><code>assertIsNotString()</code> is the inverse of this assertion and takes the
+same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">class</span> <span class="token attr-name">StringTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name">testFailure()</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertIsString(null);
+    }
+}
+</code></pre><p>$ phpunit StringTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) StringTest::testFailure Failed asserting that null is of type
+&quot;string&quot;.</p>
+<p>/home/sb/StringTest.php:8</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertisreadable">assertIsReadable()</h2>
+<p><code>assertIsReadable(string $filename[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the file or directory
+specified by <code>$filename</code> is not readable.</p>
+<p><code>assertIsNotReadable()</code> is the inverse of this assertion and takes the
+same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">IsReadableTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertIsReadable(&apos;/path/to/unreadable&apos;);
+    }
+}
+</code></pre><p>$ phpunit IsReadableTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 4.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) IsReadableTest::testFailure Failed asserting that
+&quot;/path/to/unreadable&quot; is readable.</p>
+<p>/home/sb/IsReadableTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertiswritable">assertIsWritable()</h2>
+<p><code>assertIsWritable(string $filename[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the file or directory
+specified by <code>$filename</code> is not writable.</p>
+<p><code>assertIsNotWritable()</code> is the inverse of this assertion and takes the
+same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">IsWritableTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertIsWritable(&apos;/path/to/unwritable&apos;);
+    }
+}
+</code></pre><p>$ phpunit IsWritableTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 4.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) IsWritableTest::testFailure Failed asserting that
+&quot;/path/to/unwritable&quot; is writable.</p>
+<p>/home/sb/IsWritableTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertjsonfileequalsjsonfile">assertJsonFileEqualsJsonFile()</h2>
+<p><code>assertJsonFileEqualsJsonFile(mixed $expectedFile, mixed $actualFile[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the value of <code>$actualFile</code>
+does not match the value of <code>$expectedFile</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">JsonFileEqualsJsonFileTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertJsonFileEqualsJsonFile(
+          &apos;path/to/fixture/file&apos;, &apos;path/to/actual/file&apos;);
+    }
+}
+</code></pre><p>$ phpunit JsonFileEqualsJsonFileTest PHPUnit .0 by Sebastian Bergmann
+and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) JsonFileEqualsJsonFile::testFailure Failed asserting that
+&apos;{&quot;Mascot&quot;:&quot;Tux&quot;}&apos; matches JSON string &quot;[&quot;Mascott&quot;, &quot;Tux&quot;, &quot;OS&quot;,
+&quot;Linux&quot;]&quot;.</p>
+<p>/home/sb/JsonFileEqualsJsonFileTest.php:5</p>
+<p>FAILURES! Tests: 1, Assertions: 3, Failures: 1.</p>
+<h2 id="assertjsonstringequalsjsonfile">assertJsonStringEqualsJsonFile()</h2>
+<p><code>assertJsonStringEqualsJsonFile(mixed $expectedFile, mixed $actualJson[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the value of <code>$actualJson</code>
+does not match the value of <code>$expectedFile</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">JsonStringEqualsJsonFileTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertJsonStringEqualsJsonFile(
+            &apos;path/to/fixture/file&apos;, json_encode([&apos;Mascot&apos; =&gt; &apos;ux&apos;])
+        );
+    }
+}
+</code></pre><p>$ phpunit JsonStringEqualsJsonFileTest PHPUnit .0 by Sebastian Bergmann
+and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) JsonStringEqualsJsonFile::testFailure Failed asserting that
+&apos;{&quot;Mascot&quot;:&quot;ux&quot;}&apos; matches JSON string &quot;{&quot;Mascott&quot;:&quot;Tux&quot;}&quot;.</p>
+<p>/home/sb/JsonStringEqualsJsonFileTest.php:5</p>
+<p>FAILURES! Tests: 1, Assertions: 3, Failures: 1.</p>
+<h2 id="assertjsonstringequalsjsonstring">assertJsonStringEqualsJsonString()</h2>
+<p><code>assertJsonStringEqualsJsonString(mixed $expectedJson, mixed $actualJson[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the value of <code>$actualJson</code>
+does not match the value of <code>$expectedJson</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">JsonStringEqualsJsonStringTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertJsonStringEqualsJsonString(
+            json_encode([&apos;Mascot&apos; =&gt; &apos;Tux&apos;]),
+            json_encode([&apos;Mascot&apos; =&gt; &apos;ux&apos;])
+        );
+    }
+}
+</code></pre><p>$ phpunit JsonStringEqualsJsonStringTest PHPUnit .0 by Sebastian
+Bergmann and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) JsonStringEqualsJsonStringTest::testFailure Failed asserting that two
+objects are equal. --- Expected +++ Actual @@ @@ stdClass Object ( -
+&apos;Mascot&apos; =&gt; &apos;Tux&apos; + &apos;Mascot&apos; =&gt; &apos;ux&apos; )</p>
+<p>/home/sb/JsonStringEqualsJsonStringTest.php:5</p>
+<p>FAILURES! Tests: 1, Assertions: 3, Failures: 1.</p>
+<h2 id="assertlessthan">assertLessThan()</h2>
+<p><code>assertLessThan(mixed $expected, mixed $actual[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the value of <code>$actual</code> is
+not less than the value of <code>$expected</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">LessThanTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertLessThan(1, 2);
+    }
+}
+</code></pre><p>$ phpunit LessThanTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) LessThanTest::testFailure Failed asserting that 2 is less than 1.</p>
+<p>/home/sb/LessThanTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertlessthanorequal">assertLessThanOrEqual()</h2>
+<p><code>assertLessThanOrEqual(mixed $expected, mixed $actual[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the value of <code>$actual</code> is
+not less than or equal to the value of <code>$expected</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">LessThanOrEqualTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertLessThanOrEqual(1, 2);
+    }
+}
+</code></pre><p>$ phpunit LessThanOrEqualTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.25Mb</p>
+<p>There was 1 failure:</p>
+<p>1) LessThanOrEqualTest::testFailure Failed asserting that 2 is equal to
+1 or is less than 1.</p>
+<p>/home/sb/LessThanOrEqualTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 2, Failures: 1.</p>
+<h2 id="assertnan">assertNan()</h2>
+<p><code>assertNan(mixed $variable[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$variable</code> is not <code>NAN</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">NanTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertNan(1);
+    }
+}
+</code></pre><p>$ phpunit NanTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) NanTest::testFailure Failed asserting that 1 is nan.</p>
+<p>/home/sb/NanTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertnull">assertNull()</h2>
+<p><code>assertNull(mixed $variable[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$variable</code> is not <code>null</code>.</p>
+<p><code>assertNotNull()</code> is the inverse of this assertion and takes the same
+arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">NullTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertNull(&apos;foo&apos;);
+    }
+}
+</code></pre><p>$ phpunit NotNullTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) NullTest::testFailure Failed asserting that &apos;foo&apos; is null.</p>
+<p>/home/sb/NotNullTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertobjecthasattribute">assertObjectHasAttribute()</h2>
+<p><code>assertObjectHasAttribute(string $attributeName, object $object[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$object-&gt;attributeName</code>
+does not exist.</p>
+<p><code>assertObjectNotHasAttribute()</code> is the inverse of this assertion and
+takes the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">ObjectHasAttributeTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertObjectHasAttribute(&apos;foo&apos;, new stdClass);
+    }
+}
+</code></pre><p>$ phpunit ObjectHasAttributeTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 4.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) ObjectHasAttributeTest::testFailure Failed asserting that object of
+class &quot;stdClass&quot; has attribute &quot;foo&quot;.</p>
+<p>/home/sb/ObjectHasAttributeTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertmatchesregularexpression">assertMatchesRegularExpression()</h2>
+<p><code>assertMatchesRegularExpression(string $pattern, string $string[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$string</code> does not match
+the regular expression <code>$pattern</code>.</p>
+<p><code>assertDoesNotMatchRegularExpression()</code> is the inverse of this assertion
+and takes the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">RegExpTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertMatchesRegularExpression(&apos;/foo/&apos;, &apos;bar&apos;);
+    }
+}
+</code></pre><p>$ phpunit RegExpTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) RegExpTest::testFailure Failed asserting that &apos;bar&apos; matches PCRE
+pattern &quot;/foo/&quot;.</p>
+<p>/home/sb/RegExpTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertstringmatchesformat">assertStringMatchesFormat()</h2>
+<p><code>assertStringMatchesFormat(string $format, string $string[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the <code>$string</code> does not
+match the <code>$format</code> string.</p>
+<p><code>assertStringNotMatchesFormat()</code> is the inverse of this assertion and
+takes the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">StringMatchesFormatTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertStringMatchesFormat(&apos;%i&apos;, &apos;foo&apos;);
+    }
+}
+</code></pre><p>$ phpunit StringMatchesFormatTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) StringMatchesFormatTest::testFailure Failed asserting that &apos;foo&apos;
+matches PCRE pattern &quot;/^[+-]?d+$/s&quot;.</p>
+<p>/home/sb/StringMatchesFormatTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<p>The format string may contain the following placeholders:</p>
+<ul>
+<li><p><code>%e</code>: Represents a directory separator, for example <code>/</code> on Linux.</p>
+</li>
+<li><p><code>%s</code>: One or more of anything (character or white space) except the</p>
+<blockquote>
+<p>end of line character.</p>
+</blockquote>
+</li>
+<li><p><code>%S</code>: Zero or more of anything (character or white space) except the</p>
+<blockquote>
+<p>end of line character.</p>
+</blockquote>
+</li>
+<li><p><code>%a</code>: One or more of anything (character or white space) including</p>
+<blockquote>
+<p>the end of line character.</p>
+</blockquote>
+</li>
+<li><p><code>%A</code>: Zero or more of anything (character or white space) including</p>
+<blockquote>
+<p>the end of line character.</p>
+</blockquote>
+</li>
+<li><p><code>%w</code>: Zero or more white space characters.</p>
+</li>
+<li><p><code>%i</code>: A signed integer value, for example <code>+3142</code>, <code>-3142</code>.</p>
+</li>
+<li><p><code>%d</code>: An unsigned integer value, for example <code>123456</code>.</p>
+</li>
+<li><p><code>%x</code>: One or more hexadecimal character. That is, characters in the</p>
+<blockquote>
+<p>range <code>0-9</code>, <code>a-f</code>, <code>A-F</code>.</p>
+</blockquote>
+</li>
+<li><p><code>%f</code>: A floating point number, for example: <code>3.142</code>, <code>-3.142</code>,</p>
+<blockquote>
+<p><code>3.142E-10</code>, <code>3.142e+10</code>.</p>
+</blockquote>
+</li>
+<li><p><code>%c</code>: A single character of any sort.</p>
+</li>
+<li><p><code>%%</code>: A literal percent character: <code>%</code>.</p>
+</li>
+</ul>
+<h2 id="assertstringmatchesformatfile">assertStringMatchesFormatFile()</h2>
+<p><code>assertStringMatchesFormatFile(string $formatFile, string $string[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the <code>$string</code> does not
+match the contents of the <code>$formatFile</code>.</p>
+<p><code>assertStringNotMatchesFormatFile()</code> is the inverse of this assertion
+and takes the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">StringMatchesFormatFileTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertStringMatchesFormatFile(&apos;/path/to/expected.txt&apos;, &apos;foo&apos;);
+    }
+}
+</code></pre><p>$ phpunit StringMatchesFormatFileTest PHPUnit .0 by Sebastian Bergmann
+and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) StringMatchesFormatFileTest::testFailure Failed asserting that &apos;foo&apos;
+matches PCRE pattern &quot;/^[+-]?d+ $/s&quot;.</p>
+<p>/home/sb/StringMatchesFormatFileTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 2, Failures: 1.</p>
+<h2 id="assertsame">assertSame()</h2>
+<p><code>assertSame(mixed $expected, mixed $actual[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the two variables
+<code>$expected</code> and <code>$actual</code> do not have the same type and value.</p>
+<p><code>assertNotSame()</code> is the inverse of this assertion and takes the same
+arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">SameTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertSame(&apos;2204&apos;, 2204);
+    }
+}
+</code></pre><p>$ phpunit SameTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) SameTest::testFailure Failed asserting that 2204 is identical to
+&apos;2204&apos;.</p>
+<p>/home/sb/SameTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<p><code>assertSame(object $expected, object $actual[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the two variables
+<code>$expected</code> and <code>$actual</code> do not reference the same object.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">SameTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertSame(new stdClass, new stdClass);
+    }
+}
+</code></pre><p>$ phpunit SameTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 4.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) SameTest::testFailure Failed asserting that two variables reference
+the same object.</p>
+<p>/home/sb/SameTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertstringendswith">assertStringEndsWith()</h2>
+<p><code>assertStringEndsWith(string $suffix, string $string[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the <code>$string</code> does not end
+with <code>$suffix</code>.</p>
+<p><code>assertStringEndsNotWith()</code> is the inverse of this assertion and takes
+the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">StringEndsWithTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertStringEndsWith(&apos;suffix&apos;, &apos;foo&apos;);
+    }
+}
+</code></pre><p>$ phpunit StringEndsWithTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 1 second, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) StringEndsWithTest::testFailure Failed asserting that &apos;foo&apos; ends with
+&quot;suffix&quot;.</p>
+<p>/home/sb/StringEndsWithTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertstringequalsfile">assertStringEqualsFile()</h2>
+<p><code>assertStringEqualsFile(string $expectedFile, string $actualString[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the file specified by
+<code>$expectedFile</code> does not have <code>$actualString</code> as its contents.</p>
+<p><code>assertStringNotEqualsFile()</code> is the inverse of this assertion and takes
+the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">StringEqualsFileTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertStringEqualsFile(&apos;/home/sb/expected&apos;, &apos;actual&apos;);
+    }
+}
+</code></pre><p>$ phpunit StringEqualsFileTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.25Mb</p>
+<p>There was 1 failure:</p>
+<p>1) StringEqualsFileTest::testFailure Failed asserting that two strings
+are equal. --- Expected +++ Actual @@ @@ -&apos;expected -&apos; +&apos;actual&apos;</p>
+<p>/home/sb/StringEqualsFileTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 2, Failures: 1.</p>
+<h2 id="assertstringstartswith">assertStringStartsWith()</h2>
+<p><code>assertStringStartsWith(string $prefix, string $string[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the <code>$string</code> does not
+start with <code>$prefix</code>.</p>
+<p><code>assertStringStartsNotWith()</code> is the inverse of this assertion and takes
+the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">StringStartsWithTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertStringStartsWith(&apos;prefix&apos;, &apos;foo&apos;);
+    }
+}
+</code></pre><p>$ phpunit StringStartsWithTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) StringStartsWithTest::testFailure Failed asserting that &apos;foo&apos; starts
+with &quot;prefix&quot;.</p>
+<p>/home/sb/StringStartsWithTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertthat">assertThat()</h2>
+<p>More complex assertions can be formulated using the
+<code>PHPUnit\Framework\Constraint</code> classes. They can be evaluated using the
+<code>assertThat()</code> method. <code>appendixes.assertions.assertThat.example</code> shows
+how the <code>logicalNot()</code> and <code>equalTo()</code> constraints can be used to
+express the same assertion as <code>assertNotEquals()</code>.</p>
+<p><code>assertThat(mixed $value, PHPUnit\Framework\Constraint $constraint[, $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the <code>$value</code> does not match
+the <code>$constraint</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">BiscuitTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testEquals():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$theBiscuit</span> <span class="token attr-value"><span class="token punctuation">=</span> new</span> <span class="token attr-name">Biscuit(&apos;Ginger&apos;);</span>
+        <span class="token attr-name">$myBiscuit</span>  <span class="token attr-value"><span class="token punctuation">=</span> new</span> <span class="token attr-name">Biscuit(&apos;Ginger&apos;);</span>
+
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertThat(
+          $theBiscuit,
+          $this-&gt;logicalNot(
+            $this-&gt;equalTo($myBiscuit)
+          )
+        );
+    }
+}
+</code></pre><p><code>appendixes.assertions.assertThat.tables.constraints</code> shows the
+available <code>PHPUnit\Framework\Constraint</code> classes.</p>
+<p>table</p>
+<table>
+<caption>Constraints</caption>
+<thead>
+<tr class="header">
+<th>Constraint</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\IsAnything anything()</code></td>
+<td>Constraint that accepts any input value.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\ArrayHasKey arrayHasKey(mixed $key)</code></td>
+<td>Constraint that asserts that the array has a given key.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\TraversableContains contains(mixed $value)</code></td>
+<td>Constraint that asserts that the <code>array</code> or object that implements the <code>Iterator</code> interface contains a given value.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\TraversableContainsOnly containsOnly(string $type)</code></td>
+<td>Constraint that asserts that the <code>array</code> or object that implements the <code>Iterator</code> interface contains only values of a given type.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\TraversableContainsOnly containsOnlyInstancesOf(string $classname)</code></td>
+<td>Constraint that asserts that the <code>array</code> or object that implements the <code>Iterator</code> interface contains only instances of a given classname.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\IsEqual equalTo($value, $delta = 0, $maxDepth = 10)</code></td>
+<td>Constraint that checks if one value is equal to another.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\DirectoryExists directoryExists()</code></td>
+<td>Constraint that checks if the directory exists.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\FileExists fileExists()</code></td>
+<td>Constraint that checks if the file(name) exists.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\IsReadable isReadable()</code></td>
+<td>Constraint that checks if the file(name) is readable.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\IsWritable isWritable()</code></td>
+<td>Constraint that checks if the file(name) is writable.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\GreaterThan greaterThan(mixed $value)</code></td>
+<td>Constraint that asserts that the value is greater than a given value.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\LogicalOr greaterThanOrEqual(mixed $value)</code></td>
+<td>Constraint that asserts that the value is greater than or equal to a given value.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\ClassHasAttribute classHasAttribute(string $attributeName)</code></td>
+<td>Constraint that asserts that the class has a given attribute.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\ClassHasStaticAttribute classHasStaticAttribute(string $attributeName)</code></td>
+<td>Constraint that asserts that the class has a given static attribute.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\ObjectHasAttribute objectHasAttribute(string $attributeName)</code></td>
+<td>Constraint that asserts that the object has a given attribute.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\IsIdentical identicalTo(mixed $value)</code></td>
+<td>Constraint that asserts that one value is identical to another.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\IsFalse isFalse()</code></td>
+<td>Constraint that asserts that the value is <code>false</code>.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\IsInstanceOf isInstanceOf(string $className)</code></td>
+<td>Constraint that asserts that the object is an instance of a given class.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\IsNull isNull()</code></td>
+<td>Constraint that asserts that the value is <code>null</code>.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\IsTrue isTrue()</code></td>
+<td>Constraint that asserts that the value is <code>true</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\IsType isType(string $type)</code></td>
+<td>Constraint that asserts that the value is of a specified type.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\LessThan lessThan(mixed $value)</code></td>
+<td>Constraint that asserts that the value is smaller than a given value.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\LogicalOr lessThanOrEqual(mixed $value)</code></td>
+<td>Constraint that asserts that the value is smaller than or equal to a given value.</td>
+</tr>
+<tr class="even">
+<td><code>logicalAnd()</code></td>
+<td>Logical AND.</td>
+</tr>
+<tr class="odd">
+<td><code>logicalNot(PHPUnit\Framework\Constraint $constraint)</code></td>
+<td>Logical NOT.</td>
+</tr>
+<tr class="even">
+<td><code>logicalOr()</code></td>
+<td>Logical OR.</td>
+</tr>
+<tr class="odd">
+<td><code>logicalXor()</code></td>
+<td>Logical XOR.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\PCREMatch matchesRegularExpression(string $pattern)</code></td>
+<td>Constraint that asserts that the string matches a regular expression.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\StringContains stringContains(string $string, bool $case)</code></td>
+<td>Constraint that asserts that the string contains a given string.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\Constraint\StringEndsWith stringEndsWith(string $suffix)</code></td>
+<td>Constraint that asserts that the string ends with a given suffix.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\Constraint\StringStartsWith stringStartsWith(string $prefix)</code></td>
+<td>Constraint that asserts that the string starts with a given prefix.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="asserttrue">assertTrue()</h2>
+<p><code>assertTrue(bool $condition[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if <code>$condition</code> is <code>false</code>.</p>
+<p><code>assertNotTrue()</code> is the inverse of this assertion and takes the same
+arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">TrueTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertTrue(false);
+    }
+}
+</code></pre><p>$ phpunit TrueTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) TrueTest::testFailure Failed asserting that false is true.</p>
+<p>/home/sb/TrueTest.php:6</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h2 id="assertxmlfileequalsxmlfile">assertXmlFileEqualsXmlFile()</h2>
+<p><code>assertXmlFileEqualsXmlFile(string $expectedFile, string $actualFile[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the XML document in
+<code>$actualFile</code> is not equal to the XML document in <code>$expectedFile</code>.</p>
+<p><code>assertXmlFileNotEqualsXmlFile()</code> is the inverse of this assertion and
+takes the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">XmlFileEqualsXmlFileTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertXmlFileEqualsXmlFile(
+          &apos;/home/sb/expected.xml&apos;, &apos;/home/sb/actual.xml&apos;);
+    }
+}
+</code></pre><p>$ phpunit XmlFileEqualsXmlFileTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.25Mb</p>
+<p>There was 1 failure:</p>
+<p>1) XmlFileEqualsXmlFileTest::testFailure Failed asserting that two DOM
+documents are equal. --- Expected +++ Actual @@ @@ &lt;?xml
+version=&quot;1.0&quot;?&gt; &lt;foo&gt; - &lt;bar/&gt; + &lt;baz/&gt;
+&lt;/foo&gt;</p>
+<p>/home/sb/XmlFileEqualsXmlFileTest.php:7</p>
+<p>FAILURES! Tests: 1, Assertions: 3, Failures: 1.</p>
+<h2 id="assertxmlstringequalsxmlfile">assertXmlStringEqualsXmlFile()</h2>
+<p><code>assertXmlStringEqualsXmlFile(string $expectedFile, string $actualXml[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the XML document in
+<code>$actualXml</code> is not equal to the XML document in <code>$expectedFile</code>.</p>
+<p><code>assertXmlStringNotEqualsXmlFile()</code> is the inverse of this assertion and
+takes the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">XmlStringEqualsXmlFileTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertXmlStringEqualsXmlFile(
+          &apos;/home/sb/expected.xml&apos;, &apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>foo</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>baz</span><span class="token punctuation">/&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>foo</span><span class="token punctuation">&gt;</span></span>&apos;);
+    }
+}
+</code></pre><p>$ phpunit XmlStringEqualsXmlFileTest PHPUnit .0 by Sebastian Bergmann
+and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.25Mb</p>
+<p>There was 1 failure:</p>
+<p>1) XmlStringEqualsXmlFileTest::testFailure Failed asserting that two DOM
+documents are equal. --- Expected +++ Actual @@ @@ &lt;?xml
+version=&quot;1.0&quot;?&gt; &lt;foo&gt; - &lt;bar/&gt; + &lt;baz/&gt;
+&lt;/foo&gt;</p>
+<p>/home/sb/XmlStringEqualsXmlFileTest.php:7</p>
+<p>FAILURES! Tests: 1, Assertions: 2, Failures: 1.</p>
+<h2 id="assertxmlstringequalsxmlstring">assertXmlStringEqualsXmlString()</h2>
+<p><code>assertXmlStringEqualsXmlString(string $expectedXml, string $actualXml[, string $message = &apos;&apos;])</code></p>
+<p>Reports an error identified by <code>$message</code> if the XML document in
+<code>$actualXml</code> is not equal to the XML document in <code>$expectedXml</code>.</p>
+<p><code>assertXmlStringNotEqualsXmlString()</code> is the inverse of this assertion
+and takes the same arguments.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">XmlStringEqualsXmlStringTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFailure():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertXmlStringEqualsXmlString(
+          &apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>foo</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>bar</span><span class="token punctuation">/&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>foo</span><span class="token punctuation">&gt;</span></span>&apos;, &apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>foo</span><span class="token punctuation">&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>baz</span><span class="token punctuation">/&gt;</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>foo</span><span class="token punctuation">&gt;</span></span>&apos;);
+    }
+}
+</code></pre><p>$ phpunit XmlStringEqualsXmlStringTest PHPUnit .0 by Sebastian Bergmann
+and contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) XmlStringEqualsXmlStringTest::testFailure Failed asserting that two
+DOM documents are equal. --- Expected +++ Actual @@ @@ &lt;?xml
+version=&quot;1.0&quot;?&gt; &lt;foo&gt; - &lt;bar/&gt; + &lt;baz/&gt;
+&lt;/foo&gt;</p>
+<p>/home/sb/XmlStringEqualsXmlStringTest.php:7</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="annotations.html" class="navigation navigation-prev " aria-label="Previous page: Annotations">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="bibliography.html" class="navigation navigation-next " aria-label="Next page: Bibliography">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Assertions","level":"1.3","depth":1,"next":{"title":"Bibliography","level":"1.4","depth":1,"path":"bibliography.md","ref":"bibliography.md","articles":[]},"previous":{"title":"Annotations","level":"1.2","depth":1,"path":"annotations.md","ref":"annotations.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"PHPUnit 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"assertions.md","mtime":"2021-05-20T01:13:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-20T01:13:58.148Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

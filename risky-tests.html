@@ -1,0 +1,499 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Risky Tests · PHPUnit 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="test-doubles.html" />
+    
+    
+    <link rel="prev" href="organizing-tests.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="annotations.html">
+            
+                <a href="annotations.html">
+            
+                    
+                    Annotations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="assertions.html">
+            
+                <a href="assertions.html">
+            
+                    
+                    Assertions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="bibliography.html">
+            
+                <a href="bibliography.html">
+            
+                    
+                    Bibliography
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="code-coverage-analysis.html">
+            
+                <a href="code-coverage-analysis.html">
+            
+                    
+                    Code Coverage Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="copyright.html">
+            
+                <a href="copyright.html">
+            
+                    
+                    Copyright
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="extending-phpunit.html">
+            
+                <a href="extending-phpunit.html">
+            
+                    
+                    Extending Phpunit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="fixtures.html">
+            
+                <a href="fixtures.html">
+            
+                    
+                    Fixtures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="incomplete-and-skipped-tests.html">
+            
+                <a href="incomplete-and-skipped-tests.html">
+            
+                    
+                    Incomplete And Skipped Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="organizing-tests.html">
+            
+                <a href="organizing-tests.html">
+            
+                    
+                    Organizing Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.13" data-path="risky-tests.html">
+            
+                <a href="risky-tests.html">
+            
+                    
+                    Risky Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="test-doubles.html">
+            
+                <a href="test-doubles.html">
+            
+                    
+                    Test Doubles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="textui.html">
+            
+                <a href="textui.html">
+            
+                    
+                    Textui
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="writing-tests-for-phpunit.html">
+            
+                <a href="writing-tests-for-phpunit.html">
+            
+                    
+                    Writing Tests For Phpunit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Risky Tests</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="risky-tests">Risky Tests</h1>
+<p>PHPUnit can perform the additional checks documented below while it
+executes the tests.</p>
+<h2 id="useless-tests">Useless Tests</h2>
+<p>PHPUnit is by default strict about tests that do not test anything. This
+check can be disabled by using the <code>--dont-report-useless-tests</code> option
+on the <code>command line <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textui.clioptions</span><span class="token punctuation">&gt;</span></span></code> or by setting
+<code>beStrictAboutTestsThatDoNotTestAnything=&quot;false&quot;</code> in PHPUnit&apos;s
+<code>configuration file <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appendixes.configuration</span><span class="token punctuation">&gt;</span></span></code>.</p>
+<p>A test that does not perform an assertion will be marked as risky when
+this check is enabled. Expectations on mock objects count as an
+assertion.</p>
+<h2 id="unintentionally-covered-code">Unintentionally Covered Code</h2>
+<p>PHPUnit can be strict about unintentionally covered code. This check can
+be enabled by using the <code>--strict-coverage</code> option on the
+<code>command line <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textui.clioptions</span><span class="token punctuation">&gt;</span></span></code> or by setting
+<code>beStrictAboutCoversAnnotation=&quot;true&quot;</code> in PHPUnit&apos;s
+<code>configuration file <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appendixes.configuration</span><span class="token punctuation">&gt;</span></span></code>.</p>
+<p>A test that is annotated with <code>@covers <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appendixes.annotations.covers</span><span class="token punctuation">&gt;</span></span></code>
+and executes code that is not listed using a
+<code>@covers <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appendixes.annotations.covers</span><span class="token punctuation">&gt;</span></span></code> or
+<code>@uses <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appendixes.annotations.uses</span><span class="token punctuation">&gt;</span></span></code> annotation will be marked as risky
+when this check is enabled.</p>
+<p>Furthermore, by setting <code>forceCoversAnnotation=&quot;true&quot;</code> in PHPUnit&apos;s
+<code>configuration file <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appendixes.configuration</span><span class="token punctuation">&gt;</span></span></code>, a test can be marked as
+risky when it does not have a <code>@covers <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appendixes.annotations.covers</span><span class="token punctuation">&gt;</span></span></code>
+annotation.</p>
+<h2 id="output-during-test-execution">Output During Test Execution</h2>
+<p>PHPUnit can be strict about output during tests. This check can be
+enabled by using the <code>--disallow-test-output</code> option on the
+<code>command line <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textui.clioptions</span><span class="token punctuation">&gt;</span></span></code> or by setting
+<code>beStrictAboutOutputDuringTests=&quot;true&quot;</code> in PHPUnit&apos;s
+<code>configuration file <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appendixes.configuration</span><span class="token punctuation">&gt;</span></span></code>.</p>
+<p>A test that emits output, for instance by invoking print in either the
+test code or the tested code, will be marked as risky when this check is
+enabled.</p>
+<h2 id="test-execution-timeout">Test Execution Timeout</h2>
+<p>A time limit can be enforced for the execution of a test if the
+<a href="https://packagist.org/packages/phpunit/php-invoker" target="_blank">PHP_Invoker</a>
+package is installed and the <code>pcntl</code> extension is available. The
+enforcing of this time limit can be enabled by using the
+<code>--enforce-time-limit</code> option on the <code>command line <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textui.clioptions</span><span class="token punctuation">&gt;</span></span></code>
+or by setting <code>enforceTimeLimit=&quot;true&quot;</code> in PHPUnit&apos;s
+<code>configuration file <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appendixes.configuration</span><span class="token punctuation">&gt;</span></span></code>.</p>
+<p>A test annotated with <code>@large</code> will be marked as risky if it takes
+longer than 60 seconds to execute. This timeout is configurable via the
+<code>timeoutForLargeTests</code> attribute in the
+<code>configuration file <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appendixes.configuration</span><span class="token punctuation">&gt;</span></span></code>.</p>
+<p>A test annotated with <code>@medium</code> will be marked as risky if it takes
+longer than 10 seconds to execute. This timeout is configurable via the
+<code>timeoutForMediumTests</code> attribute in the configuration
+<code>configuration file <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appendixes.configuration</span><span class="token punctuation">&gt;</span></span></code>.</p>
+<p>A test annotated with <code>@small</code> will be marked as risky if it takes
+longer than 1 second to execute. This timeout is configurable via the
+<code>timeoutForSmallTests</code> attribute in the
+<code>configuration file <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appendixes.configuration</span><span class="token punctuation">&gt;</span></span></code>.</p>
+<p>Note</p>
+<p>Tests need to be explicitly annotated by either <code>@small</code>, <code>@medium</code>, or
+<code>@large</code> to enable run time limits.</p>
+<p>To exit the test run with a non-zero exit code when tests overrun their
+time-limit, the <code>--fail-on-risky</code> option on the
+<code>command line <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textui.clioptions</span><span class="token punctuation">&gt;</span></span></code> or the <code>failOnRisky=&quot;true&quot;</code> setting
+in PHPUnit&apos;s <code>configuration file <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appendixes.configuration</span><span class="token punctuation">&gt;</span></span></code> needs to be
+enabled.</p>
+<h2 id="global-state-manipulation">Global State Manipulation</h2>
+<p>PHPUnit can be strict about tests that manipulate global state. This
+check can be enabled by using the <code>--strict-global-state</code> option on the
+<code>command line <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textui.clioptions</span><span class="token punctuation">&gt;</span></span></code> or by setting
+<code>beStrictAboutChangesToGlobalState=&quot;true&quot;</code> in PHPUnit&apos;s
+<code>configuration file <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appendixes.configuration</span><span class="token punctuation">&gt;</span></span></code>.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="organizing-tests.html" class="navigation navigation-prev " aria-label="Previous page: Organizing Tests">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="test-doubles.html" class="navigation navigation-next " aria-label="Next page: Test Doubles">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Risky Tests","level":"1.13","depth":1,"next":{"title":"Test Doubles","level":"1.14","depth":1,"path":"test-doubles.md","ref":"test-doubles.md","articles":[]},"previous":{"title":"Organizing Tests","level":"1.12","depth":1,"path":"organizing-tests.md","ref":"organizing-tests.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"PHPUnit 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"risky-tests.md","mtime":"2021-05-20T01:13:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-20T01:13:58.148Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

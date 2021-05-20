@@ -1,0 +1,729 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Code Coverage Analysis · PHPUnit 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="configuration.html" />
+    
+    
+    <link rel="prev" href="bibliography.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="annotations.html">
+            
+                <a href="annotations.html">
+            
+                    
+                    Annotations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="assertions.html">
+            
+                <a href="assertions.html">
+            
+                    
+                    Assertions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="bibliography.html">
+            
+                <a href="bibliography.html">
+            
+                    
+                    Bibliography
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.5" data-path="code-coverage-analysis.html">
+            
+                <a href="code-coverage-analysis.html">
+            
+                    
+                    Code Coverage Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="copyright.html">
+            
+                <a href="copyright.html">
+            
+                    
+                    Copyright
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="extending-phpunit.html">
+            
+                <a href="extending-phpunit.html">
+            
+                    
+                    Extending Phpunit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="fixtures.html">
+            
+                <a href="fixtures.html">
+            
+                    
+                    Fixtures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="incomplete-and-skipped-tests.html">
+            
+                <a href="incomplete-and-skipped-tests.html">
+            
+                    
+                    Incomplete And Skipped Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="organizing-tests.html">
+            
+                <a href="organizing-tests.html">
+            
+                    
+                    Organizing Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="risky-tests.html">
+            
+                <a href="risky-tests.html">
+            
+                    
+                    Risky Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="test-doubles.html">
+            
+                <a href="test-doubles.html">
+            
+                    
+                    Test Doubles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="textui.html">
+            
+                <a href="textui.html">
+            
+                    
+                    Textui
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="writing-tests-for-phpunit.html">
+            
+                <a href="writing-tests-for-phpunit.html">
+            
+                    
+                    Writing Tests For Phpunit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Code Coverage Analysis</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="code-coverage-analysis">Code Coverage Analysis</h1>
+<blockquote>
+<p><em>Wikipedia</em>:</p>
+<p>In computer science, code coverage is a measure used to describe the
+degree to which the source code of a program is tested by a particular
+test suite. A program with high code coverage has been more thoroughly
+tested and has a lower chance of containing software bugs than a
+program with low code coverage.</p>
+</blockquote>
+<p>In this chapter you will learn all about PHPUnit&apos;s code coverage
+functionality that provides an insight into what parts of the production
+code are executed when the tests are run. It makes use of the
+<a href="https://github.com/sebastianbergmann/php-code-coverage" target="_blank">php-code-coverage</a>
+component, which in turn leverages the code coverage functionality
+provided by the <a href="https://xdebug.org/" target="_blank">Xdebug</a> or
+<a href="https://github.com/krakjoe/pcov" target="_blank">PCOV</a> extensions for PHP or by
+<a href="https://www.php.net/manual/en/book.phpdbg.php" target="_blank">PHPDBG</a>.</p>
+<p>Note</p>
+<p>If you see a warning while running tests that no code coverage driver is
+available, it means that you are using the PHP CLI binary (<code>php</code>) and do
+not have Xdebug or PCOV loaded.</p>
+<p>PHPUnit can generate an HTML-based code coverage report as well as
+XML-based logfiles with code coverage information in various formats
+(Clover, Crap4J, PHPUnit). Code coverage information can also be
+reported as text (and printed to STDOUT) and exported as PHP code for
+further processing.</p>
+<p>Please refer to <code>textui</code> for a list of command line switches that
+control code coverage functionality as well as
+<code>appendixes.configuration.logging</code> for the relevant configuration
+settings.</p>
+<h2 id="software-metrics-for-code-coverage">Software Metrics for Code Coverage</h2>
+<p>Various software metrics exist to measure code coverage:</p>
+<p><em>Line Coverage</em></p>
+<blockquote>
+<p>The <em>Line Coverage</em> software metric measures whether each executable
+line was executed.</p>
+</blockquote>
+<p><em>Branch Coverage</em></p>
+<blockquote>
+<p>The <em>Branch Coverage</em> software metric measures whether the boolean
+expression of each control structure evaluated to both <code>true</code> and
+<code>false</code> while running the test suite.</p>
+</blockquote>
+<p><em>Path Coverage</em></p>
+<blockquote>
+<p>The <em>Path Coverage</em> software metric measures whether each of the
+possible execution paths in a function or method has been followed
+while running the test suite. An execution path is a unique sequence
+of branches from the entry of the function or method to its exit.</p>
+</blockquote>
+<p><em>Function and Method Coverage</em></p>
+<blockquote>
+<p>The <em>Function and Method Coverage</em> software metric measures whether
+each function or method has been invoked. php-code-coverage only
+considers a function or method as covered when all of its executable
+lines are covered.</p>
+</blockquote>
+<p><em>Class and Trait Coverage</em></p>
+<blockquote>
+<p>The <em>Class and Trait Coverage</em> software metric measures whether each
+method of a class or trait is covered. php-code-coverage only
+considers a class or trait as covered when all of its methods are
+covered.</p>
+</blockquote>
+<p><em>Change Risk Anti-Patterns (CRAP) Index</em></p>
+<blockquote>
+<p>The <em>Change Risk Anti-Patterns (CRAP) Index</em> is calculated based on
+the cyclomatic complexity and code coverage of a unit of code. Code
+that is not too complex and has an adequate test coverage will have a
+low CRAP index. The CRAP index can be lowered by writing tests and by
+refactoring the code to lower its complexity.</p>
+</blockquote>
+<h2 id="including-files">Including Files</h2>
+<p>It is mandatory to configure a filter for telling PHPUnit which
+sourcecode files to include in the code coverage report. This can either
+be done using the <code>--coverage-filter</code> <code>command line <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>textui.clioptions</span><span class="token punctuation">&gt;</span></span></code>
+option or via the configuration file (see
+<code>appendixes.configuration.coverage.include</code>).</p>
+<p>The <code>includeUncoveredFilesInCodeCoverageReport</code> and
+<code>processUncoveredFilesForCodeCoverageReport</code> configuration settings are
+available to configure how the filter is used:</p>
+<ul>
+<li><code>includeUncoveredFilesInCodeCoverageReport=&quot;false&quot;</code> means that only
+files that have at least one line of executed code are included in
+the code coverage report</li>
+<li><code>includeUncoveredFilesInCodeCoverageReport=&quot;true&quot;</code> (default) means
+that all files are included in the code coverage report even if not
+a single line of code of such a file is executed</li>
+<li><code>processUncoveredFilesForCodeCoverageReport=&quot;false&quot;</code> (default) means
+that a file that has no executed lines of code will be added to the
+code coverage report (if
+<code>includeUncoveredFilesInCodeCoverageReport=&quot;true&quot;</code> is set) but it
+will not be loaded by PHPUnit and it will therefore not be analysed
+for correct executable lines of code information</li>
+<li><code>processUncoveredFilesForCodeCoverageReport=&quot;true&quot;</code> means that a
+file that has no executed lines of code will be loaded by PHPUnit so
+that it can be analysed for correct executable lines of code
+information</li>
+</ul>
+<p>Note</p>
+<p>Please note that the loading of sourcecode files that is performed when
+<code>processUncoveredFilesForCodeCoverageReport=&quot;true&quot;</code> is set can cause
+problems when a sourcecode file contains code outside the scope of a
+class or function, for instance.</p>
+<h2 id="ignoring-code-blocks">Ignoring Code Blocks</h2>
+<p>Sometimes you have blocks of code that you cannot test and that you may
+want to ignore during code coverage analysis. PHPUnit lets you do this
+using the <code>@codeCoverageIgnore</code>, <code>@codeCoverageIgnoreStart</code> and
+<code>@codeCoverageIgnoreEnd</code> annotations as shown in
+<code>code-coverage-analysis.ignoring-code-blocks.examples.Sample.php</code>.</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
+
+/**
+ * @codeCoverageIgnore
+ */
+final class Foo
+{
+    public function bar(): void
+    {
+    }
+}
+
+final class Bar
+{
+    /**
+     * @codeCoverageIgnore
+     */
+    public function foo(): void
+    {
+    }
+}
+
+if (false) {
+    // @codeCoverageIgnoreStart
+    print &apos;*&apos;;
+    // @codeCoverageIgnoreEnd
+}
+
+exit; // @codeCoverageIgnore
+</code></pre><p>The ignored lines of code (marked as ignored using the annotations) are
+counted as executed (if they are executable) and will not be
+highlighted.</p>
+<h2 id="specifying-covered-code-parts">Specifying Covered Code Parts</h2>
+<p>The <code>@covers</code> annotation (see the
+<code>annotation documentation <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appendixes.annotations.covers.tables.annotations</span><span class="token punctuation">&gt;</span></span></code>)
+can be used in the test code to specify which code parts a test class
+(or test method) wants to test. If provided, this effectively filters
+the code coverage report to include executed code from the referenced
+code parts only.
+<code>code-coverage-analysis.specifying-covered-parts.examples.InvoiceTest.php</code>
+shows an example.</p>
+<p>Note</p>
+<p>If a method is specificed with the <code>@covers</code> annotation, only the
+referenced method will be considered as covered, but not methods called
+by this method. Hence, when a covered method is refactored using the
+<em>extract method</em> refactoring, corresponding <code>@covers</code> annotations need
+to be added. This is the reason it is recommended to use this annotation
+with class scope, not with method scope.</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
+
+/**
+ * @covers \Invoice
+ * @uses \Money
+ */
+final class InvoiceTest extends TestCase
+{
+    private $invoice;
+
+    protected function setUp(): void
+    {
+        $this-&gt;invoice = new Invoice;
+    }
+
+    public function testAmountInitiallyIsEmpty(): void
+    {
+        $this-&gt;assertEquals(new Money, $this-&gt;invoice-&gt;getAmount());
+    }
+}
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">BankAccountTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">private</span> <span class="token attr-name">$ba;</span>
+
+    <span class="token attr-name">protected</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">setUp():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>ba = new BankAccount;
+    }
+
+    /**
+     * @covers \BankAccount::getBalance
+     */
+    public function testBalanceIsInitiallyZero(): void
+    {
+        $this-&gt;assertSame(0, $this-&gt;ba-&gt;getBalance());
+    }
+
+    /**
+     * @covers \BankAccount::withdrawMoney
+     */
+    public function testBalanceCannotBecomeNegative(): void
+    {
+        try {
+            $this-&gt;ba-&gt;withdrawMoney(1);
+        }
+
+        catch (BankAccountException $e) {
+            $this-&gt;assertSame(0, $this-&gt;ba-&gt;getBalance());
+
+            return;
+        }
+
+        $this-&gt;fail();
+    }
+
+    /**
+     * @covers \BankAccount::depositMoney
+     */
+    public function testBalanceCannotBecomeNegative2(): void
+    {
+        try {
+            $this-&gt;ba-&gt;depositMoney(-1);
+        }
+
+        catch (BankAccountException $e) {
+            $this-&gt;assertSame(0, $this-&gt;ba-&gt;getBalance());
+
+            return;
+        }
+
+        $this-&gt;fail();
+    }
+
+    /**
+     * @covers \BankAccount::getBalance
+     * @covers \BankAccount::depositMoney
+     * @covers \BankAccount::withdrawMoney
+     */
+    public function testDepositWithdrawMoney(): void
+    {
+        $this-&gt;assertSame(0, $this-&gt;ba-&gt;getBalance());
+        $this-&gt;ba-&gt;depositMoney(1);
+        $this-&gt;assertSame(1, $this-&gt;ba-&gt;getBalance());
+        $this-&gt;ba-&gt;withdrawMoney(1);
+        $this-&gt;assertSame(0, $this-&gt;ba-&gt;getBalance());
+    }
+}
+</code></pre><p>It is also possible to specify that a test should not cover <em>any</em> method
+by using the <code>@coversNothing</code> annotation (see
+<code>appendixes.annotations.coversNothing</code>). This can be helpful when
+writing integration tests to make sure you only generate code coverage
+with unit tests.</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+use PHPUnit\DbUnit\TestCase
+
+final class GuestbookIntegrationTest extends TestCase
+{
+    /**
+     * @coversNothing
+     */
+    public function testAddEntry(): void
+    {
+        $guestbook = new Guestbook();
+        $guestbook-&gt;addEntry(&quot;suzy&quot;, &quot;Hello world!&quot;);
+
+        $queryTable = $this-&gt;getConnection()-&gt;createQueryTable(
+            &apos;guestbook&apos;, &apos;SELECT * FROM guestbook&apos;
+        );
+
+        $expectedTable = $this-&gt;createFlatXmlDataSet(&quot;expectedBook.xml&quot;)
+                              -&gt;getTable(&quot;guestbook&quot;);
+
+        $this-&gt;assertTablesEqual($expectedTable, $queryTable);
+    }
+}
+</code></pre><h2 id="edge-cases">Edge Cases</h2>
+<p>This section shows noteworthy edge cases that lead to confusing code
+coverage information.</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
+
+// Because it is &quot;line based&quot; and not statement base coverage
+// one line will always have one coverage status
+if (false) this_function_call_shows_up_as_covered();
+
+// Due to how code coverage works internally these two lines are special.
+// This line will show up as non executable
+if (false)
+    // This line will show up as covered because it is actually the
+    // coverage of the if statement in the line above that gets shown here!
+    will_also_show_up_as_covered();
+
+// To avoid this it is necessary that braces are used
+if (false) {
+    this_call_will_never_show_up_as_covered();
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="bibliography.html" class="navigation navigation-prev " aria-label="Previous page: Bibliography">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="configuration.html" class="navigation navigation-next " aria-label="Next page: Configuration">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Code Coverage Analysis","level":"1.5","depth":1,"next":{"title":"Configuration","level":"1.6","depth":1,"path":"configuration.md","ref":"configuration.md","articles":[]},"previous":{"title":"Bibliography","level":"1.4","depth":1,"path":"bibliography.md","ref":"bibliography.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"PHPUnit 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"code-coverage-analysis.md","mtime":"2021-05-20T01:13:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-20T01:13:58.148Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

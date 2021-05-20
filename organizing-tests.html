@@ -1,0 +1,513 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Organizing Tests · PHPUnit 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="risky-tests.html" />
+    
+    
+    <link rel="prev" href="installation.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="annotations.html">
+            
+                <a href="annotations.html">
+            
+                    
+                    Annotations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="assertions.html">
+            
+                <a href="assertions.html">
+            
+                    
+                    Assertions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="bibliography.html">
+            
+                <a href="bibliography.html">
+            
+                    
+                    Bibliography
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="code-coverage-analysis.html">
+            
+                <a href="code-coverage-analysis.html">
+            
+                    
+                    Code Coverage Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="copyright.html">
+            
+                <a href="copyright.html">
+            
+                    
+                    Copyright
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="extending-phpunit.html">
+            
+                <a href="extending-phpunit.html">
+            
+                    
+                    Extending Phpunit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="fixtures.html">
+            
+                <a href="fixtures.html">
+            
+                    
+                    Fixtures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="incomplete-and-skipped-tests.html">
+            
+                <a href="incomplete-and-skipped-tests.html">
+            
+                    
+                    Incomplete And Skipped Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.12" data-path="organizing-tests.html">
+            
+                <a href="organizing-tests.html">
+            
+                    
+                    Organizing Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="risky-tests.html">
+            
+                <a href="risky-tests.html">
+            
+                    
+                    Risky Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="test-doubles.html">
+            
+                <a href="test-doubles.html">
+            
+                    
+                    Test Doubles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="textui.html">
+            
+                <a href="textui.html">
+            
+                    
+                    Textui
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="writing-tests-for-phpunit.html">
+            
+                <a href="writing-tests-for-phpunit.html">
+            
+                    
+                    Writing Tests For Phpunit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Organizing Tests</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="organizing-tests">Organizing Tests</h1>
+<p>One of the goals of PHPUnit is that tests should be composable: we want
+to be able to run any number or combination of tests together, for
+instance all tests for the whole project, or the tests for all classes
+of a component that is part of the project, or just the tests for a
+single class.</p>
+<p>PHPUnit supports different ways of organizing tests and composing them
+into a test suite. This chapter shows the most commonly used approaches.</p>
+<h2 id="composing-a-test-suite-using-the-filesystem">Composing a Test Suite Using the Filesystem</h2>
+<p>Probably the easiest way to compose a test suite is to keep all test
+case source files in a test directory. PHPUnit can automatically
+discover and run the tests by recursively traversing the test directory.</p>
+<p>Lets take a look at the test suite of the
+<a href="http://github.com/sebastianbergmann/money/" target="_blank">sebastianbergmann/money</a>
+library. Looking at this project&apos;s directory structure, we see that the
+test case classes in the <code>tests</code> directory mirror the package and class
+structure of the System Under Test (SUT) in the <code>src</code> directory:</p>
+<pre class="language-"><code>src                                 tests
+`-- Currency.php                    `-- CurrencyTest.php
+`-- IntlFormatter.php               `-- IntlFormatterTest.php
+`-- Money.php                       `-- MoneyTest.php
+`-- autoload.php
+</code></pre><p>To run all tests for the library we need to point the PHPUnit
+command-line test runner to the test directory:</p>
+<p>$ phpunit --bootstrap src/autoload.php tests PHPUnit .0 by Sebastian
+Bergmann and contributors.</p>
+<hr>
+<p>Time: 636 ms, Memory: 3.50Mb</p>
+<p>OK (33 tests, 52 assertions)</p>
+<p>Note</p>
+<p>If you point the PHPUnit command-line test runner to a directory it will
+look for <code>*Test.php</code> files.</p>
+<p>To run only the tests that are declared in the <code>CurrencyTest</code> test case
+class in <code>tests/CurrencyTest.php</code> we can use the following command:</p>
+<p>$ phpunit --bootstrap src/autoload.php tests/CurrencyTest.php PHPUnit .0
+by Sebastian Bergmann and contributors.</p>
+<hr>
+<p>Time: 280 ms, Memory: 2.75Mb</p>
+<p>OK (8 tests, 8 assertions)</p>
+<p>For more fine-grained control of which tests to run we can use the
+<code>--filter</code> option:</p>
+<p>$ phpunit --bootstrap src/autoload.php --filter
+testObjectCanBeConstructedForValidConstructorArgument tests PHPUnit .0
+by Sebastian Bergmann and contributors.</p>
+<p>Time: 167 ms, Memory: 3.00Mb</p>
+<p>OK (2 test, 2 assertions)</p>
+<p>Note</p>
+<p>A drawback of this approach is that we have no control over the order in
+which the tests are run. This can lead to problems with regard to test
+dependencies, see <code>writing-tests-for-phpunit.test-dependencies</code>. In the
+next section you will see how you can make the test execution order
+explicit by using the XML configuration file.</p>
+<h2 id="composing-a-test-suite-using-xml-configuration">Composing a Test Suite Using XML Configuration</h2>
+<p>PHPUnit&apos;s XML configuration file (<code>appendixes.configuration</code>) can also
+be used to compose a test suite.
+<code>organizing-tests.xml-configuration.examples.phpunit.xml</code> shows a
+minimal <code>phpunit.xml</code> file that will add all <code>*Test</code> classes that are
+found in <code>*Test.php</code> files when the <code>tests</code> directory is recursively
+traversed.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>phpunit</span> <span class="token attr-name">bootstrap</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>src/autoload.php<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testsuites</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testsuite</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>money<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>directory</span><span class="token punctuation">&gt;</span></span>tests<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>directory</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>testsuite</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>testsuites</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>phpunit</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>To run the test suite, use the the <code>--testsuite</code> option:</p>
+<p>$ phpunit --bootstrap src/autoload.php --testsuite money PHPUnit .0 by
+Sebastian Bergmann and contributors.</p>
+<p>Time: 167 ms, Memory: 3.00Mb</p>
+<p>OK (2 test, 2 assertions)</p>
+<p>If <code>phpunit.xml</code> or <code>phpunit.xml.dist</code> (in that order) exist in the
+current working directory and <code>--configuration</code> is <em>not</em> used, the
+configuration will be automatically read from that file.</p>
+<p>The order in which tests are executed can be made explicit:</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>phpunit</span> <span class="token attr-name">bootstrap</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>src/autoload.php<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testsuites</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testsuite</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>money<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>file</span><span class="token punctuation">&gt;</span></span>tests/IntlFormatterTest.php<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>file</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>file</span><span class="token punctuation">&gt;</span></span>tests/MoneyTest.php<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>file</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>file</span><span class="token punctuation">&gt;</span></span>tests/CurrencyTest.php<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>file</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>testsuite</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>testsuites</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>phpunit</span><span class="token punctuation">&gt;</span></span>
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="installation.html" class="navigation navigation-prev " aria-label="Previous page: Installation">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="risky-tests.html" class="navigation navigation-next " aria-label="Next page: Risky Tests">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Organizing Tests","level":"1.12","depth":1,"next":{"title":"Risky Tests","level":"1.13","depth":1,"path":"risky-tests.md","ref":"risky-tests.md","articles":[]},"previous":{"title":"Installation","level":"1.11","depth":1,"path":"installation.md","ref":"installation.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"PHPUnit 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"organizing-tests.md","mtime":"2021-05-20T01:13:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-20T01:13:58.148Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

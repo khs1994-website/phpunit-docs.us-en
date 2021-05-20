@@ -1,0 +1,1169 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Writing Tests For Phpunit · PHPUnit 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="textui.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="annotations.html">
+            
+                <a href="annotations.html">
+            
+                    
+                    Annotations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="assertions.html">
+            
+                <a href="assertions.html">
+            
+                    
+                    Assertions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="bibliography.html">
+            
+                <a href="bibliography.html">
+            
+                    
+                    Bibliography
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="code-coverage-analysis.html">
+            
+                <a href="code-coverage-analysis.html">
+            
+                    
+                    Code Coverage Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="copyright.html">
+            
+                <a href="copyright.html">
+            
+                    
+                    Copyright
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="extending-phpunit.html">
+            
+                <a href="extending-phpunit.html">
+            
+                    
+                    Extending Phpunit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="fixtures.html">
+            
+                <a href="fixtures.html">
+            
+                    
+                    Fixtures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="incomplete-and-skipped-tests.html">
+            
+                <a href="incomplete-and-skipped-tests.html">
+            
+                    
+                    Incomplete And Skipped Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="organizing-tests.html">
+            
+                <a href="organizing-tests.html">
+            
+                    
+                    Organizing Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="risky-tests.html">
+            
+                <a href="risky-tests.html">
+            
+                    
+                    Risky Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="test-doubles.html">
+            
+                <a href="test-doubles.html">
+            
+                    
+                    Test Doubles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="textui.html">
+            
+                <a href="textui.html">
+            
+                    
+                    Textui
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.16" data-path="writing-tests-for-phpunit.html">
+            
+                <a href="writing-tests-for-phpunit.html">
+            
+                    
+                    Writing Tests For Phpunit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Writing Tests For Phpunit</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="writing-tests-for-phpunit">Writing Tests for PHPUnit</h1>
+<p><code>writing-tests-for-phpunit.examples.StackTest.php</code> shows how we can
+write tests using PHPUnit that exercise PHP&apos;s array operations. The
+example introduces the basic conventions and steps for writing tests
+with PHPUnit:</p>
+<p>#.</p>
+<blockquote>
+<p>The tests for a class <code>Class</code> go into a class <code>ClassTest</code>.</p>
+</blockquote>
+<p>#.</p>
+<blockquote>
+<p><code>ClassTest</code> inherits (most of the time) from
+<code>PHPUnit\Framework\TestCase</code>.</p>
+</blockquote>
+<p>#.</p>
+<blockquote>
+<p>The tests are public methods that are named <code>test*</code>.</p>
+<p>Alternatively, you can use the <code>@test</code> annotation in a method&apos;s
+docblock to mark it as a test method.</p>
+</blockquote>
+<p>#.</p>
+<blockquote>
+<p>Inside the test methods, assertion methods such as <code>assertSame()</code> (see
+<code>appendixes.assertions</code>) are used to assert that an actual value
+matches an expected value.</p>
+</blockquote>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">StackTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testPushAndPop():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$stack</span> <span class="token attr-value"><span class="token punctuation">=</span> [];</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertSame(0, count($stack));
+
+        array_push($stack, &apos;foo&apos;);
+        $this-&gt;assertSame(&apos;foo&apos;, $stack[count($stack)-1]);
+        $this-&gt;assertSame(1, count($stack));
+
+        $this-&gt;assertSame(&apos;foo&apos;, array_pop($stack));
+        $this-&gt;assertSame(0, count($stack));
+    }
+}
+</code></pre><blockquote>
+<p><em>Martin Fowler</em>:</p>
+<p>Whenever you are tempted to type something into a <code>print</code> statement or
+a debugger expression, write it as a test instead.</p>
+</blockquote>
+<h2 id="test-dependencies">Test Dependencies</h2>
+<blockquote>
+<p><em>Adrian Kuhn et. al.</em>:</p>
+<p>Unit Tests are primarily written as a good practice to help developers
+identify and fix bugs, to refactor code and to serve as documentation
+for a unit of software under test. To achieve these benefits, unit
+tests ideally should cover all the possible paths in a program. One
+unit test usually covers one specific path in one function or method.
+However a test method is not necessarily an encapsulated, independent
+entity. Often there are implicit dependencies between test methods,
+hidden in the implementation scenario of a test.</p>
+</blockquote>
+<p>PHPUnit supports the declaration of explicit dependencies between test
+methods. Such dependencies do not define the order in which the test
+methods are to be executed but they allow the returning of an instance
+of the test fixture by a producer and passing it to the dependent
+consumers.</p>
+<ul>
+<li><p>A producer is a test method that yields its unit under test as</p>
+<blockquote>
+<p>return value.</p>
+</blockquote>
+</li>
+<li><p>A consumer is a test method that depends on one or more producers</p>
+<blockquote>
+<p>and their return values.</p>
+</blockquote>
+</li>
+</ul>
+<p><code>writing-tests-for-phpunit.examples.StackTest2.php</code> shows how to use the
+<code>@depends</code> annotation to express dependencies between test methods.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">StackTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testEmpty():</span></span> <span class="token attr-name">array</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$stack</span> <span class="token attr-value"><span class="token punctuation">=</span> [];</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertEmpty($stack);
+
+        return $stack;
+    }
+
+    /**
+     * @depends testEmpty
+     */
+    public function testPush(array $stack): array
+    {
+        array_push($stack, &apos;foo&apos;);
+        $this-&gt;assertSame(&apos;foo&apos;, $stack[count($stack)-1]);
+        $this-&gt;assertNotEmpty($stack);
+
+        return $stack;
+    }
+
+    /**
+     * @depends testPush
+     */
+    public function testPop(array $stack): void
+    {
+        $this-&gt;assertSame(&apos;foo&apos;, array_pop($stack));
+        $this-&gt;assertEmpty($stack);
+    }
+}
+</code></pre><p>In the example above, the first test, <code>testEmpty()</code>, creates a new array
+and asserts that it is empty. The test then returns the fixture as its
+result. The second test, <code>testPush()</code>, depends on <code>testEmpty()</code> and is
+passed the result of that depended-upon test as its argument. Finally,
+<code>testPop()</code> depends upon <code>testPush()</code>.</p>
+<p>Note</p>
+<p>The return value yielded by a producer is passed &quot;as-is&quot; to its
+consumers by default. This means that when a producer returns an object,
+a reference to that object is passed to the consumers. Instead of a
+reference either (a) a (deep) copy via <code>@depends clone</code>, or (b) a
+(normal shallow) clone (based on PHP keyword <code>clone</code>) via
+<code>@depends shallowClone</code> are possible too.</p>
+<p>To localize defects, we want our attention to be focussed on relevant
+failing tests. This is why PHPUnit skips the execution of a test when a
+depended-upon test has failed. This improves defect localization by
+exploiting the dependencies between tests as shown in
+<code>writing-tests-for-phpunit.examples.DependencyFailureTest.php</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">DependencyFailureTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testOne():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertTrue(false);
+    }
+
+    /**
+     * @depends testOne
+     */
+    public function testTwo(): void
+    {
+    }
+}
+</code></pre><p>$ phpunit --verbose DependencyFailureTest PHPUnit .0 by Sebastian
+Bergmann and contributors.</p>
+<p>FS</p>
+<p>Time: 0 seconds, Memory: 5.00Mb</p>
+<p>There was 1 failure:</p>
+<p>1) DependencyFailureTest::testOne Failed asserting that false is true.</p>
+<p>/home/sb/DependencyFailureTest.php:6</p>
+<p>There was 1 skipped test:</p>
+<p>1) DependencyFailureTest::testTwo This test depends on
+&quot;DependencyFailureTest::testOne&quot; to pass.</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1, Skipped: 1.</p>
+<p>A test may have more than one <code>@depends</code> annotation. PHPUnit does not
+change the order in which tests are executed, you have to ensure that
+the dependencies of a test can actually be met before the test is run.</p>
+<p>A test that has more than one <code>@depends</code> annotation will get a fixture
+from the first producer as the first argument, a fixture from the second
+producer as the second argument, and so on. See
+<code>writing-tests-for-phpunit.examples.MultipleDependencies.php</code></p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">MultipleDependenciesTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testProducerFirst():</span></span> <span class="token attr-name">string</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertTrue(true);
+
+        return &apos;first&apos;;
+    }
+
+    public function testProducerSecond(): string
+    {
+        $this-&gt;assertTrue(true);
+
+        return &apos;second&apos;;
+    }
+
+    /**
+     * @depends testProducerFirst
+     * @depends testProducerSecond
+     */
+    public function testConsumer(string $a, string $b): void
+    {
+        $this-&gt;assertSame(&apos;first&apos;, $a);
+        $this-&gt;assertSame(&apos;second&apos;, $b);
+    }
+}
+</code></pre><p>$ phpunit --verbose MultipleDependenciesTest PHPUnit .0 by Sebastian
+Bergmann and contributors.</p>
+<p>...</p>
+<p>Time: 0 seconds, Memory: 3.25Mb</p>
+<p>OK (3 tests, 4 assertions)</p>
+<h2 id="data-providers">Data Providers</h2>
+<p>A test method can accept arbitrary arguments. These arguments are to be
+provided by one or more data provider methods (<code>additionProvider()</code> in
+<code>writing-tests-for-phpunit.data-providers.examples.DataTest.php</code>). The
+data provider method to be used is specified using the <code>@dataProvider</code>
+annotation.</p>
+<p>A data provider method must be <code>public</code> and either return an array of
+arrays or an object that implements the <code>Iterator</code> interface and yields
+an array for each iteration step. For each array that is part of the
+collection the test method will be called with the contents of the array
+as its arguments.</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
+
+final class DataTest extends TestCase
+{
+    /**
+     * @dataProvider additionProvider
+     */
+    public function testAdd(int $a, int $b, int $expected): void
+    {
+        $this-&gt;assertSame($expected, $a + $b);
+    }
+
+    public function additionProvider(): array
+    {
+        return [
+            [0, 0, 0],
+            [0, 1, 1],
+            [1, 0, 1],
+            [1, 1, 3]
+        ];
+    }
+}
+</code></pre><p>$ phpunit DataTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>...F</p>
+<p>Time: 0 seconds, Memory: 5.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) DataTest::testAdd with data set #3 (1, 1, 3) Failed asserting that 2
+is identical to 3.</p>
+<p>/home/sb/DataTest.php:9</p>
+<p>FAILURES! Tests: 4, Assertions: 4, Failures: 1.</p>
+<p>When using a large number of datasets it&apos;s useful to name each one with
+string key instead of default numeric. Output will be more verbose as
+it&apos;ll contain that name of a dataset that breaks a test.</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
+
+final class DataTest extends TestCase
+{
+    /**
+     * @dataProvider additionProvider
+     */
+    public function testAdd(int $a, int $b, int $expected): void
+    {
+        $this-&gt;assertSame($expected, $a + $b);
+    }
+
+    public function additionProvider(): array
+    {
+        return [
+            &apos;adding zeros&apos;  =&gt; [0, 0, 0],
+            &apos;zero plus one&apos; =&gt; [0, 1, 1],
+            &apos;one plus zero&apos; =&gt; [1, 0, 1],
+            &apos;one plus one&apos;  =&gt; [1, 1, 3]
+        ];
+    }
+}
+</code></pre><p>$ phpunit DataTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>...F</p>
+<p>Time: 0 seconds, Memory: 5.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) DataTest::testAdd with data set &quot;one plus one&quot; (1, 1, 3) Failed
+asserting that 2 is identical to 3.</p>
+<p>/home/sb/DataTest.php:9</p>
+<p>FAILURES! Tests: 4, Assertions: 4, Failures: 1.</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
+
+final class DataTest extends TestCase
+{
+    /**
+     * @dataProvider additionProvider
+     */
+    public function testAdd(int $a, int $b, int $expected): void
+    {
+        $this-&gt;assertSame($expected, $a + $b);
+    }
+
+    public function additionProvider(): CsvFileIterator
+    {
+        return new CsvFileIterator(&apos;data.csv&apos;);
+    }
+}
+</code></pre><p>$ phpunit DataTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>...F</p>
+<p>Time: 0 seconds, Memory: 5.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) DataTest::testAdd with data set #3 (&apos;1&apos;, &apos;1&apos;, &apos;3&apos;) Failed asserting
+that 2 is identical to 3.</p>
+<p>/home/sb/DataTest.php:11</p>
+<p>FAILURES! Tests: 4, Assertions: 4, Failures: 1.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">CsvFileIterator</span> <span class="token attr-name">implements</span> <span class="token attr-name">Iterator</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">private</span> <span class="token attr-name">$file;</span>
+    <span class="token attr-name">private</span> <span class="token attr-name">$key</span> <span class="token attr-value"><span class="token punctuation">=</span> 0;</span>
+    <span class="token attr-name">private</span> <span class="token attr-name">$current;</span>
+
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name">__construct(string</span> <span class="token attr-name">$file)</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>file = fopen($file, &apos;r&apos;);
+    }
+
+    public function __destruct()
+    {
+        fclose($this-&gt;file);
+    }
+
+    public function rewind(): void
+    {
+        rewind($this-&gt;file);
+
+        $this-&gt;current = fgetcsv($this-&gt;file);
+        $this-&gt;key     = 0;
+    }
+
+    public function valid(): bool
+    {
+        return !feof($this-&gt;file);
+    }
+
+    public function key(): int
+    {
+        return $this-&gt;key;
+    }
+
+    public function current(): array
+    {
+        return $this-&gt;current;
+    }
+
+    public function next(): void
+    {
+        $this-&gt;current = fgetcsv($this-&gt;file);
+
+        $this-&gt;key++;
+    }
+}
+</code></pre><p>When a test receives input from both a <code>@dataProvider</code> method and from
+one or more tests it <code>@depends</code> on, the arguments from the data provider
+will come before the ones from depended-upon tests. The arguments from
+depended-upon tests will be the same for each data set. See
+<code>writing-tests-for-phpunit.data-providers.examples.DependencyAndDataProviderCombo.php</code></p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">DependencyAndDataProviderComboTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">provider():</span></span> <span class="token attr-name">array</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">return</span> <span class="token attr-name">[[&apos;provider1&apos;],</span> <span class="token attr-name">[&apos;provider2&apos;]];</span>
+    <span class="token attr-name">}</span>
+
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testProducerFirst():</span></span> <span class="token attr-name">string</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertTrue(true);
+
+        return &apos;first&apos;;
+    }
+
+    public function testProducerSecond(): string
+    {
+        $this-&gt;assertTrue(true);
+
+        return &apos;second&apos;;
+    }
+
+    /**
+     * @depends testProducerFirst
+     * @depends testProducerSecond
+     * @dataProvider provider
+     */
+    public function testConsumer(): void
+    {
+        $this-&gt;assertSame(
+            [&apos;provider1&apos;, &apos;first&apos;, &apos;second&apos;],
+            func_get_args()
+        );
+    }
+}
+</code></pre><p>$ phpunit --verbose DependencyAndDataProviderComboTest PHPUnit .0 by
+Sebastian Bergmann and contributors.</p>
+<p>...F</p>
+<p>Time: 0 seconds, Memory: 3.50Mb</p>
+<p>There was 1 failure:</p>
+<p>1) DependencyAndDataProviderComboTest::testConsumer with data set #1
+(&apos;provider2&apos;) Failed asserting that two arrays are identical. ---
+Expected +++ Actual @@ @@ Array &amp;0 ( - 0 =&gt; &apos;provider1&apos; + 0 =&gt;
+&apos;provider2&apos; 1 =&gt; &apos;first&apos; 2 =&gt; &apos;second&apos; )
+/home/sb/DependencyAndDataProviderComboTest.php:32</p>
+<p>FAILURES! Tests: 4, Assertions: 4, Failures: 1.</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
+
+final class DataTest extends TestCase
+{
+    /**
+     * @dataProvider additionWithNonNegativeNumbersProvider
+     * @dataProvider additionWithNegativeNumbersProvider
+     */
+    public function testAdd(int $a, int $b, int $expected): void
+    {
+        $this-&gt;assertSame($expected, $a + $b);
+    }
+
+    public function additionWithNonNegativeNumbersProvider(): array
+    {
+        return [
+            [0, 1, 1],
+            [1, 0, 1],
+            [1, 1, 3]
+        ];
+    }
+
+    public function additionWithNegativeNumbersProvider(): array
+    {
+        return [
+            [-1, 1, 0],
+            [-1, -1, -2],
+            [1, -1, 0]
+        ];
+    }
+ }
+</code></pre><p>$ phpunit DataTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>..F... 6 / 6 (100%)</p>
+<p>Time: 0 seconds, Memory: 5.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) DataTest::testAdd with data set #3 (1, 1, 3) Failed asserting that 2
+is identical to 3.</p>
+<p>/home/sb/DataTest.php:12</p>
+<p>FAILURES! Tests: 6, Assertions: 6, Failures: 1.</p>
+<p>Note</p>
+<p>When a test depends on a test that uses data providers, the depending
+test will be executed when the test it depends upon is successful for at
+least one data set. The result of a test that uses data providers cannot
+be injected into a depending test.</p>
+<p>Note</p>
+<p>All data providers are executed before both the call to the
+<code>setUpBeforeClass()</code> static method and the first call to the <code>setUp()</code>
+method. Because of that you can&apos;t access any variables you create there
+from within a data provider. This is required in order for PHPUnit to be
+able to compute the total number of tests.</p>
+<h2 id="testing-exceptions">Testing Exceptions</h2>
+<p><code>writing-tests-for-phpunit.exceptions.examples.ExceptionTest.php</code> shows
+how to use the <code>expectException()</code> method to test whether an exception
+is thrown by the code under test.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">ExceptionTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testException():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>expectException(InvalidArgumentException::class);
+    }
+}
+</code></pre><p>$ phpunit ExceptionTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 4.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) ExceptionTest::testException Failed asserting that exception of type
+&quot;InvalidArgumentException&quot; is thrown.</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<p>In addition to the <code>expectException()</code> method the
+<code>expectExceptionCode()</code>, <code>expectExceptionMessage()</code>, and
+<code>expectExceptionMessageMatches()</code> methods exist to set up expectations
+for exceptions raised by the code under test.</p>
+<p>Note</p>
+<p>Note that <code>expectExceptionMessage()</code> asserts that the <code>$actual</code> message
+contains the <code>$expected</code> message and does not perform an exact string
+comparison.</p>
+<h2 id="testing-php-errors-warnings-and-notices">Testing PHP Errors, Warnings, and Notices</h2>
+<p>By default, PHPUnit converts PHP errors, warnings, and notices that are
+triggered during the execution of a test to an exception. Among other
+benefits, this makes it possible to expect that a PHP error, warning, or
+notice is triggered in a test as shown in
+<code>writing-tests-for-phpunit.exceptions.examples.ErrorTest.php</code>.</p>
+<p>Note</p>
+<p>PHP&apos;s <code>error_reporting</code> runtime configuration can limit which errors
+PHPUnit will convert to exceptions. If you are having issues with this
+feature, be sure PHP is not configured to suppress the type of error you
+are interested in.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">ErrorTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testDeprecationCanBeExpected():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>expectDeprecation();
+
+        // Optionally test that the message is equal to a string
+        $this-&gt;expectDeprecationMessage(&apos;foo&apos;);
+
+        // Or optionally test that the message matches a regular expression
+        $this-&gt;expectDeprecationMessageMatches(&apos;/foo/&apos;);
+
+        \trigger_error(&apos;foo&apos;, \E_USER_DEPRECATED);
+    }
+
+    public function testNoticeCanBeExpected(): void
+    {
+        $this-&gt;expectNotice();
+
+        // Optionally test that the message is equal to a string
+        $this-&gt;expectNoticeMessage(&apos;foo&apos;);
+
+        // Or optionally test that the message matches a regular expression
+        $this-&gt;expectNoticeMessageMatches(&apos;/foo/&apos;);
+
+        \trigger_error(&apos;foo&apos;, \E_USER_NOTICE);
+    }
+
+    public function testWarningCanBeExpected(): void
+    {
+        $this-&gt;expectWarning();
+
+        // Optionally test that the message is equal to a string
+        $this-&gt;expectWarningMessage(&apos;foo&apos;);
+
+        // Or optionally test that the message matches a regular expression
+        $this-&gt;expectWarningMessageMatches(&apos;/foo/&apos;);
+
+        \trigger_error(&apos;foo&apos;, \E_USER_WARNING);
+    }
+
+    public function testErrorCanBeExpected(): void
+    {
+        $this-&gt;expectError();
+
+        // Optionally test that the message is equal to a string
+        $this-&gt;expectErrorMessage(&apos;foo&apos;);
+
+        // Or optionally test that the message matches a regular expression
+        $this-&gt;expectErrorMessageMatches(&apos;/foo/&apos;);
+
+        \trigger_error(&apos;foo&apos;, \E_USER_ERROR);
+    }
+}
+</code></pre><p>When testing code that uses PHP built-in functions such as <code>fopen()</code>
+that may trigger errors it can sometimes be useful to use error
+suppression while testing. This allows you to check the return values by
+suppressing notices that would lead to an exception raised by PHPUnit&apos;s
+error handler.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">ErrorSuppressionTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFileWriting():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$writer</span> <span class="token attr-value"><span class="token punctuation">=</span> new</span> <span class="token attr-name">FileWriter;</span>
+
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertFalse(@$writer-&gt;write(&apos;/is-not-writeable/file&apos;, &apos;stuff&apos;));
+    }
+}
+
+final class FileWriter
+{
+    public function write($file, $content)
+    {
+        $file = fopen($file, &apos;w&apos;);
+
+        if ($file === false) {
+            return false;
+        }
+
+        // ...
+    }
+}
+</code></pre><p>$ phpunit ErrorSuppressionTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>.</p>
+<p>Time: 1 seconds, Memory: 5.25Mb</p>
+<p>OK (1 test, 1 assertion)</p>
+<p>Without the error suppression the test would fail reporting
+<code>fopen(/is-not-writeable/file): failed to open stream: No such file or directory</code>.</p>
+<h2 id="testing-output">Testing Output</h2>
+<p>Sometimes you want to assert that the execution of a method, for
+instance, generates an expected output (via <code>echo</code> or <code>print</code>, for
+example). The <code>PHPUnit\Framework\TestCase</code> class uses PHP&apos;s <a href="http://www.php.net/manual/en/ref.outcontrol.php" target="_blank">Output
+Buffering</a> feature to
+provide the functionality that is necessary for this.</p>
+<p><code>writing-tests-for-phpunit.output.examples.OutputTest.php</code> shows how to
+use the <code>expectOutputString()</code> method to set the expected output. If
+this expected output is not generated, the test will be counted as a
+failure.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">OutputTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testExpectFooActualFoo():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>expectOutputString(&apos;foo&apos;);
+
+        print &apos;foo&apos;;
+    }
+
+    public function testExpectBarActualBaz(): void
+    {
+        $this-&gt;expectOutputString(&apos;bar&apos;);
+
+        print &apos;baz&apos;;
+    }
+}
+</code></pre><p>$ phpunit OutputTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>.F</p>
+<p>Time: 0 seconds, Memory: 5.75Mb</p>
+<p>There was 1 failure:</p>
+<p>1) OutputTest::testExpectBarActualBaz Failed asserting that two strings
+are equal. --- Expected +++ Actual @@ @@ -&apos;bar&apos; +&apos;baz&apos;</p>
+<p>FAILURES! Tests: 2, Assertions: 2, Failures: 1.</p>
+<p><code>writing-tests-for-phpunit.output.tables.api</code> shows the methods provided
+for testing output</p>
+<p>table</p>
+<table>
+<caption>Methods for testing output</caption>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>void expectOutputRegex(string $regularExpression)</code></td>
+<td>Set up the expectation that the output matches a <code>$regularExpression</code>.</td>
+</tr>
+<tr class="even">
+<td><code>void expectOutputString(string $expectedString)</code></td>
+<td>Set up the expectation that the output is equal to an <code>$expectedString</code>.</td>
+</tr>
+<tr class="odd">
+<td><code>bool setOutputCallback(callable $callback)</code></td>
+<td>Sets up a callback that is used to, for instance, normalize the actual output.</td>
+</tr>
+<tr class="even">
+<td><code>string getActualOutput()</code></td>
+<td>Get the actual output.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Note</p>
+<p>A test that emits output will fail in strict mode.</p>
+<h2 id="error-output">Error output</h2>
+<p>Whenever a test fails PHPUnit tries its best to provide you with as much
+context as possible that can help to identify the problem.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">ArrayDiffTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testEquality():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertSame(
+            [1, 2,  3, 4, 5, 6],
+            [1, 2, 33, 4, 5, 6]
+        );
+    }
+}
+</code></pre><p>$ phpunit ArrayDiffTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.25Mb</p>
+<p>There was 1 failure:</p>
+<p>1) ArrayDiffTest::testEquality Failed asserting that two arrays are
+identical. --- Expected +++ Actual @@ @@ Array ( 0 =&gt; 1 1 =&gt; 2 - 2
+=&gt; 3 + 2 =&gt; 33 3 =&gt; 4 4 =&gt; 5 5 =&gt; 6 )</p>
+<p>/home/sb/ArrayDiffTest.php:7</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<p>In this example only one of the array values differs and the other
+values are shown to provide context on where the error occurred.</p>
+<p>When the generated output would be long to read PHPUnit will split it up
+and provide a few lines of context around every difference.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">LongArrayDiffTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testEquality():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertSame(
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2,  3, 4, 5, 6],
+            [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 2, 33, 4, 5, 6]
+        );
+    }
+}
+</code></pre><p>$ phpunit LongArrayDiffTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.25Mb</p>
+<p>There was 1 failure:</p>
+<p>1) LongArrayDiffTest::testEquality Failed asserting that two arrays are
+identical. --- Expected +++ Actual @@ @@ 11 =&gt; 0 12 =&gt; 1 13 =&gt;
+2 - 14 =&gt; 3 + 14 =&gt; 33 15 =&gt; 4 16 =&gt; 5 17 =&gt; 6 )</p>
+<p>/home/sb/LongArrayDiffTest.php:7</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<h3 id="edge-cases">Edge Cases</h3>
+<p>When a comparison fails PHPUnit creates textual representations of the
+input values and compares those. Due to that implementation a diff might
+show more problems than actually exist.</p>
+<p>This only happens when using <code>assertEquals()</code> or other &apos;weak&apos; comparison
+functions on arrays or objects.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">ArrayWeakComparisonTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testEquality():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>assertEquals(
+            [1, 2, 3, 4, 5, 6],
+            [&apos;1&apos;, 2, 33, 4, 5, 6]
+        );
+    }
+}
+</code></pre><p>$ phpunit ArrayWeakComparisonTest PHPUnit .0 by Sebastian Bergmann and
+contributors.</p>
+<p>F</p>
+<p>Time: 0 seconds, Memory: 5.25Mb</p>
+<p>There was 1 failure:</p>
+<p>1) ArrayWeakComparisonTest::testEquality Failed asserting that two
+arrays are equal. --- Expected +++ Actual @@ @@ Array ( - 0 =&gt; 1 + 0
+=&gt; &apos;1&apos; 1 =&gt; 2 - 2 =&gt; 3 + 2 =&gt; 33 3 =&gt; 4 4 =&gt; 5 5 =&gt;
+6 )</p>
+<p>/home/sb/ArrayWeakComparisonTest.php:7</p>
+<p>FAILURES! Tests: 1, Assertions: 1, Failures: 1.</p>
+<p>In this example the difference in the first index between <code>1</code> and <code>&apos;1&apos;</code>
+is reported even though <code>assertEquals()</code> considers the values as a
+match.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="textui.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Textui">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Writing Tests For Phpunit","level":"1.16","depth":1,"previous":{"title":"Textui","level":"1.15","depth":1,"path":"textui.md","ref":"textui.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"PHPUnit 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"writing-tests-for-phpunit.md","mtime":"2021-05-20T01:13:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-20T01:13:58.148Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

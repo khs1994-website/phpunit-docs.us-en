@@ -1,0 +1,895 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Textui · PHPUnit 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="writing-tests-for-phpunit.html" />
+    
+    
+    <link rel="prev" href="test-doubles.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="annotations.html">
+            
+                <a href="annotations.html">
+            
+                    
+                    Annotations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="assertions.html">
+            
+                <a href="assertions.html">
+            
+                    
+                    Assertions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="bibliography.html">
+            
+                <a href="bibliography.html">
+            
+                    
+                    Bibliography
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="code-coverage-analysis.html">
+            
+                <a href="code-coverage-analysis.html">
+            
+                    
+                    Code Coverage Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="copyright.html">
+            
+                <a href="copyright.html">
+            
+                    
+                    Copyright
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="extending-phpunit.html">
+            
+                <a href="extending-phpunit.html">
+            
+                    
+                    Extending Phpunit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="fixtures.html">
+            
+                <a href="fixtures.html">
+            
+                    
+                    Fixtures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="incomplete-and-skipped-tests.html">
+            
+                <a href="incomplete-and-skipped-tests.html">
+            
+                    
+                    Incomplete And Skipped Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="organizing-tests.html">
+            
+                <a href="organizing-tests.html">
+            
+                    
+                    Organizing Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="risky-tests.html">
+            
+                <a href="risky-tests.html">
+            
+                    
+                    Risky Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="test-doubles.html">
+            
+                <a href="test-doubles.html">
+            
+                    
+                    Test Doubles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.15" data-path="textui.html">
+            
+                <a href="textui.html">
+            
+                    
+                    Textui
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="writing-tests-for-phpunit.html">
+            
+                <a href="writing-tests-for-phpunit.html">
+            
+                    
+                    Writing Tests For Phpunit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Textui</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="the-command-line-test-runner">The Command-Line Test Runner</h1>
+<p>The PHPUnit command-line test runner can be invoked through the
+<code>phpunit</code> command. The following code shows how to run tests with the
+PHPUnit command-line test runner:</p>
+<p>$ phpunit ArrayTest PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>Time: 0 seconds</p>
+<p>OK (2 tests, 2 assertions)</p>
+<p>When invoked as shown above, the PHPUnit command-line test runner will
+look for a <code>ArrayTest.php</code> sourcefile in the current working directory,
+load it, and expect to find a <code>ArrayTest</code> test case class. It will then
+execute the tests of that class.</p>
+<p>For each test run, the PHPUnit command-line tool prints one character to
+indicate progress:</p>
+<p><code>.</code></p>
+<blockquote>
+<p>Printed when the test succeeds.</p>
+</blockquote>
+<p><code>F</code></p>
+<blockquote>
+<p>Printed when an assertion fails while running the test method.</p>
+</blockquote>
+<p><code>E</code></p>
+<blockquote>
+<p>Printed when an error occurs while running the test method.</p>
+</blockquote>
+<p><code>R</code></p>
+<blockquote>
+<p>Printed when the test has been marked as risky (see <code>risky-tests</code>).</p>
+</blockquote>
+<p><code>S</code></p>
+<blockquote>
+<p>Printed when the test has been skipped (see
+<code>incomplete-and-skipped-tests</code>).</p>
+</blockquote>
+<p><code>I</code></p>
+<blockquote>
+<p>Printed when the test is marked as being incomplete or not yet
+implemented (see <code>incomplete-and-skipped-tests</code>).</p>
+</blockquote>
+<p>PHPUnit distinguishes between <em>failures</em> and <em>errors</em>. A failure is a
+violated PHPUnit assertion such as a failing <code>assertSame()</code> call. An
+error is an unexpected exception or a PHP error. Sometimes this
+distinction proves useful since errors tend to be easier to fix than
+failures. If you have a big list of problems, it is best to tackle the
+errors first and see if you have any failures left when they are all
+fixed.</p>
+<h2 id="command-line-options">Command-Line Options</h2>
+<p>Let&apos;s take a look at the command-line test runner&apos;s options in the
+following code:</p>
+<p>$ phpunit --help PHPUnit .0 by Sebastian Bergmann and contributors.</p>
+<p>Usage:<br>phpunit [options] UnitTest.php phpunit [options] &lt;directory&gt;</p>
+<p>Code Coverage Options:<br>--coverage-clover &lt;file&gt; Generate code coverage report in Clover
+XML format --coverage-crap4j &lt;file&gt; Generate code coverage report
+in Crap4J XML format --coverage-html &lt;dir&gt; Generate code coverage
+report in HTML format --coverage-php &lt;file&gt; Export
+PHP_CodeCoverage object to file --coverage-text=&lt;file&gt; Generate
+code coverage report in text format [default: standard output]
+--coverage-xml &lt;dir&gt; Generate code coverage report in PHPUnit XML
+format --coverage-cache &lt;dir&gt; Cache static analysis results
+--warm-coverage-cache Warm static analysis cache --coverage-filter
+&lt;dir&gt; Include &lt;dir&gt; in code coverage analysis
+--path-coverage Perform path coverage analysis --disable-coverage-ignore
+Disable annotations for ignoring code coverage --no-coverage Ignore code
+coverage configuration</p>
+<p>Logging Options:<br>--log-junit &lt;file&gt; Log test execution in JUnit XML format to file
+--log-teamcity &lt;file&gt; Log test execution in TeamCity format to
+file --testdox-html &lt;file&gt; Write agile documentation in HTML
+format to file --testdox-text &lt;file&gt; Write agile documentation in
+Text format to file --testdox-xml &lt;file&gt; Write agile documentation
+in XML format to file --reverse-list Print defects in reverse order
+--no-logging Ignore logging configuration</p>
+<p>Test Selection Options:<br>--filter &lt;pattern&gt; Filter which tests to run --testsuite
+&lt;name&gt; Filter which testsuite to run --group &lt;name&gt; Only
+runs tests from the specified group(s) --exclude-group &lt;name&gt;
+Exclude tests from the specified group(s) --list-groups List available
+test groups --list-suites List available test suites --list-tests List
+available tests --list-tests-xml &lt;file&gt; List available tests in
+XML format --test-suffix &lt;suffixes&gt; Only search for test in files
+with specified suffix(es). Default: Test.php,.phpt</p>
+<p>Test Execution Options:<br>--dont-report-useless-tests Do not report tests that do not test
+anything --strict-coverage Be strict about @covers annotation usage
+--strict-global-state Be strict about changes to global state
+--disallow-test-output Be strict about output during tests
+--disallow-resource-usage Be strict about resource usage during small
+tests --enforce-time-limit Enforce time limit based on test size
+--default-time-limit &lt;sec&gt; Timeout in seconds for tests without
+@small, @medium or @large --disallow-todo-tests Disallow @todo-annotated
+tests</p>
+<p>--process-isolation Run each test in a separate PHP process
+--globals-backup Backup and restore $GLOBALS for each test
+--static-backup Backup and restore static attributes for each test</p>
+<p>--colors &lt;flag&gt; Use colors in output (&quot;never&quot;, &quot;auto&quot; or &quot;always&quot;)
+--columns &lt;n&gt; Number of columns to use for progress output
+--columns max Use maximum number of columns for progress output --stderr
+Write to STDERR instead of STDOUT --stop-on-defect Stop execution upon
+first not-passed test --stop-on-error Stop execution upon first error
+--stop-on-failure Stop execution upon first error or failure
+--stop-on-warning Stop execution upon first warning --stop-on-risky Stop
+execution upon first risky test --stop-on-skipped Stop execution upon
+first skipped test --stop-on-incomplete Stop execution upon first
+incomplete test --fail-on-incomplete Treat incomplete tests as failures
+--fail-on-risky Treat risky tests as failures --fail-on-skipped Treat
+skipped tests as failures --fail-on-warning Treat tests with warnings as
+failures -v|--verbose Output more verbose information --debug Display
+debugging information</p>
+<p>--repeat &lt;times&gt; Runs the test(s) repeatedly --teamcity Report
+test execution progress in TeamCity format --testdox Report test
+execution progress in TestDox format --testdox-group Only include tests
+from the specified group(s) --testdox-exclude-group Exclude tests from
+the specified group(s) --no-interaction Disable TestDox progress
+animation --printer &lt;printer&gt; TestListener implementation to use</p>
+<p>--order-by &lt;order&gt; Run tests in order: defaultdurationrandomsize
+--random-order-seed &lt;N&gt; Use a specific random seed &lt;N&gt; for
+random order --cache-result Write test results to cache file
+--do-not-cache-result Do not write test results to cache file</p>
+<p>Configuration Options:<br>--prepend &lt;file&gt; A PHP script that is included as early as
+possible --bootstrap &lt;file&gt; A PHP script that is included before
+the tests run -c|--configuration &lt;file&gt; Read configuration from
+XML file --no-configuration Ignore default configuration file
+(phpunit.xml) --extensions &lt;extensions&gt; A comma separated list of
+PHPUnit extensions to load --no-extensions Do not load PHPUnit
+extensions --include-path &lt;path(s)&gt; Prepend PHP&apos;s include_path
+with given path(s) -d &lt;key[=value]&gt; Sets a php.ini value
+--cache-result-file &lt;file&gt; Specify result cache path and filename
+--generate-configuration Generate configuration file with suggested
+settings --migrate-configuration Migrate configuration file to current
+format</p>
+<p>Miscellaneous Options:<br>-h|--help Prints this usage information --version Prints the version and
+exits --atleast-version &lt;min&gt; Checks that version is greater than
+min and exits --check-version Check whether PHPUnit is the latest
+version</p>
+<p><code>phpunit UnitTest</code></p>
+<blockquote>
+<p>Runs the tests that are provided by the class <code>UnitTest</code>. This class
+is expected to be declared in the <code>UnitTest.php</code> sourcefile.</p>
+<p><code>UnitTest</code> must be either a class that inherits from
+<code>PHPUnit\Framework\TestCase</code> or a class that provides a
+<code>public static suite()</code> method which returns a
+<code>PHPUnit\Framework\Test</code> object, for example an instance of the
+<code>PHPUnit\Framework\TestSuite</code> class.</p>
+</blockquote>
+<p><code>phpunit UnitTest UnitTest.php</code></p>
+<blockquote>
+<p>Runs the tests that are provided by the class <code>UnitTest</code>. This class
+is expected to be declared in the specified sourcefile.</p>
+</blockquote>
+<p><code>--coverage-clover</code></p>
+<blockquote>
+<p>Generates a logfile in XML format with the code coverage information
+for the tests run. See <code>code-coverage-analysis</code> for more details.</p>
+</blockquote>
+<p><code>--coverage-crap4j</code></p>
+<blockquote>
+<p>Generates a code coverage report in Crap4j format. See
+<code>code-coverage-analysis</code> for more details.</p>
+</blockquote>
+<p><code>--coverage-html</code></p>
+<blockquote>
+<p>Generates a code coverage report in HTML format. See
+<code>code-coverage-analysis</code> for more details.</p>
+</blockquote>
+<p><code>--coverage-php</code></p>
+<blockquote>
+<p>Generates a serialized PHP_CodeCoverage object with the code coverage
+information.</p>
+</blockquote>
+<p><code>--coverage-text</code></p>
+<blockquote>
+<p>Generates a logfile or command-line output in human readable format
+with the code coverage information for the tests run.</p>
+</blockquote>
+<p><code>--log-junit</code></p>
+<blockquote>
+<p>Generates a logfile in JUnit XML format for the tests run.</p>
+</blockquote>
+<p><code>--testdox-html</code> and <code>--testdox-text</code></p>
+<blockquote>
+<p>Generates agile documentation in HTML or plain text format for the
+tests that are run (see <code>textui.testdox</code>).</p>
+</blockquote>
+<p><code>--filter</code></p>
+<blockquote>
+<p>Only runs tests whose name matches the given regular expression
+pattern. If the pattern is not enclosed in delimiters, PHPUnit will
+enclose the pattern in <code>/</code> delimiters.</p>
+<p>The test names to match will be in one of the following formats:</p>
+<p><code>TestNamespace\TestCaseClass::testMethod</code></p>
+<blockquote>
+<p>The default test name format is the equivalent of using the
+<code>__METHOD__</code> magic constant inside the test method.</p>
+</blockquote>
+<p><code>TestNamespace\TestCaseClass::testMethod with data set #0</code></p>
+<blockquote>
+<p>When a test has a data provider, each iteration of the data gets the
+current index appended to the end of the default test name.</p>
+</blockquote>
+<p><code>TestNamespace\TestCaseClass::testMethod with data set &quot;my named data&quot;</code></p>
+<blockquote>
+<p>When a test has a data provider that uses named sets, each iteration
+of the data gets the current name appended to the end of the default
+test name. See <code>textui.examples.TestCaseClass.php</code> for an example of
+named data sets.</p>
+<pre class="language-"><code>&lt;?php
+namespace TestNamespace;
+
+use PHPUnit\Framework\TestCase;
+
+class TestCaseClass extends TestCase
+{
+    /**
+     * @dataProvider provider
+     */
+    public function testMethod($data)
+    {
+        $this-&gt;assertTrue($data);
+    }
+
+    public function provider()
+    {
+        return [
+            &apos;my named data&apos; =&gt; [true],
+            &apos;my data&apos;       =&gt; [true]
+        ];
+    }
+}
+</code></pre></blockquote>
+<p><code>/path/to/my/test.phpt</code></p>
+<blockquote>
+<p>The test name for a PHPT test is the filesystem path.</p>
+</blockquote>
+<p>See <code>textui.examples.filter-patterns</code> for examples of valid filter
+patterns.</p>
+<pre class="language-"><code>--filter &apos;TestNamespace\\TestCaseClass::testMethod&apos;
+--filter &apos;TestNamespace\\TestCaseClass&apos;
+--filter TestNamespace
+--filter TestCaseClase
+--filter testMethod
+--filter &apos;/::testMethod .*&quot;my named data&quot;/&apos;
+--filter &apos;/::testMethod .*#5$/&apos;
+--filter &apos;/::testMethod .*#(5|6|7)$/&apos;
+</code></pre><p>See <code>textui.examples.filter-shortcuts</code> for some additional shortcuts
+that are available for matching data providers.</p>
+<pre class="language-"><code>--filter &apos;testMethod#2&apos;
+--filter &apos;testMethod#2-4&apos;
+--filter &apos;#2&apos;
+--filter &apos;#2-4&apos;
+--filter &apos;testMethod@my named data&apos;
+--filter &apos;testMethod@my.*data&apos;
+--filter &apos;@my named data&apos;
+--filter &apos;@my.*data&apos;
+</code></pre></blockquote>
+<p><code>--testsuite</code></p>
+<blockquote>
+<p>Only runs the test suite whose name matches the given pattern.</p>
+</blockquote>
+<p><code>--group</code></p>
+<blockquote>
+<p>Only runs tests from the specified group(s). A test can be tagged as
+belonging to a group using the <code>@group</code> annotation.</p>
+<p>The <code>@author</code> and <code>@ticket</code> annotations are aliases for <code>@group</code>
+allowing to filter tests based on their authors or their ticket
+identifiers, respectively.</p>
+</blockquote>
+<p><code>--exclude-group</code></p>
+<blockquote>
+<p>Exclude tests from the specified group(s). A test can be tagged as
+belonging to a group using the <code>@group</code> annotation.</p>
+</blockquote>
+<p><code>--list-groups</code></p>
+<blockquote>
+<p>List available test groups.</p>
+</blockquote>
+<p><code>--test-suffix</code></p>
+<blockquote>
+<p>Only search for test files with specified suffix(es).</p>
+</blockquote>
+<p><code>--dont-report-useless-tests</code></p>
+<blockquote>
+<p>Do not report tests that do not test anything. See <code>risky-tests</code> for
+details.</p>
+</blockquote>
+<p><code>--strict-coverage</code></p>
+<blockquote>
+<p>Be strict about unintentionally covered code. See <code>risky-tests</code> for
+details.</p>
+</blockquote>
+<p><code>--strict-global-state</code></p>
+<blockquote>
+<p>Be strict about global state manipulation. See <code>risky-tests</code> for
+details.</p>
+</blockquote>
+<p><code>--disallow-test-output</code></p>
+<blockquote>
+<p>Be strict about output during tests. See <code>risky-tests</code> for details.</p>
+</blockquote>
+<p><code>--disallow-todo-tests</code></p>
+<blockquote>
+<p>Does not execute tests which have the <code>@todo</code> annotation in its
+docblock.</p>
+</blockquote>
+<p><code>--enforce-time-limit</code></p>
+<blockquote>
+<p>Enforce time limit based on test size. See <code>risky-tests</code> for details.</p>
+</blockquote>
+<p><code>--process-isolation</code></p>
+<blockquote>
+<p>Run each test in a separate PHP process.</p>
+</blockquote>
+<p><code>--no-globals-backup</code></p>
+<blockquote>
+<p>Do not backup and restore $GLOBALS. See <code>fixtures.global-state</code> for
+more details.</p>
+</blockquote>
+<p><code>--static-backup</code></p>
+<blockquote>
+<p>Backup and restore static attributes of user-defined classes. See
+<code>fixtures.global-state</code> for more details.</p>
+</blockquote>
+<p><code>--colors</code></p>
+<blockquote>
+<p>Use colors in output. On Windows, use
+<a href="https://github.com/adoxa/ansicon" target="_blank">ANSICON</a> or
+<a href="https://github.com/Maximus5/ConEmu" target="_blank">ConEmu</a>.</p>
+<p>There are three possible values for this option:</p>
+<ul>
+<li><p><code>never</code>: never displays colors in the output. This is the default</p>
+<blockquote>
+<p>value when <code>--colors</code> option is not used.</p>
+</blockquote>
+</li>
+<li><p><code>auto</code>: displays colors in the output unless the current terminal</p>
+<blockquote>
+<p>doesn&apos;t supports colors, or if the output is piped to a command
+or redirected to a file.</p>
+</blockquote>
+</li>
+<li><p><code>always</code>: always displays colors in the output even when the</p>
+<blockquote>
+<p>current terminal doesn&apos;t supports colors, or when the output is
+piped to a command or redirected to a file.</p>
+</blockquote>
+</li>
+</ul>
+<p>When <code>--colors</code> is used without any value, <code>auto</code> is the chosen value.</p>
+</blockquote>
+<p><code>--columns</code></p>
+<blockquote>
+<p>Defines the number of columns to use for progress output. If <code>max</code> is
+defined as value, the number of columns will be maximum of the current
+terminal.</p>
+</blockquote>
+<p><code>--stderr</code></p>
+<blockquote>
+<p>Optionally print to <code>STDERR</code> instead of <code>STDOUT</code>.</p>
+</blockquote>
+<p><code>--stop-on-error</code></p>
+<blockquote>
+<p>Stop execution upon first error.</p>
+</blockquote>
+<p><code>--stop-on-failure</code></p>
+<blockquote>
+<p>Stop execution upon first error or failure.</p>
+</blockquote>
+<p><code>--stop-on-risky</code></p>
+<blockquote>
+<p>Stop execution upon first risky test.</p>
+</blockquote>
+<p><code>--stop-on-skipped</code></p>
+<blockquote>
+<p>Stop execution upon first skipped test.</p>
+</blockquote>
+<p><code>--stop-on-incomplete</code></p>
+<blockquote>
+<p>Stop execution upon first incomplete test.</p>
+</blockquote>
+<p><code>--verbose</code></p>
+<blockquote>
+<p>Output more verbose information, for instance the names of tests that
+were incomplete or have been skipped.</p>
+</blockquote>
+<p><code>--debug</code></p>
+<blockquote>
+<p>Output debug information such as the name of a test when its execution
+starts.</p>
+</blockquote>
+<p><code>--loader</code></p>
+<blockquote>
+<p>Specifies the <code>PHPUnit\Runner\TestSuiteLoader</code> implementation to use.</p>
+<p>The standard test suite loader will look for the sourcefile in the
+current working directory and in each directory that is specified in
+PHP&apos;s <code>include_path</code> configuration directive. A class name such as
+<code>Project_Package_Class</code> is mapped to the source filename
+<code>Project/Package/Class.php</code>.</p>
+</blockquote>
+<p><code>--repeat</code></p>
+<blockquote>
+<p>Repeatedly runs the test(s) the specified number of times.</p>
+</blockquote>
+<p><code>--testdox</code></p>
+<blockquote>
+<p>Reports the test progress in TestDox format (see <code>textui.testdox</code>).</p>
+</blockquote>
+<p><code>--printer</code></p>
+<blockquote>
+<p>Specifies the result printer to use. The printer class must extend
+<code>PHPUnit\Util\Printer</code> and implement the
+<code>PHPUnit\Framework\TestListener</code> interface.</p>
+</blockquote>
+<p><code>--bootstrap</code></p>
+<blockquote>
+<p>A &quot;bootstrap&quot; PHP file that is run before the tests.</p>
+</blockquote>
+<p><code>--configuration</code>, <code>-c</code></p>
+<blockquote>
+<p>Read configuration from XML file. See <code>appendixes.configuration</code> for
+more details.</p>
+<p>If <code>phpunit.xml</code> or <code>phpunit.xml.dist</code> (in that order) exist in the
+current working directory and <code>--configuration</code> is <em>not</em> used, the
+configuration will be automatically read from that file.</p>
+<p>If a directory is specified and if <code>phpunit.xml</code> or <code>phpunit.xml.dist</code>
+(in that order) exists in this directory, the configuration will be
+automatically read from that file.</p>
+</blockquote>
+<p><code>--no-configuration</code></p>
+<blockquote>
+<p>Ignore <code>phpunit.xml</code> and <code>phpunit.xml.dist</code> from the current working
+directory.</p>
+</blockquote>
+<p><code>--include-path</code></p>
+<blockquote>
+<p>Prepend PHP&apos;s <code>include_path</code> with given path(s).</p>
+</blockquote>
+<p><code>-d</code></p>
+<blockquote>
+<p>Sets the value of the given PHP configuration option.</p>
+</blockquote>
+<p>Note</p>
+<p>Please note that options can be put after the argument(s).</p>
+<h2 id="testdox">TestDox</h2>
+<p>PHPUnit&apos;s TestDox functionality looks at a test class and all the test
+method names and converts them from camel case (or snake_case) PHP
+names to sentences: <code>testBalanceIsInitiallyZero()</code> (or
+<code>test_balance_is_initially_zero()</code> becomes &quot;Balance is initially zero&quot;.
+If there are several test methods whose names only differ in a suffix of
+one or more digits, such as <code>testBalanceCannotBecomeNegative()</code> and
+<code>testBalanceCannotBecomeNegative2()</code>, the sentence &quot;Balance cannot
+become negative&quot; will appear only once, assuming that all of these tests
+succeed.</p>
+<p>Let us take a look at the agile documentation generated for a
+<code>BankAccount</code> class:</p>
+<p>$ phpunit --testdox BankAccountTest.php PHPUnit .0 by Sebastian Bergmann
+and contributors.</p>
+<p>BankAccount<br>&#x2714; Balance is initially zero &#x2714; Balance cannot become negative</p>
+<p>Alternatively, the agile documentation can be generated in HTML or plain
+text format and written to a file using the <code>--testdox-html</code> and
+<code>--testdox-text</code> arguments.</p>
+<p>Agile Documentation can be used to document the assumptions you make
+about the external packages that you use in your project. When you use
+an external package, you are exposed to the risks that the package will
+not behave as you expect, and that future versions of the package will
+change in subtle ways that will break your code, without you knowing it.
+You can address these risks by writing a test every time you make an
+assumption. If your test succeeds, your assumption is valid. If you
+document all your assumptions with tests, future releases of the
+external package will be no cause for concern: if the tests succeed,
+your system should continue working.</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="test-doubles.html" class="navigation navigation-prev " aria-label="Previous page: Test Doubles">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="writing-tests-for-phpunit.html" class="navigation navigation-next " aria-label="Next page: Writing Tests For Phpunit">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Textui","level":"1.15","depth":1,"next":{"title":"Writing Tests For Phpunit","level":"1.16","depth":1,"path":"writing-tests-for-phpunit.md","ref":"writing-tests-for-phpunit.md","articles":[]},"previous":{"title":"Test Doubles","level":"1.14","depth":1,"path":"test-doubles.md","ref":"test-doubles.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"PHPUnit 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"textui.md","mtime":"2021-05-20T01:13:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-20T01:13:58.148Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

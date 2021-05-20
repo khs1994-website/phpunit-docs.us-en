@@ -1,0 +1,549 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Installation · PHPUnit 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="organizing-tests.html" />
+    
+    
+    <link rel="prev" href="incomplete-and-skipped-tests.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="annotations.html">
+            
+                <a href="annotations.html">
+            
+                    
+                    Annotations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="assertions.html">
+            
+                <a href="assertions.html">
+            
+                    
+                    Assertions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="bibliography.html">
+            
+                <a href="bibliography.html">
+            
+                    
+                    Bibliography
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="code-coverage-analysis.html">
+            
+                <a href="code-coverage-analysis.html">
+            
+                    
+                    Code Coverage Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="copyright.html">
+            
+                <a href="copyright.html">
+            
+                    
+                    Copyright
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="extending-phpunit.html">
+            
+                <a href="extending-phpunit.html">
+            
+                    
+                    Extending Phpunit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="fixtures.html">
+            
+                <a href="fixtures.html">
+            
+                    
+                    Fixtures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="incomplete-and-skipped-tests.html">
+            
+                <a href="incomplete-and-skipped-tests.html">
+            
+                    
+                    Incomplete And Skipped Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.11" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="organizing-tests.html">
+            
+                <a href="organizing-tests.html">
+            
+                    
+                    Organizing Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="risky-tests.html">
+            
+                <a href="risky-tests.html">
+            
+                    
+                    Risky Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="test-doubles.html">
+            
+                <a href="test-doubles.html">
+            
+                    
+                    Test Doubles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="textui.html">
+            
+                <a href="textui.html">
+            
+                    
+                    Textui
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="writing-tests-for-phpunit.html">
+            
+                <a href="writing-tests-for-phpunit.html">
+            
+                    
+                    Writing Tests For Phpunit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Installation</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="installing-phpunit">Installing PHPUnit</h1>
+<h2 id="requirements">Requirements</h2>
+<p>PHPUnit requires PHP 7.3; using the latest version of PHP is highly
+recommended.</p>
+<p>PHPUnit requires the <a href="http://php.net/manual/en/dom.setup.php" target="_blank">dom</a> and
+<a href="http://php.net/manual/en/json.installation.php" target="_blank">json</a> extensions, which
+are normally enabled by default.</p>
+<p>PHPUnit also requires the
+<a href="http://php.net/manual/en/pcre.installation.php" target="_blank">pcre</a>,
+<a href="http://php.net/manual/en/reflection.installation.php" target="_blank">reflection</a>, and
+<a href="http://php.net/manual/en/spl.installation.php" target="_blank">spl</a> extensions. These
+standard extensions are enabled by default and cannot be disabled
+without patching PHP&apos;s build system and/or C sources.</p>
+<p>The code coverage report feature requires the
+<a href="http://xdebug.org/" target="_blank">Xdebug</a> (2.7.0 or later) and
+<a href="http://php.net/manual/en/tokenizer.installation.php" target="_blank">tokenizer</a>
+extensions. Generating XML reports requires the
+<a href="http://php.net/manual/en/xmlwriter.installation.php" target="_blank">xmlwriter</a>
+extension.</p>
+<h2 id="recommended-php-configuration">Recommended PHP configuration</h2>
+<p>For the output of PHPUnit to be most informative, it is recommended to
+have the following configuration set in the <code>php.ini</code> file used for test
+runs:</p>
+<p>memory_limit=-1 error_reporting=-1 log_errors_max_len=0
+zend.assertions=1 assert.exception=1 xdebug.show_exception_trace=0</p>
+<h2 id="php-archive-phar">PHP Archive (PHAR)</h2>
+<p>The easiest way to obtain PHPUnit is to download a <a href="http://php.net/phar" target="_blank">PHP Archive
+(PHAR)</a> that has all required (as well as some
+optional) dependencies of PHPUnit bundled in a single file.</p>
+<p>The <a href="http://php.net/manual/en/phar.installation.php" target="_blank">phar</a> extension is
+required for using PHP Archives (PHAR).</p>
+<p>If the <a href="http://suhosin.org/" target="_blank">Suhosin</a> extension is enabled, you need to
+allow execution of PHARs in your <code>php.ini</code>:</p>
+<pre class="language-"><code>suhosin.executor.include.whitelist = phar
+</code></pre><p>The PHPUnit PHAR can be used immediately after download:</p>
+<p>$ wget <a href="https://phar.phpunit.de/phpunit-%7Cversion" target="_blank">https://phar.phpunit.de/phpunit-%7Cversion</a>version|.phar
+--version PHPUnit x.y.z by Sebastian Bergmann and contributors.</p>
+<p>It is a common practice to make the PHAR executable:</p>
+<p>$ wget <a href="https://phar.phpunit.de/phpunit-%7Cversion" target="_blank">https://phar.phpunit.de/phpunit-%7Cversion</a>versionversion|.phar
+--version PHPUnit x.y.z by Sebastian Bergmann and contributors.</p>
+<h3 id="verifying-phpunit-phar-releases">Verifying PHPUnit PHAR Releases</h3>
+<p>All official releases of code distributed by the PHPUnit Project are
+signed by the release manager for the release. PGP signatures and SHA256
+hashes are available for verification on
+<a href="https://phar.phpunit.de/" target="_blank">phar.phpunit.de</a>.</p>
+<p>The following example details how release verification works. We start
+by downloading <code>phpunit.phar</code> as well as its detached PGP signature
+<code>phpunit.phar.asc</code>:</p>
+<p>$ wget <a href="https://phar.phpunit.de/phpunit-%7Cversion" target="_blank">https://phar.phpunit.de/phpunit-%7Cversion</a>.phar.asc</p>
+<p>We want to verify PHPUnit&apos;s PHP Archive (<code>phpunit-x.y.phar</code>) against its
+detached signature (<code>phpunit-x.y.phar.asc</code>):</p>
+<p>$ gpg phpunit-.phar.asc gpg: Signature made Sat 19 Jul 2014 01:28:02 PM
+CEST using RSA key ID 6372C20A gpg: Can&apos;t check signature: public key
+not found</p>
+<p>We don&apos;t have the release manager&apos;s public key (<code>6372C20A</code>) in our local
+system. In order to proceed with the verification we need to retrieve
+the release manager&apos;s public key from a key server. One such server is
+<code>pgp.uni-mainz.de</code>. The public key servers are linked together, so you
+should be able to connect to any key server.</p>
+<p>$ curl --silent <a href="https://sebastian-bergmann.de/gpg.asc" target="_blank">https://sebastian-bergmann.de/gpg.asc</a> | gpg --import
+gpg: key 4AA394086372C20A: 452 signatures not checked due to missing
+keys gpg: /root/.gnupg/trustdb.gpg: trustdb created gpg: key
+4AA394086372C20A: public key &quot;Sebastian Bergmann
+&lt;<a href="mailto:sb@sebastian-bergmann.de" target="_blank">sb@sebastian-bergmann.de</a>&gt;&quot; imported gpg: Total number
+processed: 1 gpg: imported: 1 gpg: no ultimately trusted keys found</p>
+<p>Now we have received a public key for an entity known as &quot;Sebastian
+Bergmann &lt;<a href="mailto:sb@sebastian-bergmann.de" target="_blank">sb@sebastian-bergmann.de</a>&gt;&quot;. However, we have no way of
+verifying this key was created by the person known as Sebastian
+Bergmann. But, let&apos;s try to verify the release signature again.</p>
+<p>$ gpg phpunit-.phar.asc gpg: Signature made Sat 19 Jul 2014 01:28:02 PM
+CEST using RSA key ID 6372C20A gpg: Good signature from &quot;Sebastian
+Bergmann &lt;<a href="mailto:sb@sebastian-bergmann.de" target="_blank">sb@sebastian-bergmann.de</a>&gt;&quot; gpg: aka &quot;Sebastian
+Bergmann &lt;<a href="mailto:sebastian@php.net" target="_blank">sebastian@php.net</a>&gt;&quot; gpg: aka &quot;Sebastian Bergmann
+&lt;<a href="mailto:sebastian@thephp.cc" target="_blank">sebastian@thephp.cc</a>&gt;&quot; gpg: aka &quot;Sebastian Bergmann
+&lt;<a href="mailto:sebastian@phpunit.de" target="_blank">sebastian@phpunit.de</a>&gt;&quot; gpg: aka &quot;Sebastian Bergmann
+&lt;<a href="mailto:sebastian.bergmann@thephp.cc" target="_blank">sebastian.bergmann@thephp.cc</a>&gt;&quot; gpg: aka &quot;[jpeg image of size
+40635]&quot; gpg: WARNING: This key is not certified with a trusted
+signature! gpg: There is no indication that the signature belongs to the
+owner. Primary key fingerprint: D840 6D0D 8294 7747 2937 7831 4AA3 9408
+6372 C20A</p>
+<p>At this point, the signature is good, but we don&apos;t trust this key. A
+good signature means that the file has not been tampered. However, due
+to the nature of public key cryptography, you need to additionally
+verify that key <code>6372C20A</code> was created by the real Sebastian Bergmann.</p>
+<p>Any attacker can create a public key and upload it to the public key
+servers. They can then create a malicious release signed by this fake
+key. Then, if you tried to verify the signature of this corrupt release,
+it would succeed because the key was not the &quot;real&quot; key. Therefore, you
+need to validate the authenticity of this key. Validating the
+authenticity of a public key, however, is outside the scope of this
+documentation.</p>
+<p>Manually verifying the authenticity and integrity of a PHPUnit PHAR
+using GPG is tedious. This is why PHIVE, the PHAR Installation and
+Verification Environment, was created. You can learn about PHIVE on its
+<a href="https://phar.io/" target="_blank">website</a></p>
+<h2 id="composer">Composer</h2>
+<p>Add a (development-time) dependency on <code>phpunit/phpunit</code> to your
+project&apos;s <code>composer.json</code> file if you use
+<a href="https://getcomposer.org/" target="_blank">Composer</a> to manage the dependencies of your
+project:</p>
+<p>composer require --dev phpunit/phpunit ^</p>
+<h2 id="global-installation">Global Installation</h2>
+<p>Please note that it is not recommended to install PHPUnit globally, as
+<code>/usr/bin/phpunit</code> or <code>/usr/local/bin/phpunit</code>, for instance.</p>
+<p>Instead, PHPUnit should be managed as a project-local dependency.</p>
+<p>Either put the PHAR of the specific PHPUnit version you need in your
+project&apos;s <code>tools</code> directory (which should be managed by PHIVE) or depend
+on the specific PHPUnit version you need in your project&apos;s
+<code>composer.json</code> if you use Composer.</p>
+<h2 id="webserver">Webserver</h2>
+<p>PHPUnit is a framework for writing as well as a commandline tool for
+running tests. Writing and running tests is a development-time activity.
+There is no reason why PHPUnit should be installed on a webserver.</p>
+<p><strong>If you upload PHPUnit to a webserver then your deployment process is
+broken. On a more general note, if your</strong> <code>vendor</code> <strong>directory is
+publicly accessible on your webserver then your deployment process is
+also broken.</strong></p>
+<p>Please note that if you upload PHPUnit to a webserver &quot;bad things&quot; may
+happen. <a href="https://thephp.cc/news/2020/02/phpunit-a-security-risk" target="_blank">You have been
+warned.</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="incomplete-and-skipped-tests.html" class="navigation navigation-prev " aria-label="Previous page: Incomplete And Skipped Tests">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="organizing-tests.html" class="navigation navigation-next " aria-label="Next page: Organizing Tests">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Installation","level":"1.11","depth":1,"next":{"title":"Organizing Tests","level":"1.12","depth":1,"path":"organizing-tests.md","ref":"organizing-tests.md","articles":[]},"previous":{"title":"Incomplete And Skipped Tests","level":"1.10","depth":1,"path":"incomplete-and-skipped-tests.md","ref":"incomplete-and-skipped-tests.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"PHPUnit 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"installation.md","mtime":"2021-05-20T01:13:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-20T01:13:58.148Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

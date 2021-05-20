@@ -1,0 +1,1084 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Configuration · PHPUnit 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="copyright.html" />
+    
+    
+    <link rel="prev" href="code-coverage-analysis.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="annotations.html">
+            
+                <a href="annotations.html">
+            
+                    
+                    Annotations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="assertions.html">
+            
+                <a href="assertions.html">
+            
+                    
+                    Assertions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="bibliography.html">
+            
+                <a href="bibliography.html">
+            
+                    
+                    Bibliography
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="code-coverage-analysis.html">
+            
+                <a href="code-coverage-analysis.html">
+            
+                    
+                    Code Coverage Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="copyright.html">
+            
+                <a href="copyright.html">
+            
+                    
+                    Copyright
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="extending-phpunit.html">
+            
+                <a href="extending-phpunit.html">
+            
+                    
+                    Extending Phpunit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="fixtures.html">
+            
+                <a href="fixtures.html">
+            
+                    
+                    Fixtures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="incomplete-and-skipped-tests.html">
+            
+                <a href="incomplete-and-skipped-tests.html">
+            
+                    
+                    Incomplete And Skipped Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="organizing-tests.html">
+            
+                <a href="organizing-tests.html">
+            
+                    
+                    Organizing Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="risky-tests.html">
+            
+                <a href="risky-tests.html">
+            
+                    
+                    Risky Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="test-doubles.html">
+            
+                <a href="test-doubles.html">
+            
+                    
+                    Test Doubles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="textui.html">
+            
+                <a href="textui.html">
+            
+                    
+                    Textui
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="writing-tests-for-phpunit.html">
+            
+                <a href="writing-tests-for-phpunit.html">
+            
+                    
+                    Writing Tests For Phpunit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Configuration</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="the-xml-configuration-file">The XML Configuration File</h1>
+<h2 id="the-phpunit-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>phpunit</span><span class="token punctuation">&gt;</span></span></code> Element</h2>
+<h3 id="the-backupglobals-attribute">The <code>backupGlobals</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>PHPUnit can optionally backup all global and super-global variables
+before each test and restore this backup after each test.</p>
+<p>This attribute configures this operation for all tests. This
+configuration can be overridden using the <code>@backupGlobals</code> annotation on
+the test case class and test method level.</p>
+<h3 id="the-backupstaticattributes-attribute">The <code>backupStaticAttributes</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>PHPUnit can optionally backup all static attributes in all declared
+classes before each test and restore this backup after each test.</p>
+<p>This attribute configures this operation for all tests. This
+configuration can be overridden using the <code>@backupStaticAttributes</code>
+annotation on the test case class and test method level.</p>
+<h3 id="the-bootstrap-attribute">The <code>bootstrap</code> Attribute</h3>
+<p>This attribute configures the bootstrap script that is loaded before the
+tests are executed. This script usually only registers the autoloader
+callback that is used to load the code under test.</p>
+<h3 id="the-cacheresult-attribute">The <code>cacheResult</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>true</code>)</p>
+<p>This attribute configures the caching of test results. This caching is
+required for certain other features to work.</p>
+<h3 id="the-cacheresultfile-attribute">The <code>cacheResultFile</code> Attribute</h3>
+<p>This attribute configures the file in which the test result cache (see
+above) is stored.</p>
+<h3 id="the-colors-attribute">The <code>colors</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether colors are used in PHPUnit&apos;s output.</p>
+<p>Setting this attribute to <code>true</code> is equivalent to using the
+<code>--colors=auto</code> CLI option.</p>
+<p>Setting this attribute to <code>false</code> is equivalent to using the
+<code>--colors=never</code> CLI option.</p>
+<h3 id="the-columns-attribute">The <code>columns</code> Attribute</h3>
+<p>Possible values: integer or string <code>max</code> (default: <code>80</code>)</p>
+<p>This attribute configures the number of columns to use for progress
+output.</p>
+<p>If <code>max</code> is defined as value, the number of columns will be maximum of
+the current terminal.</p>
+<h3 id="the-convertdeprecationstoexceptions-attribute">The <code>convertDeprecationsToExceptions</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>true</code>)</p>
+<p>This attribute configures whether <code>E_DEPRECATED</code> and <code>E_USER_DEPRECATED</code>
+events triggered by the code under test are converted to an exception
+(and mark the test as error).</p>
+<h3 id="the-converterrorstoexceptions-attribute">The <code>convertErrorsToExceptions</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>true</code>)</p>
+<p>This attribute configures whether <code>E_ERROR</code> and <code>E_USER_ERROR</code> events
+triggered by the code under test are converted to an exception (and mark
+the test as error).</p>
+<h3 id="the-convertnoticestoexceptions-attribute">The <code>convertNoticesToExceptions</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>true</code>)</p>
+<p>This attribute configures whether <code>E_STRICT</code>, <code>E_NOTICE</code>, and
+<code>E_USER_NOTICE</code> events triggered by the code under test are converted to
+an exception (and mark the test as error).</p>
+<h3 id="the-convertwarningstoexceptions-attribute">The <code>convertWarningsToExceptions</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>true</code>)</p>
+<p>This attribute configures whether <code>E_WARNING</code> and <code>E_USER_WARNING</code>
+events triggered by the code under test are converted to an exception
+(and mark the test as error).</p>
+<h3 id="the-forcecoversannotation-attribute">The <code>forceCoversAnnotation</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether a test will be marked as risky (see
+<code>risky-tests.unintentionally-covered-code</code>) when it does not have a
+<code>@covers <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appendixes.annotations.covers</span><span class="token punctuation">&gt;</span></span></code> annotation.</p>
+<h3 id="the-printerclass-attribute">The <code>printerClass</code> Attribute</h3>
+<p>Default: <code>PHPUnit\TextUI\ResultPrinter</code></p>
+<p>This attribute configures the name of a class that either is
+<code>PHPUnit\TextUI\ResultPrinter</code> or that extends
+<code>PHPUnit\TextUI\ResultPrinter</code>. An object of this class is used to print
+progress and test results.</p>
+<h3 id="the-printerfile-attribute">The <code>printerFile</code> Attribute</h3>
+<p>This attribute can be used to configure the path to the sourcecode file
+that declares the class configured with <code>printerClass</code> in case that
+class cannot be autoloaded.</p>
+<h3 id="the-processisolation-attribute">The <code>processIsolation</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether each test should be run in a separate
+PHP process for increased isolation.</p>
+<h3 id="the-stoponerror-attribute">The <code>stopOnError</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether the test suite execution should be
+stopped after the first test finished with status &quot;error&quot;.</p>
+<h3 id="the-stoponfailure-attribute">The <code>stopOnFailure</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether the test suite execution should be
+stopped after the first test finished with status &quot;failure&quot;.</p>
+<h3 id="the-stoponincomplete-attribute">The <code>stopOnIncomplete</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether the test suite execution should be
+stopped after the first test finished with status &quot;incomplete&quot;.</p>
+<h3 id="the-stoponrisky-attribute">The <code>stopOnRisky</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether the test suite execution should be
+stopped after the first test finished with status &quot;risky&quot;.</p>
+<h3 id="the-stoponskipped-attribute">The <code>stopOnSkipped</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether the test suite execution should be
+stopped after the first test finished with status &quot;skipped&quot;.</p>
+<h3 id="the-stoponwarning-attribute">The <code>stopOnWarning</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether the test suite execution should be
+stopped after the first test finished with status &quot;warning&quot;.</p>
+<h3 id="the-stopondefect-attribute">The <code>stopOnDefect</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether the test suite execution should be
+stopped after the first test finished with a status &quot;error&quot;, &quot;failure&quot;,
+&quot;risky&quot; or &quot;warning&quot;.</p>
+<h3 id="the-failonrisky-attribute">The <code>failOnRisky</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether the PHPUnit test runner should exit
+with a shell exit code that indicates failure when all tests are
+successful but there are tests that were marked as risky.</p>
+<h3 id="the-failonwarning-attribute">The <code>failOnWarning</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether the PHPUnit test runner should exit
+with a shell exit code that indicates failure when all tests are
+successful but there are tests that had warnings.</p>
+<h3 id="the-bestrictaboutchangestoglobalstate-attribute">The <code>beStrictAboutChangesToGlobalState</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether PHPUnit should mark a test as risky
+when global state is manipulated by the code under test (or the test
+code).</p>
+<h3 id="the-bestrictaboutoutputduringtests-attribute">The <code>beStrictAboutOutputDuringTests</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether PHPUnit should mark a test as risky
+when the code under test (or the test code) prints output.</p>
+<h3 id="the-bestrictaboutresourceusageduringsmalltests-attribute">The <code>beStrictAboutResourceUsageDuringSmallTests</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether PHPUnit should mark a test that is
+annotated with <code>@small</code> as risky when it invokes a PHP built-in function
+or method that operates on <code>resource</code> variables.</p>
+<h3 id="the-bestrictaboutteststhatdonottestanything-attribute">The <code>beStrictAboutTestsThatDoNotTestAnything</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>true</code>)</p>
+<p>This attribute configures whether PHPUnit should mark a test as risky
+when no assertions are performed (expectations are also considered).</p>
+<h3 id="the-bestrictabouttodoannotatedtests-attribute">The <code>beStrictAboutTodoAnnotatedTests</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether PHPUnit should mark a test as risky
+when it is annotated with <code>@todo</code>.</p>
+<h3 id="the-bestrictaboutcoversannotation-attribute">The <code>beStrictAboutCoversAnnotation</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether PHPUnit should mark a test as risky
+when it executes code that is not specified using <code>@covers</code> or <code>@uses</code>.</p>
+<h3 id="the-enforcetimelimit-attribute">The <code>enforceTimeLimit</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether time limits should be enforced.</p>
+<h3 id="the-defaulttimelimit-attribute">The <code>defaultTimeLimit</code> Attribute</h3>
+<p>Possible values: integer (default: <code>0</code>)</p>
+<p>This attribute configures the default time limit (in seconds).</p>
+<h3 id="the-timeoutforsmalltests-attribute">The <code>timeoutForSmallTests</code> Attribute</h3>
+<p>Possible values: integer (default: <code>1</code>)</p>
+<p>This attribute configures the time limit for tests annotated with
+<code>@small</code> (in seconds).</p>
+<h3 id="the-timeoutformediumtests-attribute">The <code>timeoutForMediumTests</code> Attribute</h3>
+<p>Possible values: integer (default: <code>10</code>)</p>
+<p>This attribute configures the time limit for tests annotated with
+<code>@medium</code> (in seconds).</p>
+<h3 id="the-timeoutforlargetests-attribute">The <code>timeoutForLargeTests</code> Attribute</h3>
+<p>Possible values: integer (default: <code>60</code>)</p>
+<p>This attribute configures the time limit for tests annotated with
+<code>@large</code> (in seconds).</p>
+<h3 id="the-testsuiteloaderclass-attribute">The <code>testSuiteLoaderClass</code> Attribute</h3>
+<p>Default: <code>PHPUnit\Runner\StandardTestSuiteLoader</code></p>
+<p>This attribute configures the name of a class that implements the
+<code>PHPUnit\Runner\TestSuiteLoader</code> interface. An object of this class is
+used to load the test suite.</p>
+<h3 id="the-testsuiteloaderfile-attribute">The <code>testSuiteLoaderFile</code> Attribute</h3>
+<p>This attribute can be used to configure the path to the sourcecode file
+that declares the class configured with <code>testSuiteLoaderClass</code> in case
+that class cannot be autoloaded.</p>
+<h3 id="the-defaulttestsuite-attribute">The <code>defaultTestSuite</code> Attribute</h3>
+<p>This attribute configures the name of the default test suite.</p>
+<h3 id="the-verbose-attribute">The <code>verbose</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether more verbose output should be printed.</p>
+<h3 id="the-stderr-attribute">The <code>stderr</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether PHPUnit should print its output to
+<code>stderr</code> instead of <code>stdout</code>.</p>
+<h3 id="the-reversedefectlist-attribute">The <code>reverseDefectList</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether tests that are not successful should
+be printed in reverse order.</p>
+<h3 id="the-registermockobjectsfromtestargumentsrecursively-attribute">The <code>registerMockObjectsFromTestArgumentsRecursively</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether arrays and object graphs that are
+passed from one test to another using the <code>@depends</code> annotation should
+be recursively scanned for mock objects.</p>
+<h3 id="the-extensionsdirectory-attribute">The <code>extensionsDirectory</code> Attribute</h3>
+<p>When <code>phpunit.phar</code> is used then this attribute may be used to configure
+a directory from which all <code>*.phar</code> files will be loaded as extensions
+for the PHPUnit test runner.</p>
+<h3 id="the-executionorder-attribute">The <code>executionOrder</code> Attribute</h3>
+<p>Possible values: <code>default</code>, <code>defects</code>, <code>depends</code>, <code>no-depends</code>,
+<code>duration</code>, <code>random</code>, <code>reverse</code>, <code>size</code></p>
+<p>Using multiple values is possible. These need to be separated by <code>,</code>.</p>
+<p>This attribute configures the order in which tests are executed.</p>
+<h3 id="the-resolvedependencies-attribute">The <code>resolveDependencies</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>true</code>)</p>
+<p>This attribute configures whether dependencies between tests (expressed
+using the <code>@depends</code> annotation) should be resolved.</p>
+<h3 id="the-testdox-attribute">The <code>testdox</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether the output should be printed in
+TestDox format.</p>
+<h3 id="the-nointeraction-attribute">The <code>noInteraction</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether progress should be animated when
+TestDox format is used, for instance.</p>
+<h2 id="the-testsuites-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testsuites</span><span class="token punctuation">&gt;</span></span></code> Element</h2>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>phpunit</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>This element is the root for one or more <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testsuite</span><span class="token punctuation">&gt;</span></span></code> elements that are
+used to configure the tests that are to be executed.</p>
+<h3 id="the-testsuite-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testsuite</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testsuites</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>A <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testsuite</span><span class="token punctuation">&gt;</span></span></code> element must have a <code>name</code> attribute and may have one or
+more <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>directory</span><span class="token punctuation">&gt;</span></span></code> and/or <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>file</span><span class="token punctuation">&gt;</span></span></code> child elements that configure
+directories and/or files, respectively, that should be searched for
+tests.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testsuites</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testsuite</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>unit<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>directory</span><span class="token punctuation">&gt;</span></span>tests/unit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>directory</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>testsuite</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testsuite</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>integration<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>directory</span><span class="token punctuation">&gt;</span></span>tests/integration<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>directory</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>testsuite</span><span class="token punctuation">&gt;</span></span>
+
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testsuite</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>edge-to-edge<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>directory</span><span class="token punctuation">&gt;</span></span>tests/edge-to-edge<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>directory</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>testsuite</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>testsuites</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>Using the <code>phpVersion</code> and <code>phpVersionOperator</code> attributes, a required
+PHP version can be specified:</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testsuites</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testsuite</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>unit<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>directory</span> <span class="token attr-name">phpVersion</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>8.0.0<span class="token punctuation">&quot;</span></span> <span class="token attr-name">phpVersionOperator</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>&gt;=<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>tests/unit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>directory</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>testsuite</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>testsuites</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>In the example above, the tests from the <code>tests/unit</code> directory are only
+added to the test suite if the PHP version is at least 8.0.0. The
+<code>phpVersionOperator</code> attribute is optional and defaults to <code>&gt;=</code>.</p>
+<h2 id="the-coverage-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>coverage</span><span class="token punctuation">&gt;</span></span></code> Element</h2>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>phpunit</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>coverage</span><span class="token punctuation">&gt;</span></span></code> element and its children can be used to configure code
+coverage:</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>coverage</span> <span class="token attr-name">cacheDirectory</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/path/to/directory<span class="token punctuation">&quot;</span></span>
+          <span class="token attr-name">includeUncoveredFiles</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>true<span class="token punctuation">&quot;</span></span>
+          <span class="token attr-name">processUncoveredFiles</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>true<span class="token punctuation">&quot;</span></span>
+          <span class="token attr-name">pathCoverage</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>false<span class="token punctuation">&quot;</span></span>
+          <span class="token attr-name">ignoreDeprecatedCodeUnits</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>true<span class="token punctuation">&quot;</span></span>
+          <span class="token attr-name">disableCodeCoverageIgnore</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>true<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token comment">&lt;!-- ... --&gt;</span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>coverage</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h3 id="the-cachedirectory-attribute">The <code>cacheDirectory</code> Attribute</h3>
+<p>Possible values: string</p>
+<p>When code coverage data is collected and processed, static code analysis
+is performed to improve reasoning about the covered code. This is an
+expensive operation, whose result can be cached. When the
+<code>cacheDirectory</code> attribute is set, static analysis results will be
+cached in the specified directory.</p>
+<h3 id="the-includeuncoveredfiles-attribute">The <code>includeUncoveredFiles</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>true</code>)</p>
+<p>When set to <code>true</code>, all sourcecode files that are configured to be
+considered for code coverage analysis will be included in the code
+coverage report(s). This includes sourcecode files that are not executed
+while the tests are running.</p>
+<h3 id="the-processuncoveredfiles-attribute">The <code>processUncoveredFiles</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>When set to <code>true</code>, all sourcecode files that are configured to be
+considered for code coverage analysis will be processed. This includes
+sourcecode files that are not executed while the tests are running.</p>
+<h3 id="the-ignoredeprecatedcodeunits-attribute">The <code>ignoreDeprecatedCodeUnits</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether code units annotated with
+<code>@deprecated</code> should be ignored from code coverage.</p>
+<h3 id="the-pathcoverage-attribute">The <code>pathCoverage</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>When set to <code>false</code>, only line coverage data will be collected,
+processed, and reported.</p>
+<p>When set to <code>true</code>, line coverage, branch coverage, and path coverage
+data will be collected, processed, and reported. This requires a code
+coverage driver that supports path coverage. Path Coverage is currently
+only implemented by Xdebug.</p>
+<h3 id="the-disablecodecoverageignore-attribute">The <code>disableCodeCoverageIgnore</code> Attribute</h3>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<p>This attribute configures whether the <code>@codeCoverageIgnore*</code> annotations
+should be ignored.</p>
+<h3 id="the-include-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>include</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>coverage</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Configures a set of files to be included in code coverage report(s).</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>include</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>directory</span> <span class="token attr-name">suffix</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>.php<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>src<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>directory</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>include</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>The example shown above instructs PHPUnit to include all sourcecode
+files with <code>.php</code> suffix in the <code>src</code> directory and its sub-directories
+in the code coverage report(s).</p>
+<h3 id="the-exclude-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclude</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>coverage</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Configures a set of files to be excluded from code coverage report(s).</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>include</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>directory</span> <span class="token attr-name">suffix</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>.php<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>src<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>directory</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>include</span><span class="token punctuation">&gt;</span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclude</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>directory</span> <span class="token attr-name">suffix</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>.php<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>src/generated<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>directory</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>file</span><span class="token punctuation">&gt;</span></span>src/autoload.php<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>file</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exclude</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>The example shown above instructs PHPUnit to include all sourcecode
+files with <code>.php</code> suffix in the <code>src</code> directory and its sub-directories
+in the code coverage report but exclude all files with <code>.php</code> suffix in
+the <code>src/generated</code> directory and its sub-directories as well as the
+<code>src/autoload.php</code> file from the code coverage report(s).</p>
+<h3 id="the-directory-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>directory</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent elements: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>include</span><span class="token punctuation">&gt;</span></span></code>, <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclude</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Configures a directory and its sub-directories for inclusion in or
+exclusion from code coverage report(s).</p>
+<h4 id="the-prefix-attribute">The <code>prefix</code> Attribute</h4>
+<p>Possible values: string</p>
+<p>Configures a prefix-based filter that is applied to the names of files
+in the directory and its sub-directories.</p>
+<h4 id="the-suffix-attribute">The <code>suffix</code> Attribute</h4>
+<p>Possible values: string (default: <code>&apos;.php&apos;</code>)</p>
+<p>Configures a suffix-based filter that is applied to the names of files
+in the directory and its sub-directories.</p>
+<h4 id="the-phpversion-attribute">The <code>phpVersion</code> Attribute</h4>
+<p>Possible values: string</p>
+<p>Configures a filter based on the version of the PHP runtime that is used
+to run the current PHPUnit process.</p>
+<h4 id="the-phpversionoperator-attribute">The <code>phpVersionOperator</code> Attribute</h4>
+<p>Possible values: <code>&apos;&lt;&apos;</code>, <code>&apos;lt&apos;</code>, <code>&apos;&lt;=&apos;</code>, <code>&apos;le&apos;</code>, <code>&apos;&gt;&apos;</code>, <code>&apos;gt&apos;</code>, <code>&apos;&gt;=&apos;</code>,
+<code>&apos;ge&apos;</code>, <code>&apos;==&apos;</code>, <code>&apos;=&apos;</code>, <code>&apos;eq&apos;</code>, <code>&apos;!=&apos;</code>, <code>&apos;&lt;&gt;&apos;</code>, <code>&apos;ne&apos;</code> (default: <code>&apos;&gt;=&apos;</code>)</p>
+<p>Configures the comparison operator to be used with <code>version_compare()</code>
+for the filter based on the version of the PHP runtime that is used to
+run the current PHPUnit process.</p>
+<h3 id="the-file-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>file</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent elements: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>include</span><span class="token punctuation">&gt;</span></span></code>, <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclude</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Configures a file for inclusion in or exclusion from code coverage
+report(s).</p>
+<h3 id="the-report-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>report</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>coverage</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Configures the code coverage reports to be generated.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>report</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>clover</span> <span class="token attr-name">outputFile</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>clover.xml<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>crap4j</span> <span class="token attr-name">outputFile</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>crap4j.xml<span class="token punctuation">&quot;</span></span> <span class="token attr-name">threshold</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>50<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span> <span class="token attr-name">outputDirectory</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>html-coverage<span class="token punctuation">&quot;</span></span> <span class="token attr-name">lowUpperBound</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>50<span class="token punctuation">&quot;</span></span> <span class="token attr-name">highLowerBound</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>90<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span> <span class="token attr-name">outputFile</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>coverage.php<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">outputFile</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>coverage.txt<span class="token punctuation">&quot;</span></span> <span class="token attr-name">showUncoveredFiles</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>false<span class="token punctuation">&quot;</span></span> <span class="token attr-name">showOnlySummary</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>true<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>xml</span> <span class="token attr-name">outputDirectory</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>xml-coverage<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>report</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h4 id="the-clover-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>clover</span><span class="token punctuation">&gt;</span></span></code> Element</h4>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>report</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Configures a code coverage report in Clover XML format.</p>
+<h5 id="the-outputfile-attribute">The <code>outputFile</code> Attribute</h5>
+<p>Possible values: string</p>
+<p>The file to which the Clover XML report is written.</p>
+<h4 id="the-crap4j-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>crap4j</span><span class="token punctuation">&gt;</span></span></code> Element</h4>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>report</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Configures a code coverage report in Crap4J XML format.</p>
+<h5 id="the-outputfile-attribute">The <code>outputFile</code> Attribute</h5>
+<p>Possible values: string</p>
+<p>The file to which the Crap4J XML report is written.</p>
+<h5 id="the-threshold-attribute">The <code>threshold</code> Attribute</h5>
+<p>Possible values: integer (default: <code>50</code>)</p>
+<h4 id="the-html-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">&gt;</span></span></code> Element</h4>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>report</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Configures a code coverage report in HTML format.</p>
+<h5 id="the-outputdirectory-attribute">The <code>outputDirectory</code> Attribute</h5>
+<p>The directory to which the HTML report is written.</p>
+<h5 id="the-lowupperbound-attribute">The <code>lowUpperBound</code> Attribute</h5>
+<p>Possible values: integer (default: <code>50</code>)</p>
+<p>The upper bound of what should be considered &quot;low coverage&quot;.</p>
+<h5 id="the-highlowerbound-attribute">The <code>highLowerBound</code> Attribute</h5>
+<p>Possible values: integer (default: <code>90</code>)</p>
+<p>The lower bound of what should be considered &quot;high coverage&quot;.</p>
+<h4 id="the-php-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span></code> Element</h4>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>report</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Configures a code coverage report in PHP format.</p>
+<h5 id="the-outputfile-attribute">The <code>outputFile</code> Attribute</h5>
+<p>Possible values: string</p>
+<p>The file to which the PHP report is written.</p>
+<h4 id="the-text-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span><span class="token punctuation">&gt;</span></span></code> Element</h4>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>report</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Configures a code coverage report in text format.</p>
+<h5 id="the-outputfile-attribute">The <code>outputFile</code> Attribute</h5>
+<p>Possible values: string</p>
+<p>The file to which the text report is written.</p>
+<h5 id="the-showuncoveredfiles-attribute">The <code>showUncoveredFiles</code> Attribute</h5>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<h5 id="the-showonlysummary-attribute">The <code>showOnlySummary</code> Attribute</h5>
+<p>Possible values: <code>true</code> or <code>false</code> (default: <code>false</code>)</p>
+<h4 id="the-xml-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>xml</span><span class="token punctuation">&gt;</span></span></code> Element</h4>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>report</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Configures a code coverage report in PHPUnit XML format.</p>
+<h5 id="the-outputdirectory-attribute">The <code>outputDirectory</code> Attribute</h5>
+<p>Possible values: string</p>
+<p>The directory to which the PHPUnit XML report is written.</p>
+<h2 id="the-logging-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logging</span><span class="token punctuation">&gt;</span></span></code> Element</h2>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>phpunit</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logging</span><span class="token punctuation">&gt;</span></span></code> element and its children can be used to configure the
+logging of the test execution.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logging</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>junit</span> <span class="token attr-name">outputFile</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>junit.xml<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>teamcity</span> <span class="token attr-name">outputFile</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>teamcity.txt<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testdoxHtml</span> <span class="token attr-name">outputFile</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>testdox.html<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testdoxText</span> <span class="token attr-name">outputFile</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>testdox.txt<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testdoxXml</span> <span class="token attr-name">outputFile</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>testdox.xml<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span> <span class="token attr-name">outputFile</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>logfile.txt<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>logging</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h3 id="the-junit-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>junit</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logging</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Configures a test result logfile in JUnit XML format.</p>
+<h4 id="the-outputfile-attribute">The <code>outputFile</code> Attribute</h4>
+<p>Possible values: string</p>
+<p>The file to which the test result logfile in JUnit XML format is
+written.</p>
+<h3 id="the-teamcity-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>teamcity</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logging</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Configures a test result logfile in TeamCity format.</p>
+<h4 id="the-outputfile-attribute">The <code>outputFile</code> Attribute</h4>
+<p>Possible values: string</p>
+<p>The file to which the test result logfile in TeamCity format is written.</p>
+<h3 id="the-testdoxhtml-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testdoxHtml</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logging</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Configures a test result logfile in TestDox HTML format.</p>
+<h4 id="the-outputfile-attribute">The <code>outputFile</code> Attribute</h4>
+<p>Possible values: string</p>
+<p>The file to which the test result logfile in TestDox HTML format is
+written.</p>
+<h3 id="the-testdoxtext-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testdoxText</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logging</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Configures a test result logfile in TestDox text format.</p>
+<h4 id="the-outputfile-attribute">The <code>outputFile</code> Attribute</h4>
+<p>Possible values: string</p>
+<p>The file to which the test result logfile in TestDox text format is
+written.</p>
+<h3 id="the-testdoxxml-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testdoxXml</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logging</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Configures a test result logfile in TestDox XML format.</p>
+<h4 id="the-outputfile-attribute">The <code>outputFile</code> Attribute</h4>
+<p>Possible values: string</p>
+<p>The file to which the test result logfile in TestDox XML format is
+written.</p>
+<h3 id="the-text-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>text</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>logging</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>Configures a test result logfile in text format.</p>
+<h4 id="the-outputfile-attribute">The <code>outputFile</code> Attribute</h4>
+<p>Possible values: string</p>
+<p>The file to which the test result logfile in text format is written.</p>
+<h2 id="the-groups-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groups</span><span class="token punctuation">&gt;</span></span></code> Element</h2>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>phpunit</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groups</span><span class="token punctuation">&gt;</span></span></code> element and its <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>include</span><span class="token punctuation">&gt;</span></span></code>, <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclude</span><span class="token punctuation">&gt;</span></span></code>, and <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>group</span><span class="token punctuation">&gt;</span></span></code>
+children can be used to select groups of tests marked with the <code>@group</code>
+annotation (documented in <code>appendixes.annotations.group</code>) that should
+(not) be run:</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>groups</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>include</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>group</span><span class="token punctuation">&gt;</span></span>name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>group</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>include</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>exclude</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>group</span><span class="token punctuation">&gt;</span></span>name<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>group</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>exclude</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>groups</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>The example shown above is equivalent to invoking the PHPUnit test
+runner with <code>--group name --exclude-group name</code>.</p>
+<h2 id="the-testdoxgroups-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>testdoxGroups</span><span class="token punctuation">&gt;</span></span></code> Element</h2>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>phpunit</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>... TBD ...</p>
+<h2 id="the-listeners-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>listeners</span><span class="token punctuation">&gt;</span></span></code> Element</h2>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>phpunit</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>listeners</span><span class="token punctuation">&gt;</span></span></code> element and its <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>listener</span><span class="token punctuation">&gt;</span></span></code> children can be used to
+attach additional test listeners to the test execution.</p>
+<h3 id="the-listener-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>listener</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>listeners</span><span class="token punctuation">&gt;</span></span></code></p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>listeners</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>listener</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>MyListener<span class="token punctuation">&quot;</span></span> <span class="token attr-name">file</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>/optional/path/to/MyListener.php<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>arguments</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>array</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>element</span> <span class="token attr-name">key</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+          <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>Sebastian<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>element</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>array</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>integer</span><span class="token punctuation">&gt;</span></span>22<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>integer</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>April<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>double</span><span class="token punctuation">&gt;</span></span>19.78<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>double</span><span class="token punctuation">&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>null</span><span class="token punctuation">/&gt;</span></span>
+      <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>object</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>stdClass<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>arguments</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>listener</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>listeners</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>The XML configuration above corresponds to attaching the <code>$listener</code>
+object (see below) to the test execution:</p>
+<pre class="language-"><code>$listener = new MyListener(
+    [&apos;Sebastian&apos;],
+    22,
+    &apos;April&apos;,
+    19.78,
+    null,
+    new stdClass
+);
+</code></pre><p>Note</p>
+<p>Please note that the <code>PHPUnit\Framework\TestListener</code> interface is
+deprecated and will be removed in the future. TestRunner extensions
+should be used instead of test listeners.</p>
+<h2 id="the-extensions-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>extensions</span><span class="token punctuation">&gt;</span></span></code> Element</h2>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>phpunit</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>extensions</span><span class="token punctuation">&gt;</span></span></code> element and its <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>extension</span><span class="token punctuation">&gt;</span></span></code> children can be used to
+register test runner extensions.</p>
+<h3 id="the-extension-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>extension</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>extensions</span><span class="token punctuation">&gt;</span></span></code></p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>extensions</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>extension</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Vendor\MyExtension<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>extensions</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h4 id="the-arguments-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>arguments</span><span class="token punctuation">&gt;</span></span></code> Element</h4>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>extension</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>arguments</span><span class="token punctuation">&gt;</span></span></code> element can be used to configure a single
+<code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>extension</span><span class="token punctuation">&gt;</span></span></code>.</p>
+<p>Accepts a list of elements of types, which are then used to configure
+individual extensions. The arguments are passed to the extension class&apos;
+<code>__constructor</code> method in the order they are defined in the
+configuration.</p>
+<p>Available types:</p>
+<ul>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>boolean</span><span class="token punctuation">&gt;</span></span></code></li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>integer</span><span class="token punctuation">&gt;</span></span></code></li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span></code></li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>double</span><span class="token punctuation">&gt;</span></span></code> (float)</li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>array</span><span class="token punctuation">&gt;</span></span></code></li>
+<li><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>object</span><span class="token punctuation">&gt;</span></span></code></li>
+</ul>
+<!-- -->
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>extension</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Vendor\MyExtension<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>arguments</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>integer</span><span class="token punctuation">&gt;</span></span>1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>integer</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>integer</span><span class="token punctuation">&gt;</span></span>2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>integer</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>integer</span><span class="token punctuation">&gt;</span></span>3<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>integer</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>hello world<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>boolean</span><span class="token punctuation">&gt;</span></span>true<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>boolean</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>double</span><span class="token punctuation">&gt;</span></span>1.23<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>double</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>array</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>element</span> <span class="token attr-name">index</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>0<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>value1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>element</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>element</span> <span class="token attr-name">index</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>1<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+                <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>value2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>element</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>array</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>object</span> <span class="token attr-name">class</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>Vendor\MyPhpClass<span class="token punctuation">&quot;</span></span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>constructor arg 1<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+            <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>constructor arg 2<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>object</span><span class="token punctuation">&gt;</span></span>
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>arguments</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>extension</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h2 id="the-php-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span></code> Element</h2>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>phpunit</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span></code> element and its children can be used to configure PHP
+settings, constants, and global variables. It can also be used to
+prepend the <code>include_path</code>.</p>
+<h3 id="the-includepath-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>includePath</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>This element can be used to prepend a path to the <code>include_path</code>.</p>
+<h3 id="the-ini-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ini</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>This element can be used to set a PHP configuration setting.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>ini</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>foo<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>bar<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>php</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>The XML configuration above corresponds to the following PHP code:</p>
+<pre class="language-"><code>ini_set(&apos;foo&apos;, &apos;bar&apos;);
+</code></pre><h3 id="the-const-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>const</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>This element can be used to set a global constant.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>const</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>foo<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>bar<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>php</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>The XML configuration above corresponds to the following PHP code:</p>
+<pre class="language-"><code>define(&apos;foo&apos;, &apos;bar&apos;);
+</code></pre><h3 id="the-var-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>var</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>This element can be used to set a global variable.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>var</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>foo<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>bar<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>php</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>The XML configuration above corresponds to the following PHP code:</p>
+<pre class="language-"><code>$GLOBALS[&apos;foo&apos;] = &apos;bar&apos;;
+</code></pre><h3 id="the-env-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>env</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>This element can be used to set a value in the super-global array
+<code>$_ENV</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>env</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>foo<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>bar<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>php</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>The XML configuration above corresponds to the following PHP code:</p>
+<pre class="language-"><code>$_ENV[&apos;foo&apos;] = &apos;bar&apos;;
+</code></pre><p>By default, environment variables are not overwritten if they exist
+already. To force overwriting existing variables, use the <code>force</code>
+attribute:</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>env</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>foo<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>bar<span class="token punctuation">&quot;</span></span> <span class="token attr-name">force</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>true<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>php</span><span class="token punctuation">&gt;</span></span>
+</code></pre><h3 id="the-get-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>get</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>This element can be used to set a value in the super-global array
+<code>$_GET</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>get</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>foo<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>bar<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>php</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>The XML configuration above corresponds to the following PHP code:</p>
+<pre class="language-"><code>$_GET[&apos;foo&apos;] = &apos;bar&apos;;
+</code></pre><h3 id="the-post-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>post</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>This element can be used to set a value in the super-global array
+<code>$_POST</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>post</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>foo<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>bar<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>php</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>The XML configuration above corresponds to the following PHP code:</p>
+<pre class="language-"><code>$_POST[&apos;foo&apos;] = &apos;bar&apos;;
+</code></pre><h3 id="the-cookie-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cookie</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>This element can be used to set a value in the super-global array
+<code>$_COOKIE</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>cookie</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>foo<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>bar<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>php</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>The XML configuration above corresponds to the following PHP code:</p>
+<pre class="language-"><code>$_COOKIE[&apos;foo&apos;] = &apos;bar&apos;;
+</code></pre><h3 id="the-server-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>server</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>This element can be used to set a value in the super-global array
+<code>$_SERVER</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>server</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>foo<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>bar<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>php</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>The XML configuration above corresponds to the following PHP code:</p>
+<pre class="language-"><code>$_SERVER[&apos;foo&apos;] = &apos;bar&apos;;
+</code></pre><h3 id="the-files-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>files</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>This element can be used to set a value in the super-global array
+<code>$_FILES</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>files</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>foo<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>bar<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>php</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>The XML configuration above corresponds to the following PHP code:</p>
+<pre class="language-"><code>$_FILES[&apos;foo&apos;] = &apos;bar&apos;;
+</code></pre><h3 id="the-request-element">The <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>request</span><span class="token punctuation">&gt;</span></span></code> Element</h3>
+<p>Parent element: <code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span></code></p>
+<p>This element can be used to set a value in the super-global array
+<code>$_REQUEST</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>php</span><span class="token punctuation">&gt;</span></span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>request</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>foo<span class="token punctuation">&quot;</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">&quot;</span>bar<span class="token punctuation">&quot;</span></span><span class="token punctuation">/&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>php</span><span class="token punctuation">&gt;</span></span>
+</code></pre><p>The XML configuration above corresponds to the following PHP code:</p>
+<pre class="language-"><code>$_REQUEST[&apos;foo&apos;] = &apos;bar&apos;;
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="code-coverage-analysis.html" class="navigation navigation-prev " aria-label="Previous page: Code Coverage Analysis">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="copyright.html" class="navigation navigation-next " aria-label="Next page: Copyright">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Configuration","level":"1.6","depth":1,"next":{"title":"Copyright","level":"1.7","depth":1,"path":"copyright.md","ref":"copyright.md","articles":[]},"previous":{"title":"Code Coverage Analysis","level":"1.5","depth":1,"path":"code-coverage-analysis.md","ref":"code-coverage-analysis.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"PHPUnit 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"configuration.md","mtime":"2021-05-20T01:13:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-20T01:13:58.148Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

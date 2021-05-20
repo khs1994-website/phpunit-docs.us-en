@@ -1,0 +1,1219 @@
+
+<!DOCTYPE HTML>
+<html lang="us-en" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Test Doubles · PHPUnit 英文文档</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-prism/prism-solarizedlight.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="textui.html" />
+    
+    
+    <link rel="prev" href="risky-tests.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://docs.khs1994.com" target="_blank" class="custom-link">Home</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="annotations.html">
+            
+                <a href="annotations.html">
+            
+                    
+                    Annotations
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="assertions.html">
+            
+                <a href="assertions.html">
+            
+                    
+                    Assertions
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="bibliography.html">
+            
+                <a href="bibliography.html">
+            
+                    
+                    Bibliography
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="code-coverage-analysis.html">
+            
+                <a href="code-coverage-analysis.html">
+            
+                    
+                    Code Coverage Analysis
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="configuration.html">
+            
+                <a href="configuration.html">
+            
+                    
+                    Configuration
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="copyright.html">
+            
+                <a href="copyright.html">
+            
+                    
+                    Copyright
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="extending-phpunit.html">
+            
+                <a href="extending-phpunit.html">
+            
+                    
+                    Extending Phpunit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="fixtures.html">
+            
+                <a href="fixtures.html">
+            
+                    
+                    Fixtures
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="incomplete-and-skipped-tests.html">
+            
+                <a href="incomplete-and-skipped-tests.html">
+            
+                    
+                    Incomplete And Skipped Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="installation.html">
+            
+                <a href="installation.html">
+            
+                    
+                    Installation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="organizing-tests.html">
+            
+                <a href="organizing-tests.html">
+            
+                    
+                    Organizing Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="risky-tests.html">
+            
+                <a href="risky-tests.html">
+            
+                    
+                    Risky Tests
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.14" data-path="test-doubles.html">
+            
+                <a href="test-doubles.html">
+            
+                    
+                    Test Doubles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="textui.html">
+            
+                <a href="textui.html">
+            
+                    
+                    Textui
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="writing-tests-for-phpunit.html">
+            
+                <a href="writing-tests-for-phpunit.html">
+            
+                    
+                    Writing Tests For Phpunit
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >Test Doubles</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="test-doubles">Test Doubles</h1>
+<p>Gerard Meszaros introduces the concept of Test Doubles in
+<code>Meszaros2007 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>appendixes.bibliography</span><span class="token punctuation">&gt;</span></span></code> like this:</p>
+<blockquote>
+<p><em>Gerard Meszaros</em>:</p>
+<p>Sometimes it is just plain hard to test the system under test (SUT)
+because it depends on other components that cannot be used in the test
+environment. This could be because they aren&apos;t available, they will
+not return the results needed for the test or because executing them
+would have undesirable side effects. In other cases, our test strategy
+requires us to have more control or visibility of the internal
+behavior of the SUT.</p>
+<p>When we are writing a test in which we cannot (or chose not to) use a
+real depended-on component (DOC), we can replace it with a Test
+Double. The Test Double doesn&apos;t have to behave exactly like the real
+DOC; it merely has to provide the same API as the real one so that the
+SUT thinks it is the real one!</p>
+</blockquote>
+<p>The <code>createStub($type)</code>, <code>createMock($type)</code>, and
+<code>getMockBuilder($type)</code> methods provided by PHPUnit can be used in a
+test to automatically generate an object that can act as a test double
+for the specified original type (interface or class name). This test
+double object can be used in every context where an object of the
+original type is expected or required.</p>
+<p>The <code>createStub($type)</code> and <code>createMock($type)</code> method immediately
+return a test double object for the specified type (interface or class).
+The creation of this test double is performed using best practice
+defaults. The <code>__construct()</code> and <code>__clone()</code> methods of the original
+class are not executed and the arguments passed to a method of the test
+double will not be cloned. If these defaults are not what you need then
+you can use the <code>getMockBuilder($type)</code> method to customize the test
+double generation using a fluent interface.</p>
+<p>By default, all methods of the original class are replaced with a dummy
+implementation that returns <code>null</code> (without calling the original
+method). Using the <code>will($this-&gt;returnValue())</code> method, for instance,
+you can configure these dummy implementations to return a value when
+called.</p>
+<p>Limitation: final, private, and static methods</p>
+<p>Please note that <code>final</code>, <code>private</code>, and <code>static</code> methods cannot be
+stubbed or mocked. They are ignored by PHPUnit&apos;s test double
+functionality and retain their original behavior except for <code>static</code>
+methods that will be replaced by a method throwing a
+<code>\PHPUnit\Framework\MockObject\BadMethodCallException</code> exception.</p>
+<h2 id="stubs">Stubs</h2>
+<p>The practice of replacing an object with a test double that (optionally)
+returns configured return values is referred to as <em>stubbing</em>. You can
+use a <em>stub</em> to &quot;replace a real component on which the SUT depends so
+that the test has a control point for the indirect inputs of the SUT.
+This allows the test to force the SUT down paths it might not otherwise
+execute&quot;.</p>
+<p><code>test-doubles.stubs.examples.StubTest.php</code> shows how to stub method
+calls and set up return values. We first use the <code>createStub()</code> method
+that is provided by the <code>PHPUnit\Framework\TestCase</code> class to set up a
+stub object that looks like an object of <code>SomeClass</code>
+(<code>test-doubles.stubs.examples.SomeClass.php</code>). We then use the <a href="http://martinfowler.com/bliki/FluentInterface.html" target="_blank">Fluent
+Interface</a> that
+PHPUnit provides to specify the behavior for the stub. In essence, this
+means that you do not need to create several temporary objects and wire
+them together afterwards. Instead, you chain method calls as shown in
+the example. This leads to more readable and &quot;fluent&quot; code.</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+class SomeClass
+{
+    public function doSomething()
+    {
+        // Do something.
+    }
+}
+
+&lt;?php declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
+
+final class StubTest extends TestCase
+{
+    public function testStub(): void
+    {
+        // Create a stub for the SomeClass class.
+        $stub = $this-&gt;createStub(SomeClass::class);
+
+        // Configure the stub.
+        $stub-&gt;method(&apos;doSomething&apos;)
+             -&gt;willReturn(&apos;foo&apos;);
+
+        // Calling $stub-&gt;doSomething() will now return
+        // &apos;foo&apos;.
+        $this-&gt;assertSame(&apos;foo&apos;, $stub-&gt;doSomething());
+    }
+}
+</code></pre><p>Limitation: Methods named &quot;method&quot;</p>
+<p>The example shown above only works when the original class does not
+declare a method named &quot;method&quot;.</p>
+<p>If the original class does declare a method named &quot;method&quot; then
+<code>$stub-&gt;expects($this-&gt;any())-&gt;method(&apos;doSomething&apos;)-&gt;willReturn(&apos;foo&apos;);</code>
+has to be used.</p>
+<p>&quot;Behind the scenes&quot;, PHPUnit automatically generates a new PHP class
+that implements the desired behavior when the <code>createStub()</code> method is
+used.</p>
+<p>Please note that <code>createStub()</code> will automatically and recursively stub
+return values based on a method&apos;s return type. Consider the example
+shown below:</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+class C
+{
+    public function m(): D
+    {
+        // Do something.
+    }
+}
+</code></pre><p>In the example shown above, the <code>C::m()</code> method has a return type
+declaration indicating that this method returns an object of type <code>D</code>.
+When a test double for <code>C</code> is created and no return value is configured
+for <code>m()</code> using <code>willReturn()</code> (see above), for instance, then when
+<code>m()</code> is invoked PHPUnit will automatically create a test double for <code>D</code>
+to be returned.</p>
+<p>Similarily, if <code>m</code> had a return type declaration for a scalar type then
+a return value such as <code>0</code> (for <code>int</code>), <code>0.0</code> (for <code>float</code>), or <code>[]</code>
+(for <code>array</code>) would be generated.</p>
+<p><code>test-doubles.stubs.examples.StubTest2.php</code> shows an example of how to
+use the Mock Builder&apos;s fluent interface to configure the creation of the
+test double. The configuration of this test double uses the same best
+practice defaults used by <code>createStub()</code>.</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
+
+final class StubTest extends TestCase
+{
+    public function testStub(): void
+    {
+        // Create a stub for the SomeClass class.
+        $stub = $this-&gt;getMockBuilder(SomeClass::class)
+                     -&gt;disableOriginalConstructor()
+                     -&gt;disableOriginalClone()
+                     -&gt;disableArgumentCloning()
+                     -&gt;disallowMockingUnknownTypes()
+                     -&gt;getMock();
+
+        // Configure the stub.
+        $stub-&gt;method(&apos;doSomething&apos;)
+             -&gt;willReturn(&apos;foo&apos;);
+
+        // Calling $stub-&gt;doSomething() will now return
+        // &apos;foo&apos;.
+        $this-&gt;assertSame(&apos;foo&apos;, $stub-&gt;doSomething());
+    }
+}
+</code></pre><p>In the examples so far we have been returning simple values using
+<code>willReturn($value)</code>. This short syntax is the same as
+<code>will($this-&gt;returnValue($value))</code>. We can use variations on this longer
+syntax to achieve more complex stubbing behaviour.</p>
+<p>Sometimes you want to return one of the arguments of a method call
+(unchanged) as the result of a stubbed method call.
+<code>test-doubles.stubs.examples.StubTest3.php</code> shows how you can achieve
+this using <code>returnArgument()</code> instead of <code>returnValue()</code>.</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
+
+final class StubTest extends TestCase
+{
+    public function testReturnArgumentStub(): void
+    {
+        // Create a stub for the SomeClass class.
+        $stub = $this-&gt;createStub(SomeClass::class);
+
+        // Configure the stub.
+        $stub-&gt;method(&apos;doSomething&apos;)
+             -&gt;will($this-&gt;returnArgument(0));
+
+        // $stub-&gt;doSomething(&apos;foo&apos;) returns &apos;foo&apos;
+        $this-&gt;assertSame(&apos;foo&apos;, $stub-&gt;doSomething(&apos;foo&apos;));
+
+        // $stub-&gt;doSomething(&apos;bar&apos;) returns &apos;bar&apos;
+        $this-&gt;assertSame(&apos;bar&apos;, $stub-&gt;doSomething(&apos;bar&apos;));
+    }
+}
+</code></pre><p>When testing a fluent interface, it is sometimes useful to have a
+stubbed method return a reference to the stubbed object.
+<code>test-doubles.stubs.examples.StubTest4.php</code> shows how you can use
+<code>returnSelf()</code> to achieve this.</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
+
+final class StubTest extends TestCase
+{
+    public function testReturnSelf(): void
+    {
+        // Create a stub for the SomeClass class.
+        $stub = $this-&gt;createStub(SomeClass::class);
+
+        // Configure the stub.
+        $stub-&gt;method(&apos;doSomething&apos;)
+             -&gt;will($this-&gt;returnSelf());
+
+        // $stub-&gt;doSomething() returns $stub
+        $this-&gt;assertSame($stub, $stub-&gt;doSomething());
+    }
+}
+</code></pre><p>Sometimes a stubbed method should return different values depending on a
+predefined list of arguments. You can use <code>returnValueMap()</code> to create a
+map that associates arguments with corresponding return values. See
+<code>test-doubles.stubs.examples.StubTest5.php</code> for an example.</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
+
+final class StubTest extends TestCase
+{
+    public function testReturnValueMapStub(): void
+    {
+        // Create a stub for the SomeClass class.
+        $stub = $this-&gt;createStub(SomeClass::class);
+
+        // Create a map of arguments to return values.
+        $map = [
+            [&apos;a&apos;, &apos;b&apos;, &apos;c&apos;, &apos;d&apos;],
+            [&apos;e&apos;, &apos;f&apos;, &apos;g&apos;, &apos;h&apos;]
+        ];
+
+        // Configure the stub.
+        $stub-&gt;method(&apos;doSomething&apos;)
+             -&gt;will($this-&gt;returnValueMap($map));
+
+        // $stub-&gt;doSomething() returns different values depending on
+        // the provided arguments.
+        $this-&gt;assertSame(&apos;d&apos;, $stub-&gt;doSomething(&apos;a&apos;, &apos;b&apos;, &apos;c&apos;));
+        $this-&gt;assertSame(&apos;h&apos;, $stub-&gt;doSomething(&apos;e&apos;, &apos;f&apos;, &apos;g&apos;));
+    }
+}
+</code></pre><p>When the stubbed method call should return a calculated value instead of
+a fixed one (see <code>returnValue()</code>) or an (unchanged) argument (see
+<code>returnArgument()</code>), you can use <code>returnCallback()</code> to have the stubbed
+method return the result of a callback function or method. See
+<code>test-doubles.stubs.examples.StubTest6.php</code> for an example.</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
+
+final class StubTest extends TestCase
+{
+    public function testReturnCallbackStub(): void
+    {
+        // Create a stub for the SomeClass class.
+        $stub = $this-&gt;createStub(SomeClass::class);
+
+        // Configure the stub.
+        $stub-&gt;method(&apos;doSomething&apos;)
+             -&gt;will($this-&gt;returnCallback(&apos;str_rot13&apos;));
+
+        // $stub-&gt;doSomething($argument) returns str_rot13($argument)
+        $this-&gt;assertSame(&apos;fbzrguvat&apos;, $stub-&gt;doSomething(&apos;something&apos;));
+    }
+}
+</code></pre><p>A simpler alternative to setting up a callback method may be to specify
+a list of desired return values. You can do this with the
+<code>onConsecutiveCalls()</code> method. See
+<code>test-doubles.stubs.examples.StubTest7.php</code> for an example.</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
+
+final class StubTest extends TestCase
+{
+    public function testOnConsecutiveCallsStub(): void
+    {
+        // Create a stub for the SomeClass class.
+        $stub = $this-&gt;createStub(SomeClass::class);
+
+        // Configure the stub.
+        $stub-&gt;method(&apos;doSomething&apos;)
+             -&gt;will($this-&gt;onConsecutiveCalls(2, 3, 5, 7));
+
+        // $stub-&gt;doSomething() returns a different value each time
+        $this-&gt;assertSame(2, $stub-&gt;doSomething());
+        $this-&gt;assertSame(3, $stub-&gt;doSomething());
+        $this-&gt;assertSame(5, $stub-&gt;doSomething());
+    }
+}
+</code></pre><p>Instead of returning a value, a stubbed method can also raise an
+exception. <code>test-doubles.stubs.examples.StubTest8.php</code> shows how to use
+<code>throwException()</code> to do this.</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
+
+final class StubTest extends TestCase
+{
+    public function testThrowExceptionStub(): void
+    {
+        // Create a stub for the SomeClass class.
+        $stub = $this-&gt;createStub(SomeClass::class);
+
+        // Configure the stub.
+        $stub-&gt;method(&apos;doSomething&apos;)
+             -&gt;will($this-&gt;throwException(new Exception));
+
+        // $stub-&gt;doSomething() throws Exception
+        $stub-&gt;doSomething();
+    }
+}
+</code></pre><p>Alternatively, you can write the stub yourself and improve your design
+along the way. Widely used resources are accessed through a single
+fa&#xE7;ade, so you can replace the resource with the stub. For example,
+instead of having direct database calls scattered throughout the code,
+you have a single <code>Database</code> object, an implementor of the <code>IDatabase</code>
+interface. Then, you can create a stub implementation of <code>IDatabase</code> and
+use it for your tests. You can even create an option for running the
+tests with the stub database or the real database, so you can use your
+tests for both local testing during development and integration testing
+with the real database.</p>
+<p>Functionality that needs to be stubbed out tends to cluster in the same
+object, improving cohesion. By presenting the functionality with a
+single, coherent interface you reduce the coupling with the rest of the
+system.</p>
+<h2 id="mock-objects">Mock Objects</h2>
+<p>The practice of replacing an object with a test double that verifies
+expectations, for instance asserting that a method has been called, is
+referred to as <em>mocking</em>.</p>
+<p>You can use a <em>mock object</em> &quot;as an observation point that is used to
+verify the indirect outputs of the SUT as it is exercised. Typically,
+the mock object also includes the functionality of a test stub in that
+it must return values to the SUT if it hasn&apos;t already failed the tests
+but the emphasis is on the verification of the indirect outputs.
+Therefore, a mock object is a lot more than just a test stub plus
+assertions; it is used in a fundamentally different way&quot; (Gerard
+Meszaros).</p>
+<p>Limitation: Automatic verification of expectations</p>
+<p>Only mock objects generated within the scope of a test will be verified
+automatically by PHPUnit. Mock objects generated in data providers, for
+instance, or injected into the test using the <code>@depends</code> annotation will
+not be verified automatically by PHPUnit.</p>
+<p>Here is an example: suppose we want to test that the correct method,
+<code>update()</code> in our example, is called on an object that observes another
+object. <code>test-doubles.mock-objects.examples.SUT.php</code> shows the code for
+the <code>Subject</code> and <code>Observer</code> classes that are part of the System under
+Test (SUT).</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">class</span> <span class="token attr-name">Subject</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">protected</span> <span class="token attr-name">$observers</span> <span class="token attr-value"><span class="token punctuation">=</span> [];</span>
+    <span class="token attr-name">protected</span> <span class="token attr-name">$name;</span>
+
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name">__construct($name)</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>name = $name;
+    }
+
+    public function getName()
+    {
+        return $this-&gt;name;
+    }
+
+    public function attach(Observer $observer)
+    {
+        $this-&gt;observers[] = $observer;
+    }
+
+    public function doSomething()
+    {
+        // Do something.
+        // ...
+
+        // Notify observers that we did something.
+        $this-&gt;notify(&apos;something&apos;);
+    }
+
+    public function doSomethingBad()
+    {
+        foreach ($this-&gt;observers as $observer) {
+            $observer-&gt;reportError(42, &apos;Something bad happened&apos;, $this);
+        }
+    }
+
+    protected function notify($argument)
+    {
+        foreach ($this-&gt;observers as $observer) {
+            $observer-&gt;update($argument);
+        }
+    }
+
+    // Other methods.
+}
+
+class Observer
+{
+    public function update($argument)
+    {
+        // Do something.
+    }
+
+    public function reportError($errorCode, $errorMessage, Subject $subject)
+    {
+        // Do something
+    }
+
+    // Other methods.
+}
+</code></pre><p><code>test-doubles.mock-objects.examples.SubjectTest.php</code> shows how to use a
+mock object to test the interaction between <code>Subject</code> and <code>Observer</code>
+objects.</p>
+<p>We first use the <code>createMock()</code> method that is provided by the
+<code>PHPUnit\Framework\TestCase</code> class to set up a mock object for the
+<code>Observer</code>.</p>
+<p>Because we are interested in verifying that a method is called, and
+which arguments it is called with, we introduce the <code>expects()</code> and
+<code>with()</code> methods to specify how this interaction should look.</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
+
+final class SubjectTest extends TestCase
+{
+    public function testObserversAreUpdated(): void
+    {
+        // Create a mock for the Observer class,
+        // only mock the update() method.
+        $observer = $this-&gt;createMock(Observer::class);
+
+        // Set up the expectation for the update() method
+        // to be called only once and with the string &apos;something&apos;
+        // as its parameter.
+        $observer-&gt;expects($this-&gt;once())
+                 -&gt;method(&apos;update&apos;)
+                 -&gt;with($this-&gt;equalTo(&apos;something&apos;));
+
+        // Create a Subject object and attach the mocked
+        // Observer object to it.
+        $subject = new Subject(&apos;My subject&apos;);
+        $subject-&gt;attach($observer);
+
+        // Call the doSomething() method on the $subject object
+        // which we expect to call the mocked Observer object&apos;s
+        // update() method with the string &apos;something&apos;.
+        $subject-&gt;doSomething();
+    }
+}
+</code></pre><p>The <code>with()</code> method can take any number of arguments, corresponding to
+the number of arguments to the method being mocked. You can specify more
+advanced constraints on the method&apos;s arguments than a simple match.</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
+
+final class SubjectTest extends TestCase
+{
+    public function testErrorReported(): void
+    {
+        // Create a mock for the Observer class, mocking the
+        // reportError() method
+        $observer = $this-&gt;createMock(Observer::class);
+
+        $observer-&gt;expects($this-&gt;once())
+                 -&gt;method(&apos;reportError&apos;)
+                 -&gt;with(
+                       $this-&gt;greaterThan(0),
+                       $this-&gt;stringContains(&apos;Something&apos;),
+                       $this-&gt;anything()
+                   );
+
+        $subject = new Subject(&apos;My subject&apos;);
+        $subject-&gt;attach($observer);
+
+        // The doSomethingBad() method should report an error to the observer
+        // via the reportError() method
+        $subject-&gt;doSomethingBad();
+    }
+}
+</code></pre><p>The <code>withConsecutive()</code> method can take any number of arrays of
+arguments, depending on the calls you want to test against. Each array
+is a list of constraints corresponding to the arguments of the method
+being mocked, like in <code>with()</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">FooTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testFunctionCalledTwoTimesWithSpecificArguments():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$mock</span> <span class="token attr-value"><span class="token punctuation">=</span> $this-</span><span class="token punctuation">&gt;</span></span>getMockBuilder(stdClass::class)
+                     -&gt;setMethods([&apos;set&apos;])
+                     -&gt;getMock();
+
+        $mock-&gt;expects($this-&gt;exactly(2))
+             -&gt;method(&apos;set&apos;)
+             -&gt;withConsecutive(
+                 [$this-&gt;equalTo(&apos;foo&apos;), $this-&gt;greaterThan(0)],
+                 [$this-&gt;equalTo(&apos;bar&apos;), $this-&gt;greaterThan(0)]
+             );
+
+        $mock-&gt;set(&apos;foo&apos;, 21);
+        $mock-&gt;set(&apos;bar&apos;, 48);
+    }
+}
+</code></pre><p>The <code>callback()</code> constraint can be used for more complex argument
+verification. This constraint takes a PHP callback as its only argument.
+The PHP callback will receive the argument to be verified as its only
+argument and should return <code>true</code> if the argument passes verification
+and <code>false</code> otherwise.</p>
+<pre class="language-"><code>&lt;?php declare(strict_types=1);
+use PHPUnit\Framework\TestCase;
+
+final class SubjectTest extends TestCase
+{
+    public function testErrorReported(): void
+    {
+        // Create a mock for the Observer class, mocking the
+        // reportError() method
+        $observer = $this-&gt;createMock(Observer::class);
+
+        $observer-&gt;expects($this-&gt;once())
+                 -&gt;method(&apos;reportError&apos;)
+                 -&gt;with(
+                     $this-&gt;greaterThan(0),
+                     $this-&gt;stringContains(&apos;Something&apos;),
+                     $this-&gt;callback(function($subject)
+                     {
+                         return is_callable([$subject, &apos;getName&apos;]) &amp;&amp;
+                                $subject-&gt;getName() == &apos;My subject&apos;;
+                     }
+                 ));
+
+        $subject = new Subject(&apos;My subject&apos;);
+        $subject-&gt;attach($observer);
+
+        // The doSomethingBad() method should report an error to the observer
+        // via the reportError() method
+        $subject-&gt;doSomethingBad();
+    }
+}
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">FooTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testIdenticalObjectPassed():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$expectedObject</span> <span class="token attr-value"><span class="token punctuation">=</span> new</span> <span class="token attr-name">stdClass;</span>
+
+        <span class="token attr-name">$mock</span> <span class="token attr-value"><span class="token punctuation">=</span> $this-</span><span class="token punctuation">&gt;</span></span>getMockBuilder(stdClass::class)
+                     -&gt;setMethods([&apos;foo&apos;])
+                     -&gt;getMock();
+
+        $mock-&gt;expects($this-&gt;once())
+             -&gt;method(&apos;foo&apos;)
+             -&gt;with($this-&gt;identicalTo($expectedObject));
+
+        $mock-&gt;foo($expectedObject);
+    }
+}
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">FooTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testIdenticalObjectPassed():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$cloneArguments</span> <span class="token attr-value"><span class="token punctuation">=</span> true;</span>
+
+        <span class="token attr-name">$mock</span> <span class="token attr-value"><span class="token punctuation">=</span> $this-</span><span class="token punctuation">&gt;</span></span>getMockBuilder(stdClass::class)
+                     -&gt;enableArgumentCloning()
+                     -&gt;getMock();
+
+        // now your mock clones parameters so the identicalTo constraint
+        // will fail.
+    }
+}
+</code></pre><p><code>appendixes.assertions.assertThat.tables.constraints</code> shows the
+constraints that can be applied to method arguments and
+<code>test-doubles.mock-objects.tables.matchers</code> shows the matchers that are
+available to specify the number of invocations.</p>
+<p>table</p>
+<table>
+<caption>Matchers</caption>
+<thead>
+<tr class="header">
+<th>Matcher</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>PHPUnit\Framework\MockObject\Matcher\AnyInvokedCount any()</code></td>
+<td>Returns a matcher that matches when the method it is evaluated for is executed zero or more times.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\MockObject\Matcher\InvokedCount never()</code></td>
+<td>Returns a matcher that matches when the method it is evaluated for is never executed.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\MockObject\Matcher\InvokedAtLeastOnce atLeastOnce()</code></td>
+<td>Returns a matcher that matches when the method it is evaluated for is executed at least once.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\MockObject\Matcher\InvokedCount once()</code></td>
+<td>Returns a matcher that matches when the method it is evaluated for is executed exactly once.</td>
+</tr>
+<tr class="odd">
+<td><code>PHPUnit\Framework\MockObject\Matcher\InvokedCount exactly(int $count)</code></td>
+<td>Returns a matcher that matches when the method it is evaluated for is executed exactly <code>$count</code> times.</td>
+</tr>
+<tr class="even">
+<td><code>PHPUnit\Framework\MockObject\Matcher\InvokedAtIndex at(int $index)</code></td>
+<td>Returns a matcher that matches when the method it is evaluated for is invoked at the given <code>$index</code>.</td>
+</tr>
+</tbody>
+</table>
+
+<p>Note</p>
+<p>The <code>$index</code> parameter for the <code>at()</code> matcher refers to the index,
+starting at zero, in <em>all method invocations</em> for a given mock object.
+Exercise caution when using this matcher as it can lead to brittle tests
+which are too closely tied to specific implementation details.</p>
+<p>As mentioned in the beginning, when the defaults used by the
+<code>createStub()</code> and <code>createMock()</code> methods to generate the test double do
+not match your needs then you can use the <code>getMockBuilder($type)</code> method
+to customize the test double generation using a fluent interface. Here
+is a list of methods provided by the Mock Builder:</p>
+<ul>
+<li><p><code>setMethods(array $methods)</code> can be called on the Mock Builder</p>
+<blockquote>
+<p>object to specify the methods that are to be replaced with a
+configurable test double. The behavior of the other methods is not
+changed. If you call <code>setMethods(null)</code>, then no methods will be
+replaced.</p>
+</blockquote>
+</li>
+<li><p><code>setMethodsExcept(array $methods)</code> can be called on the Mock Builder</p>
+<blockquote>
+<p>object to specify the methods that will not be replaced with a
+configurable test double while replacing all other public methods.
+This works inverse to <code>setMethods()</code>.</p>
+</blockquote>
+</li>
+<li><p><code>setConstructorArgs(array $args)</code> can be called to provide a</p>
+<blockquote>
+<p>parameter array that is passed to the original class&apos; constructor
+(which is not replaced with a dummy implementation by default).</p>
+</blockquote>
+</li>
+<li><p><code>setMockClassName($name)</code> can be used to specify a class name for</p>
+<blockquote>
+<p>the generated test double class.</p>
+</blockquote>
+</li>
+<li><p><code>disableOriginalConstructor()</code> can be used to disable the call to</p>
+<blockquote>
+<p>the original class&apos; constructor.</p>
+</blockquote>
+</li>
+<li><p><code>disableOriginalClone()</code> can be used to disable the call to the</p>
+<blockquote>
+<p>original class&apos; clone constructor.</p>
+</blockquote>
+</li>
+<li><p><code>disableAutoload()</code> can be used to disable <code>__autoload()</code> during the</p>
+<blockquote>
+<p>generation of the test double class.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="mocking-traits-and-abstract-classes">Mocking Traits and Abstract Classes</h2>
+<p>The <code>getMockForTrait()</code> method returns a mock object that uses a
+specified trait. All abstract methods of the given trait are mocked.
+This allows for testing the concrete methods of a trait.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">trait</span> <span class="token attr-name">AbstractTrait</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name">concreteMethod()</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">return</span> <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>abstractMethod();
+    }
+
+    public abstract function abstractMethod();
+}
+
+final class TraitClassTest extends TestCase
+{
+    public function testConcreteMethod(): void
+    {
+        $mock = $this-&gt;getMockForTrait(AbstractTrait::class);
+
+        $mock-&gt;expects($this-&gt;any())
+             -&gt;method(&apos;abstractMethod&apos;)
+             -&gt;will($this-&gt;returnValue(true));
+
+        $this-&gt;assertTrue($mock-&gt;concreteMethod());
+    }
+}
+</code></pre><p>The <code>getMockForAbstractClass()</code> method returns a mock object for an
+abstract class. All abstract methods of the given abstract class are
+mocked. This allows for testing the concrete methods of an abstract
+class.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">abstract</span> <span class="token attr-name">class</span> <span class="token attr-name">AbstractClass</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name">concreteMethod()</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">return</span> <span class="token attr-name">$this-</span><span class="token punctuation">&gt;</span></span>abstractMethod();
+    }
+
+    public abstract function abstractMethod();
+}
+
+final class AbstractClassTest extends TestCase
+{
+    public function testConcreteMethod(): void
+    {
+        $stub = $this-&gt;getMockForAbstractClass(AbstractClass::class);
+
+        $stub-&gt;expects($this-&gt;any())
+             -&gt;method(&apos;abstractMethod&apos;)
+             -&gt;will($this-&gt;returnValue(true));
+
+        $this-&gt;assertTrue($stub-&gt;concreteMethod());
+    }
+}
+</code></pre><h2 id="stubbing-and-mocking-web-services">Stubbing and Mocking Web Services</h2>
+<p>When your application interacts with a web service you want to test it
+without actually interacting with the web service. To create stubs and
+mocks of web services, the <code>getMockFromWsdl()</code> can be used like
+<code>getMock()</code> (see above). The only difference is that <code>getMockFromWsdl()</code>
+returns a stub or mock based on a web service description in WSDL and
+<code>getMock()</code> returns a stub or mock based on a PHP class or interface.</p>
+<p><code>test-doubles.stubbing-and-mocking-web-services.examples.GoogleTest.php</code>
+shows how <code>getMockFromWsdl()</code> can be used to stub, for example, the web
+service described in <code>GoogleSearch.wsdl</code>.</p>
+<pre class="language-"><code><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>?php</span> <span class="token attr-name">declare(strict_types</span><span class="token attr-value"><span class="token punctuation">=</span>1);</span>
+<span class="token attr-name">use</span> <span class="token attr-name">PHPUnit\Framework\TestCase;</span>
+
+<span class="token attr-name">final</span> <span class="token attr-name">class</span> <span class="token attr-name">GoogleTest</span> <span class="token attr-name">extends</span> <span class="token attr-name">TestCase</span>
+<span class="token attr-name">{</span>
+    <span class="token attr-name">public</span> <span class="token attr-name">function</span> <span class="token attr-name"><span class="token namespace">testSearch():</span></span> <span class="token attr-name">void</span>
+    <span class="token attr-name">{</span>
+        <span class="token attr-name">$googleSearch</span> <span class="token attr-value"><span class="token punctuation">=</span> $this-</span><span class="token punctuation">&gt;</span></span>getMockFromWsdl(
+          &apos;GoogleSearch.wsdl&apos;, &apos;GoogleSearch&apos;
+        );
+
+        $directoryCategory = new stdClass;
+        $directoryCategory-&gt;fullViewableName = &apos;&apos;;
+        $directoryCategory-&gt;specialEncoding = &apos;&apos;;
+
+        $element = new stdClass;
+        $element-&gt;summary = &apos;&apos;;
+        $element-&gt;URL = &apos;https://phpunit.de/&apos;;
+        $element-&gt;snippet = &apos;...&apos;;
+        $element-&gt;title = &apos;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">&gt;</span></span>PHPUnit<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">&gt;</span></span>&apos;;
+        $element-&gt;cachedSize = &apos;11k&apos;;
+        $element-&gt;relatedInformationPresent = true;
+        $element-&gt;hostName = &apos;phpunit.de&apos;;
+        $element-&gt;directoryCategory = $directoryCategory;
+        $element-&gt;directoryTitle = &apos;&apos;;
+
+        $result = new stdClass;
+        $result-&gt;documentFiltering = false;
+        $result-&gt;searchComments = &apos;&apos;;
+        $result-&gt;estimatedTotalResultsCount = 3.9000;
+        $result-&gt;estimateIsExact = false;
+        $result-&gt;resultElements = [$element];
+        $result-&gt;searchQuery = &apos;PHPUnit&apos;;
+        $result-&gt;startIndex = 1;
+        $result-&gt;endIndex = 1;
+        $result-&gt;searchTips = &apos;&apos;;
+        $result-&gt;directoryCategories = [];
+        $result-&gt;searchTime = 0.248822;
+
+        $googleSearch-&gt;expects($this-&gt;any())
+                     -&gt;method(&apos;doGoogleSearch&apos;)
+                     -&gt;will($this-&gt;returnValue($result));
+
+        /**
+         * $googleSearch-&gt;doGoogleSearch() will now return a stubbed result and
+         * the web service&apos;s doGoogleSearch() method will not be invoked.
+         */
+        $this-&gt;assertEquals(
+          $result,
+          $googleSearch-&gt;doGoogleSearch(
+            &apos;00000000000000000000000000000000&apos;,
+            &apos;PHPUnit&apos;,
+            0,
+            1,
+            false,
+            &apos;&apos;,
+            false,
+            &apos;&apos;,
+            &apos;&apos;,
+            &apos;&apos;
+          )
+        );
+    }
+}
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="risky-tests.html" class="navigation navigation-prev " aria-label="Previous page: Risky Tests">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="textui.html" class="navigation navigation-next " aria-label="Next page: Textui">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Test Doubles","level":"1.14","depth":1,"next":{"title":"Textui","level":"1.15","depth":1,"path":"textui.md","ref":"textui.md","articles":[]},"previous":{"title":"Risky Tests","level":"1.13","depth":1,"path":"risky-tests.md","ref":"risky-tests.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-highlight","-livereload","prism"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-solarizedlight.css"]},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"PHPUnit 英文文档","language":"us-en","links":{"sidebar":{"Home":"https://docs.khs1994.com"}},"gitbook":"*"},"file":{"path":"test-doubles.md","mtime":"2021-05-20T01:13:25.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-05-20T01:13:58.148Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
